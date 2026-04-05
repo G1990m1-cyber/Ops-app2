@@ -36,6 +36,7 @@ export interface ActionItem {
   notes?: string;
   approvalRequired: boolean;
   approvalStatus?: 'pending' | 'approved' | 'rejected';
+  history?: ApprovalHistoryEntry[];
   createdAt: string;
   updatedAt: string;
 }

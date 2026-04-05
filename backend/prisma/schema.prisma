@@ -1,0 +1,292 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id          String   @id @default(cuid())
+  name        String
+  email       String   @unique
+  password    String
+  phone       String?
+  role        String   @default("caretaker") // admin | manager | caretaker | cleaner
+  active      Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  properties  UserProperty[]
+  approvals   Approval[]
+  weeklyChecks WeeklyCheck[]
+  monthlyChecks MonthlyCheck[]
+  workTickets WorkTicket[]
+}
+
+model Property {
+  id        String   @id @default(cuid())
+  name      String
+  address   String
+  bedrooms  Int
+  maxGuests Int
+  type      String   @default("cottage")
+  active    Boolean  @default(true)
+  notes     String?
+  createdAt DateTime @default(now())
+
+  users       UserProperty[]
+  actionItems ActionItem[]
+  bookings    Booking[]
+  stocktakes  StocktakeEntry[]
+  preCheckIns  PreCheckIn[]
+  postCheckOuts PostCheckOut[]
+  weeklyChecks WeeklyCheck[]
+  monthlyChecks MonthlyCheck[]
+  approvals   Approval[]
+  workTickets WorkTicket[]
+}
+
+model UserProperty {
+  userId     String
+  propertyId String
+  user       User     @relation(fields: [userId], references: [id])
+  property   Property @relation(fields: [propertyId], references: [id])
+  @@id([userId, propertyId])
+}
+
+model ActionItem {
+  id              String   @id @default(cuid())
+  title           String
+  description     String?
+  propertyId      String?
+  dueDate         DateTime
+  category        String   // compliance | maintenance | safety | admin | cleaning
+  priority        String   @default("medium") // low | medium | high | critical
+  status          String   @default("pending") // pending | in_progress | completed | overdue
+  assignedTo      String?
+  completedAt     DateTime?
+  completedBy     String?
+  notes           String?
+  approvalRequired Boolean @default(false)
+  approvalStatus  String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  property   Property? @relation(fields: [propertyId], references: [id])
+  history    ActionItemHistory[]
+}
+
+model ActionItemHistory {
+  id           String   @id @default(cuid())
+  actionItemId String
+  action       String
+  by           String
+  at           DateTime @default(now())
+  notes        String?
+  actionItem   ActionItem @relation(fields: [actionItemId], references: [id])
+}
+
+model StocktakeItem {
+  id       String @id @default(cuid())
+  name     String
+  category String // shelf | cleaning
+  unit     String @default("units")
+  minStock Int    @default(0)
+  entries  StocktakeEntryItem[]
+}
+
+model StocktakeEntry {
+  id          String   @id @default(cuid())
+  propertyId  String
+  date        DateTime @default(now())
+  submittedBy String
+  status      String   @default("submitted")
+  notes       String?
+  property    Property @relation(fields: [propertyId], references: [id])
+  items       StocktakeEntryItem[]
+}
+
+model StocktakeEntryItem {
+  entryId  String
+  itemId   String
+  quantity Int
+  entry    StocktakeEntry @relation(fields: [entryId], references: [id])
+  item     StocktakeItem  @relation(fields: [itemId], references: [id])
+  @@id([entryId, itemId])
+}
+
+model Booking {
+  id         String   @id @default(cuid())
+  bookingRef String   @unique
+  guestName  String
+  guestEmail String?
+  guestPhone String?
+  propertyId String
+  checkIn    DateTime
+  checkOut   DateTime
+  guests     Int      @default(2)
+  status     String   @default("confirmed") // confirmed | checked_in | checked_out | cancelled
+  notes      String?
+  source     String   @default("direct")
+  createdAt  DateTime @default(now())
+
+  property    Property      @relation(fields: [propertyId], references: [id])
+  preCheckIn  PreCheckIn?
+  postCheckOut PostCheckOut?
+}
+
+model PreCheckIn {
+  id            String    @id @default(cuid())
+  bookingId     String    @unique
+  propertyId    String
+  scheduledDate DateTime
+  completedAt   DateTime?
+  completedBy   String?
+  status        String    @default("pending")
+  notes         String?
+  damageReported Boolean  @default(false)
+  damageNotes   String?
+
+  booking   Booking  @relation(fields: [bookingId], references: [id])
+  property  Property @relation(fields: [propertyId], references: [id])
+  checklist PreCheckInItem[]
+}
+
+model PreCheckInItem {
+  id           String     @id @default(cuid())
+  preCheckInId String
+  label        String
+  checked      Boolean    @default(false)
+  notes        String?
+  preCheckIn   PreCheckIn @relation(fields: [preCheckInId], references: [id])
+}
+
+model PostCheckOut {
+  id              String    @id @default(cuid())
+  bookingId       String    @unique
+  propertyId      String
+  scheduledDate   DateTime
+  completedAt     DateTime?
+  completedBy     String?
+  status          String    @default("pending")
+  notes           String?
+  damageReported  Boolean   @default(false)
+  damageNotes     String?
+  cleaningRequired Boolean  @default(true)
+
+  booking   Booking  @relation(fields: [bookingId], references: [id])
+  property  Property @relation(fields: [propertyId], references: [id])
+  checklist PostCheckOutItem[]
+}
+
+model PostCheckOutItem {
+  id             String       @id @default(cuid())
+  postCheckOutId String
+  label          String
+  checked        Boolean      @default(false)
+  notes          String?
+  postCheckOut   PostCheckOut @relation(fields: [postCheckOutId], references: [id])
+}
+
+model WeeklyCheck {
+  id          String    @id @default(cuid())
+  propertyId  String
+  weekStart   DateTime
+  completedAt DateTime?
+  completedBy String?
+  status      String    @default("pending")
+  issuesFound Boolean   @default(false)
+  notes       String?
+
+  property  Property @relation(fields: [propertyId], references: [id])
+  user      User?    @relation(fields: [completedBy], references: [id])
+  checklist WeeklyCheckItem[]
+}
+
+model WeeklyCheckItem {
+  id            String      @id @default(cuid())
+  weeklyCheckId String
+  label         String
+  checked       Boolean     @default(false)
+  notes         String?
+  weeklyCheck   WeeklyCheck @relation(fields: [weeklyCheckId], references: [id])
+}
+
+model MonthlyCheck {
+  id            String    @id @default(cuid())
+  propertyId    String
+  month         String
+  year          Int
+  completedAt   DateTime?
+  completedBy   String?
+  status        String    @default("pending")
+  electricReading Float?
+  gasReading    Float?
+  waterReading  Float?
+  notes         String?
+
+  property  Property @relation(fields: [propertyId], references: [id])
+  user      User?    @relation(fields: [completedBy], references: [id])
+  checklist MonthlyCheckItem[]
+}
+
+model MonthlyCheckItem {
+  id             String       @id @default(cuid())
+  monthlyCheckId String
+  label          String
+  checked        Boolean      @default(false)
+  notes          String?
+  monthlyCheck   MonthlyCheck @relation(fields: [monthlyCheckId], references: [id])
+}
+
+model Approval {
+  id          String   @id @default(cuid())
+  title       String
+  description String
+  propertyId  String
+  submittedBy String
+  submittedAt DateTime @default(now())
+  amount      Float
+  category    String
+  status      String   @default("in_progress") // in_progress | approved | rejected
+  reviewedBy  String?
+  reviewedAt  DateTime?
+  reviewNotes String?
+
+  property    Property @relation(fields: [propertyId], references: [id])
+  submitter   User     @relation(fields: [submittedBy], references: [id])
+  history     ApprovalHistory[]
+}
+
+model ApprovalHistory {
+  id         String   @id @default(cuid())
+  approvalId String
+  action     String
+  by         String
+  at         DateTime @default(now())
+  notes      String?
+  approval   Approval @relation(fields: [approvalId], references: [id])
+}
+
+model WorkTicket {
+  id             String    @id @default(cuid())
+  title          String
+  description    String?
+  propertyId     String
+  assignedTo     String?
+  priority       String    @default("medium") // low | medium | high | urgent
+  status         String    @default("open") // open | in_progress | completed | cancelled
+  category       String    @default("maintenance")
+  estimatedHours Float?
+  actualHours    Float?
+  dueDate        DateTime?
+  completedAt    DateTime?
+  notes          String?
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+
+  property Property  @relation(fields: [propertyId], references: [id])
+  assignee User?     @relation(fields: [assignedTo], references: [id])
+}
