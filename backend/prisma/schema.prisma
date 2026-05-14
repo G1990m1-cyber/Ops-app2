@@ -26,15 +26,16 @@ model User {
 }
 
 model Property {
-  id        String   @id @default(cuid())
-  name      String
-  address   String
-  bedrooms  Int
-  maxGuests Int
-  type      String   @default("cottage")
-  active    Boolean  @default(true)
-  notes     String?
-  createdAt DateTime @default(now())
+  id                String   @id @default(cuid())
+  name              String
+  address           String
+  bedrooms          Int
+  maxGuests         Int
+  type              String   @default("cottage")
+  active            Boolean  @default(true)
+  notes             String?
+  hostawayListingId String?  @unique
+  createdAt         DateTime @default(now())
 
   users       UserProperty[]
   actionItems ActionItem[]
@@ -118,19 +119,20 @@ model StocktakeEntryItem {
 }
 
 model Booking {
-  id         String   @id @default(cuid())
-  bookingRef String   @unique
-  guestName  String
-  guestEmail String?
-  guestPhone String?
-  propertyId String
-  checkIn    DateTime
-  checkOut   DateTime
-  guests     Int      @default(2)
-  status     String   @default("confirmed") // confirmed | checked_in | checked_out | cancelled
-  notes      String?
-  source     String   @default("direct")
-  createdAt  DateTime @default(now())
+  id           String   @id @default(cuid())
+  bookingRef   String   @unique
+  hostawayId   String?  @unique
+  guestName    String
+  guestEmail   String?
+  guestPhone   String?
+  propertyId   String
+  checkIn      DateTime
+  checkOut     DateTime
+  guests       Int      @default(2)
+  status       String   @default("confirmed") // confirmed | checked_in | checked_out | cancelled
+  notes        String?
+  source       String   @default("direct")
+  createdAt    DateTime @default(now())
 
   property    Property      @relation(fields: [propertyId], references: [id])
   preCheckIn  PreCheckIn?
