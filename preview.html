@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Group Retreats Ops App</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+  :root {
+    --primary: #7D6B3D;
+    --primary-light: #9B8654;
+    --bg: #F2EFE8;
+    --white: #fff;
+    --border: #E0DAD0;
+    --text: #2C2C2C;
+    --muted: #9E9E9E;
+    --secondary: #6B6B6B;
+    --success: #4CAF50;
+    --success-bg: #E8F5E9;
+    --warning: #FF8C00;
+    --warning-bg: #FFF3E0;
+    --error: #F44336;
+    --error-bg: #FFEBEE;
+    --info: #2196F3;
+    --info-bg: #E3F2FD;
+  }
+  body { background: var(--bg); min-height: 100vh; display: flex; justify-content: center; }
+  .phone { width: 100%; max-width: 430px; min-height: 100vh; background: var(--bg); position: relative; overflow: hidden; }
+
+  /* Header */
+  .header {
+    background: var(--primary);
+    padding: 52px 16px 14px;
+    display: flex; align-items: center; justify-content: space-between;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    position: sticky; top: 0; z-index: 100;
+  }
+  .header-icon { width: 36px; height: 36px; display:flex; align-items:center; justify-content:center; cursor:pointer; }
+  .header svg { fill: white; }
+  .header-title { color: white; font-size: 18px; font-weight: 700; flex:1; text-align:center; }
+
+  /* Screen management */
+  .screen { display: none; flex-direction: column; min-height: 100vh; }
+  .screen.active { display: flex; }
+  .scroll-content { flex: 1; overflow-y: auto; padding-bottom: 32px; }
+
+  /* Home grid */
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 14px; }
+  .tile {
+    background: var(--white); border-radius: 14px; padding: 26px 12px;
+    display: flex; flex-direction: column; align-items: center; gap: 10px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.08); cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.1s; position: relative;
+    border: none; width: 100%;
+  }
+  .tile:active { transform: scale(0.97); }
+  .tile-icon { font-size: 38px; }
+  .tile-label { font-size: 13px; font-weight: 600; color: var(--text); text-align: center; line-height: 1.3; }
+  .tile-badge {
+    position: absolute; top: 10px; right: 10px;
+    background: var(--error); color: white;
+    border-radius: 10px; min-width: 20px; height: 20px;
+    font-size: 11px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center; padding: 0 4px;
+  }
+
+  /* Cards */
+  .card {
+    background: var(--white); border-radius: 14px; padding: 14px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.07); margin: 0 12px 10px;
+  }
+  .card-title { font-size: 15px; font-weight: 700; color: var(--primary); margin-bottom: 6px; }
+  .card-row { display: flex; align-items: center; gap: 8px; margin-top: 5px; }
+  .card-row span { font-size: 13px; color: var(--secondary); }
+  .card-row .icon { font-size: 14px; }
+
+  /* Badges */
+  .badge {
+    border-radius: 8px; padding: 3px 10px; font-size: 13px; font-weight: 700;
+    display: inline-flex; align-items: center;
+  }
+  .badge-amber { background: #FFD580; color: #B85C00; }
+  .badge-red { background: var(--error-bg); color: var(--error); }
+  .badge-green { background: var(--success-bg); color: var(--success); }
+  .badge-blue { background: var(--info-bg); color: var(--info); }
+
+  /* Status pills */
+  .pill { border-radius: 20px; padding: 3px 10px; font-size: 11px; font-weight: 600; display: inline-block; }
+  .pill-blue { background: var(--info-bg); color: var(--info); }
+  .pill-green { background: var(--success-bg); color: var(--success); }
+  .pill-amber { background: var(--warning-bg); color: var(--warning); }
+  .pill-red { background: var(--error-bg); color: var(--error); }
+  .pill-grey { background: #F5F5F5; color: #888; }
+
+  /* Toolbar */
+  .toolbar { display: flex; gap: 10px; padding: 12px; align-items: center; }
+  .selector {
+    flex: 1; background: var(--white); border: 1px solid var(--border);
+    border-radius: 8px; padding: 10px 14px; font-size: 14px; color: var(--muted);
+    display: flex; align-items: center; justify-content: space-between; cursor: pointer;
+  }
+  .add-btn {
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: 8px; padding: 10px 14px; font-size: 14px;
+    color: var(--primary); font-weight: 600; cursor: pointer; white-space: nowrap;
+  }
+
+  /* Tabs */
+  .tabs { display: flex; padding: 0 12px; border-bottom: 1px solid var(--border); }
+  .tab {
+    flex: 1; padding: 11px; text-align: center; font-size: 14px;
+    color: var(--muted); font-weight: 500; cursor: pointer;
+    border-bottom: 2px solid transparent; margin-bottom: -1px;
+    background: none; border-top: none; border-left: none; border-right: none;
+  }
+  .tab.active { color: var(--primary); font-weight: 700; border-bottom-color: var(--primary); }
+
+  /* Card actions */
+  .card-actions { display: flex; align-items: center; gap: 10px; margin-top: 10px; }
+  .hist-btn {
+    border: 1px solid var(--border); border-radius: 6px;
+    padding: 5px 10px; font-size: 12px; color: var(--text); cursor: pointer;
+    background: white;
+  }
+  .edit-btn { font-size: 18px; cursor: pointer; padding: 4px; background: none; border: none; }
+
+  /* Checklist */
+  .check-row { display: flex; align-items: center; gap: 12px; padding: 9px 0; }
+  .checkbox {
+    width: 22px; height: 22px; border-radius: 5px;
+    border: 2px solid var(--primary); display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; cursor: pointer;
+  }
+  .checkbox.checked { background: var(--primary); }
+  .checkbox.checked::after { content: '✓'; color: white; font-size: 13px; font-weight: 700; }
+  .check-label { font-size: 14px; color: var(--text); flex: 1; }
+  .check-label.done { text-decoration: line-through; color: var(--muted); }
+
+  /* Progress bar */
+  .progress-track { height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; margin-top: 6px; }
+  .progress-fill { height: 100%; background: var(--primary); border-radius: 4px; transition: width 0.3s; }
+
+  /* Search */
+  .search { margin: 12px; background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 11px 14px; font-size: 14px; color: var(--text); width: calc(100% - 24px); outline: none; }
+  .search::placeholder { color: var(--muted); }
+
+  /* Booking card */
+  .booking-card {
+    background: var(--white); border-radius: 12px; padding: 14px;
+    margin: 0 12px 10px; cursor: pointer;
+    border-left: 3px solid var(--primary);
+    box-shadow: 0 1px 5px rgba(0,0,0,0.07);
+    display: flex; align-items: center; gap: 12px;
+  }
+  .booking-ref { font-size: 15px; font-weight: 600; color: var(--primary); }
+  .booking-dates { font-size: 13px; color: var(--secondary); margin-top: 3px; }
+
+  /* Dashboard stats */
+  .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 0 12px 12px; }
+  .stat-card {
+    background: var(--white); border-radius: 14px; padding: 16px;
+    text-align: center; box-shadow: 0 1px 5px rgba(0,0,0,0.07);
+  }
+  .stat-icon-wrap { width: 44px; height: 44px; border-radius: 22px; display: flex; align-items: center; justify-content: center; margin: 0 auto 8px; font-size: 22px; }
+  .stat-value { font-size: 26px; font-weight: 800; color: var(--text); }
+  .stat-label { font-size: 11px; color: var(--secondary); margin-top: 2px; line-height: 1.3; }
+
+  /* Alert row */
+  .alert-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 8px; padding: 0 12px 12px; }
+  .alert-card { border-radius: 12px; padding: 10px 6px; text-align: center; }
+  .alert-val { font-size: 22px; font-weight: 800; color: var(--text); margin: 4px 0 2px; }
+  .alert-lbl { font-size: 10px; color: var(--secondary); line-height: 1.2; }
+
+  /* Meter grid */
+  .meter-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-bottom: 16px; }
+  .meter-card { background: var(--white); border-radius: 10px; padding: 12px; text-align: center; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+  .meter-label { font-size: 10px; color: var(--secondary); margin-bottom: 6px; }
+  .meter-val { font-size: 20px; font-weight: 800; color: var(--primary); }
+
+  /* Section title */
+  .section-title { font-size: 14px; font-weight: 700; color: var(--text); padding: 12px 12px 4px; }
+
+  /* Bottom nav bar */
+  .nav-bar {
+    position: sticky; bottom: 0; background: var(--white);
+    border-top: 1px solid var(--border);
+    display: flex; padding: 8px 0 20px;
+  }
+  .nav-item { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px; cursor: pointer; background: none; border: none; }
+  .nav-item .nav-icon { font-size: 22px; }
+  .nav-item .nav-label { font-size: 10px; color: var(--muted); }
+  .nav-item.active .nav-label { color: var(--primary); font-weight: 600; }
+
+  /* Work ticket */
+  .ticket-card {
+    background: var(--white); border-radius: 12px; padding: 14px;
+    margin: 0 12px 10px; cursor: pointer;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.07);
+    border-left: 4px solid var(--error);
+  }
+  .ticket-card.med { border-left-color: var(--warning); }
+  .ticket-card.low { border-left-color: var(--muted); }
+  .ticket-card.done { border-left-color: var(--success); }
+  .ticket-title { font-size: 14px; font-weight: 600; color: var(--text); flex: 1; }
+  .ticket-meta { display: flex; gap: 12px; margin-top: 8px; flex-wrap: wrap; }
+  .ticket-meta span { font-size: 12px; color: var(--muted); }
+
+  /* Approval card */
+  .approval-card {
+    background: var(--white); border-radius: 12px; padding: 14px;
+    margin: 0 12px 10px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.07);
+  }
+  .approval-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+  .approval-amount { font-size: 18px; font-weight: 800; color: var(--primary); }
+  .approval-desc { font-size: 13px; color: var(--secondary); }
+
+  /* Property card */
+  .prop-card {
+    background: var(--white); border-radius: 12px; padding: 16px;
+    margin: 0 12px 10px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.07);
+    display: flex; align-items: flex-start; gap: 12px;
+  }
+  .prop-name { font-size: 15px; font-weight: 700; color: var(--text); }
+  .prop-addr { font-size: 12px; color: var(--secondary); margin-top: 3px; }
+  .prop-chips { display: flex; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
+  .prop-chip { background: var(--bg); border-radius: 20px; padding: 3px 10px; font-size: 11px; color: var(--primary); }
+
+  /* Buttons */
+  .btn-primary { background: var(--primary); color: white; border: none; border-radius: 12px; padding: 15px; width: 100%; font-size: 16px; font-weight: 700; cursor: pointer; margin-top: 8px; }
+  .btn-success { background: var(--success); color: white; border: none; border-radius: 12px; padding: 15px; width: 100%; font-size: 16px; font-weight: 700; cursor: pointer; }
+  .btn-outline { background: white; color: var(--text); border: 1px solid var(--border); border-radius: 12px; padding: 14px; width: 100%; font-size: 15px; font-weight: 600; cursor: pointer; margin-top: 8px; }
+
+  /* Login screen */
+  .login-screen { background: var(--primary); min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 32px 24px; }
+  .login-logo { font-size: 64px; margin-bottom: 16px; }
+  .login-title { color: white; font-size: 26px; font-weight: 800; margin-bottom: 8px; text-align: center; }
+  .login-sub { color: rgba(255,255,255,0.7); font-size: 14px; margin-bottom: 40px; text-align: center; }
+  .login-input { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); border-radius: 12px; padding: 16px; width: 100%; font-size: 16px; color: white; margin-bottom: 12px; outline: none; }
+  .login-input::placeholder { color: rgba(255,255,255,0.6); }
+  .login-btn { background: white; color: var(--primary); border: none; border-radius: 12px; padding: 16px; width: 100%; font-size: 16px; font-weight: 700; cursor: pointer; margin-top: 8px; }
+
+  /* Bar chart */
+  .bar-row { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+  .bar-label { width: 70px; font-size: 11px; color: var(--secondary); }
+  .bar-track { flex: 1; height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 4px; }
+  .bar-val { width: 20px; font-size: 11px; font-weight: 600; color: var(--text); text-align: right; }
+
+  /* Stocktake row */
+  .stk-row { display: flex; align-items: center; padding: 11px 14px; border-bottom: 1px solid var(--border); }
+  .stk-row:nth-child(odd) { background: #F7F3EA; }
+  .stk-label { flex: 1; font-size: 14px; color: var(--text); }
+  .stk-input { width: 70px; background: white; border: 1px solid var(--border); border-radius: 8px; padding: 7px 10px; text-align: center; font-size: 14px; color: var(--text); }
+</style>
+</head>
+<body>
+<div class="phone">
+
+<!-- LOGIN SCREEN -->
+<div id="screen-login" class="screen active">
+  <div class="login-screen">
+    <div class="login-logo">🏡</div>
+    <div class="login-title">Group Retreats</div>
+    <div class="login-sub">Operations Management</div>
+    <input class="login-input" type="email" placeholder="Email address" value="sarah@retreats.com">
+    <input class="login-input" type="password" placeholder="Password" value="••••••••">
+    <button class="login-btn" onclick="go('home')">Sign In</button>
+  </div>
+</div>
+
+<!-- HOME SCREEN -->
+<div id="screen-home" class="screen">
+  <div class="header">
+    <div class="header-icon">🏠</div>
+    <div class="header-title">Group Retreats</div>
+    <div class="header-icon">👤</div>
+  </div>
+  <div class="scroll-content">
+    <div class="grid">
+      <button class="tile" onclick="go('action-items')">
+        <span class="tile-badge">6</span>
+        <div class="tile-icon">⚠️</div>
+        <div class="tile-label">Action Items</div>
+      </button>
+      <button class="tile" onclick="go('stocktake')">
+        <div class="tile-icon">🛒</div>
+        <div class="tile-label">Stocktake</div>
+      </button>
+      <button class="tile" onclick="go('pre-checkin')">
+        <span class="tile-badge">2</span>
+        <div class="tile-icon">🏨</div>
+        <div class="tile-label">Pre Check Ins</div>
+      </button>
+      <button class="tile" onclick="go('post-checkout')">
+        <span class="tile-badge">2</span>
+        <div class="tile-icon">🚪</div>
+        <div class="tile-label">Post Check Outs</div>
+      </button>
+      <button class="tile" onclick="go('weekly-checks')">
+        <div class="tile-icon">📋</div>
+        <div class="tile-label">Weekly Checks</div>
+      </button>
+      <button class="tile" onclick="go('approvals')">
+        <span class="tile-badge">4</span>
+        <div class="tile-icon">📨</div>
+        <div class="tile-label">Send for Approvals</div>
+      </button>
+      <button class="tile" onclick="go('monthly-checks')">
+        <div class="tile-icon">📅</div>
+        <div class="tile-label">Monthly Checks</div>
+      </button>
+      <button class="tile" onclick="go('properties')">
+        <div class="tile-icon">🏠</div>
+        <div class="tile-label">Properties</div>
+      </button>
+      <button class="tile" onclick="go('dashboard')">
+        <div class="tile-icon">📊</div>
+        <div class="tile-label">Office Dashboard</div>
+      </button>
+      <button class="tile" onclick="go('work-tickets')">
+        <span class="tile-badge">3</span>
+        <div class="tile-icon">🔧</div>
+        <div class="tile-label">Work Tickets</div>
+      </button>
+      <button class="tile" onclick="go('home')">
+        <div class="tile-icon">⚙️</div>
+        <div class="tile-label">Manage Admins</div>
+      </button>
+      <button class="tile" onclick="go('home')">
+        <div class="tile-icon">👥</div>
+        <div class="tile-label">Manage Users</div>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ACTION ITEMS -->
+<div id="screen-action-items" class="screen">
+  <div class="header">
+    <div class="header-icon" onclick="go('home')" style="cursor:pointer">🏠</div>
+    <div class="header-title">Action Items</div>
+    <div class="header-icon">👤</div>
+  </div>
+  <div class="scroll-content">
+    <div class="toolbar">
+      <div class="selector">Select Property <span>▾</span></div>
+      <button class="add-btn">+ Add</button>
+    </div>
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <div class="card-title">Chimney Sweep</div>
+        <span class="badge badge-amber">-6</span>
+      </div>
+      <div class="card-row"><span class="icon">🔧</span><span>TP Chimneys</span></div>
+      <div class="card-row"><span class="icon">⏳</span><span>11/04/2026</span></div>
+      <div class="card-row"><span class="icon">🏠</span><span>Stag House</span></div>
+      <div class="card-actions">
+        <button class="hist-btn">Approval History</button>
+        <button class="edit-btn">✏️</button>
+      </div>
+    </div>
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <div class="card-title">Boiler Service</div>
+        <span class="badge badge-amber">-6</span>
+      </div>
+      <div class="card-row"><span class="icon">🔧</span><span>Remlap Heating</span></div>
+      <div class="card-row"><span class="icon">⏳</span><span>11/04/2026</span></div>
+      <div class="card-row"><span class="icon">🏠</span><span>Stag House</span></div>
+      <div class="card-actions">
+        <button class="hist-btn">Approval History</button>
+        <button class="edit-btn">✏️</button>
+      </div>
+    </div>
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <div class="card-title">Gas Safe Certificate</div>
+        <span class="badge badge-amber">-6</span>
+      </div>
+      <div class="card-row"><span class="icon">🔧</span><span>Max Shutler</span></div>
+      <div class="card-row"><span class="icon">⏳</span><span>11/04/2026</span></div>
+      <div class="card-row"><span class="icon">🏠</span><span>The Granary</span></div>
+      <div class="card-actions">
+        <button class="hist-btn">Approval History</button>
+        <button class="edit-btn">✏️</button>
+      </div>
+    </div>
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <div class="card-title">Fire Risk Assessment</div>
+        <span class="badge badge-amber">17</span>
+      </div>
+      <div class="card-row"><span class="icon">🔧</span><span>FireSafe Ltd</span></div>
+      <div class="card-row"><span class="icon">⏳</span><span>01/05/2026</span></div>
+      <div class="card-row"><span class="icon">🏠</span><span>The Granary</span></div>
+      <div class="card-actions">
+        <button class="hist-btn">Approval History</button>
+        <button class="edit-btn">✏️</button>
+      </div>
+    </div>
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <div class="card-title" style="color:#F44336">EICR Inspection ⚠️</div>
+        <span class="badge badge-red">-43</span>
+      </div>
+      <div class="card-row"><span class="icon">🔧</span><span>Watts Electrical</span></div>
+      <div class="card-row"><span class="icon">⏳</span><span>01/03/2026</span></div>
+      <div class="card-row"><span class="icon">🏠</span><span>Stag House</span></div>
+      <div class="card-actions">
+        <button class="hist-btn">Approval History</button>
+        <button class="edit-btn">✏️</button>
+      </div>
+    </div>
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <div class="card-title">PAT Testing</div>
+        <span class="badge badge-green">62</span>
+      </div>
+      <div class="card-row"><span class="icon">🔧</span><span>ElecCheck</span></div>
+      <div class="card-row"><span class="icon">⏳</span><span>15/06/2026</span></div>
+      <div class="card-row"><span class="icon">🏠</span><span>Oak Barn</span></div>
+      <div class="card-actions">
+        <button class="hist-btn">Approval History</button>
+        <button class="edit-btn">✏️</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- STOCKTAKE -->
+<div id="screen-stocktake" class="screen">
+  <div class="header">
+    <div class="header-icon" onclick="go('home')" style="cursor:pointer">🏠</div>
+    <div class="header-title">Stocktake - Items on the Shelf</div>
+    <div class="header-icon">👤</div>
+  </div>
+  <div class="scroll-content">
+    <div class="toolbar">
+      <div class="selector">Select Property <span>▾</span></div>
+    </div>
+    <div>
+      <div class="stk-row"><span class="stk-label">Salted Crisps</span><input class="stk-input" placeholder="0"></div>
+      <div class="stk-row"><span class="stk-label">Cheese &amp; Onion Crisps</span><input class="stk-input" placeholder="0"></div>
+      <div class="stk-row"><span class="stk-label">Jam</span><input class="stk-input" placeholder="0"></div>
+      <div class="stk-row"><span class="stk-label">Breadsticks</span><input class="stk-input" placeholder="0"></div>
+      <div class="stk-row"><span class="stk-label">Shortbread Fingers</span><input class="stk-input" placeholder="0"></div>
+      <div class="stk-row"><span class="stk-label">Gluten-Free Crackers</span><input class="stk-input" placeholder="0"></div>
+      <div class="stk-row"><span class="stk-label">Chutney</span><input class="stk-input" placeholder="0"></div>
+      <div class="stk-row"><span class="stk-label">Jar of Olives</span><input class="stk-input" placeholder="0"></div>
+      <div class="stk-row"><span class="stk-label">Chocolate Bar</span><input class="stk-input" placeholder="0"></div>
+      <div class="stk-row"><span class="stk-label">Marmalade</span><input class="stk-input" placeholder="0"></div>
+      <div class="stk-row"><span class="stk-label">Jacobs Crackers</span><input class="stk-input" placeholder="0"></div>
+      <div class="stk-row"><span class="stk-label">Tea Bags (80pk)</span><input class="stk-input" placeholder="0"></div>
+      <div class="stk-row"><span class="stk-label">Ground Coffee</span><input class="stk-input" placeholder="0"></div>
+    </div>
+    <div style="display:flex;gap:12px;padding:16px;">
+      <button class="btn-primary" style="margin:0">Submit</button>
+      <button class="btn-outline" style="margin:0;background:#2C2C2C;color:white;border:none">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- PRE CHECK IN -->
+<div id="screen-pre-checkin" class="screen">
+  <div class="header">
+    <div class="header-icon" onclick="go('home')" style="cursor:pointer">🏠</div>
+    <div class="header-title">Pre Check In</div>
+    <div class="header-icon">👤</div>
+  </div>
+  <div class="scroll-content">
+    <input class="search" placeholder="Search by Booking ID or Guest Name">
+    <div class="tabs">
+      <button class="tab active">Today's Check In</button>
+      <button class="tab">Completed</button>
+    </div>
+    <div style="height:12px"></div>
+    <div class="booking-card" onclick="go('pre-checkin-detail')">
+      <div style="flex:1">
+        <div class="booking-ref">51835044 – Aviva Frei</div>
+        <div class="booking-dates">📅 05/04/2026 – 08/04/2026</div>
+      </div>
+      <span>✏️</span>
+    </div>
+    <div class="booking-card" onclick="go('pre-checkin-detail')">
+      <div style="flex:1">
+        <div class="booking-ref">53890317 – Victoria Horncastle</div>
+        <div class="booking-dates">📅 05/04/2026 – 07/04/2026</div>
+      </div>
+      <span>✏️</span>
+    </div>
+  </div>
+</div>
+
+<!-- PRE CHECK IN DETAIL -->
+<div id="screen-pre-checkin-detail" class="screen">
+  <div class="header">
+    <div class="header-icon" onclick="go('pre-checkin')" style="cursor:pointer">‹</div>
+    <div class="header-title">Pre Check In</div>
+    <div class="header-icon">👤</div>
+  </div>
+  <div class="scroll-content" style="padding:16px">
+    <div class="card" style="margin:0 0 14px">
+      <div class="booking-ref">51835044 – Aviva Frei</div>
+      <div class="booking-dates">05/04/2026 → 08/04/2026 · 14 guests · Stag House</div>
+    </div>
+    <div style="margin-bottom:14px">
+      <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--secondary);font-weight:600;margin-bottom:6px">
+        <span>3/10 items completed</span>
+      </div>
+      <div class="progress-track"><div class="progress-fill" style="width:30%"></div></div>
+    </div>
+    <div id="checklist">
+      <div class="check-row"><div class="checkbox checked" onclick="this.classList.toggle('checked');this.nextSibling.classList.toggle('done')"></div><span class="check-label done">Keys left in lockbox</span></div>
+      <div class="check-row"><div class="checkbox checked" onclick="this.classList.toggle('checked');this.nextSibling.classList.toggle('done')"></div><span class="check-label done">Welcome pack prepared</span></div>
+      <div class="check-row"><div class="checkbox checked" onclick="this.classList.toggle('checked');this.nextSibling.classList.toggle('done')"></div><span class="check-label done">Bedrooms checked and made up</span></div>
+      <div class="check-row"><div class="checkbox" onclick="this.classList.toggle('checked');this.nextSibling.classList.toggle('done')"></div><span class="check-label">Bathrooms stocked</span></div>
+      <div class="check-row"><div class="checkbox" onclick="this.classList.toggle('checked');this.nextSibling.classList.toggle('done')"></div><span class="check-label">Kitchen supplies topped up</span></div>
+      <div class="check-row"><div class="checkbox" onclick="this.classList.toggle('checked');this.nextSibling.classList.toggle('done')"></div><span class="check-label">Hot tub temperature checked</span></div>
+      <div class="check-row"><div class="checkbox" onclick="this.classList.toggle('checked');this.nextSibling.classList.toggle('done')"></div><span class="check-label">Heating set</span></div>
+      <div class="check-row"><div class="checkbox" onclick="this.classList.toggle('checked');this.nextSibling.classList.toggle('done')"></div><span class="check-label">WiFi tested</span></div>
+      <div class="check-row"><div class="checkbox" onclick="this.classList.toggle('checked');this.nextSibling.classList.toggle('done')"></div><span class="check-label">External areas checked</span></div>
+      <div class="check-row"><div class="checkbox" onclick="this.classList.toggle('checked');this.nextSibling.classList.toggle('done')"></div><span class="check-label">Information folder updated</span></div>
+    </div>
+    <div style="margin-top:16px">
+      <button class="btn-success">✓ Mark as Complete</button>
+      <button class="btn-outline">Save Progress</button>
+    </div>
+  </div>
+</div>
+
+<!-- POST CHECK OUT -->
+<div id="screen-post-checkout" class="screen">
+  <div class="header">
+    <div class="header-icon" onclick="go('home')" style="cursor:pointer">🏠</div>
+    <div class="header-title">Post Check Out</div>
+    <div class="header-icon">👤</div>
+  </div>
+  <div class="scroll-content">
+    <input class="search" placeholder="Search by Booking ID or Guest Name">
+    <div class="tabs">
+      <button class="tab active">Pending Check Outs</button>
+      <button class="tab">Completed</button>
+    </div>
+    <div style="height:12px"></div>
+    <div class="booking-card" style="border-left-color:var(--warning)">
+      <div style="flex:1">
+        <div class="booking-ref">50998761 – Richard Oakley</div>
+        <div class="booking-dates">📅 03/04/2026 – 05/04/2026</div>
+        <div style="display:flex;align-items:center;gap:4px;margin-top:4px"><span style="font-size:12px">⚠️</span><span style="font-size:12px;color:var(--error);font-weight:600">Damage Reported</span></div>
+      </div>
+      <span>✏️</span>
+    </div>
+    <div class="booking-card" style="border-left-color:var(--warning)">
+      <div style="flex:1">
+        <div class="booking-ref">49873245 – Clare Jennings</div>
+        <div class="booking-dates">📅 02/04/2026 – 05/04/2026</div>
+      </div>
+      <span>✏️</span>
+    </div>
+  </div>
+</div>
+
+<!-- APPROVALS -->
+<div id="screen-approvals" class="screen">
+  <div class="header">
+    <div class="header-icon" onclick="go('home')" style="cursor:pointer">🏠</div>
+    <div class="header-title">Caretaker Approvals</div>
+    <div class="header-icon">👤</div>
+  </div>
+  <div class="scroll-content">
+    <div class="toolbar">
+      <div class="selector">Select Property <span>▾</span></div>
+      <button class="add-btn">+ Add</button>
+    </div>
+    <div class="tabs">
+      <button class="tab active">In Progress</button>
+      <button class="tab">Completed</button>
+    </div>
+    <div style="height:12px"></div>
+    <div class="approval-card">
+      <div class="approval-top">
+        <span style="font-size:13px;font-weight:600">📅 05/04/2026</span>
+        <span class="pill pill-blue">In Progress</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px">
+        <span>💰</span><span class="approval-amount">£30.00</span>
+      </div>
+      <div class="approval-desc">🏷️ Call out ref. Issue with flat shower</div>
+      <div class="card-actions">
+        <button class="hist-btn">Approval History</button>
+        <button class="edit-btn">👁️</button>
+      </div>
+    </div>
+    <div class="approval-card">
+      <div class="approval-top">
+        <span style="font-size:13px;font-weight:600">📅 29/03/2026</span>
+        <span class="pill pill-blue">In Progress</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px">
+        <span>💰</span><span class="approval-amount">£7.12</span>
+      </div>
+      <div class="approval-desc">🏷️ Hard brush</div>
+      <div class="card-actions">
+        <button class="hist-btn">Approval History</button>
+        <button class="edit-btn">👁️</button>
+      </div>
+    </div>
+    <div class="approval-card">
+      <div class="approval-top">
+        <span style="font-size:13px;font-weight:600">📅 23/02/2026</span>
+        <span class="pill pill-blue">In Progress</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px">
+        <span>💰</span><span class="approval-amount">£965.08</span>
+      </div>
+      <div class="approval-desc">🏷️ Carpet for bed 7 sgh and fitting</div>
+      <div class="card-actions">
+        <button class="hist-btn">Approval History</button>
+        <button class="edit-btn">👁️</button>
+      </div>
+    </div>
+    <div class="approval-card">
+      <div class="approval-top">
+        <span style="font-size:13px;font-weight:600">📅 26/01/2026</span>
+        <span class="pill pill-blue">In Progress</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px">
+        <span>💰</span><span class="approval-amount">£716.54</span>
+      </div>
+      <div class="approval-desc">🏷️ Blinds for bar room</div>
+      <div class="card-actions">
+        <button class="hist-btn">Approval History</button>
+        <button class="edit-btn">👁️</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WEEKLY CHECKS -->
+<div id="screen-weekly-checks" class="screen">
+  <div class="header">
+    <div class="header-icon" onclick="go('home')" style="cursor:pointer">🏠</div>
+    <div class="header-title">Weekly Checks</div>
+    <div class="header-icon">👤</div>
+  </div>
+  <div class="scroll-content">
+    <div class="toolbar"><div class="selector">Select Property <span>▾</span></div></div>
+    <div class="card" style="display:flex;align-items:center;gap:12px">
+      <span style="font-size:22px;color:var(--success)">✅</span>
+      <div style="flex:1">
+        <div style="font-size:14px;font-weight:700">30/03/2026 – 05/04/2026</div>
+        <div style="font-size:12px;color:var(--secondary)">Stag House</div>
+        <div class="progress-track" style="margin-top:8px"><div class="progress-fill" style="width:100%"></div></div>
+      </div>
+      <span class="pill pill-green">Done</span>
+    </div>
+    <div class="card" style="display:flex;align-items:center;gap:12px">
+      <span style="font-size:22px;color:var(--warning)">⏱️</span>
+      <div style="flex:1">
+        <div style="font-size:14px;font-weight:700">06/04/2026 – 12/04/2026</div>
+        <div style="font-size:12px;color:var(--secondary)">Stag House</div>
+        <div class="progress-track" style="margin-top:8px"><div class="progress-fill" style="width:0%"></div></div>
+      </div>
+      <span class="pill pill-amber">Pending</span>
+    </div>
+    <div class="card" style="display:flex;align-items:center;gap:12px">
+      <span style="font-size:22px;color:var(--success)">✅</span>
+      <div style="flex:1">
+        <div style="font-size:14px;font-weight:700">30/03/2026 – 05/04/2026</div>
+        <div style="font-size:12px;color:var(--secondary)">The Granary</div>
+        <div class="progress-track" style="margin-top:8px"><div class="progress-fill" style="width:100%"></div></div>
+      </div>
+      <span class="pill pill-green">Done</span>
+    </div>
+    <div class="card" style="display:flex;align-items:center;gap:12px">
+      <span style="font-size:22px;color:var(--warning)">⏱️</span>
+      <div style="flex:1">
+        <div style="font-size:14px;font-weight:700">06/04/2026 – 12/04/2026</div>
+        <div style="font-size:12px;color:var(--secondary)">Oak Barn</div>
+        <div class="progress-track" style="margin-top:8px"><div class="progress-fill" style="width:38%"></div></div>
+      </div>
+      <span class="pill pill-amber">Pending</span>
+    </div>
+  </div>
+</div>
+
+<!-- MONTHLY CHECKS -->
+<div id="screen-monthly-checks" class="screen">
+  <div class="header">
+    <div class="header-icon" onclick="go('home')" style="cursor:pointer">🏠</div>
+    <div class="header-title">Monthly Checks</div>
+    <div class="header-icon">👤</div>
+  </div>
+  <div class="scroll-content" style="padding:16px">
+    <div class="card" style="margin:0 0 14px">
+      <div style="font-size:16px;font-weight:700;color:var(--primary)">April 2026</div>
+      <div style="font-size:13px;color:var(--secondary);margin-top:2px">Stag House</div>
+    </div>
+    <div class="section-title" style="padding:0 0 8px">Meter Readings</div>
+    <div class="meter-grid">
+      <div class="meter-card"><div class="meter-label">Electric (kWh)</div><input style="font-size:20px;font-weight:800;color:var(--primary);text-align:center;width:100%;border:none;border-bottom:1px solid var(--border);background:none;outline:none;padding-bottom:4px" value="48203"></div>
+      <div class="meter-card"><div class="meter-label">Gas (m³)</div><input style="font-size:20px;font-weight:800;color:var(--primary);text-align:center;width:100%;border:none;border-bottom:1px solid var(--border);background:none;outline:none;padding-bottom:4px" value="12045"></div>
+      <div class="meter-card"><div class="meter-label">Water (m³)</div><input style="font-size:20px;font-weight:800;color:var(--primary);text-align:center;width:100%;border:none;border-bottom:1px solid var(--border);background:none;outline:none;padding-bottom:4px" value="3821"></div>
+    </div>
+    <div class="section-title" style="padding:0 0 8px">Checklist (0/8)</div>
+    <div class="progress-track" style="margin-bottom:14px"><div class="progress-fill" style="width:0%"></div></div>
+    <div class="check-row"><div class="checkbox" onclick="this.classList.toggle('checked');this.nextSibling.classList.toggle('done')"></div><span class="check-label">Electric meter reading taken</span></div>
+    <div class="check-row"><div class="checkbox" onclick="this.classList.toggle('checked');this.nextSibling.classList.toggle('done')"></div><span class="check-label">Gas meter reading taken</span></div>
+    <div class="check-row"><div class="checkbox" onclick="this.classList.toggle('checked');this.nextSibling.classList.toggle('done')"></div><span class="check-label">Water meter reading taken</span></div>
+    <div class="check-row"><div class="checkbox" onclick="this.classList.toggle('checked');this.nextSibling.classList.toggle('done')"></div><span class="check-label">Septic tank checked</span></div>
+    <div class="check-row"><div class="checkbox" onclick="this.classList.toggle('checked');this.nextSibling.classList.toggle('done')"></div><span class="check-label">Gutters inspected</span></div>
+    <div class="check-row"><div class="checkbox" onclick="this.classList.toggle('checked');this.nextSibling.classList.toggle('done')"></div><span class="check-label">Pest control check</span></div>
+    <div class="check-row"><div class="checkbox" onclick="this.classList.toggle('checked');this.nextSibling.classList.toggle('done')"></div><span class="check-label">Fire blanket locations checked</span></div>
+    <div class="check-row"><div class="checkbox" onclick="this.classList.toggle('checked');this.nextSibling.classList.toggle('done')"></div><span class="check-label">Emergency lighting tested</span></div>
+    <button class="btn-primary">Mark Month as Complete</button>
+  </div>
+</div>
+
+<!-- DASHBOARD -->
+<div id="screen-dashboard" class="screen">
+  <div class="header">
+    <div class="header-icon" onclick="go('home')" style="cursor:pointer">🏠</div>
+    <div class="header-title">Office Dashboard</div>
+    <div class="header-icon">👤</div>
+  </div>
+  <div class="scroll-content">
+    <div class="section-title">Today at a Glance</div>
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="stat-icon-wrap" style="background:#F0EBD8">🚪</div>
+        <div class="stat-value">2</div>
+        <div class="stat-label">Check-Ins Today</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon-wrap" style="background:var(--info-bg)">📅</div>
+        <div class="stat-value">1</div>
+        <div class="stat-label">Check-Ins Tomorrow</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon-wrap" style="background:var(--warning-bg)">🚶</div>
+        <div class="stat-value">2</div>
+        <div class="stat-label">Check-Outs Today</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon-wrap" style="background:var(--success-bg)">🏠</div>
+        <div class="stat-value">3/4</div>
+        <div class="stat-label">Properties Occupied</div>
+      </div>
+    </div>
+    <div class="section-title">Checks Required</div>
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="stat-icon-wrap" style="background:var(--warning-bg)">✅</div>
+        <div class="stat-value">2</div>
+        <div class="stat-label">Pre Check-Ins Pending</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon-wrap" style="background:var(--warning-bg)">🚪</div>
+        <div class="stat-value">2</div>
+        <div class="stat-label">Post Check-Outs Pending</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon-wrap" style="background:var(--error-bg)">⚠️</div>
+        <div class="stat-value">1</div>
+        <div class="stat-label">Damage Reports</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon-wrap" style="background:#F0EBD8">📨</div>
+        <div class="stat-value">4</div>
+        <div class="stat-label">Pending Approvals</div>
+      </div>
+    </div>
+    <div class="section-title">Action Items</div>
+    <div class="alert-row">
+      <div class="alert-card" style="background:var(--error-bg)"><span style="font-size:22px">🔴</span><div class="alert-val">1</div><div class="alert-lbl">Overdue</div></div>
+      <div class="alert-card" style="background:var(--warning-bg)"><span style="font-size:22px">⏱️</span><div class="alert-val">6</div><div class="alert-lbl">Open</div></div>
+      <div class="alert-card" style="background:var(--error-bg)"><span style="font-size:22px">🔧</span><div class="alert-val">1</div><div class="alert-lbl">Urgent Tickets</div></div>
+      <div class="alert-card" style="background:var(--bg)"><span style="font-size:22px">📋</span><div class="alert-val">3</div><div class="alert-lbl">Open Tickets</div></div>
+    </div>
+    <div class="section-title">By Property</div>
+    <div class="card" style="margin:0 12px">
+      <div style="font-size:13px;font-weight:700;color:var(--primary);margin-bottom:8px">Stag House</div>
+      <div class="bar-row"><span class="bar-label">Check-Ins</span><div class="bar-track"><div class="bar-fill" style="width:40%;background:var(--primary)"></div></div><span class="bar-val">2</span></div>
+      <div class="bar-row"><span class="bar-label">Check-Outs</span><div class="bar-track"><div class="bar-fill" style="width:20%;background:var(--warning)"></div></div><span class="bar-val">1</span></div>
+      <div class="bar-row"><span class="bar-label">Actions</span><div class="bar-track"><div class="bar-fill" style="width:30%;background:var(--error)"></div></div><span class="bar-val">3</span></div>
+      <div style="font-size:13px;font-weight:700;color:var(--primary);margin:14px 0 8px">The Granary</div>
+      <div class="bar-row"><span class="bar-label">Check-Ins</span><div class="bar-track"><div class="bar-fill" style="width:20%;background:var(--primary)"></div></div><span class="bar-val">1</span></div>
+      <div class="bar-row"><span class="bar-label">Check-Outs</span><div class="bar-track"><div class="bar-fill" style="width:20%;background:var(--warning)"></div></div><span class="bar-val">1</span></div>
+      <div class="bar-row"><span class="bar-label">Actions</span><div class="bar-track"><div class="bar-fill" style="width:20%;background:var(--error)"></div></div><span class="bar-val">2</span></div>
+      <div style="font-size:13px;font-weight:700;color:var(--primary);margin:14px 0 8px">Oak Barn</div>
+      <div class="bar-row"><span class="bar-label">Check-Ins</span><div class="bar-track"><div class="bar-fill" style="width:0%;background:var(--primary)"></div></div><span class="bar-val">0</span></div>
+      <div class="bar-row"><span class="bar-label">Check-Outs</span><div class="bar-track"><div class="bar-fill" style="width:0%;background:var(--warning)"></div></div><span class="bar-val">0</span></div>
+      <div class="bar-row"><span class="bar-label">Actions</span><div class="bar-track"><div class="bar-fill" style="width:10%;background:var(--error)"></div></div><span class="bar-val">1</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- WORK TICKETS -->
+<div id="screen-work-tickets" class="screen">
+  <div class="header">
+    <div class="header-icon" onclick="go('home')" style="cursor:pointer">🏠</div>
+    <div class="header-title">Work Tickets</div>
+    <div class="header-icon">➕</div>
+  </div>
+  <div class="scroll-content">
+    <div class="toolbar"><div class="selector">Select Property <span>▾</span></div></div>
+    <div class="tabs">
+      <button class="tab active">Open</button>
+      <button class="tab">All Tickets</button>
+    </div>
+    <div style="height:12px"></div>
+    <div class="ticket-card">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:4px">
+        <span class="ticket-title">Fix leaking tap in bedroom 3</span>
+        <span class="pill pill-blue">in progress</span>
+      </div>
+      <div style="font-size:12px;color:var(--secondary)">Stag House</div>
+      <div class="ticket-meta">
+        <span>👤 James Hartley</span>
+        <span style="color:var(--error)">🚩 high</span>
+        <span>📅 06/04/2026</span>
+      </div>
+    </div>
+    <div class="ticket-card med">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:4px">
+        <span class="ticket-title">Deep clean kitchen after guest damage</span>
+        <span class="pill pill-amber">open</span>
+      </div>
+      <div style="font-size:12px;color:var(--secondary)">Stag House</div>
+      <div class="ticket-meta">
+        <span>👤 James Hartley</span>
+        <span style="color:var(--warning)">🚩 medium</span>
+        <span>📅 06/04/2026</span>
+      </div>
+    </div>
+    <div class="ticket-card low">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:4px">
+        <span class="ticket-title">Replace broken patio chair</span>
+        <span class="pill pill-grey">open</span>
+      </div>
+      <div style="font-size:12px;color:var(--secondary)">The Granary</div>
+      <div class="ticket-meta">
+        <span>👤 Emily Clarke</span>
+        <span style="color:var(--muted)">🚩 low</span>
+        <span>📅 10/04/2026</span>
+      </div>
+    </div>
+    <div class="ticket-card done">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:4px">
+        <span class="ticket-title">Test and reset hot tub</span>
+        <span class="pill pill-green">completed</span>
+      </div>
+      <div style="font-size:12px;color:var(--secondary)">Oak Barn</div>
+      <div class="ticket-meta">
+        <span>👤 Emily Clarke</span>
+        <span style="color:var(--error)">🚩 urgent</span>
+        <span>📅 02/04/2026</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROPERTIES -->
+<div id="screen-properties" class="screen">
+  <div class="header">
+    <div class="header-icon" onclick="go('home')" style="cursor:pointer">🏠</div>
+    <div class="header-title">Properties</div>
+    <div class="header-icon">➕</div>
+  </div>
+  <div class="scroll-content">
+    <div style="height:12px"></div>
+    <div class="prop-card">
+      <div style="font-size:32px">🏡</div>
+      <div style="flex:1">
+        <div class="prop-name">Stag House</div>
+        <div class="prop-addr">Church Lane, Ludlow, SY8 1AW</div>
+        <div class="prop-chips">
+          <span class="prop-chip">🛏 10 bed</span>
+          <span class="prop-chip">👥 20 guests</span>
+          <span class="prop-chip">cottage</span>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+        <div style="width:10px;height:10px;border-radius:5px;background:var(--success)"></div>
+        <span>✏️</span>
+      </div>
+    </div>
+    <div class="prop-card">
+      <div style="font-size:32px">🏠</div>
+      <div style="flex:1">
+        <div class="prop-name">The Granary</div>
+        <div class="prop-addr">Mill Road, Shrewsbury, SY3 8PL</div>
+        <div class="prop-chips">
+          <span class="prop-chip">🛏 6 bed</span>
+          <span class="prop-chip">👥 12 guests</span>
+          <span class="prop-chip">barn</span>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+        <div style="width:10px;height:10px;border-radius:5px;background:var(--success)"></div>
+        <span>✏️</span>
+      </div>
+    </div>
+    <div class="prop-card">
+      <div style="font-size:32px">🌳</div>
+      <div style="flex:1">
+        <div class="prop-name">Oak Barn</div>
+        <div class="prop-addr">Wenlock Edge, Much Wenlock, TF13 6DB</div>
+        <div class="prop-chips">
+          <span class="prop-chip">🛏 8 bed</span>
+          <span class="prop-chip">👥 16 guests</span>
+          <span class="prop-chip">barn</span>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+        <div style="width:10px;height:10px;border-radius:5px;background:var(--success)"></div>
+        <span>✏️</span>
+      </div>
+    </div>
+    <div class="prop-card">
+      <div style="font-size:32px">🏘️</div>
+      <div style="flex:1">
+        <div class="prop-name">The Lodge</div>
+        <div class="prop-addr">Ironbridge, Telford, TF8 7LN</div>
+        <div class="prop-chips">
+          <span class="prop-chip">🛏 4 bed</span>
+          <span class="prop-chip">👥 8 guests</span>
+          <span class="prop-chip">lodge</span>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+        <div style="width:10px;height:10px;border-radius:5px;background:var(--success)"></div>
+        <span>✏️</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div><!-- end phone -->
+
+<script>
+function go(screen) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  const el = document.getElementById('screen-' + screen);
+  if (el) { el.classList.add('active'); el.scrollTop = 0; }
+  window.scrollTo(0,0);
+}
+// Tab switching
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', function() {
+    const tabs = this.closest('.tabs');
+    tabs.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    this.classList.add('active');
+  });
+});
+</script>
+</body>
+</html>
