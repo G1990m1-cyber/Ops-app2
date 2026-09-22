@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<title>Max &amp; Chloe's Playtime</title>
+<style>
+  :root {
+    --bg: #fff7e6;
+    --ink: #3b2f2f;
+    --max: #4da3ff;
+    --chloe: #ff7ab8;
+    --card: #ffffff;
+    --shadow: 0 6px 0 rgba(0,0,0,0.12);
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; user-select: none; -webkit-user-select: none; }
+  html, body { margin: 0; height: 100%; overflow: hidden; touch-action: manipulation; }
+  body {
+    font-family: "Comic Sans MS", "Chalkboard SE", "Marker Felt", "Segoe UI", system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    display: flex; flex-direction: column;
+  }
+  .screen { display: none; flex: 1; flex-direction: column; align-items: center; justify-content: center; padding: 16px; position: relative; }
+  .screen.active { display: flex; }
+  h1 { font-size: clamp(28px, 7vw, 48px); margin: 0 0 8px; text-align: center; }
+  h2 { font-size: clamp(22px, 6vw, 36px); margin: 0 0 16px; text-align: center; }
+  .sub { font-size: clamp(16px, 4vw, 22px); opacity: 0.75; margin-bottom: 24px; text-align: center; }
+  .row { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; width: 100%; max-width: 640px; }
+  .big-btn {
+    flex: 1 1 220px; min-height: 140px; border: none; border-radius: 28px;
+    background: var(--card); box-shadow: var(--shadow); cursor: pointer;
+    font-family: inherit; font-size: clamp(22px, 5vw, 32px); color: var(--ink);
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
+    transition: transform .1s;
+  }
+  .big-btn:active { transform: translateY(4px); box-shadow: 0 2px 0 rgba(0,0,0,0.12); }
+  .big-btn .emoji { font-size: clamp(56px, 14vw, 90px); line-height: 1; }
+  .big-btn.max { background: var(--max); color: white; }
+  .big-btn.chloe { background: var(--chloe); color: white; }
+  .topbar {
+    position: absolute; top: 0; left: 0; right: 0; display: flex; align-items: center; justify-content: space-between;
+    padding: 12px 16px; padding-top: max(12px, env(safe-area-inset-top)); font-size: clamp(18px, 4.5vw, 26px);
+  }
+  .back {
+    border: none; background: var(--card); box-shadow: var(--shadow); border-radius: 999px;
+    width: 64px; height: 64px; font-size: 30px; cursor: pointer; font-family: inherit;
+  }
+  .back:active { transform: translateY(3px); box-shadow: none; }
+  .stars { background: var(--card); box-shadow: var(--shadow); border-radius: 999px; padding: 10px 18px; }
+  .prompt { font-size: clamp(26px, 7vw, 44px); text-align: center; margin: 80px 0 24px; min-height: 1.3em; }
+  .choices { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; width: 100%; max-width: 720px; }
+  .choice {
+    flex: 1 1 140px; max-width: 220px; aspect-ratio: 1; border: none; border-radius: 28px;
+    background: var(--card); box-shadow: var(--shadow); cursor: pointer;
+    font-size: clamp(64px, 18vw, 120px); line-height: 1; font-family: inherit;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .choice:active { transform: translateY(4px); box-shadow: 0 2px 0 rgba(0,0,0,0.12); }
+  .choice.color { font-size: 0; }
+  .choice.num { font-size: clamp(48px, 14vw, 96px); font-weight: bold; }
+  .choice.wrong { animation: wobble .45s; }
+  .choice.right { animation: pop .45s; }
+  @keyframes wobble { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-12px)} 75%{transform:translateX(12px)} }
+  @keyframes pop { 0%{transform:scale(1)} 50%{transform:scale(1.18)} 100%{transform:scale(1)} }
+  .count-area {
+    display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; align-items: center;
+    max-width: 520px; font-size: clamp(44px, 12vw, 80px); line-height: 1; margin-bottom: 28px; min-height: 1.2em;
+  }
+  #bubbles { position: absolute; inset: 0; overflow: hidden; }
+  .bubble {
+    position: absolute; bottom: -140px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    cursor: pointer; box-shadow: inset -8px -8px 0 rgba(0,0,0,0.08), inset 6px 6px 0 rgba(255,255,255,0.6);
+    animation: rise linear forwards;
+  }
+  .bubble span { font-size: 55%; line-height: 1; pointer-events: none; }
+  @keyframes rise { to { transform: translateY(calc(-100vh - 160px)); } }
+  .bubble-hint { position: absolute; top: 90px; left: 0; right: 0; text-align: center; font-size: clamp(22px, 6vw, 36px); pointer-events: none; opacity: .8; }
+  .confetti { position: fixed; pointer-events: none; font-size: 28px; animation: fall 1.1s ease-out forwards; z-index: 10; }
+  @keyframes fall { 0%{opacity:1; transform:translate(0,0) rotate(0)} 100%{opacity:0; transform:translate(var(--dx), var(--dy)) rotate(360deg)} }
+  .cheer {
+    position: fixed; inset: 0; display: none; align-items: center; justify-content: center; pointer-events: none;
+    font-size: clamp(40px, 12vw, 90px); text-align: center; z-index: 20; text-shadow: 0 4px 0 rgba(0,0,0,.1);
+  }
+  .cheer.show { display: flex; animation: pop .6s; }
+  .footer-note { position: absolute; bottom: max(10px, env(safe-area-inset-bottom)); font-size: 13px; opacity: .5; text-align: center; padding: 0 16px; }
+</style>
+</head>
+<body>
+
+<!-- WHO IS PLAYING -->
+<section id="who" class="screen active">
+  <h1>🎈 Playtime! 🎈</h1>
+  <p class="sub">Who is playing?</p>
+  <div class="row">
+    <button class="big-btn max" data-player="Max"><span class="emoji">🦖</span>Max</button>
+    <button class="big-btn chloe" data-player="Chloe"><span class="emoji">🦄</span>Chloe</button>
+  </div>
+  <div class="footer-note">Tip: tap the name for sounds. Add to Home Screen for full-screen fun.</div>
+</section>
+
+<!-- GAME MENU -->
+<section id="menu" class="screen">
+  <div class="topbar"><button class="back" data-go="who">🏠</button><span class="stars">⭐ <b id="star-count">0</b></span></div>
+  <h2 id="hello">Hi!</h2>
+  <p class="sub">Pick a game</p>
+  <div class="row">
+    <button class="big-btn" data-game="bubbles"><span class="emoji">🫧</span>Pop Bubbles</button>
+    <button class="big-btn" data-game="animals"><span class="emoji">🐮</span>Find the Animal</button>
+    <button class="big-btn" data-game="colors"><span class="emoji">🌈</span>Colours</button>
+    <button class="big-btn" data-game="count"><span class="emoji">🔢</span>Counting</button>
+  </div>
+</section>
+
+<!-- BUBBLES -->
+<section id="bubbles-screen" class="screen">
+  <div id="bubbles"></div>
+  <div class="topbar"><button class="back" data-go="menu">⬅️</button><span class="stars">⭐ <b class="star-live">0</b></span></div>
+  <div class="bubble-hint">Pop the bubbles!</div>
+</section>
+
+<!-- FIND THE ANIMAL / COLOURS / COUNTING share one layout -->
+<section id="quiz" class="screen">
+  <div class="topbar"><button class="back" data-go="menu">⬅️</button><span class="stars">⭐ <b class="star-live">0</b></span></div>
+  <div class="prompt" id="prompt"></div>
+  <div class="count-area" id="count-area"></div>
+  <div class="choices" id="choices"></div>
+</section>
+
+<div class="cheer" id="cheer"></div>
+
+<script>
+(function () {
+  // ---------- state ----------
+  var player = 'Max';
+  var stars = 0;
+  var currentGame = null;
+  var bubbleTimer = null;
+  var busy = false;
+
+  var ANIMALS = [
+    ['🐮', 'cow'], ['🐶', 'dog'], ['🐱', 'cat'], ['🐷', 'pig'], ['🐸', 'frog'], ['🦁', 'lion'],
+    ['🐘', 'elephant'], ['🐵', 'monkey'], ['🐔', 'chicken'], ['🐰', 'rabbit'], ['🦆', 'duck'], ['🐴', 'horse']
+  ];
+  var COLORS = [
+    ['#e53935', 'red'], ['#1e88e5', 'blue'], ['#43a047', 'green'], ['#fdd835', 'yellow'],
+    ['#fb8c00', 'orange'], ['#8e24aa', 'purple'], ['#ec407a', 'pink']
+  ];
+  var COUNT_THINGS = ['⭐', '🍎', '🚗', '🐟', '🎈', '🍪', '🦋'];
+  var CHEERS = ['Yay!', 'Well done!', 'Brilliant!', 'Super!', 'You did it!', 'Hooray!'];
+  var BUBBLE_COLORS = ['#ffb3c6', '#a0e7ff', '#c8f7c5', '#fff3a0', '#e0c3ff', '#ffd6a5'];
+
+  // ---------- helpers ----------
+  function $(id) { return document.getElementById(id); }
+  function rand(n) { return Math.floor(Math.random() * n); }
+  function pick(arr) { return arr[rand(arr.length)]; }
+  function shuffle(arr) {
+    var a = arr.slice();
+    for (var i = a.length - 1; i > 0; i--) { var j = rand(i + 1); var t = a[i]; a[i] = a[j]; a[j] = t; }
+    return a;
+  }
+  function sample(arr, n) { return shuffle(arr).slice(0, n); }
+
+  // Younger player gets fewer choices and smaller numbers.
+  function difficulty() {
+    return player === 'Chloe' ? { choices: 2, maxCount: 3 } : { choices: 3, maxCount: 5 };
+  }
+
+  // ---------- sound ----------
+  var audioCtx = null;
+  function ensureAudio() {
+    try {
+      if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      if (audioCtx.state === 'suspended') audioCtx.resume();
+    } catch (e) { audioCtx = null; }
+  }
+  function tone(freq, dur, type, when, vol) {
+    if (!audioCtx) return;
+    try {
+      var o = audioCtx.createOscillator(), g = audioCtx.createGain();
+      o.type = type || 'sine'; o.frequency.value = freq;
+      var t = audioCtx.currentTime + (when || 0);
+      g.gain.setValueAtTime(vol || 0.2, t);
+      g.gain.exponentialRampToValueAtTime(0.001, t + dur);
+      o.connect(g); g.connect(audioCtx.destination);
+      o.start(t); o.stop(t + dur);
+    } catch (e) {}
+  }
+  function popSound() { tone(600 + rand(400), 0.12, 'triangle', 0, 0.25); }
+  function cheerSound() { tone(523, .15, 'sine', 0); tone(659, .15, 'sine', .12); tone(784, .15, 'sine', .24); tone(1047, .35, 'sine', .36); }
+  function nopeSound() { tone(220, .25, 'sine', 0, 0.12); }
+  function tapSound() { tone(440, .08, 'square', 0, 0.08); }
+
+  function say(text) {
+    try {
+      if (!('speechSynthesis' in window)) return;
+      window.speechSynthesis.cancel();
+      var u = new SpeechSynthesisUtterance(text);
+      u.rate = 0.9; u.pitch = 1.2;
+      window.speechSynthesis.speak(u);
+    } catch (e) {}
+  }
+
+  // ---------- screens ----------
+  function show(id) {
+    var screens = document.querySelectorAll('.screen');
+    for (var i = 0; i < screens.length; i++) screens[i].classList.remove('active');
+    $(id).classList.add('active');
+    if (id !== 'bubbles-screen') stopBubbles();
+  }
+  function addStar() {
+    stars++;
+    $('star-count').textContent = stars;
+    var live = document.querySelectorAll('.star-live');
+    for (var i = 0; i < live.length; i++) live[i].textContent = stars;
+  }
+  function confetti(x, y) {
+    var bits = ['🎉', '⭐', '✨', '🎈', '💫'];
+    for (var i = 0; i < 10; i++) {
+      var s = document.createElement('span');
+      s.className = 'confetti';
+      s.textContent = pick(bits);
+      s.style.left = x + 'px'; s.style.top = y + 'px';
+      s.style.setProperty('--dx', (rand(240) - 120) + 'px');
+      s.style.setProperty('--dy', (rand(160) + 60) + 'px');
+      document.body.appendChild(s);
+      (function (el) { setTimeout(function () { el.remove(); }, 1200); })(s);
+    }
+  }
+  function cheer(cb) {
+    var c = $('cheer');
+    var msg = pick(CHEERS);
+    c.textContent = '🌟 ' + msg + ' 🌟';
+    c.classList.remove('show'); void c.offsetWidth; c.classList.add('show');
+    cheerSound();
+    say(msg + ' ' + player + '!');
+    setTimeout(function () { c.classList.remove('show'); if (cb) cb(); }, 1300);
+  }
+
+  // ---------- bubbles game (great for age 2: nothing can go wrong) ----------
+  function spawnBubble() {
+    var area = $('bubbles');
+    var size = 90 + rand(70);
+    var b = document.createElement('div');
+    b.className = 'bubble';
+    b.style.width = b.style.height = size + 'px';
+    b.style.left = rand(Math.max(1, area.clientWidth - size)) + 'px';
+    b.style.background = pick(BUBBLE_COLORS);
+    b.style.fontSize = size + 'px';
+    b.style.animationDuration = (6 + Math.random() * 5) + 's';
+    var inner = document.createElement('span');
+    inner.textContent = pick(['🐟', '🦀', '🐙', '🐢', '⭐', '🐬', '🦋', '🌸']);
+    b.appendChild(inner);
+    b.addEventListener('pointerdown', function (e) {
+      e.preventDefault();
+      popSound();
+      confetti(e.clientX, e.clientY);
+      addStar();
+      b.remove();
+    });
+    b.addEventListener('animationend', function () { b.remove(); });
+    area.appendChild(b);
+  }
+  function startBubbles() {
+    stopBubbles();
+    $('bubbles').innerHTML = '';
+    say('Pop the bubbles, ' + player + '!');
+    for (var i = 0; i < 3; i++) setTimeout(spawnBubble, i * 400);
+    bubbleTimer = setInterval(spawnBubble, 1100);
+  }
+  function stopBubbles() {
+    if (bubbleTimer) { clearInterval(bubbleTimer); bubbleTimer = null; }
+    $('bubbles').innerHTML = '';
+  }
+
+  // ---------- quiz games ----------
+  function renderChoices(items, makeButton, onCorrect) {
+    var box = $('choices');
+    box.innerHTML = '';
+    busy = false;
+    items.forEach(function (item) {
+      var btn = document.createElement('button');
+      btn.className = 'choice';
+      makeButton(btn, item);
+      btn.addEventListener('pointerdown', function (e) {
+        e.preventDefault();
+        if (busy) return;
+        if (item.correct) {
+          busy = true;
+          btn.classList.add('right');
+          confetti(e.clientX, e.clientY);
+          addStar();
+          cheer(onCorrect);
+        } else {
+          btn.classList.remove('wrong'); void btn.offsetWidth; btn.classList.add('wrong');
+          nopeSound();
+          say('Try again!');
+        }
+      });
+      box.appendChild(btn);
+    });
+  }
+
+  function roundAnimals() {
+    var d = difficulty();
+    var set = sample(ANIMALS, d.choices);
+    var target = pick(set);
+    $('prompt').textContent = 'Find the ' + target[1] + '!';
+    $('count-area').innerHTML = '';
+    say('Find the ' + target[1]);
+    renderChoices(set.map(function (a) { return { emoji: a[0], correct: a === target }; }),
+      function (btn, item) { btn.textContent = item.emoji; }, roundAnimals);
+  }
+
+  function roundColors() {
+    var d = difficulty();
+    var set = sample(COLORS, d.choices);
+    var target = pick(set);
+    $('prompt').textContent = 'Tap ' + target[1] + '!';
+    $('count-area').innerHTML = '';
+    say('Tap the ' + target[1] + ' one');
+    renderChoices(set.map(function (c) { return { color: c[0], correct: c === target }; }),
+      function (btn, item) { btn.classList.add('color'); btn.style.background = item.color; }, roundColors);
+  }
+
+  function roundCount() {
+    var d = difficulty();
+    var n = 1 + rand(d.maxCount);
+    var thing = pick(COUNT_THINGS);
+    $('prompt').textContent = 'How many?';
+    var area = $('count-area');
+    area.innerHTML = '';
+    for (var i = 0; i < n; i++) { var s = document.createElement('span'); s.textContent = thing; area.appendChild(s); }
+    say('How many can you count?');
+    var nums = [n];
+    while (nums.length < d.choices) { var m = 1 + rand(d.maxCount); if (nums.indexOf(m) === -1) nums.push(m); }
+    renderChoices(shuffle(nums).map(function (v) { return { value: v, correct: v === n }; }),
+      function (btn, item) { btn.classList.add('num'); btn.textContent = item.value; }, roundCount);
+  }
+
+  function startGame(name) {
+    currentGame = name;
+    if (name === 'bubbles') { show('bubbles-screen'); startBubbles(); return; }
+    show('quiz');
+    if (name === 'animals') roundAnimals();
+    else if (name === 'colors') roundColors();
+    else roundCount();
+  }
+
+  // ---------- wiring ----------
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest('[data-player],[data-game],[data-go]');
+    if (!el) return;
+    ensureAudio();
+    tapSound();
+    if (el.dataset.player) {
+      player = el.dataset.player;
+      $('hello').textContent = 'Hi ' + player + '! 👋';
+      say('Hi ' + player + '! Pick a game.');
+      show('menu');
+    } else if (el.dataset.game) {
+      startGame(el.dataset.game);
+    } else if (el.dataset.go) {
+      show(el.dataset.go);
+    }
+  });
+
+  // Prevent double-tap zoom and rubber-banding on iOS.
+  document.addEventListener('touchmove', function (e) { e.preventDefault(); }, { passive: false });
+  var lastTouch = 0;
+  document.addEventListener('touchend', function (e) {
+    var now = Date.now();
+    if (now - lastTouch < 300) e.preventDefault();
+    lastTouch = now;
+  }, { passive: false });
+})();
+</script>
+</body>
+</html>
