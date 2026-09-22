@@ -23,14 +23,15 @@
     color: var(--ink);
     display: flex; flex-direction: column;
   }
-  .screen { display: none; flex: 1; flex-direction: column; align-items: center; justify-content: center; padding: 16px; position: relative; }
+  .screen { display: none; flex: 1; flex-direction: column; align-items: center; justify-content: center; padding: 16px; position: relative; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+  .screen.no-scroll { overflow: hidden; }
   .screen.active { display: flex; }
   h1 { font-size: clamp(28px, 7vw, 48px); margin: 0 0 8px; text-align: center; }
   h2 { font-size: clamp(22px, 6vw, 36px); margin: 0 0 16px; text-align: center; }
   .sub { font-size: clamp(16px, 4vw, 22px); opacity: 0.75; margin-bottom: 24px; text-align: center; }
   .row { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; width: 100%; max-width: 640px; }
   .big-btn {
-    flex: 1 1 220px; min-height: 140px; border: none; border-radius: 28px;
+    flex: 1 1 220px; min-height: 140px; max-width: 320px; border: none; border-radius: 28px;
     background: var(--card); box-shadow: var(--shadow); cursor: pointer;
     font-family: inherit; font-size: clamp(22px, 5vw, 32px); color: var(--ink);
     display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
@@ -38,6 +39,12 @@
   }
   .big-btn:active { transform: translateY(4px); box-shadow: 0 2px 0 rgba(0,0,0,0.12); }
   .big-btn .emoji { font-size: clamp(56px, 14vw, 90px); line-height: 1; }
+  .row.menu { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; padding-top: 70px; padding-bottom: 12px; }
+  .row.menu .big-btn { min-height: 0; max-width: none; padding: 14px 8px; font-size: clamp(17px, 4.2vw, 26px); }
+  .row.menu .big-btn .emoji { font-size: clamp(40px, 11vw, 72px); }
+  .row.menu .big-btn.wide { grid-column: span 2; flex-direction: row; gap: 16px; }
+  #menu { justify-content: flex-start; }
+  #menu h2 { margin-top: 8px; }
   .big-btn.max { background: var(--max); color: white; }
   .big-btn.chloe { background: var(--chloe); color: white; }
   .topbar {
@@ -90,7 +97,7 @@
   #trace-wrap { position: absolute; top: 90px; bottom: 16px; left: 0; right: 0; display: flex; align-items: center; justify-content: center; }
   #trace { touch-action: none; border-radius: 28px; background: var(--card); box-shadow: var(--shadow); }
   .trace-hint { position: absolute; top: 86px; left: 0; right: 0; text-align: center; font-size: clamp(20px, 5vw, 30px); pointer-events: none; opacity: .8; }
-  .glyph-grid { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; width: 100%; max-width: 720px; margin-top: 70px; overflow-y: auto; -webkit-overflow-scrolling: touch; max-height: calc(100vh - 150px); padding: 4px 4px 24px; }
+  .glyph-grid { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; width: 100%; max-width: 720px; margin-top: 70px; padding: 4px 4px 24px; }
   .glyph-btn {
     width: 78px; height: 78px; border: none; border-radius: 20px; background: var(--card); box-shadow: var(--shadow);
     font-family: inherit; font-size: 40px; font-weight: bold; color: var(--ink); cursor: pointer;
@@ -116,19 +123,19 @@
 <!-- GAME MENU -->
 <section id="menu" class="screen">
   <div class="topbar"><button class="back" data-go="who">🏠</button><span class="stars">⭐ <b id="star-count">0</b></span></div>
-  <h2 id="hello">Hi!</h2>
-  <p class="sub">Pick a game</p>
-  <div class="row">
+  <div class="row menu">
+    <h2 id="hello" style="grid-column: span 2; margin: 0;">Hi!</h2>
+    <p class="sub" style="grid-column: span 2; margin: 0 0 4px;">Pick a game</p>
     <button class="big-btn" data-game="bubbles"><span class="emoji">🫧</span>Pop Bubbles</button>
     <button class="big-btn" data-game="animals"><span class="emoji">🐮</span>Find the Animal</button>
     <button class="big-btn" data-game="colors"><span class="emoji">🌈</span>Colours</button>
     <button class="big-btn" data-game="count"><span class="emoji">🔢</span>Counting</button>
-    <button class="big-btn" data-game="trace"><span class="emoji">✏️</span>Dot to Dot</button>
+    <button class="big-btn wide" data-game="trace"><span class="emoji">✏️</span>Dot to Dot</button>
   </div>
 </section>
 
 <!-- BUBBLES -->
-<section id="bubbles-screen" class="screen">
+<section id="bubbles-screen" class="screen no-scroll">
   <div id="bubbles"></div>
   <div class="topbar"><button class="back" data-go="menu">⬅️</button><span class="right"><span class="level-badge">⚡ Level <b id="bubble-level">1</b></span><span class="stars">⭐ <b class="star-live">0</b></span></span></div>
   <div class="bubble-hint" id="bubble-hint">Pop the bubbles!</div>
@@ -143,14 +150,14 @@
 </section>
 
 <!-- DOT TO DOT: pick a letter / number / shape -->
-<section id="trace-pick" class="screen">
+<section id="trace-pick" class="screen" style="justify-content: flex-start;">
   <div class="topbar"><button class="back" data-go="menu">⬅️</button><span class="stars">⭐ <b class="star-live">0</b></span></div>
   <h2 style="position:absolute; top:14px; left:0; right:0; pointer-events:none;">Dot to Dot ✏️</h2>
   <div class="glyph-grid" id="glyph-grid"></div>
 </section>
 
 <!-- DOT TO DOT: tracing -->
-<section id="trace-screen" class="screen">
+<section id="trace-screen" class="screen no-scroll">
   <div class="topbar"><button class="back" data-go="trace-pick">⬅️</button><span class="stars">⭐ <b class="star-live">0</b></span></div>
   <div class="trace-hint" id="trace-hint">Start at 1</div>
   <div id="trace-wrap"><canvas id="trace"></canvas></div>
@@ -690,8 +697,8 @@
 
   // Prevent double-tap zoom and rubber-banding on iOS.
   document.addEventListener('touchmove', function (e) {
-    if (e.target.closest && e.target.closest('.glyph-grid')) return; // let the letter picker scroll
-    e.preventDefault();
+    // Block finger-scrolling only inside the play areas; menus and pickers can scroll.
+    if (e.target.closest && e.target.closest('.screen.no-scroll')) e.preventDefault();
   }, { passive: false });
   var lastTouch = 0;
   document.addEventListener('touchend', function (e) {
