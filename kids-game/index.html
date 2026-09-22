@@ -85,6 +85,18 @@
     font-size: clamp(40px, 12vw, 90px); text-align: center; z-index: 20; text-shadow: 0 4px 0 rgba(0,0,0,.1);
   }
   .cheer.show { display: flex; animation: pop .6s; }
+  .level-badge { background: var(--card); box-shadow: var(--shadow); border-radius: 999px; padding: 10px 18px; margin-right: 10px; }
+  .topbar .right { display: flex; align-items: center; }
+  #trace-wrap { position: absolute; top: 90px; bottom: 16px; left: 0; right: 0; display: flex; align-items: center; justify-content: center; }
+  #trace { touch-action: none; border-radius: 28px; background: var(--card); box-shadow: var(--shadow); }
+  .trace-hint { position: absolute; top: 86px; left: 0; right: 0; text-align: center; font-size: clamp(20px, 5vw, 30px); pointer-events: none; opacity: .8; }
+  .glyph-grid { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; width: 100%; max-width: 720px; margin-top: 70px; overflow-y: auto; -webkit-overflow-scrolling: touch; max-height: calc(100vh - 150px); padding: 4px 4px 24px; }
+  .glyph-btn {
+    width: 78px; height: 78px; border: none; border-radius: 20px; background: var(--card); box-shadow: var(--shadow);
+    font-family: inherit; font-size: 40px; font-weight: bold; color: var(--ink); cursor: pointer;
+  }
+  .glyph-btn:active { transform: translateY(3px); box-shadow: none; }
+  .glyph-btn.done { background: #c8f7c5; }
   .footer-note { position: absolute; bottom: max(10px, env(safe-area-inset-bottom)); font-size: 13px; opacity: .5; text-align: center; padding: 0 16px; }
 </style>
 </head>
@@ -111,14 +123,15 @@
     <button class="big-btn" data-game="animals"><span class="emoji">🐮</span>Find the Animal</button>
     <button class="big-btn" data-game="colors"><span class="emoji">🌈</span>Colours</button>
     <button class="big-btn" data-game="count"><span class="emoji">🔢</span>Counting</button>
+    <button class="big-btn" data-game="trace"><span class="emoji">✏️</span>Dot to Dot</button>
   </div>
 </section>
 
 <!-- BUBBLES -->
 <section id="bubbles-screen" class="screen">
   <div id="bubbles"></div>
-  <div class="topbar"><button class="back" data-go="menu">⬅️</button><span class="stars">⭐ <b class="star-live">0</b></span></div>
-  <div class="bubble-hint">Pop the bubbles!</div>
+  <div class="topbar"><button class="back" data-go="menu">⬅️</button><span class="right"><span class="level-badge">⚡ Level <b id="bubble-level">1</b></span><span class="stars">⭐ <b class="star-live">0</b></span></span></div>
+  <div class="bubble-hint" id="bubble-hint">Pop the bubbles!</div>
 </section>
 
 <!-- FIND THE ANIMAL / COLOURS / COUNTING share one layout -->
@@ -127,6 +140,20 @@
   <div class="prompt" id="prompt"></div>
   <div class="count-area" id="count-area"></div>
   <div class="choices" id="choices"></div>
+</section>
+
+<!-- DOT TO DOT: pick a letter / number / shape -->
+<section id="trace-pick" class="screen">
+  <div class="topbar"><button class="back" data-go="menu">⬅️</button><span class="stars">⭐ <b class="star-live">0</b></span></div>
+  <h2 style="position:absolute; top:14px; left:0; right:0; pointer-events:none;">Dot to Dot ✏️</h2>
+  <div class="glyph-grid" id="glyph-grid"></div>
+</section>
+
+<!-- DOT TO DOT: tracing -->
+<section id="trace-screen" class="screen">
+  <div class="topbar"><button class="back" data-go="trace-pick">⬅️</button><span class="stars">⭐ <b class="star-live">0</b></span></div>
+  <div class="trace-hint" id="trace-hint">Start at 1</div>
+  <div id="trace-wrap"><canvas id="trace"></canvas></div>
 </section>
 
 <div class="cheer" id="cheer"></div>
@@ -139,6 +166,7 @@
   var currentGame = null;
   var bubbleTimer = null;
   var busy = false;
+  var trace = { raf: null };
 
   var ANIMALS = [
     ['🐮', 'cow'], ['🐶', 'dog'], ['🐱', 'cat'], ['🐷', 'pig'], ['🐸', 'frog'], ['🦁', 'lion'],
@@ -209,6 +237,8 @@
     for (var i = 0; i < screens.length; i++) screens[i].classList.remove('active');
     $(id).classList.add('active');
     if (id !== 'bubbles-screen') stopBubbles();
+    if (id !== 'trace-screen' && trace.raf) { cancelAnimationFrame(trace.raf); trace.raf = null; }
+    if (id === 'trace-pick') buildGlyphGrid();
   }
   function addStar() {
     stars++;
@@ -240,16 +270,40 @@
   }
 
   // ---------- bubbles game (great for age 2: nothing can go wrong) ----------
+  // Gets faster and smaller as the pop count climbs. Level goes up every 5 pops.
+  var bubblePops = 0;
+  function bubbleLevel() { return 1 + Math.floor(bubblePops / 5); }
+  function bubbleSettings() {
+    var lvl = bubbleLevel();
+    var younger = player === 'Chloe';
+    var ramp = younger ? 0.6 : 1;               // Chloe ramps up more gently
+    return {
+      spawnMs: Math.max(younger ? 550 : 320, 1100 - (lvl - 1) * 90 * ramp),
+      riseSec: Math.max(younger ? 3 : 2, 6 - (lvl - 1) * 0.45 * ramp),
+      minSize: Math.max(younger ? 70 : 50, 90 - (lvl - 1) * 5 * ramp),
+      wobble: Math.min(60, (lvl - 1) * 8)        // sideways drift in px at higher levels
+    };
+  }
+  function updateBubbleHud() {
+    $('bubble-level').textContent = bubbleLevel();
+  }
   function spawnBubble() {
     var area = $('bubbles');
-    var size = 90 + rand(70);
+    var cfg = bubbleSettings();
+    var size = cfg.minSize + rand(60);
     var b = document.createElement('div');
     b.className = 'bubble';
     b.style.width = b.style.height = size + 'px';
     b.style.left = rand(Math.max(1, area.clientWidth - size)) + 'px';
     b.style.background = pick(BUBBLE_COLORS);
     b.style.fontSize = size + 'px';
-    b.style.animationDuration = (6 + Math.random() * 5) + 's';
+    b.style.animationDuration = (cfg.riseSec + Math.random() * 2) + 's';
+    if (cfg.wobble) {
+      // Higher levels: bubbles drift sideways as they rise.
+      b.style.marginLeft = '0px';
+      b.style.transition = 'margin-left ' + (cfg.riseSec / 2) + 's ease-in-out';
+      setTimeout(function () { b.style.marginLeft = (rand(cfg.wobble * 2) - cfg.wobble) + 'px'; }, 50);
+    }
     var inner = document.createElement('span');
     inner.textContent = pick(['🐟', '🦀', '🐙', '🐢', '⭐', '🐬', '🦋', '🌸']);
     b.appendChild(inner);
@@ -259,19 +313,37 @@
       confetti(e.clientX, e.clientY);
       addStar();
       b.remove();
+      var before = bubbleLevel();
+      bubblePops++;
+      if (bubbleLevel() !== before) {
+        updateBubbleHud();
+        $('bubble-hint').textContent = 'Level ' + bubbleLevel() + '! Faster! ⚡';
+        cheerSound();
+        say('Level ' + bubbleLevel() + '! Faster!');
+        setTimeout(function () { $('bubble-hint').textContent = 'Pop the bubbles!'; }, 1500);
+      }
     });
     b.addEventListener('animationend', function () { b.remove(); });
     area.appendChild(b);
   }
+  function scheduleBubble() {
+    bubbleTimer = setTimeout(function () {
+      spawnBubble();
+      scheduleBubble();
+    }, bubbleSettings().spawnMs);
+  }
   function startBubbles() {
     stopBubbles();
+    bubblePops = 0;
+    updateBubbleHud();
+    $('bubble-hint').textContent = 'Pop the bubbles!';
     $('bubbles').innerHTML = '';
     say('Pop the bubbles, ' + player + '!');
     for (var i = 0; i < 3; i++) setTimeout(spawnBubble, i * 400);
-    bubbleTimer = setInterval(spawnBubble, 1100);
+    scheduleBubble();
   }
   function stopBubbles() {
-    if (bubbleTimer) { clearInterval(bubbleTimer); bubbleTimer = null; }
+    if (bubbleTimer) { clearTimeout(bubbleTimer); bubbleTimer = null; }
     $('bubbles').innerHTML = '';
   }
 
@@ -340,9 +412,258 @@
       function (btn, item) { btn.classList.add('num'); btn.textContent = item.value; }, roundCount);
   }
 
+  // ---------- dot to dot writing practice ----------
+  // Each glyph is a list of strokes; each stroke is a list of [x, y] points in a 0-100 box.
+  // Dots are numbered in order across strokes. A "closed" stroke joins back to its first dot.
+  var GLYPHS = {
+    'M': { say: 'M', strokes: [[[20,85],[20,15],[50,60],[80,15],[80,85]]] },
+    'A': { say: 'A', strokes: [[[15,85],[50,15],[85,85]], [[30,60],[70,60]]] },
+    'X': { say: 'X', strokes: [[[20,15],[80,85]], [[80,15],[20,85]]] },
+    'C': { say: 'C', strokes: [[[78,25],[60,15],[40,15],[25,30],[22,50],[25,70],[40,85],[60,85],[78,75]]] },
+    'H': { say: 'H', strokes: [[[25,15],[25,85]], [[25,50],[75,50]], [[75,15],[75,85]]] },
+    'L': { say: 'L', strokes: [[[25,15],[25,85],[75,85]]] },
+    'O': { say: 'O', strokes: [{ closed: true, pts: [[50,15],[75,25],[85,50],[75,75],[50,85],[25,75],[15,50],[25,25]] }] },
+    'E': { say: 'E', strokes: [[[75,15],[25,15],[25,85],[75,85]], [[25,50],[65,50]]] },
+    '1': { say: 'one', strokes: [[[35,30],[50,15],[50,85]]] },
+    '2': { say: 'two', strokes: [[[25,30],[40,15],[60,15],[75,30],[70,50],[25,85],[75,85]]] },
+    '3': { say: 'three', strokes: [[[25,20],[50,15],[70,25],[55,45],[75,65],[50,85],[25,78]]] },
+    '4': { say: 'four', strokes: [[[60,15],[20,60],[80,60]], [[60,35],[60,85]]] },
+    '5': { say: 'five', strokes: [[[75,15],[30,15],[28,45],[55,42],[75,58],[65,80],[45,85],[28,75]]] },
+    '—': { say: 'a line', label: '—', strokes: [[[15,50],[85,50]]] },
+    '|': { say: 'a line down', label: '|', strokes: [[[50,15],[50,85]]] },
+    '△': { say: 'a triangle', strokes: [{ closed: true, pts: [[50,15],[85,80],[15,80]] }] },
+    '□': { say: 'a square', strokes: [{ closed: true, pts: [[20,20],[80,20],[80,80],[20,80]] }] },
+    '○': { say: 'a circle', strokes: [{ closed: true, pts: [[50,15],[75,25],[85,50],[75,75],[50,85],[25,75],[15,50],[25,25]] }] },
+    '♥': { say: 'a heart', strokes: [{ closed: true, pts: [[50,30],[30,15],[15,35],[50,85],[85,35],[70,15]] }] }
+  };
+  // Name letters first so each child sees their own name, then shapes and numbers.
+  var GLYPH_ORDER = {
+    Max:   ['M','A','X','—','|','△','□','○','♥','1','2','3','4','5','C','H','L','O','E'],
+    Chloe: ['—','|','○','△','□','♥','C','H','L','O','E','1','2','3','M','A','X','4','5']
+  };
+  var traceDone = {};
+  var traceList = [];
+  var traceIndex = 0;
+  trace = { dots: [], next: 0, finished: false, pressed: false, finger: null, raf: null };
+
+  function buildGlyphGrid() {
+    var grid = $('glyph-grid');
+    grid.innerHTML = '';
+    traceList = GLYPH_ORDER[player] || GLYPH_ORDER.Max;
+    traceList.forEach(function (key, i) {
+      var b = document.createElement('button');
+      b.className = 'glyph-btn' + (traceDone[key] ? ' done' : '');
+      b.textContent = GLYPHS[key].label || key;
+      b.addEventListener('click', function () { ensureAudio(); tapSound(); traceIndex = i; startTrace(key); });
+      grid.appendChild(b);
+    });
+  }
+
+  // Flatten the glyph into a numbered dot list with stroke ids.
+  function buildDots(key) {
+    var dots = [];
+    GLYPHS[key].strokes.forEach(function (st, si) {
+      var pts = st.pts || st;
+      pts.forEach(function (p, pi) {
+        dots.push({ x: p[0], y: p[1], stroke: si, indexInStroke: pi, closed: !!st.closed, strokeLen: pts.length });
+      });
+    });
+    return dots;
+  }
+
+  function traceCanvasSize() {
+    var wrap = $('trace-wrap');
+    var size = Math.floor(Math.min(wrap.clientWidth - 24, wrap.clientHeight - 8, 560));
+    return Math.max(size, 200);
+  }
+
+  function startTrace(key) {
+    trace.key = key;
+    trace.dots = buildDots(key);
+    trace.next = 0;
+    trace.finished = false;
+    trace.pressed = false;
+    trace.finger = null;
+    show('trace-screen');
+    var c = $('trace');
+    var size = traceCanvasSize();
+    var dpr = window.devicePixelRatio || 1;
+    c.width = size * dpr; c.height = size * dpr;
+    c.style.width = size + 'px'; c.style.height = size + 'px';
+    trace.size = size; trace.dpr = dpr;
+    $('trace-hint').textContent = 'Start at 1  •  ' + (GLYPHS[key].label || key);
+    say('Start at number 1 and follow the dots');
+    if (trace.raf) cancelAnimationFrame(trace.raf);
+    drawTrace();
+  }
+
+  function dotPos(d) {
+    var pad = 0.08 * trace.size;
+    var scale = (trace.size - 2 * pad) / 100;
+    return { x: pad + d.x * scale, y: pad + d.y * scale };
+  }
+  function dotRadius() { return Math.max(18, trace.size * 0.052); }
+
+  function drawTrace() {
+    var c = $('trace'), ctx = c.getContext('2d');
+    var s = trace.size, dpr = trace.dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.clearRect(0, 0, s, s);
+    var inkColor = player === 'Chloe' ? '#ff4f9a' : '#1e7be6';
+    var t = Date.now() / 300;
+
+    // Faint guide of the whole glyph so the child can see the shape.
+    ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+    ctx.strokeStyle = 'rgba(0,0,0,0.08)'; ctx.lineWidth = Math.max(10, s * 0.03);
+    ctx.setLineDash([]);
+    GLYPHS[trace.key].strokes.forEach(function (st) {
+      var pts = st.pts || st;
+      ctx.beginPath();
+      pts.forEach(function (p, i) {
+        var q = dotPos({ x: p[0], y: p[1] });
+        if (i === 0) ctx.moveTo(q.x, q.y); else ctx.lineTo(q.x, q.y);
+      });
+      if (st.closed) ctx.closePath();
+      ctx.stroke();
+    });
+
+    // Lines the child has drawn so far.
+    ctx.strokeStyle = inkColor; ctx.lineWidth = Math.max(8, s * 0.025);
+    for (var i = 1; i < trace.next; i++) {
+      var a = trace.dots[i - 1], b = trace.dots[i];
+      if (a.stroke !== b.stroke) continue;
+      var pa = dotPos(a), pb = dotPos(b);
+      ctx.beginPath(); ctx.moveTo(pa.x, pa.y); ctx.lineTo(pb.x, pb.y); ctx.stroke();
+    }
+    // Closing segments for finished closed strokes.
+    trace.dots.forEach(function (d, i) {
+      if (d.closed && d.indexInStroke === d.strokeLen - 1 && i < trace.next) {
+        var first = trace.dots[i - (d.strokeLen - 1)];
+        var p1 = dotPos(d), p2 = dotPos(first);
+        ctx.beginPath(); ctx.moveTo(p1.x, p1.y); ctx.lineTo(p2.x, p2.y); ctx.stroke();
+      }
+    });
+    // Live line from the last dot to the finger.
+    if (trace.pressed && trace.finger && trace.next > 0 && !trace.finished) {
+      var last = trace.dots[trace.next - 1];
+      var nextDot = trace.dots[trace.next];
+      if (nextDot && nextDot.stroke === last.stroke) {
+        var pl = dotPos(last);
+        ctx.strokeStyle = 'rgba(0,0,0,0.25)';
+        ctx.setLineDash([12, 10]);
+        ctx.beginPath(); ctx.moveTo(pl.x, pl.y); ctx.lineTo(trace.finger.x, trace.finger.y); ctx.stroke();
+        ctx.setLineDash([]);
+      }
+    }
+
+    // Dots.
+    var r = dotRadius();
+    ctx.font = 'bold ' + Math.round(r * 1.1) + 'px ' + getComputedStyle(document.body).fontFamily;
+    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    trace.dots.forEach(function (d, i) {
+      var p = dotPos(d);
+      var isNext = i === trace.next && !trace.finished;
+      var done = i < trace.next;
+      var rr = isNext ? r * (1.1 + 0.12 * Math.sin(t)) : r;
+      ctx.beginPath(); ctx.arc(p.x, p.y, rr, 0, Math.PI * 2);
+      ctx.fillStyle = done ? inkColor : (isNext ? '#ffd54f' : '#ffffff');
+      ctx.fill();
+      ctx.lineWidth = 4; ctx.strokeStyle = done ? inkColor : (isNext ? '#f9a825' : 'rgba(0,0,0,0.25)');
+      ctx.stroke();
+      ctx.fillStyle = done ? '#ffffff' : '#3b2f2f';
+      ctx.fillText(String(i + 1), p.x, p.y + 1);
+    });
+
+    if (trace.finished) {
+      // Big finished glyph in the middle as a reward.
+      ctx.fillStyle = 'rgba(255,255,255,0.7)';
+      ctx.fillRect(0, 0, s, s);
+      ctx.fillStyle = inkColor;
+      ctx.font = 'bold ' + Math.round(s * 0.7) + 'px ' + getComputedStyle(document.body).fontFamily;
+      ctx.fillText(GLYPHS[trace.key].label || trace.key, s / 2, s / 2 + s * 0.04);
+    }
+    if (!trace.finished) trace.raf = requestAnimationFrame(drawTrace);
+  }
+
+  function fingerPos(e) {
+    var rect = $('trace').getBoundingClientRect();
+    return { x: e.clientX - rect.left, y: e.clientY - rect.top };
+  }
+  function dotAt(pt) {
+    var r = dotRadius() * 1.7;
+    for (var i = 0; i < trace.dots.length; i++) {
+      var p = dotPos(trace.dots[i]);
+      var dx = p.x - pt.x, dy = p.y - pt.y;
+      if (dx * dx + dy * dy <= r * r) return i;
+    }
+    return -1;
+  }
+  function hitDot(i, e) {
+    if (trace.finished) return;
+    if (i === trace.next) {
+      trace.next++;
+      popSound();
+      if (trace.next === trace.dots.length) finishTrace(e);
+    } else if (i > trace.next && !trace.pressed) {
+      // Tapped a dot too early: gentle nudge.
+      nopeSound();
+      $('trace-hint').textContent = 'Find number ' + (trace.next + 1) + '!';
+    }
+  }
+  function finishTrace(e) {
+    trace.finished = true;
+    if (trace.raf) cancelAnimationFrame(trace.raf);
+    drawTrace();
+    traceDone[trace.key] = true;
+    addStar();
+    confetti(e.clientX, e.clientY);
+    var g = GLYPHS[trace.key];
+    var msg = g.say;
+    var isName = (player === 'Max' && 'MAX'.indexOf(trace.key) !== -1) || (player === 'Chloe' && 'CHLOE'.indexOf(trace.key) !== -1);
+    if (isName) msg = g.say + '! ' + g.say + ' is for ' + player;
+    else if (/^[A-Z]$/.test(trace.key)) msg = 'The letter ' + g.say;
+    else if (/^[0-9]$/.test(trace.key)) msg = 'The number ' + g.say;
+    else msg = 'You drew ' + g.say;
+    $('trace-hint').textContent = '🌟 ' + (GLYPHS[trace.key].label || trace.key) + ' 🌟';
+    cheerSound();
+    say(msg + '. Well done ' + player + '!');
+    setTimeout(function () {
+      if (!$('trace-screen').classList.contains('active')) return;
+      traceIndex = (traceIndex + 1) % traceList.length;
+      startTrace(traceList[traceIndex]);
+    }, 2600);
+  }
+
+  (function wireTrace() {
+    var c = $('trace');
+    c.addEventListener('pointerdown', function (e) {
+      e.preventDefault();
+      ensureAudio();
+      try { c.setPointerCapture(e.pointerId); } catch (err) {}
+      trace.pressed = true;
+      trace.finger = fingerPos(e);
+      var i = dotAt(trace.finger);
+      if (i !== -1) hitDot(i, e);
+    });
+    c.addEventListener('pointermove', function (e) {
+      if (!trace.pressed) return;
+      e.preventDefault();
+      trace.finger = fingerPos(e);
+      var i = dotAt(trace.finger);
+      if (i === trace.next) hitDot(i, e);
+    });
+    function up() { trace.pressed = false; trace.finger = null; }
+    c.addEventListener('pointerup', up);
+    c.addEventListener('pointercancel', up);
+    window.addEventListener('resize', function () {
+      if ($('trace-screen').classList.contains('active') && !trace.finished) startTrace(trace.key);
+    });
+  })();
+
   function startGame(name) {
     currentGame = name;
     if (name === 'bubbles') { show('bubbles-screen'); startBubbles(); return; }
+    if (name === 'trace') { buildGlyphGrid(); show('trace-pick'); say('Pick a letter, ' + player); return; }
     show('quiz');
     if (name === 'animals') roundAnimals();
     else if (name === 'colors') roundColors();
@@ -368,7 +689,10 @@
   });
 
   // Prevent double-tap zoom and rubber-banding on iOS.
-  document.addEventListener('touchmove', function (e) { e.preventDefault(); }, { passive: false });
+  document.addEventListener('touchmove', function (e) {
+    if (e.target.closest && e.target.closest('.glyph-grid')) return; // let the letter picker scroll
+    e.preventDefault();
+  }, { passive: false });
   var lastTouch = 0;
   document.addEventListener('touchend', function (e) {
     var now = Date.now();

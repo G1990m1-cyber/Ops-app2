@@ -12,6 +12,9 @@ Open `kids-game/index.html` in any browser, or on a phone or tablet:
    - **Find the Animal** — "Find the cow!" Tap the right animal.
    - **Colours** — "Tap red!" Tap the right colour.
    - **Counting** — count the pictures and tap the number.
+   - **Dot to Dot** — join numbered dots with a finger to draw letters (their own names first), numbers 1 to 5, and shapes. A faint guide shows the shape, and a finished letter is read out loud.
+
+Pop Bubbles speeds up as you go: every 5 pops raises the level, and bubbles get faster, smaller, and start drifting sideways. Chloe ramps up more gently than Max.
 3. Every right answer earns a star and a cheer.
 
 Sounds and spoken prompts use the browser's built-in audio and speech, so nothing needs downloading.
