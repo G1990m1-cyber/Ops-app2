@@ -1,0 +1,58 @@
+/* GR Hotels admin theme: brand tones on top of Payload's light theme. */
+:root {
+  --theme-bg: #faf6f1;
+  --theme-input-bg: #ffffff;
+  --theme-elevation-0: #ffffff;
+  --theme-elevation-50: #f7f1ea;
+  --theme-elevation-100: #f1e9e0;
+  --theme-elevation-150: #e8dccd;
+  --theme-elevation-200: #ddcab4;
+  --theme-elevation-250: #d2bda3;
+  --theme-elevation-300: #c4ad90;
+  --theme-elevation-400: #a8906d;
+  --theme-elevation-500: #88764c;
+  --theme-elevation-600: #6f6040;
+  --theme-elevation-700: #574b33;
+  --theme-elevation-800: #3c352a;
+  --theme-elevation-900: #262626;
+  --theme-elevation-1000: #1a1a1a;
+  --theme-success-500: #8f8a45;
+  --theme-text: #262626;
+  --style-radius-s: 4px;
+  --style-radius-m: 8px;
+  --style-radius-l: 12px;
+  --font-body: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+}
+html[data-theme='light'] {
+  --theme-bg: #faf6f1;
+  --theme-text: #262626;
+}
+/* Primary buttons in the signature accent */
+.btn--style-primary {
+  --color: #faf6f1;
+  --bg-color: #88764c;
+  --hover-bg: #6f6040;
+  --hover-color: #faf6f1;
+}
+.btn--style-secondary {
+  --color: #88764c;
+  --bg-color: transparent;
+  --hover-bg: #f1e9e0;
+}
+.nav__link--active,
+.nav__link:hover {
+  color: #88764c;
+}
+.template-default__nav-toggler,
+.hamburger__line {
+  background: #88764c;
+}
+.login .graphic-logo,
+.login__brand {
+  margin-bottom: 1.5rem;
+}
+.doc-controls__status,
+.pill--style-success {
+  background: #e9ecd3;
+  color: #4f4c22;
+}

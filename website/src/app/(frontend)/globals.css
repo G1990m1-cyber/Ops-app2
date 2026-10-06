@@ -1,0 +1,280 @@
+@import 'tailwindcss';
+@plugin "@tailwindcss/typography";
+
+/* ── Brand tokens (Group Retreats guidelines 2025/26) ───────────────────── */
+@theme {
+  --color-cream: #faf6f1;
+  --color-sand: #f1e9e0;
+  --color-linen: #ddcab4;
+  --color-bronze: #88764c;
+  --color-gold: #d9b282;
+  --color-olive: #8f8a45;
+  --color-cocoa: #815c46;
+  --color-charcoal: #262626;
+  --color-ink: #262626;
+  --color-ink-soft: #4d4741;
+
+  --font-display: var(--font-display), Georgia, 'Times New Roman', serif;
+  --font-body: var(--font-body), Georgia, 'Times New Roman', serif;
+  --font-sans: var(--font-body), Georgia, serif;
+
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 80rem;
+  --breakpoint-2xl: 90rem;
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --animate-fade-up: fade-up 0.9s var(--ease-out-soft) both;
+  --animate-kenburns: kenburns 18s ease-in-out infinite alternate;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  @keyframes kenburns {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.06);
+    }
+  }
+}
+
+/* Tone utilities map one-to-one to the palette; editors pick a tone, never a colour. */
+@utility tone-cream {
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+}
+@utility tone-sand {
+  background-color: var(--color-sand);
+  color: var(--color-ink);
+}
+@utility tone-linen {
+  background-color: var(--color-linen);
+  color: var(--color-ink);
+}
+@utility tone-charcoal {
+  background-color: var(--color-charcoal);
+  color: var(--color-cream);
+}
+
+@utility container-site {
+  width: 100%;
+  max-width: 84rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+  @media (width >= 48rem) {
+    padding-inline: 2.5rem;
+  }
+  @media (width >= 80rem) {
+    padding-inline: 3.5rem;
+  }
+}
+
+@utility measure {
+  max-width: 42rem;
+}
+@utility measure-wide {
+  max-width: 56rem;
+}
+
+/* Text over images: brown tint or soft gradient, never shadows or outlines. */
+@utility overlay-gradient {
+  background:
+    linear-gradient(to bottom, rgb(129 92 70 / 0.38) 0%, rgb(129 92 70 / 0) 28%),
+    linear-gradient(to top, rgb(129 92 70 / 0.72) 0%, rgb(129 92 70 / 0.35) 45%, rgb(129 92 70 / 0.12) 100%);
+}
+@utility overlay-tint40 {
+  background-color: rgb(129 92 70 / 0.4);
+}
+@utility overlay-tint50 {
+  background-color: rgb(129 92 70 / 0.5);
+}
+@utility overlay-tint60 {
+  background-color: rgb(129 92 70 / 0.6);
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-cream text-ink font-body antialiased;
+    font-size: 1.125rem; /* 18px minimum */
+    line-height: 1.55;
+    font-feature-settings: 'kern', 'liga';
+  }
+  @media (width >= 48rem) {
+    body {
+      font-size: 1.25rem;
+    }
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+    font-weight: 400;
+  }
+  .font-display {
+    letter-spacing: 0.005em;
+  }
+  ::selection {
+    background: var(--color-linen);
+    color: var(--color-ink);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-bronze);
+    outline-offset: 3px;
+  }
+  img,
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+  button {
+    font: inherit;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* Scroll reveal: visible by default, animated only when JS marks it and motion is allowed. */
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .js [data-reveal] {
+      opacity: 0;
+      transform: translateY(22px);
+      transition:
+        opacity 0.9s var(--ease-out-soft),
+        transform 0.9s var(--ease-out-soft);
+      transition-delay: var(--reveal-delay, 0ms);
+    }
+    .js [data-reveal][data-revealed='true'] {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .prose-brand {
+    @apply prose prose-lg max-w-none;
+    --tw-prose-body: var(--color-ink);
+    --tw-prose-headings: var(--color-ink);
+    --tw-prose-links: var(--color-cocoa);
+    --tw-prose-bold: var(--color-ink);
+    --tw-prose-bullets: var(--color-bronze);
+    --tw-prose-counters: var(--color-bronze);
+    --tw-prose-hr: var(--color-linen);
+    --tw-prose-quotes: var(--color-ink);
+    font-size: inherit;
+    line-height: 1.6;
+  }
+  .prose-brand h2,
+  .prose-brand h3,
+  .prose-brand h4 {
+    font-family: var(--font-body);
+    font-weight: 500;
+    letter-spacing: 0.005em;
+  }
+  .prose-brand h2 {
+    font-size: 2rem;
+    line-height: 1.15;
+    margin-top: 1.6em;
+    margin-bottom: 0.5em;
+  }
+  .prose-brand h3 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+  .prose-brand a {
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+    text-decoration-thickness: 1px;
+    text-decoration-color: var(--color-linen);
+    transition: text-decoration-color 0.2s ease;
+  }
+  .prose-brand a:hover {
+    text-decoration-color: var(--color-cocoa);
+  }
+  .tone-charcoal .prose-brand {
+    --tw-prose-body: var(--color-cream);
+    --tw-prose-headings: var(--color-cream);
+    --tw-prose-links: var(--color-gold);
+    --tw-prose-bold: var(--color-cream);
+    --tw-prose-bullets: var(--color-gold);
+  }
+
+  .link-underline {
+    position: relative;
+    text-decoration: none;
+  }
+  .link-underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -0.15em;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.35s var(--ease-out-soft);
+  }
+  .link-underline:hover::after,
+  .link-underline:focus-visible::after,
+  .link-underline[aria-current='page']::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  .eyebrow {
+    @apply text-bronze uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.22em;
+    font-weight: 600;
+  }
+  .tone-charcoal .eyebrow {
+    color: var(--color-gold);
+  }
+
+  .img-hover {
+    overflow: hidden;
+  }
+  .img-hover img {
+    transition: transform 1.2s var(--ease-out-soft);
+  }
+  .img-hover:hover img {
+    transform: scale(1.04);
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+}

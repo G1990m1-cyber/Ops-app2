@@ -1,6 +1,21 @@
 # GR Hotels website replacement — PLAN
 
-**Status: waiting for your approval. No site code has been written yet.**
+**Status (6 Oct 2026): approved. Phase 1 to 6 built with placeholder content in `website/`. The crawl of the old site (Phase 0) is still blocked by the environment's network policy and will be run as a follow-up; until then every piece of hotel copy and photography is a clearly labelled placeholder.**
+
+### What was built (summary)
+
+- `website/`: Next.js 16 + Payload 3.90 app, Tailwind 4 brand tokens, self-hosted Cormorant Garamond and a Bodoni Moda stand-in for TAN Pearl.
+- Content model, roles and access rules exactly as section 4, with one change: menu dietary flags are tick boxes instead of a multi-select (a multi-select that deep inside nested lists trips a Payload/Postgres bug in version history).
+- 17 blocks (section 5 plus an **Enquiry form** block so contact forms can sit on any page). Payload's form-builder plugin was dropped in favour of a purpose-built enquiry form with hotel routing, honeypot and Turnstile; simpler for managers and one fewer moving part.
+- Public site, Book Now with UTM tags and GTM events, hotel picker, mobile bar, cookie consent gating GTM-WVZV4DV8, newsletter to HubSpot, SEO fallbacks, sitemap, robots, JSON-LD, admin-managed redirects (applied in the request proxy).
+- Manager dashboard with the three big actions, branded admin, seed script and an admin "Load placeholder content" button for an empty production database.
+- Verified locally: production build green, 27/27 old URLs pass the redirect test, manager role cannot read or change other hotels (REST and admin), Lighthouse mobile on a hotel page 90+ across the board.
+- Docs: `website/README.md`, `website/MANAGER-GUIDE.md`, `website/LAUNCH-CHECKLIST.md`, `website/.env.example`.
+- Supabase project **GR Hotels Website** created (London, ref `kamdmgouuidvvhsujzmy`). Tables are created by the migration on the first Vercel deploy; no data lives there yet.
+
+### Still needed from you (unchanged from section 8)
+
+Vercel access, booking URLs per hotel, enquiry emails per hotel, logo SVG, TAN Pearl files, HubSpot IDs, a Turnstile key, an email sending domain, and answers to the Royal Oak and Caer Beris questions. The old-site crawl needs the cloud environment's network access widened (session menu → Edit cloud environment → Network access).
 
 This plan covers everything in your brief. It is written for you as the owner, not for a developer. Where I have made a decision on your behalf I say so and why. Where I need something from you it is listed in section 8.
 
