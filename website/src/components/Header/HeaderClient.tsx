@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React, { useEffect, useRef, useState } from 'react'
@@ -9,6 +10,7 @@ import { Icon } from '@/components/Icons'
 import { hrefFromReference } from '@/components/Link'
 import type { Hotel, Media, Navigation } from '@/payload-types'
 import type { BookTarget } from '@/utilities/booking'
+import { mediaUrl } from '@/components/Media'
 import { cn } from '@/utilities/ui'
 
 type HotelLite = { name: string; slug: string; location: string }
@@ -24,9 +26,21 @@ type Props = {
 
 const Wordmark: React.FC<{ siteName: string; logo: Media | null; light: boolean }> = ({ siteName, logo, light }) => {
   if (logo?.url) {
-    // eslint-disable-next-line @next/next/no-img-element
     // Any logo colour works: forced to white over photos, to charcoal on the cream bar.
-    return <img src={logo.url} alt={siteName} className={cn('h-12 w-auto md:h-16', light ? 'brightness-0 invert' : 'brightness-0')} />
+    // Rendered through next/image so it is served same-origin, resized and preloaded (it is often the largest thing above the fold).
+    const h = 64
+    const w = logo.width && logo.height ? Math.round((h * logo.width) / logo.height) : h * 2
+    return (
+      <Image
+        src={mediaUrl(logo) || logo.url}
+        alt={siteName}
+        width={w}
+        height={h}
+        priority
+        quality={90}
+        className={cn('h-12 w-auto md:h-16', light ? 'brightness-0 invert' : 'brightness-0')}
+      />
+    )
   }
   return (
     <span className={cn('font-display text-[1.6rem] leading-none tracking-[0.04em] md:text-[1.9rem]', light ? 'text-cream' : 'text-ink')}>
