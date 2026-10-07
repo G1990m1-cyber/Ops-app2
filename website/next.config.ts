@@ -18,6 +18,8 @@ const nextConfig: NextConfig = {
     deviceSizes: [390, 640, 768, 1024, 1280, 1536, 1920, 2400],
   },
   turbopack: { root: path.resolve(dirname) },
+  // The seed route reads the migrated images from disk; make sure they ship with that function.
+  outputFileTracingIncludes: { '/next/seed': ['./content/images/**/*'] },
   async headers() {
     return [
       {

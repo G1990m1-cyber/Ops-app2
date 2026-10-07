@@ -10,7 +10,29 @@ import { placeholderImage } from './images'
 import { h2, p, paragraphs, rich, ul } from './lexical'
 
 const dirname = path.dirname(fileURLToPath(import.meta.url))
-const IMAGE_DIR = path.resolve(dirname, '../../content/images')
+/** content/images relative to the project root (process.cwd() on Vercel and locally); dirname as a fallback for odd runners. */
+const IMAGE_DIRS = [path.join(process.cwd(), 'content/images'), path.resolve(dirname, '../../content/images')]
+const findImage = (file: string): string | null => {
+  for (const dir of IMAGE_DIRS) {
+    const p = path.join(dir, file)
+    if (fs.existsSync(p)) return p
+  }
+  return null
+}
+/** Last resort: fetch the original from the URL recorded at crawl time. */
+const fetchOriginal = async (file: string): Promise<Buffer | null> => {
+  for (const dir of IMAGE_DIRS) {
+    const idx = path.join(dir, 'index.json')
+    if (!fs.existsSync(idx)) continue
+    const info = JSON.parse(fs.readFileSync(idx, 'utf8')) as Record<string, { url?: string }>
+    const url = info[file]?.url
+    if (!url) return null
+    const res = await fetch(url)
+    if (!res.ok) return null
+    return Buffer.from(await res.arrayBuffer())
+  }
+  return null
+}
 
 const log = (msg: string) => console.info(`  · ${msg}`)
 
@@ -43,9 +65,9 @@ const uploadImg = async (ctx: Ctx, img: Img): Promise<Media> => {
     ctx.images.set(img.file, doc)
     return doc
   }
-  const filePath = path.join(IMAGE_DIR, img.file)
-  if (!fs.existsSync(filePath)) throw new Error(`Missing image ${img.file} in content/images`)
-  const buffer = fs.readFileSync(filePath)
+  const filePath = findImage(img.file)
+  const buffer = filePath ? fs.readFileSync(filePath) : await fetchOriginal(img.file)
+  if (!buffer) throw new Error(`Missing image ${img.file} in content/images (cwd ${process.cwd()})`)
   const doc = await ctx.payload.create({
     collection: 'media',
     data: { alt: img.alt },
