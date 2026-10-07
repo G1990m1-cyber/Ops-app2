@@ -1,6 +1,7 @@
 import { NextResponse, type NextRequest } from 'next/server'
 
 import { getPayloadClient } from '@/utilities/data'
+import { getCachedGlobal } from '@/utilities/getGlobals'
 import { verifyTurnstile } from '@/utilities/turnstile'
 
 const escapeHtml = (s: string) =>
@@ -44,17 +45,21 @@ export async function POST(req: NextRequest) {
 
   const payload = await getPayloadClient()
   const hotelId = body.hotel ? Number(body.hotel) || body.hotel : null
-  let hotel: { id: number | string; name: string; email?: string | null } | null = null
+  let hotel: { id: number | string; name: string; email?: string | null; phone?: string | null } | null = null
   if (hotelId) {
     try {
       const h = await payload.findByID({ collection: 'hotels', id: hotelId, depth: 0, overrideAccess: true })
-      hotel = { id: h.id, name: h.name, email: h.email }
+      hotel = { id: h.id, name: h.name, email: h.email, phone: h.phone }
     } catch {
       hotel = null
     }
   }
+  const settings = await getCachedGlobal('site-settings', 0)()
+  const enquirySettings = settings.enquiries || {}
 
-  const to = hotel?.email || process.env.ENQUIRY_FALLBACK_EMAIL || process.env.EMAIL_FROM_ADDRESS
+  // Who receives it: the hotel's own enquiry email, else the group address set in Site settings, else the env fallback.
+  const to = hotel?.email || enquirySettings.fallbackEmail || process.env.ENQUIRY_FALLBACK_EMAIL || process.env.EMAIL_FROM_ADDRESS
+  const cc = enquirySettings.copyTo && enquirySettings.copyTo !== to ? enquirySettings.copyTo : undefined
   const subjectLabel = body.subject || 'other'
   const stay = [
     body.arrival && `Arriving: ${escapeHtml(body.arrival)}`,
@@ -67,6 +72,7 @@ export async function POST(req: NextRequest) {
     try {
       await payload.sendEmail({
         to,
+        ...(cc ? { cc } : {}),
         replyTo: email,
         subject: `Website enquiry${hotel ? ` for ${hotel.name}` : ''}: ${name}`,
         html: `
@@ -82,6 +88,29 @@ export async function POST(req: NextRequest) {
       emailSent = true
     } catch (err) {
       payload.logger.error({ err }, 'Enquiry email failed')
+    }
+  }
+
+  // Automatic thank-you to the guest. Only attempted once the real message has gone, so a broken
+  // email setup never produces a thank-you for a message nobody received.
+  let autoReplySent = false
+  if (emailSent && enquirySettings.autoReply !== false) {
+    const brand = hotel?.name || settings.siteName || 'GR Hotels'
+    const phone = hotel?.phone || settings.contact?.phone || ''
+    const fill = (t: string) =>
+      t.replace(/\{name\}/g, name.split(' ')[0] || name).replace(/\{hotel\}/g, brand).replace(/\{phone\}/g, phone || 'the number on our website')
+    const text = fill(enquirySettings.autoReplyMessage || 'Thank you for getting in touch with {hotel}. We have your message and will reply as soon as we can.')
+    try {
+      await payload.sendEmail({
+        to: email,
+        ...(to ? { replyTo: to } : {}),
+        subject: fill(enquirySettings.autoReplySubject || 'Thank you for your message'),
+        text,
+        html: `<div style="font-family:Georgia,serif;font-size:17px;color:#262626;line-height:1.6;white-space:pre-wrap">${escapeHtml(text)}</div>`,
+      })
+      autoReplySent = true
+    } catch (err) {
+      payload.logger.warn({ err }, 'Enquiry auto-reply failed')
     }
   }
 
@@ -101,6 +130,7 @@ export async function POST(req: NextRequest) {
         hotel: hotel ? (hotel.id as number) : undefined,
         sourcePath: body.page?.slice(0, 200),
         emailSent,
+        autoReplySent,
         status: 'new',
       },
     })

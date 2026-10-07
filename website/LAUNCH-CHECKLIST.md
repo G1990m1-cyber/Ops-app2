@@ -22,12 +22,13 @@ Work through this top to bottom. Each line is a yes/no.
 - [ ] **Site settings → Contact & social:** group phone, email, company line, social links.
 - [ ] **Each hotel → Booking tab:** the exact booking engine link. Test it opens the right hotel.
 - [ ] **Each hotel → Contact & location:** enquiry email, phone, address, map pin, Google Maps link, social links.
+- [ ] **Site settings → Enquiries:** the group enquiry email (used for group pages and any hotel without its own), an optional copy-to address, and the automatic thank-you wording.
 - [ ] **Users:** one login per manager, role Hotel Manager, correct hotels ticked. Remove the sample manager account.
 - [ ] **Navigation & footer** reviewed.
 
 ## C. Technical (developer)
 
-- [ ] Vercel environment variables set for Production: `DATABASE_URL` (pooler, port 6543), `PAYLOAD_SECRET`, `PREVIEW_SECRET`, `NEXT_PUBLIC_SERVER_URL=https://www.grhotels.co.uk`, `S3_*`, email (`RESEND_API_KEY` or SMTP), `EMAIL_FROM_ADDRESS` on a verified sending domain, `ENQUIRY_FALLBACK_EMAIL`, `TURNSTILE_*`, `HUBSPOT_*`, `NEXT_PUBLIC_GTM_ID=GTM-WVZV4DV8`.
+- [ ] Vercel environment variables set for Production: `DATABASE_URL` (pooler, port 6543), `PAYLOAD_SECRET`, `PREVIEW_SECRET`, `NEXT_PUBLIC_SERVER_URL=https://www.grhotels.co.uk`, `S3_*`, email (`RESEND_API_KEY` or SMTP), `EMAIL_FROM_ADDRESS` on a verified sending domain, `TURNSTILE_*`, `HUBSPOT_*`, `NEXT_PUBLIC_GTM_ID=GTM-WVZV4DV8`.
 - [ ] Supabase Storage bucket `media` exists, is public, and the S3 keys work (upload an image in the admin and view it on the site).
 - [ ] TAN Pearl font files added to `src/fonts` and wired in `src/app/(frontend)/fonts.ts` (licence covers web use).
 - [ ] Production build green on Vercel. Migrations applied.

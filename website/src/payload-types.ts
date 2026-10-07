@@ -1327,6 +1327,7 @@ export interface Enquiry {
   notes?: string | null;
   sourcePath?: string | null;
   emailSent?: boolean | null;
+  autoReplySent?: boolean | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -2309,6 +2310,7 @@ export interface EnquiriesSelect<T extends boolean = true> {
   notes?: T;
   sourcePath?: T;
   emailSent?: T;
+  autoReplySent?: T;
   updatedAt?: T;
   createdAt?: T;
 }
@@ -2462,6 +2464,22 @@ export interface SiteSetting {
     instagram?: string | null;
     linkedin?: string | null;
     x?: string | null;
+  };
+  enquiries?: {
+    /**
+     * Receives messages from group pages, and from any hotel that has no enquiry email of its own.
+     */
+    fallbackEmail?: string | null;
+    /**
+     * Optional. Every enquiry from every hotel is also sent here.
+     */
+    copyTo?: string | null;
+    autoReply?: boolean | null;
+    autoReplySubject?: string | null;
+    /**
+     * Plain text. {name}, {hotel} and {phone} are filled in automatically. {hotel} becomes the site name for group enquiries.
+     */
+    autoReplyMessage?: string | null;
   };
   booking?: {
     pickerTitle?: string | null;
@@ -2625,6 +2643,15 @@ export interface SiteSettingsSelect<T extends boolean = true> {
         instagram?: T;
         linkedin?: T;
         x?: T;
+      };
+  enquiries?:
+    | T
+    | {
+        fallbackEmail?: T;
+        copyTo?: T;
+        autoReply?: T;
+        autoReplySubject?: T;
+        autoReplyMessage?: T;
       };
   booking?:
     | T

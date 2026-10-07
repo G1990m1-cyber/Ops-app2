@@ -86,6 +86,59 @@ export const SiteSettings: GlobalConfig = {
           ],
         },
         {
+          label: 'Enquiries',
+          fields: [
+            {
+              name: 'enquiries',
+              type: 'group',
+              label: false,
+              fields: [
+                {
+                  type: 'row',
+                  fields: [
+                    {
+                      name: 'fallbackEmail',
+                      type: 'email',
+                      label: 'Group enquiry email',
+                      admin: { width: '50%', description: 'Receives messages from group pages, and from any hotel that has no enquiry email of its own.' },
+                    },
+                    {
+                      name: 'copyTo',
+                      type: 'email',
+                      label: 'Always copy to',
+                      admin: { width: '50%', description: 'Optional. Every enquiry from every hotel is also sent here.' },
+                    },
+                  ],
+                },
+                {
+                  name: 'autoReply',
+                  type: 'checkbox',
+                  label: 'Send guests an automatic thank-you email',
+                  defaultValue: true,
+                },
+                {
+                  name: 'autoReplySubject',
+                  type: 'text',
+                  label: 'Thank-you subject',
+                  defaultValue: 'Thank you for your message',
+                  admin: { condition: (data) => data?.enquiries?.autoReply !== false },
+                },
+                {
+                  name: 'autoReplyMessage',
+                  type: 'textarea',
+                  label: 'Thank-you message',
+                  defaultValue:
+                    'Dear {name},\n\nThank you for getting in touch with {hotel}. We have your message and will reply as soon as we can, usually within one working day.\n\nIf your enquiry is urgent, please call us on {phone}.\n\nWarm regards,\nThe team at {hotel}',
+                  admin: {
+                    description: 'Plain text. {name}, {hotel} and {phone} are filled in automatically. {hotel} becomes the site name for group enquiries.',
+                    condition: (data) => data?.enquiries?.autoReply !== false,
+                  },
+                },
+              ],
+            },
+          ],
+        },
+        {
           label: 'Booking & tracking',
           fields: [
             {

@@ -301,6 +301,7 @@ export const seed = async (payload: Payload, opts: { reset?: boolean } = {}) => 
     logoLight: logo.id,
     seo: { titleSuffix: 'GR Hotels', defaultDescription: 'Eight characterful hotels and inns across Britain, from the Scottish Borders to the Kent Weald. Book direct with GR Hotels for the best rates.', defaultImage: ogImg.id },
     contact: { email: 'info@grhotels.co.uk', companyLine: 'All rights reserved.' },
+    enquiries: { fallbackEmail: 'enquiries@groupretreats.co.uk', autoReply: true },
     booking: { pickerTitle: 'Where would you like to stay?', pickerIntro: 'Choose a hotel and we will take you to its booking page.', utmSource: 'grhotels.co.uk', utmMedium: 'website' },
     cookies: { title: 'A word about cookies', text: 'We use cookies to understand how the site is used and to measure our advertising. Analytics only run if you accept.' },
   } as never })

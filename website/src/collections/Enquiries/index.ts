@@ -77,5 +77,6 @@ export const Enquiries: CollectionConfig = {
     { name: 'notes', type: 'textarea', label: 'Internal notes', admin: { position: 'sidebar' } },
     { name: 'sourcePath', type: 'text', label: 'Sent from page', admin: { readOnly: true, position: 'sidebar' } },
     { name: 'emailSent', type: 'checkbox', admin: { readOnly: true, position: 'sidebar' } },
+    { name: 'autoReplySent', type: 'checkbox', label: 'Thank-you sent', admin: { readOnly: true, position: 'sidebar' } },
   ],
 }

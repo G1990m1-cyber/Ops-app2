@@ -78,7 +78,7 @@ Press **Publish**.
 - **Photos.** Phone photos are fine if they are sharp and well lit. Landscape for heroes and cards. Under 10 MB. The site resizes and compresses them for you. Drag the dot on the preview to choose the focal point so faces are not cropped on phones.
 - **Alt text.** Every photo needs a short description. "Double bedroom with garden view" is perfect. It helps blind visitors and Google.
 - **Your hotel page.** Under **Hotels → your hotel → Page content** you can add, remove and drag blocks (text, gallery, FAQ and so on). Each block has a background tone, spacing and alignment. There are no colour or font choices to get wrong.
-- **Enquiries.** Contact form messages are emailed to the hotel and also listed under **Enquiries**, so nothing gets lost. Mark them Replied or Closed as you go.
+- **Enquiries.** Contact form messages are emailed to your hotel's enquiry address and also listed under **Enquiries**, so nothing gets lost. The guest gets an automatic thank-you straight away; you still need to reply properly. Mark them Replied or Closed as you go.
 - **Rooms.** Edit room names, prices, photos and descriptions under **Rooms**. Room photos need at least one image.
 - **Something you cannot change** (the hotel name, web address, booking link or enquiry email)? Those are set by head office. Ask the admin.
 
