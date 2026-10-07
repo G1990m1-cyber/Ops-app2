@@ -16,6 +16,8 @@ export async function POST(req: NextRequest) {
 
   const portalId = process.env.HUBSPOT_PORTAL_ID
   const formGuid = process.env.HUBSPOT_FORM_GUID
+  // Accounts hosted in HubSpot's EU data centre (app-eu1.hubspot.com) must use api-eu1.hsforms.com.
+  const formsHost = process.env.HUBSPOT_FORMS_HOST || 'api.hsforms.com'
   if (!portalId || !formGuid) {
     console.info('[newsletter] HubSpot not configured; sign-up not forwarded:', email)
     return NextResponse.json({ ok: true, message: 'Thank you, you are on the list.' })
@@ -25,7 +27,7 @@ export async function POST(req: NextRequest) {
   if (body.firstName) fields.push({ objectTypeId: '0-1', name: 'firstname', value: body.firstName.trim().slice(0, 80) })
 
   try {
-    const res = await fetch(`https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formGuid}`, {
+    const res = await fetch(`https://${formsHost}/submissions/v3/integration/submit/${portalId}/${formGuid}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
