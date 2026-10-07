@@ -5,6 +5,8 @@ import { getCachedGlobal } from '@/utilities/getGlobals'
 import { toBookTarget } from '@/utilities/booking'
 import type { Hotel } from '@/payload-types'
 
+import { AnnouncementBar } from '@/components/AnnouncementBar'
+
 import { HeaderClient } from './HeaderClient'
 
 export const Header: React.FC<{ hotel?: Hotel | null }> = async ({ hotel }) => {
@@ -21,6 +23,7 @@ export const Header: React.FC<{ hotel?: Hotel | null }> = async ({ hotel }) => {
       hotels={hotels.map((h) => ({ name: h.name, slug: h.slug || '', location: h.location }))}
       bookTargets={hotels.map(toBookTarget)}
       hotel={hotel || null}
+      announcement={<AnnouncementBar />}
     />
   )
 }

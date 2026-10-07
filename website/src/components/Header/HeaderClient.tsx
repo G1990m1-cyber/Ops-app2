@@ -22,6 +22,8 @@ type Props = {
   hotels: HotelLite[]
   bookTargets: BookTarget[]
   hotel: Hotel | null
+  /** The announcement strip, rendered inside the fixed header so nothing overlaps it. */
+  announcement?: React.ReactNode
 }
 
 const Wordmark: React.FC<{ siteName: string; logo: Media | null; light: boolean }> = ({ siteName, logo, light }) => {
@@ -49,8 +51,10 @@ const Wordmark: React.FC<{ siteName: string; logo: Media | null; light: boolean 
   )
 }
 
-export const HeaderClient: React.FC<Props> = ({ nav, siteName, logo, hotels, bookTargets, hotel }) => {
+export const HeaderClient: React.FC<Props> = ({ nav, siteName, logo, hotels, bookTargets, hotel, announcement }) => {
   const pathname = usePathname()
+  const headerRef = useRef<HTMLElement>(null)
+  const [headerHeight, setHeaderHeight] = useState(68)
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [hotelsOpen, setHotelsOpen] = useState(false)
@@ -68,6 +72,17 @@ export const HeaderClient: React.FC<Props> = ({ nav, siteName, logo, hotels, boo
     setOpen(false)
     setHotelsOpen(false)
   }, [pathname])
+
+  // The mobile menu starts below whatever the header currently occupies (it grows when the announcement shows).
+  useEffect(() => {
+    const el = headerRef.current
+    if (!el) return
+    const measure = () => setHeaderHeight(el.getBoundingClientRect().height)
+    measure()
+    const ro = new ResizeObserver(measure)
+    ro.observe(el)
+    return () => ro.disconnect()
+  }, [])
 
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : ''
@@ -101,12 +116,18 @@ export const HeaderClient: React.FC<Props> = ({ nav, siteName, logo, hotels, boo
         Skip to content
       </a>
       <header
+        ref={headerRef}
         className={cn(
           'fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow,backdrop-filter] duration-500',
           onHero ? 'bg-transparent' : 'bg-cream/92 backdrop-blur-md border-b border-linen/70',
         )}
         data-light={light}
       >
+        {announcement && (
+          <div className={cn('overflow-hidden transition-[max-height,opacity] duration-300', scrolled && !open ? 'max-h-0 opacity-0' : 'max-h-28 opacity-100')}>
+            {announcement}
+          </div>
+        )}
         <div className="container-site flex h-[4.25rem] items-center justify-between gap-6 md:h-[5.25rem]">
           <Link href="/" className="shrink-0" aria-label={`${siteName} home`}>
             <Wordmark siteName={siteName} logo={logo} light={light} />
@@ -195,9 +216,10 @@ export const HeaderClient: React.FC<Props> = ({ nav, siteName, logo, hotels, boo
       <div
         id="mobile-menu"
         className={cn(
-          'fixed inset-0 z-40 flex flex-col overflow-y-auto bg-cream pt-[4.25rem] transition-opacity duration-300 lg:hidden',
+          'fixed inset-0 z-40 flex flex-col overflow-y-auto bg-cream transition-opacity duration-300 lg:hidden',
           open ? 'opacity-100' : 'pointer-events-none opacity-0',
         )}
+        style={{ paddingTop: headerHeight }}
         aria-hidden={!open}
       >
         <nav aria-label="Mobile" className="container-site flex-1 pb-32 pt-6">

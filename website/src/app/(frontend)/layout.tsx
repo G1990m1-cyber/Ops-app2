@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from 'next'
 import { draftMode } from 'next/headers'
 import React from 'react'
 
-import { AnnouncementBar } from '@/components/AnnouncementBar'
 import { MobileBookBar } from '@/components/BookNow/MobileBookBar'
 import { CookieConsent } from '@/components/Consent/CookieConsent'
 import { Footer } from '@/components/Footer'
@@ -35,7 +34,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </head>
       <body>
-        <AnnouncementBar />
         <Header />
         <main id="main">
           <PageTransition>{children}</PageTransition>

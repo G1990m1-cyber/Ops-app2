@@ -33,7 +33,7 @@ export const Dismissible: React.FC<{ messageKey: string; children: React.ReactNo
   }
 
   return (
-    <div className="relative z-[60] bg-bronze text-white" role="region" aria-label="Announcement">
+    <div className="relative bg-bronze text-white" role="region" aria-label="Announcement">
       <div className="px-12 py-2 text-center text-[0.95rem]">{children}</div>
       <button
         type="button"
