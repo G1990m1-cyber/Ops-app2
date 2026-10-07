@@ -12,7 +12,7 @@ export const RoomCard: React.FC<{ room: Room; hotel: Hotel; index?: number; clas
   const href = `/${hotel.slug}/rooms/${room.slug}`
   return (
     <article
-      className={cn('group flex flex-col overflow-hidden rounded-xl bg-white/60 [.tone-cream_&]:bg-sand/70 [.tone-sand_&]:bg-cream [.tone-charcoal_&]:bg-white/5', className)}
+      className={cn('group lift flex flex-col overflow-hidden rounded-xl bg-white/60 [.tone-cream_&]:bg-sand/70 [.tone-sand_&]:bg-cream [.tone-charcoal_&]:bg-white/5', className)}
       data-reveal
       style={{ '--reveal-delay': `${Math.min(index, 5) * 90}ms` } as React.CSSProperties}
     >

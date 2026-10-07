@@ -20,7 +20,7 @@ export const HotelCard: React.FC<{ hotel: Hotel; index?: number; className?: str
     : hotel.heroMedia
   return (
     <article
-      className={cn('group flex flex-col', className)}
+      className={cn('group lift flex flex-col', className)}
       data-reveal
       style={{ '--reveal-delay': `${Math.min(index, 5) * 90}ms` } as React.CSSProperties}
     >

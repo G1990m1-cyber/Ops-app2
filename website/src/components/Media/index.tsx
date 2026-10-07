@@ -1,5 +1,6 @@
-import NextImage from 'next/image'
 import React from 'react'
+
+import { FadeImage as NextImage } from './FadeImage'
 
 import type { Media as MediaType } from '@/payload-types'
 import { cn } from '@/utilities/ui'

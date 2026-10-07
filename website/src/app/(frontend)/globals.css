@@ -108,7 +108,22 @@
   }
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 6.5rem; /* anchors land below the sticky header */
     -webkit-text-size-adjust: 100%;
+    interpolate-size: allow-keywords;
+  }
+  a,
+  button {
+    transition:
+      color 0.25s ease,
+      background-color 0.3s ease,
+      border-color 0.3s ease,
+      opacity 0.3s ease,
+      transform 0.3s var(--ease-out-soft);
+  }
+  button:active,
+  a[class*='inline-flex']:active {
+    transform: scale(0.985);
   }
   body {
     @apply bg-cream text-ink font-body antialiased;
@@ -269,6 +284,69 @@
   }
   .img-hover:hover img {
     transform: scale(1.04);
+  }
+
+  /* Route change: content eases in */
+  @keyframes page-in {
+    from {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  .page-in {
+    animation: page-in 0.55s var(--ease-out-soft) both;
+  }
+
+  /* Images fade in once loaded (progressive enhancement; see components/Media) */
+  img[data-fade] {
+    opacity: 0;
+    transition: opacity 0.9s ease, transform 1.2s var(--ease-out-soft);
+  }
+  img[data-fade='loaded'] {
+    opacity: 1;
+  }
+  .no-js img[data-fade] {
+    opacity: 1;
+  }
+
+  /* Hero image drifts gently as you scroll (browsers with scroll-driven animations only) */
+  @supports (animation-timeline: scroll()) {
+    @media (prefers-reduced-motion: no-preference) {
+      [data-hero] [data-hero-media] {
+        animation: hero-drift linear both;
+        animation-timeline: scroll(root);
+        animation-range: 0 100vh;
+      }
+    }
+  }
+  @keyframes hero-drift {
+    to {
+      transform: translateY(12%) scale(1.04);
+    }
+  }
+
+  /* FAQ accordion opens smoothly */
+  details::details-content {
+    block-size: 0;
+    overflow: clip;
+    transition:
+      block-size 0.45s var(--ease-out-soft),
+      content-visibility 0.45s allow-discrete;
+  }
+  details[open]::details-content {
+    block-size: auto;
+  }
+
+  /* Cards lift a touch on hover */
+  .lift {
+    transition: transform 0.6s var(--ease-out-soft);
+  }
+  .lift:hover {
+    transform: translateY(-4px);
   }
 
   .no-scrollbar::-webkit-scrollbar {

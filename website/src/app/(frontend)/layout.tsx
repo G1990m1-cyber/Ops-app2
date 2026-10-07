@@ -8,6 +8,7 @@ import { CookieConsent } from '@/components/Consent/CookieConsent'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { LivePreviewListener } from '@/components/LivePreviewListener'
+import { PageTransition } from '@/components/PageTransition'
 import { RevealObserver } from '@/components/Reveal'
 import { toBookTarget } from '@/utilities/booking'
 import { getHotels } from '@/utilities/data'
@@ -30,7 +31,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <body>
         <AnnouncementBar />
         <Header />
-        <main id="main">{children}</main>
+        <main id="main">
+          <PageTransition>{children}</PageTransition>
+        </main>
         <Footer />
         <MobileBookBar hotels={hotels.map(toBookTarget)} />
         <CookieConsent gtmId={process.env.NEXT_PUBLIC_GTM_ID} title={settings.cookies?.title} text={settings.cookies?.text} />

@@ -18,7 +18,7 @@ export const OfferCard: React.FC<{ offer: Offer; feature?: boolean; index?: numb
   return (
     <article
       className={cn(
-        'group overflow-hidden rounded-xl [.tone-cream_&]:bg-sand/70 [.tone-sand_&]:bg-cream [.tone-linen_&]:bg-cream/70 [.tone-charcoal_&]:bg-white/5',
+        'group lift overflow-hidden rounded-xl [.tone-cream_&]:bg-sand/70 [.tone-sand_&]:bg-cream [.tone-linen_&]:bg-cream/70 [.tone-charcoal_&]:bg-white/5',
         feature ? 'grid md:grid-cols-2' : 'flex flex-col',
         className,
       )}
