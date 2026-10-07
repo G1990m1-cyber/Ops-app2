@@ -31,7 +31,7 @@ export const MapEmbed: React.FC<{ lat: number | null; lng: number | null; query:
         <button type="button" onClick={() => setLive(true)} className="group absolute inset-0 flex items-center justify-center" aria-label={`Show interactive map of ${name}`}>
           {tile && (
             // eslint-disable-next-line @next/next/no-img-element
-            <img src={tile} alt="" className="absolute inset-0 h-full w-full scale-[2.2] object-cover opacity-70 blur-[1px] transition-transform duration-700 group-hover:scale-[2.3]" aria-hidden="true" />
+            <img src={tile} alt="" loading="lazy" decoding="async" className="absolute inset-0 h-full w-full scale-[2.2] object-cover opacity-70 blur-[1px] transition-transform duration-700 group-hover:scale-[2.3]" aria-hidden="true" />
           )}
           <span className="relative z-10 inline-flex items-center gap-2 rounded-full bg-cream px-5 py-3 text-ink">
             <Icon name="pin" className="h-5 w-5 text-bronze" /> Show map

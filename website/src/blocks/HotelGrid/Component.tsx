@@ -51,7 +51,7 @@ export const HotelGridBlock: React.FC<H> = async ({ heading, intro, hotels: pick
       ) : (
         <div className="grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
           {hotels.map((h, i) => (
-            <HotelCard key={h.id} hotel={h} index={i} priority={i < 3} />
+            <HotelCard key={h.id} hotel={h} index={i} />
           ))}
         </div>
       )}
