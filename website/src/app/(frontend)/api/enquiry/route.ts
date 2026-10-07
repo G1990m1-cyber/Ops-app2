@@ -67,8 +67,11 @@ export async function POST(req: NextRequest) {
     body.guests && `Guests: ${escapeHtml(body.guests)}`,
   ].filter(Boolean)
 
+  // Without a real email service Payload only logs emails, so do not record them as sent.
+  const emailConfigured = Boolean(process.env.RESEND_API_KEY || process.env.SMTP_HOST)
   let emailSent = false
-  if (to) {
+  if (!emailConfigured) payload.logger.warn('No email service configured (RESEND_API_KEY or SMTP_*); enquiry saved but not emailed')
+  if (to && emailConfigured) {
     try {
       await payload.sendEmail({
         to,
