@@ -26,7 +26,7 @@ const Wordmark: React.FC<{ siteName: string; logo: Media | null; light: boolean 
   if (logo?.url) {
     // eslint-disable-next-line @next/next/no-img-element
     // Any logo colour works: forced to white over photos, to charcoal on the cream bar.
-    return <img src={logo.url} alt={siteName} className={cn('h-9 w-auto md:h-11', light ? 'brightness-0 invert' : 'brightness-0')} />
+    return <img src={logo.url} alt={siteName} className={cn('h-12 w-auto md:h-16', light ? 'brightness-0 invert' : 'brightness-0')} />
   }
   return (
     <span className={cn('font-display text-[1.6rem] leading-none tracking-[0.04em] md:text-[1.9rem]', light ? 'text-cream' : 'text-ink')}>
