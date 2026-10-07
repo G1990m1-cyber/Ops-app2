@@ -21,7 +21,8 @@ export const getHotels = unstable_cache(
     const res = await payload.find({
       collection: 'hotels',
       where: { _status: { equals: 'published' } },
-      sort: 'order',
+      // Tie-break on id so hotels sharing a display-order number always list the same way.
+      sort: ['order', 'id'],
       limit: 50,
       depth: 1,
       pagination: false,
