@@ -1,0 +1,73 @@
+{
+  "name": "grhotels-website",
+  "version": "0.1.0",
+  "description": "GR Hotels website: Next.js App Router + Payload CMS 3",
+  "license": "UNLICENSED",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "cross-env NODE_OPTIONS=--no-deprecation next build",
+    "dev": "cross-env NODE_OPTIONS=--no-deprecation next dev",
+    "start": "cross-env NODE_OPTIONS=--no-deprecation next start",
+    "lint": "cross-env NODE_OPTIONS=--no-deprecation eslint .",
+    "typecheck": "tsc --noEmit",
+    "payload": "cross-env NODE_OPTIONS=--no-deprecation payload",
+    "generate:importmap": "cross-env NODE_OPTIONS=--no-deprecation payload generate:importmap",
+    "generate:types": "cross-env NODE_OPTIONS=--no-deprecation payload generate:types",
+    "migrate": "cross-env NODE_OPTIONS=--no-deprecation payload migrate",
+    "migrate:create": "cross-env NODE_OPTIONS=--no-deprecation payload migrate:create",
+    "seed": "cross-env NODE_OPTIONS=--no-deprecation payload run src/seed/run.ts",
+    "test:redirects": "node scripts/test-redirects.mjs"
+  },
+  "dependencies": {
+    "@payloadcms/admin-bar": "3.90.2",
+    "@payloadcms/db-postgres": "3.90.2",
+    "@payloadcms/email-nodemailer": "3.90.2",
+    "@payloadcms/email-resend": "3.90.2",
+    "@payloadcms/live-preview-react": "3.90.2",
+    "@payloadcms/next": "3.90.2",
+    "@payloadcms/plugin-form-builder": "3.90.2",
+    "@payloadcms/plugin-redirects": "3.90.2",
+    "@payloadcms/plugin-seo": "3.90.2",
+    "@payloadcms/richtext-lexical": "3.90.2",
+    "@payloadcms/storage-s3": "3.90.2",
+    "@payloadcms/ui": "3.90.2",
+    "clsx": "^2.1.1",
+    "cross-env": "10.1.0",
+    "dotenv": "16.4.7",
+    "graphql": "^16.8.2",
+    "next": "16.3.8",
+    "payload": "3.90.2",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "sharp": "0.35.5",
+    "tailwind-merge": "^3.4.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.2.0",
+    "@tailwindcss/postcss": "^4.1.18",
+    "@tailwindcss/typography": "^0.5.19",
+    "@types/node": "24.12.3",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "eslint": "^9.16.0",
+    "eslint-config-next": "16.3.8",
+    "playwright": "1.56.1",
+    "postcss": "^8.4.38",
+    "prettier": "^3.4.2",
+    "tailwindcss": "^4.1.18",
+    "tsx": "4.23.15",
+    "typescript": "6.0.3"
+  },
+  "engines": {
+    "node": ">=22.12.0",
+    "pnpm": "^9 || ^10 || ^11"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "sharp",
+      "esbuild",
+      "unrs-resolver"
+    ]
+  }
+}

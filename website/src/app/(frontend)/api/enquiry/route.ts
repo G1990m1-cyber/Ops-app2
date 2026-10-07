@@ -1,0 +1,151 @@
+import { NextResponse, type NextRequest } from 'next/server'
+
+import { getPayloadClient } from '@/utilities/data'
+import { getCachedGlobal } from '@/utilities/getGlobals'
+import { verifyTurnstile } from '@/utilities/turnstile'
+
+const escapeHtml = (s: string) =>
+  s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c] || c)
+
+const rateLimit = new Map<string, { n: number; t: number }>()
+const limited = (ip: string) => {
+  const now = Date.now()
+  const r = rateLimit.get(ip)
+  if (!r || now - r.t > 10 * 60 * 1000) {
+    rateLimit.set(ip, { n: 1, t: now })
+    return false
+  }
+  r.n += 1
+  return r.n > 8
+}
+
+export async function POST(req: NextRequest) {
+  const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown'
+  if (limited(ip)) return NextResponse.json({ ok: false, message: 'Too many messages. Please try again later.' }, { status: 429 })
+
+  let body: Record<string, string>
+  try {
+    body = await req.json()
+  } catch {
+    return NextResponse.json({ ok: false, message: 'Invalid request.' }, { status: 400 })
+  }
+
+  // Honeypot filled in = bot. Pretend success so they stop.
+  if (body.website) return NextResponse.json({ ok: true, message: 'Thank you.' })
+
+  const name = (body.name || '').trim().slice(0, 120)
+  const email = (body.email || '').trim().slice(0, 200)
+  const message = (body.message || '').trim().slice(0, 5000)
+  if (!name || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email) || message.length < 10) {
+    return NextResponse.json({ ok: false, message: 'Please add your name, a valid email and a short message.' }, { status: 400 })
+  }
+  if (!(await verifyTurnstile(body.turnstileToken, ip))) {
+    return NextResponse.json({ ok: false, message: 'Spam check failed. Please refresh and try again.' }, { status: 400 })
+  }
+
+  const payload = await getPayloadClient()
+  const hotelId = body.hotel ? Number(body.hotel) || body.hotel : null
+  let hotel: { id: number | string; name: string; email?: string | null; phone?: string | null } | null = null
+  if (hotelId) {
+    try {
+      const h = await payload.findByID({ collection: 'hotels', id: hotelId, depth: 0, overrideAccess: true })
+      hotel = { id: h.id, name: h.name, email: h.email, phone: h.phone }
+    } catch {
+      hotel = null
+    }
+  }
+  const settings = await getCachedGlobal('site-settings', 0)()
+  const enquirySettings = settings.enquiries || {}
+
+  // Who receives it: the hotel's own enquiry email, else the group address set in Site settings, else the env fallback.
+  const to = hotel?.email || enquirySettings.fallbackEmail || process.env.ENQUIRY_FALLBACK_EMAIL || process.env.EMAIL_FROM_ADDRESS
+  const cc = enquirySettings.copyTo && enquirySettings.copyTo !== to ? enquirySettings.copyTo : undefined
+  const subjectLabel = body.subject || 'other'
+  const stay = [
+    body.arrival && `Arriving: ${escapeHtml(body.arrival)}`,
+    body.departure && `Leaving: ${escapeHtml(body.departure)}`,
+    body.guests && `Guests: ${escapeHtml(body.guests)}`,
+  ].filter(Boolean)
+
+  // Without a real email service Payload only logs emails, so do not record them as sent.
+  const emailConfigured = Boolean(process.env.RESEND_API_KEY || process.env.SMTP_HOST)
+  let emailSent = false
+  if (!emailConfigured) payload.logger.warn('No email service configured (RESEND_API_KEY or SMTP_*); enquiry saved but not emailed')
+  if (to && emailConfigured) {
+    try {
+      await payload.sendEmail({
+        to,
+        ...(cc ? { cc } : {}),
+        replyTo: email,
+        subject: `Website enquiry${hotel ? ` for ${hotel.name}` : ''}: ${name}`,
+        html: `
+          <div style="font-family:Georgia,serif;font-size:17px;color:#262626;line-height:1.5">
+            <p><strong>${escapeHtml(name)}</strong> sent a message${hotel ? ` about <strong>${escapeHtml(hotel.name)}</strong>` : ''}.</p>
+            <p>Email: <a href="mailto:${escapeHtml(email)}">${escapeHtml(email)}</a><br/>
+            ${body.phone ? `Phone: ${escapeHtml(body.phone)}<br/>` : ''}
+            About: ${escapeHtml(subjectLabel)}${stay.length ? `<br/>${stay.join('<br/>')}` : ''}</p>
+            <p style="white-space:pre-wrap;border-left:3px solid #ddcab4;padding-left:12px">${escapeHtml(message)}</p>
+            <p style="color:#6f6040;font-size:14px">Sent from ${escapeHtml(body.page || '/')} on the GR Hotels website. Reply to this email to answer the guest.</p>
+          </div>`,
+      })
+      emailSent = true
+    } catch (err) {
+      payload.logger.error({ err }, 'Enquiry email failed')
+    }
+  }
+
+  // Automatic thank-you to the guest. Only attempted once the real message has gone, so a broken
+  // email setup never produces a thank-you for a message nobody received.
+  let autoReplySent = false
+  if (emailSent && enquirySettings.autoReply !== false) {
+    const brand = hotel?.name || settings.siteName || 'GR Hotels'
+    const phone = hotel?.phone || settings.contact?.phone || ''
+    const fill = (t: string) =>
+      t.replace(/\{name\}/g, name.split(' ')[0] || name).replace(/\{hotel\}/g, brand).replace(/\{phone\}/g, phone || 'the number on our website')
+    const template = enquirySettings.autoReplyMessage || 'Thank you for getting in touch with {hotel}. We have your message and will reply as soon as we can.'
+    // Trim each line: wording typed or migrated with indentation must not leak into the email.
+    const text = fill(template.split('\n').map((l) => l.trim()).join('\n'))
+    try {
+      await payload.sendEmail({
+        to: email,
+        ...(to ? { replyTo: to } : {}),
+        subject: fill(enquirySettings.autoReplySubject || 'Thank you for your message'),
+        text,
+        html: `<div style="font-family:Georgia,serif;font-size:17px;color:#262626;line-height:1.6;white-space:pre-wrap">${escapeHtml(text)}</div>`,
+      })
+      autoReplySent = true
+    } catch (err) {
+      payload.logger.warn({ err }, 'Enquiry auto-reply failed')
+    }
+  }
+
+  try {
+    await payload.create({
+      collection: 'enquiries',
+      overrideAccess: true,
+      data: {
+        name,
+        email,
+        phone: body.phone?.slice(0, 40) || undefined,
+        subject: ['stay', 'dining', 'event', 'wedding', 'other'].includes(subjectLabel) ? (subjectLabel as 'stay') : 'other',
+        message,
+        arrival: body.arrival || undefined,
+        departure: body.departure || undefined,
+        guests: body.guests ? Number(body.guests) : undefined,
+        hotel: hotel ? (hotel.id as number) : undefined,
+        sourcePath: body.page?.slice(0, 200),
+        emailSent,
+        autoReplySent,
+        status: 'new',
+      },
+    })
+  } catch (err) {
+    payload.logger.error({ err }, 'Enquiry save failed')
+    if (!emailSent) return NextResponse.json({ ok: false, message: 'We could not send your message. Please call us instead.' }, { status: 500 })
+  }
+
+  return NextResponse.json({
+    ok: true,
+    message: hotel ? `Thank you. ${hotel.name} has your message and will reply soon.` : 'Thank you. We have your message and will reply soon.',
+  })
+}
