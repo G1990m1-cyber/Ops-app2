@@ -24,7 +24,7 @@ export const HotelCard: React.FC<{ hotel: Hotel; index?: number; className?: str
       data-reveal
       style={{ '--reveal-delay': `${Math.min(index, 5) * 90}ms` } as React.CSSProperties}
     >
-      <Link href={`/${hotel.slug}`} className="img-hover relative block aspect-[4/3] overflow-hidden rounded-xl bg-linen" aria-label={hotel.name}>
+      <Link href={`/${hotel.slug}`} className="img-hover relative block aspect-[4/3] overflow-hidden rounded-2xl bg-linen" aria-label={hotel.name}>
         <Media resource={media} fill size="card" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" priority={priority} />
       </Link>
       <div className="flex flex-1 flex-col pt-5">

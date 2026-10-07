@@ -10,7 +10,7 @@ import { cn } from '@/utilities/ui'
 export const TextWithImageBlock: React.FC<T & { contextHotel?: Hotel | null }> = ({ image, imagePosition, eyebrow, richText, links, style, contextHotel }) => (
   <Section style={style}>
     <div className="grid items-center gap-10 md:grid-cols-2 md:gap-16 lg:gap-24">
-      <div className={cn('img-hover relative aspect-[4/5] overflow-hidden rounded-xl bg-linen md:aspect-[4/5]', imagePosition === 'right' && 'md:order-2')} data-reveal>
+      <div className={cn('img-hover relative aspect-[4/5] overflow-hidden rounded-2xl bg-linen md:aspect-[4/5]', imagePosition === 'right' && 'md:order-2')} data-reveal>
         <Media resource={image} fill size="large" sizes="(max-width: 768px) 100vw, 50vw" />
       </div>
       <div data-reveal style={{ '--reveal-delay': '120ms' } as React.CSSProperties}>

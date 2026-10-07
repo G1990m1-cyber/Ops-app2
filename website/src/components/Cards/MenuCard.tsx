@@ -26,7 +26,7 @@ export const MenuCard: React.FC<{ menu: Menu; index?: number; className?: string
 
   return (
     <article
-      className={cn('rounded-xl p-6 md:p-8 [.tone-cream_&]:bg-sand/70 [.tone-sand_&]:bg-cream [.tone-linen_&]:bg-cream/70 [.tone-charcoal_&]:bg-white/5', className)}
+      className={cn('rounded-2xl p-6 md:p-8 [.tone-cream_&]:bg-sand/70 [.tone-sand_&]:bg-cream [.tone-linen_&]:bg-cream/70 [.tone-charcoal_&]:bg-white/5', className)}
       data-reveal
       style={{ '--reveal-delay': `${Math.min(index, 5) * 80}ms` } as React.CSSProperties}
     >

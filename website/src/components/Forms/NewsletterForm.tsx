@@ -63,7 +63,7 @@ export const NewsletterForm: React.FC<{ compact?: boolean; consentText?: string 
             placeholder="First name"
             aria-label="First name"
             autoComplete="given-name"
-            className="rounded-md border border-linen bg-white/90 px-4 py-3 text-ink [.tone-charcoal_&]:border-cream/30 [.tone-charcoal_&]:bg-charcoal [.tone-charcoal_&]:text-cream"
+            className="rounded-full border border-linen bg-white/90 px-5 py-3 text-ink [.tone-charcoal_&]:border-cream/30 [.tone-charcoal_&]:bg-charcoal [.tone-charcoal_&]:text-cream"
           />
         )}
         <input
@@ -74,7 +74,7 @@ export const NewsletterForm: React.FC<{ compact?: boolean; consentText?: string 
           placeholder="Email address"
           aria-label="Email address"
           autoComplete="email"
-          className="rounded-md border border-linen bg-white/90 px-4 py-3 text-ink [.tone-charcoal_&]:border-cream/30 [.tone-charcoal_&]:bg-charcoal [.tone-charcoal_&]:text-cream"
+          className="rounded-full border border-linen bg-white/90 px-5 py-3 text-ink [.tone-charcoal_&]:border-cream/30 [.tone-charcoal_&]:bg-charcoal [.tone-charcoal_&]:text-cream"
         />
         {/* Honeypot: real people never see or fill this. */}
         <input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" />

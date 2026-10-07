@@ -127,7 +127,7 @@ export const HeaderClient: React.FC<Props> = ({ nav, siteName, logo, hotels, boo
                 <div
                   id="hotels-menu"
                   className={cn(
-                    'absolute left-1/2 top-full z-50 mt-3 w-[34rem] -translate-x-1/2 rounded-xl border border-linen bg-cream p-3 text-ink transition-all duration-300',
+                    'absolute left-1/2 top-full z-50 mt-3 w-[34rem] -translate-x-1/2 rounded-2xl border border-linen bg-cream p-3 text-ink transition-all duration-300',
                     hotelsOpen ? 'visible opacity-100 translate-y-0' : 'invisible opacity-0 -translate-y-1',
                   )}
                 >
@@ -137,7 +137,7 @@ export const HeaderClient: React.FC<Props> = ({ nav, siteName, logo, hotels, boo
                         <Link
                           href={`/${h.slug}`}
                           prefetch={false}
-                          className="block rounded-lg px-3 py-2.5 transition-colors hover:bg-sand"
+                          className="block rounded-xl px-3 py-2.5 transition-colors hover:bg-sand"
                           aria-current={pathname === `/${h.slug}` ? 'page' : undefined}
                         >
                           <span className="block leading-tight">{h.name}</span>
@@ -146,7 +146,7 @@ export const HeaderClient: React.FC<Props> = ({ nav, siteName, logo, hotels, boo
                       </li>
                     ))}
                   </ul>
-                  <Link href="/hotels" prefetch={false} className="mt-2 flex items-center justify-between rounded-lg px-3 py-2.5 text-cocoa hover:bg-sand">
+                  <Link href="/hotels" prefetch={false} className="mt-2 flex items-center justify-between rounded-xl px-3 py-2.5 text-cocoa hover:bg-sand">
                     See all hotels <Icon name="arrow" className="h-5 w-5" />
                   </Link>
                 </div>

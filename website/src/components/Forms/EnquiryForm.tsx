@@ -58,7 +58,7 @@ export const EnquiryForm: React.FC<{
 
   if (state === 'done') {
     return (
-      <div role="status" className="rounded-xl bg-sand p-8 text-center [.tone-sand_&]:bg-cream">
+      <div role="status" className="rounded-2xl bg-sand p-8 text-center [.tone-sand_&]:bg-cream">
         <p className="font-display text-[1.6rem]">Thank you</p>
         <p className="mt-2">{message}</p>
       </div>

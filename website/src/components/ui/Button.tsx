@@ -7,20 +7,20 @@ export type ButtonVariant = 'primary' | 'secondary' | 'link' | 'ghost' | 'onImag
 export type ButtonSize = 'md' | 'lg' | 'sm'
 
 const base =
-  'inline-flex items-center justify-center gap-2 font-body font-semibold tracking-[0.04em] transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-bronze disabled:opacity-60 disabled:pointer-events-none select-none'
+  'inline-flex items-center justify-center gap-2 rounded-full font-body font-medium tracking-[0.02em] transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-bronze disabled:opacity-60 disabled:pointer-events-none select-none'
 
 const variants: Record<ButtonVariant, string> = {
-  primary: 'bg-cocoa text-white hover:bg-[#6a4a38] border border-cocoa hover:border-[#6a4a38]',
-  secondary: 'bg-transparent text-cocoa border border-bronze hover:bg-bronze hover:text-white',
+  primary: 'bg-bronze-deep text-white border border-bronze-deep hover:bg-[#6f6040] hover:border-[#6f6040]',
+  secondary: 'bg-transparent text-bronze-deep border border-bronze/60 hover:bg-bronze-deep hover:text-white hover:border-bronze-deep',
   onImage: 'bg-cream/95 text-ink border border-cream hover:bg-white',
-  ghost: 'bg-transparent text-ink border border-transparent hover:text-cocoa',
-  link: 'link-underline text-cocoa px-0 py-0 border-0',
+  ghost: 'bg-transparent text-ink border border-transparent hover:text-bronze-deep',
+  link: 'link-underline text-bronze-deep px-0 py-0 border-0 rounded-none',
 }
 
 const sizes: Record<ButtonSize, string> = {
-  sm: 'text-[1rem] px-4 py-2',
-  md: 'text-[1.05rem] px-6 py-3',
-  lg: 'text-[1.125rem] px-8 py-3.5',
+  sm: 'text-[1rem] px-5 py-2',
+  md: 'text-[1.05rem] px-7 py-2.5',
+  lg: 'text-[1.125rem] px-9 py-3',
 }
 
 type Common = {

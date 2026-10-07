@@ -24,7 +24,7 @@ export const MapEmbed: React.FC<{ lat: number | null; lng: number | null; query:
     : null
 
   return (
-    <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-linen md:aspect-[16/10]">
+    <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-linen md:aspect-[16/10]">
       {live ? (
         <iframe title={`Map showing ${name}`} src={src} className="absolute inset-0 h-full w-full border-0" loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen />
       ) : (

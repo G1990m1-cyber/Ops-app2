@@ -18,17 +18,17 @@ export const EventCard: React.FC<{ event: Event; showHotel?: boolean; index?: nu
   const d = new Date(event.start)
   return (
     <article
-      className={cn('group grid gap-5 rounded-xl p-5 sm:grid-cols-[6.5rem_1fr] [.tone-cream_&]:bg-sand/70 [.tone-sand_&]:bg-cream [.tone-linen_&]:bg-cream/70 [.tone-charcoal_&]:bg-white/5', className)}
+      className={cn('group grid gap-5 rounded-2xl p-5 sm:grid-cols-[6.5rem_1fr] [.tone-cream_&]:bg-sand/70 [.tone-sand_&]:bg-cream [.tone-linen_&]:bg-cream/70 [.tone-charcoal_&]:bg-white/5', className)}
       data-reveal
       style={{ '--reveal-delay': `${Math.min(index, 5) * 80}ms` } as React.CSSProperties}
     >
-      <div className="flex flex-row items-baseline gap-2 sm:flex-col sm:items-center sm:justify-center sm:rounded-lg sm:bg-cream sm:py-4 [.tone-charcoal_&]:sm:bg-white/10">
+      <div className="flex flex-row items-baseline gap-2 sm:flex-col sm:items-center sm:justify-center sm:rounded-xl sm:bg-cream sm:py-4 [.tone-charcoal_&]:sm:bg-white/10">
         <span className="font-display text-[2.4rem] leading-none text-bronze [.tone-charcoal_&]:text-gold">{d.getDate()}</span>
         <span className="uppercase tracking-[0.18em] text-[0.8rem]">{d.toLocaleString('en-GB', { month: 'short', timeZone: 'Europe/London' })}</span>
       </div>
       <div className="min-w-0">
         {event.image && (
-          <div className="img-hover relative mb-4 aspect-[16/9] overflow-hidden rounded-lg bg-linen sm:hidden">
+          <div className="img-hover relative mb-4 aspect-[16/9] overflow-hidden rounded-xl bg-linen sm:hidden">
             <Media resource={event.image} fill size="card" sizes="100vw" />
           </div>
         )}

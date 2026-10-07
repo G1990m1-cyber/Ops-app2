@@ -7,6 +7,8 @@
   --color-sand: #f1e9e0;
   --color-linen: #ddcab4;
   --color-bronze: #88764c;
+  /* Filled buttons: a touch deeper than the signature bronze so white text clears WCAG AA (4.97:1). */
+  --color-bronze-deep: #7f6e46;
   --color-gold: #d9b282;
   --color-olive: #8f8a45;
   --color-cocoa: #815c46;
@@ -142,6 +144,17 @@
   h4 {
     text-wrap: balance;
     font-weight: 400;
+  }
+
+  /* Headlines sit in the signature bronze on light tones, as on groupretreats.co.uk; cream over photos and on charcoal. */
+  h1,
+  h2,
+  h3 {
+    color: var(--color-bronze);
+  }
+  .tone-charcoal :is(h1, h2, h3),
+  [data-hero] :is(h1, h2, h3) {
+    color: var(--color-cream);
   }
   .font-display {
     letter-spacing: 0.005em;

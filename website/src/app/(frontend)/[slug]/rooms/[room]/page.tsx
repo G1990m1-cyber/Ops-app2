@@ -53,7 +53,7 @@ export default async function RoomPage({ params }: Args) {
               </ul>
             )}
           </div>
-          <aside className="h-fit rounded-xl bg-sand p-7 lg:sticky lg:top-36" data-reveal style={{ '--reveal-delay': '120ms' } as React.CSSProperties}>
+          <aside className="h-fit rounded-2xl bg-sand p-7 lg:sticky lg:top-36" data-reveal style={{ '--reveal-delay': '120ms' } as React.CSSProperties}>
             {room.fromPrice ? (
               <p className="text-ink-soft">
                 From <span className="font-display text-[2.2rem] text-ink">£{room.fromPrice}</span> per night

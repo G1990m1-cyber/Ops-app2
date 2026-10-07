@@ -27,7 +27,7 @@ export const GalleryBlock: React.FC<G & { hotel?: Hotel | null }> = ({ heading, 
         {layout === 'strip' ? (
           <div className="no-scrollbar flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-2 md:px-10">
             {resolved.map((r, i) => (
-              <button key={i} type="button" data-lightbox-index={i} className="img-hover relative aspect-[4/3] w-[78vw] shrink-0 snap-center overflow-hidden rounded-xl bg-linen sm:w-[48vw] lg:w-[32vw]" aria-label={`Open photo ${i + 1}${r.caption ? `: ${r.caption}` : ''}`}>
+              <button key={i} type="button" data-lightbox-index={i} className="img-hover relative aspect-[4/3] w-[78vw] shrink-0 snap-center overflow-hidden rounded-2xl bg-linen sm:w-[48vw] lg:w-[32vw]" aria-label={`Open photo ${i + 1}${r.caption ? `: ${r.caption}` : ''}`}>
                 <Media resource={r.image} fill size="large" sizes="(max-width: 640px) 80vw, (max-width: 1024px) 50vw, 33vw" />
               </button>
             ))}
@@ -35,7 +35,7 @@ export const GalleryBlock: React.FC<G & { hotel?: Hotel | null }> = ({ heading, 
         ) : layout === 'grid' ? (
           <div className={cn('grid gap-4', gridClass)}>
             {resolved.map((r, i) => (
-              <button key={i} type="button" data-lightbox-index={i} className="img-hover relative aspect-[4/3] overflow-hidden rounded-xl bg-linen" aria-label={`Open photo ${i + 1}${r.caption ? `: ${r.caption}` : ''}`} data-reveal style={{ '--reveal-delay': `${(i % 4) * 70}ms` } as React.CSSProperties}>
+              <button key={i} type="button" data-lightbox-index={i} className="img-hover relative aspect-[4/3] overflow-hidden rounded-2xl bg-linen" aria-label={`Open photo ${i + 1}${r.caption ? `: ${r.caption}` : ''}`} data-reveal style={{ '--reveal-delay': `${(i % 4) * 70}ms` } as React.CSSProperties}>
                 <Media resource={r.image} fill size="card" sizes="(max-width: 640px) 100vw, 33vw" />
               </button>
             ))}
@@ -43,7 +43,7 @@ export const GalleryBlock: React.FC<G & { hotel?: Hotel | null }> = ({ heading, 
         ) : (
           <div className={cn('columns-1 gap-4 [&>*]:mb-4', colClass)}>
             {resolved.map((r, i) => (
-              <button key={i} type="button" data-lightbox-index={i} className="img-hover block w-full overflow-hidden rounded-xl bg-linen break-inside-avoid" aria-label={`Open photo ${i + 1}${r.caption ? `: ${r.caption}` : ''}`} data-reveal style={{ '--reveal-delay': `${(i % 4) * 70}ms` } as React.CSSProperties}>
+              <button key={i} type="button" data-lightbox-index={i} className="img-hover block w-full overflow-hidden rounded-2xl bg-linen break-inside-avoid" aria-label={`Open photo ${i + 1}${r.caption ? `: ${r.caption}` : ''}`} data-reveal style={{ '--reveal-delay': `${(i % 4) * 70}ms` } as React.CSSProperties}>
                 <Media resource={r.image} size="large" sizes="(max-width: 640px) 100vw, 33vw" className="h-auto w-full" />
               </button>
             ))}

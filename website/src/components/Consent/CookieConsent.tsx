@@ -70,7 +70,7 @@ export const CookieConsent: React.FC<Props> = ({ gtmId, title, text }) => {
           role="dialog"
           aria-live="polite"
           aria-label="Cookie choices"
-          className="fixed inset-x-3 bottom-[4.75rem] z-50 mx-auto max-w-xl rounded-xl border border-linen bg-cream p-5 md:inset-x-auto md:bottom-6 md:left-6 md:p-6 motion-safe:animate-fade-up"
+          className="fixed inset-x-3 bottom-[4.75rem] z-50 mx-auto max-w-xl rounded-2xl border border-linen bg-cream p-5 md:inset-x-auto md:bottom-6 md:left-6 md:p-6 motion-safe:animate-fade-up"
         >
           <p className="font-display text-[1.35rem] leading-tight">{title || 'A word about cookies'}</p>
           <p className="mt-2 text-[1rem] leading-snug text-ink-soft">

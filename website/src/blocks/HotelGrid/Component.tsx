@@ -27,7 +27,7 @@ export const HotelGridBlock: React.FC<H> = async ({ heading, intro, hotels: pick
             const media = h.heroMedia && typeof h.heroMedia === 'object' && h.heroMedia.mimeType?.startsWith('video/') ? h.heroPoster : h.heroMedia
             return (
               <article key={h.id} className="grid items-center gap-8 md:grid-cols-12 md:gap-12">
-                <Link href={`/${h.slug}`} className={cn('img-hover relative block aspect-[4/3] overflow-hidden rounded-xl bg-linen md:col-span-7', i % 2 === 1 && 'md:order-2')} aria-label={h.name} data-reveal>
+                <Link href={`/${h.slug}`} className={cn('img-hover relative block aspect-[4/3] overflow-hidden rounded-2xl bg-linen md:col-span-7', i % 2 === 1 && 'md:order-2')} aria-label={h.name} data-reveal>
                   <Media resource={media} fill size="large" sizes="(max-width: 768px) 100vw, 58vw" />
                 </Link>
                 <div className="md:col-span-5" data-reveal style={{ '--reveal-delay': '120ms' } as React.CSSProperties}>

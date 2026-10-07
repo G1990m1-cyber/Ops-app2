@@ -15,7 +15,7 @@ export const SubpageHeader: React.FC<{ hotel: Hotel; title: string; intro?: stri
         <p className="eyebrow mb-3 !text-gold">
           <Link href={`/${hotel.slug}`} className="hover:underline">{hotel.name}</Link> · {hotel.location}
         </p>
-        <h1 className="font-display text-[clamp(2.2rem,6vw,4rem)] leading-[1.03]">{title}</h1>
+        <h1 className="font-display text-[clamp(2.2rem,6vw,4rem)] leading-[1.03] text-cream">{title}</h1>
         {intro && <p className="mt-4 max-w-2xl text-[1.15rem] text-cream/90 md:text-[1.3rem]">{intro}</p>}
       </div>
     </section>

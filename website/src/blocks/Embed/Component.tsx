@@ -33,7 +33,7 @@ export const EmbedBlockComponent: React.FC<E> = ({ heading, provider, url, title
   return (
     <Section style={style}>
       <SectionHeading heading={heading} />
-      <div className={`${ratio[aspect || '16:9']} overflow-hidden rounded-xl bg-linen`} data-reveal>
+      <div className={`${ratio[aspect || '16:9']} overflow-hidden rounded-2xl bg-linen`} data-reveal>
         <ConsentGate src={src} title={title} provider={provider} />
       </div>
     </Section>
