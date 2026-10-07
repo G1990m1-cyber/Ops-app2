@@ -24,9 +24,10 @@ export const TestimonialCarousel: React.FC<{ items: Item[] }> = ({ items }) => {
   return (
     <div className="mx-auto max-w-3xl text-center" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)} onFocus={() => setPaused(true)} onBlur={() => setPaused(false)}>
       <Icon name="quote" className="mx-auto h-9 w-9 text-bronze [.tone-charcoal_&]:text-gold" />
+      {/* The active quote sits in normal flow so the box grows with it; the others fade out underneath. */}
       <div aria-live="polite" className="relative mt-4 min-h-[9rem]">
         {items.map((it, idx) => (
-          <blockquote key={idx} className={cn('absolute inset-0 transition-opacity duration-700', idx === i ? 'opacity-100' : 'pointer-events-none opacity-0')} aria-hidden={idx !== i}>
+          <blockquote key={idx} className={cn('transition-opacity duration-700', idx === i ? 'relative opacity-100' : 'pointer-events-none absolute inset-0 opacity-0')} aria-hidden={idx !== i}>
             <p className="font-body text-[1.4rem] italic leading-snug md:text-[1.75rem]">“{it.quote}”</p>
             <footer className="mt-5 text-[1rem] text-ink-soft [.tone-charcoal_&]:text-cream/70">
               {it.rating ? <span className="mr-2 tracking-[0.2em] text-bronze [.tone-charcoal_&]:text-gold" aria-label={`${it.rating} out of 5`}>{'★'.repeat(it.rating)}</span> : null}

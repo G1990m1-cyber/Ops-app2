@@ -7,7 +7,7 @@ export type ButtonVariant = 'primary' | 'secondary' | 'link' | 'ghost' | 'onImag
 export type ButtonSize = 'md' | 'lg' | 'sm'
 
 const base =
-  'inline-flex items-center justify-center gap-2 rounded-full font-body font-medium tracking-[0.02em] transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-bronze disabled:opacity-60 disabled:pointer-events-none select-none'
+  'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full font-body font-medium tracking-[0.02em] transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-bronze disabled:opacity-60 disabled:pointer-events-none select-none'
 
 const variants: Record<ButtonVariant, string> = {
   primary: 'bg-bronze-deep text-white border border-bronze-deep hover:bg-[#6f6040] hover:border-[#6f6040]',
