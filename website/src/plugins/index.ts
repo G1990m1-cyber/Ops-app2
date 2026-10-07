@@ -94,6 +94,8 @@ export const plugins: Plugin[] = [
   }),
   s3Storage({
     enabled: s3Enabled,
+    // Keep the media table identical whether or not S3 is configured, so migrations match production.
+    alwaysInsertFields: true,
     collections: { media: { prefix: 'media' } },
     bucket: process.env.S3_BUCKET || 'media',
     config: {
