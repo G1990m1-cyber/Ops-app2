@@ -30,6 +30,8 @@ export const revalidateCollection =
         for (const slug of [d.slug, prev?.slug]) {
           if (slug) revalidatePath(slug === 'home' ? '/' : `/${slug}`, 'layout')
         }
+        // The hotel picker's fallback feed is a cached route; refresh it too so (un)published hotels appear at once.
+        if (collection === 'hotels') revalidatePath('/api/book-targets')
       } else {
         const slug = hotelSlugOf(d) ?? (prev ? hotelSlugOf(prev) : null)
         if (slug) revalidatePath(`/${slug}`, 'layout')
@@ -50,6 +52,7 @@ export const revalidateCollectionDelete =
       revalidateTag('sitemap', 'max')
       const d = doc as Doc
       if (d.slug) revalidatePath(d.slug === 'home' ? '/' : `/${d.slug}`, 'layout')
+      if (collection === 'hotels') revalidatePath('/api/book-targets')
       const hotelSlug = hotelSlugOf(d)
       if (hotelSlug) revalidatePath(`/${hotelSlug}`, 'layout')
     } catch {
