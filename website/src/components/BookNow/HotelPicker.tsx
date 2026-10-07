@@ -116,8 +116,8 @@ export const HotelPicker: React.FC<Props> = ({ hotels: provided, onClose, placem
                       )}
                     </span>
                     <span className="min-w-0 flex-1">
-                      <span className="block truncate font-display text-[1.35rem] leading-tight text-bronze">{h.name}</span>
-                      <span className="block truncate text-[0.95rem] text-ink-soft">{h.location || ''}</span>
+                      <span className="block font-display text-[1.25rem] leading-[1.15] text-bronze sm:text-[1.35rem]">{h.name}</span>
+                      <span className="mt-0.5 block text-[0.92rem] leading-snug text-ink-soft">{h.location || ''}</span>
                     </span>
                     <span className="flex shrink-0 items-center gap-1.5 text-[0.95rem] text-bronze-deep">
                       <span className="hidden sm:inline">{engine ? 'Book online' : tel ? 'Call' : 'Enquire'}</span>
