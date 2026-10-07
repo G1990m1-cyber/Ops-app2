@@ -42,7 +42,7 @@ export const Footer: React.FC = async () => {
                 {socials.map((s) => (
                   <li key={s.name}>
                     <a href={s.url!} target="_blank" rel="noopener noreferrer" aria-label={s.name} className="text-gold transition-colors hover:text-cream">
-                      <Icon name={s.name} />
+                      <Icon name={s.name} className="h-5 w-5" />
                     </a>
                   </li>
                 ))}

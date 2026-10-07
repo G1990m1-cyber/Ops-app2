@@ -45,15 +45,15 @@ export const Lightbox: React.FC<{ images: Img[]; children: React.ReactNode }> = 
         createPortal(
           <div role="dialog" aria-modal="true" aria-label={img.alt || 'Photo'} className="fixed inset-0 z-[110] flex items-center justify-center bg-charcoal/92 p-4 motion-safe:animate-[fade-up_0.25s_ease-out]">
             <button type="button" onClick={close} aria-label="Close" className="absolute right-4 top-4 rounded-full bg-cream/10 p-2 text-cream hover:bg-cream/20">
-              <Icon name="close" />
+              <Icon name="close" className="h-6 w-6" />
             </button>
             {images.length > 1 && (
               <>
                 <button type="button" onClick={() => step(-1)} aria-label="Previous photo" className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-cream/10 p-2 text-cream hover:bg-cream/20 md:left-6">
-                  <Icon name="arrow" className="rotate-180" />
+                  <Icon name="arrow" className="h-6 w-6 rotate-180" />
                 </button>
                 <button type="button" onClick={() => step(1)} aria-label="Next photo" className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-cream/10 p-2 text-cream hover:bg-cream/20 md:right-6">
-                  <Icon name="arrow" />
+                  <Icon name="arrow" className="h-6 w-6" />
                 </button>
               </>
             )}

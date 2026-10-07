@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import React, { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 
@@ -78,7 +79,7 @@ export const HotelPicker: React.FC<Props> = ({ hotels: provided, onClose, placem
             </h2>
           </div>
           <button type="button" onClick={onClose} aria-label="Close" className="rounded-full p-2 text-ink hover:bg-sand">
-            <Icon name="close" />
+            <Icon name="close" className="h-5 w-5" />
           </button>
         </div>
         {loading ? (
@@ -107,15 +108,21 @@ export const HotelPicker: React.FC<Props> = ({ hotels: provided, onClose, placem
                       })
                       if (!engine) onClose()
                     }}
-                    className="group flex items-center justify-between gap-4 py-4 text-left transition-colors hover:text-cocoa"
+                    className="group flex items-center gap-4 py-3 text-left"
                   >
-                    <span>
-                      <span className="block text-[1.2rem] font-medium">{h.name}</span>
-                      <span className="block text-[0.95rem] text-ink-soft">
-                        {engine ? 'Book online' : tel ? `Call ${h.phone}` : 'Send an enquiry'}
-                      </span>
+                    <span className="relative block h-16 w-24 shrink-0 overflow-hidden rounded-xl bg-linen">
+                      {h.image && (
+                        <Image src={h.image} alt="" fill sizes="96px" className="object-cover transition-transform duration-500 group-hover:scale-105" />
+                      )}
                     </span>
-                    <Icon name={engine ? 'arrowUpRight' : 'arrow'} className="shrink-0 text-bronze transition-transform group-hover:translate-x-1" />
+                    <span className="min-w-0 flex-1">
+                      <span className="block truncate font-display text-[1.35rem] leading-tight text-bronze">{h.name}</span>
+                      <span className="block truncate text-[0.95rem] text-ink-soft">{h.location || ''}</span>
+                    </span>
+                    <span className="flex shrink-0 items-center gap-1.5 text-[0.95rem] text-bronze-deep">
+                      <span className="hidden sm:inline">{engine ? 'Book online' : tel ? 'Call' : 'Enquire'}</span>
+                      <Icon name={engine ? 'arrowUpRight' : 'arrow'} className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                    </span>
                   </a>
                 </li>
               )
