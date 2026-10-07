@@ -16,7 +16,11 @@ import { adminOnlyField } from '@/access'
 export const seoTab = ({ adminOnly = false }: { adminOnly?: boolean } = {}) => ({
   name: 'meta',
   label: 'SEO & sharing',
-  admin: adminOnly ? { condition: (_: unknown, __: unknown, { user }: { user?: { role?: string } | null }) => user?.role === 'admin' } : undefined,
+  // Only add `admin` when there is something in it: Payload 3.9 reads `field.admin.disabled` whenever the key exists,
+  // and an explicit `admin: undefined` blanked the whole edit screen for Hotels and Pages.
+  ...(adminOnly
+    ? { admin: { condition: (_: unknown, __: unknown, { user }: { user?: { role?: string } | null }) => user?.role === 'admin' } }
+    : {}),
   fields: [
     OverviewField({
       titlePath: 'meta.title',

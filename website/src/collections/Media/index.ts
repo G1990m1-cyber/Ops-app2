@@ -3,6 +3,7 @@ import type { CollectionConfig } from 'payload'
 import { hiddenUnlessAdmin, isAdminUser, isLoggedIn } from '@/access'
 import { populateCreatedBy } from '@/hooks/populateCreatedBy'
 import { validateUpload } from '@/hooks/validateUpload'
+import { publicMediaURL } from '@/plugins'
 
 export const Media: CollectionConfig = {
   slug: 'media',
@@ -52,7 +53,14 @@ export const Media: CollectionConfig = {
   ],
   upload: {
     staticDir: 'public/media',
-    adminThumbnail: 'thumbnail',
+    // Thumbnails come straight from the public bucket in production; Payload serves them itself in local dev.
+    adminThumbnail: ({ doc }) => {
+      const sizes = doc.sizes as Record<string, { filename?: string | null; url?: string | null }> | undefined
+      const file = sizes?.thumbnail?.filename || (doc.filename as string | undefined)
+      const mime = String(doc.mimeType || '')
+      if (!mime.startsWith('image/')) return null
+      return publicMediaURL(file, (doc.prefix as string) || 'media') || sizes?.thumbnail?.url || (doc.url as string) || null
+    },
     focalPoint: true,
     crop: true,
     displayPreview: true,

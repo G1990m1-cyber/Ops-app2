@@ -22,7 +22,7 @@ export const Enquiries: CollectionConfig = {
   admin: {
     useAsTitle: 'name',
     defaultColumns: ['name', 'hotel', 'subject', 'status', 'createdAt'],
-    group: 'Enquiries',
+    group: 'Content',
     description:
       'Every contact form message is kept here as well as being emailed, so nothing is lost if an email goes astray.',
   },

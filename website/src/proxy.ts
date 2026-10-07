@@ -39,8 +39,22 @@ async function loadRedirects(origin: string): Promise<Entry[]> {
   return items
 }
 
+const mediaBase = (() => {
+  const explicit = process.env.MEDIA_PUBLIC_URL?.replace(/\/$/, '')
+  if (explicit) return explicit
+  const endpoint = process.env.S3_ENDPOINT || ''
+  const bucket = process.env.S3_BUCKET || 'media'
+  if (process.env.S3_ACCESS_KEY_ID && /\/storage\/v1\/s3\/?$/.test(endpoint)) return endpoint.replace(/\/s3\/?$/, `/object/public/${bucket}`)
+  return null
+})()
+
 export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
+  // Files live in the public bucket; links to Payload's own file route (older pages, social caches) are sent there.
+  if (mediaBase && pathname.startsWith('/api/media/file/')) {
+    const file = pathname.slice('/api/media/file/'.length)
+    if (file && !file.includes('/')) return NextResponse.redirect(`${mediaBase}/media/${file}`, 301)
+  }
   if (pathname.startsWith('/_next') || pathname.startsWith('/api') || pathname.startsWith('/admin') || pathname.startsWith('/next/')) {
     return NextResponse.next()
   }

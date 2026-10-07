@@ -56,7 +56,7 @@ const s3Enabled = Boolean(
  * every image through a serverless function) is much faster for heroes and galleries.
  * Supabase: https://PROJECT.storage.supabase.co/storage/v1/s3 -> .../storage/v1/object/public/<bucket>
  */
-const mediaPublicBase = (() => {
+export const mediaPublicBase = (() => {
   const explicit = process.env.MEDIA_PUBLIC_URL?.replace(/\/$/, '')
   if (explicit) return explicit
   const endpoint = process.env.S3_ENDPOINT || ''
@@ -64,6 +64,10 @@ const mediaPublicBase = (() => {
   if (/\/storage\/v1\/s3\/?$/.test(endpoint)) return endpoint.replace(/\/s3\/?$/, `/object/public/${bucket}`)
   return null
 })()
+
+/** Public URL for a file in the media bucket, or null when files are served by Payload itself (local dev). */
+export const publicMediaURL = (filename?: string | null, prefix = 'media'): string | null =>
+  s3Enabled && mediaPublicBase && filename ? `${mediaPublicBase}/${prefix}/${encodeURIComponent(filename)}` : null
 
 export const plugins: Plugin[] = [
   redirectsPlugin({
