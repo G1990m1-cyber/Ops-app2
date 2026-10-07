@@ -12,7 +12,7 @@ export const SubpageHeader: React.FC<{ hotel: Hotel; title: string; intro?: stri
       <Media resource={media} fill size="hero" sizes="100vw" priority className="absolute inset-0" decorative />
       <div className="absolute inset-0 overlay-gradient" aria-hidden="true" />
       <div className="container-site relative z-10 w-full pb-10 pt-36 md:pb-14">
-        <p className="eyebrow mb-3 !text-gold">
+        <p className="eyebrow mb-3 !text-cream/90">
           <Link href={`/${hotel.slug}`} className="hover:underline">{hotel.name}</Link> · {hotel.location}
         </p>
         <h1 className="font-display text-[clamp(2.2rem,6vw,4rem)] leading-[1.03] text-cream">{title}</h1>

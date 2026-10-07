@@ -50,7 +50,7 @@ export const HeroBlock: React.FC<Props> = ({ media, poster, eyebrow, title, subt
       </div>
       <div className="container-site relative z-10 w-full pb-14 pt-40 md:pb-20">
         <div className="max-w-3xl motion-safe:animate-fade-up" style={{ animationDelay: '120ms' }}>
-          {kicker && <p className="eyebrow mb-4 !text-gold">{kicker}</p>}
+          {kicker && <p className="eyebrow mb-4 !text-cream/90">{kicker}</p>}
           {heading && (
             <Title className="font-display text-[clamp(2.6rem,7vw,5.25rem)] leading-[1.02] text-cream">{heading}</Title>
           )}

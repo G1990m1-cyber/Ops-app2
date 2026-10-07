@@ -190,37 +190,39 @@ export const HeaderClient: React.FC<Props> = ({ nav, siteName, logo, hotels, boo
           </div>
         </div>
 
-        {/* Mobile menu */}
-        <div
-          id="mobile-menu"
-          className={cn(
-            'fixed inset-x-0 bottom-0 top-[4.25rem] z-40 overflow-y-auto bg-cream px-6 pb-28 pt-6 transition-opacity duration-300 lg:hidden',
-            open ? 'opacity-100' : 'pointer-events-none opacity-0',
-          )}
-          aria-hidden={!open}
-        >
-          <p className="eyebrow mb-3">Our hotels</p>
-          <ul className="mb-8 grid gap-1">
+      </header>
+      {/* Mobile menu. Lives outside the header: the header's backdrop blur would otherwise trap this fixed panel inside it. */}
+      <div
+        id="mobile-menu"
+        className={cn(
+          'fixed inset-0 z-40 flex flex-col overflow-y-auto bg-cream pt-[4.25rem] transition-opacity duration-300 lg:hidden',
+          open ? 'opacity-100' : 'pointer-events-none opacity-0',
+        )}
+        aria-hidden={!open}
+      >
+        <nav aria-label="Mobile" className="container-site flex-1 pb-32 pt-6">
+          <ul className="grid gap-1">
+            {items.map((i) => (
+              <li key={i.href}>
+                <Link href={i.href} prefetch={false} className="block border-b border-linen py-3.5 font-display text-[1.9rem] leading-none text-bronze">
+                  {i.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <p className="eyebrow mb-3 mt-10">Our hotels</p>
+          <ul className="grid gap-1">
             {hotels.map((h) => (
               <li key={h.slug}>
-                <Link href={`/${h.slug}`} prefetch={false} className="flex items-baseline justify-between gap-3 border-b border-linen py-3 text-[1.25rem]">
+                <Link href={`/${h.slug}`} prefetch={false} className="flex flex-col gap-0.5 border-b border-linen py-3 text-[1.25rem] text-ink">
                   <span>{h.name}</span>
                   <span className="text-[0.95rem] text-ink-soft">{h.location}</span>
                 </Link>
               </li>
             ))}
           </ul>
-          <ul className="grid gap-1">
-            {items.map((i) => (
-              <li key={i.href}>
-                <Link href={i.href} prefetch={false} className="block py-3 text-[1.35rem]">
-                  {i.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </header>
+        </nav>
+      </div>
     </>
   )
 }

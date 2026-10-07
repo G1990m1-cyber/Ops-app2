@@ -90,9 +90,10 @@
 
 /* Text over images: brown tint or soft gradient, never shadows or outlines. */
 @utility overlay-gradient {
+  /* Warm charcoal rather than pure cocoa: deep enough where the words sit (lower half), light at the top. */
   background:
-    linear-gradient(to bottom, rgb(129 92 70 / 0.38) 0%, rgb(129 92 70 / 0) 28%),
-    linear-gradient(to top, rgb(129 92 70 / 0.72) 0%, rgb(129 92 70 / 0.35) 45%, rgb(129 92 70 / 0.12) 100%);
+    linear-gradient(to bottom, rgb(38 38 38 / 0.42) 0%, rgb(38 38 38 / 0) 30%),
+    linear-gradient(to top, rgb(38 30 24 / 0.86) 0%, rgb(50 38 30 / 0.66) 38%, rgb(70 52 40 / 0.4) 62%, rgb(129 92 70 / 0.16) 100%);
 }
 @utility overlay-tint40 {
   background-color: rgb(129 92 70 / 0.4);
