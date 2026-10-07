@@ -78,7 +78,12 @@ export default buildConfig({
   },
   editor: simpleLexical,
   db: postgresAdapter({
-    pool: { connectionString: process.env.DATABASE_URL },
+    pool: {
+      connectionString: process.env.DATABASE_URL,
+      // Supabase's pooler presents a certificate chain Node does not ship with; encrypt without strict verification.
+      ssl: /supabase\.(co|com)/.test(process.env.DATABASE_URL || '') ? { rejectUnauthorized: false } : undefined,
+      max: 10,
+    },
     migrationDir: path.resolve(dirname, 'migrations'),
     push: process.env.NODE_ENV !== 'production' && process.env.PAYLOAD_DB_PUSH !== 'false',
   }),
