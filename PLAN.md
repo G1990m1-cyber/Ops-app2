@@ -13,6 +13,15 @@
 - Docs: `website/README.md`, `website/MANAGER-GUIDE.md`, `website/LAUNCH-CHECKLIST.md`, `website/.env.example`.
 - Supabase project **GR Hotels Website** created (London, ref `kamdmgouuidvvhsujzmy`). Tables are created by the migration on the first Vercel deploy; no data lives there yet.
 
+### Follow-up session: start here
+
+If this is a new Claude session picking the work up: the build lives in `website/` on branch `ccr-0d76b103-2z12vu`. Read `website/README.md` first. Remaining work, in order:
+
+1. **Crawl the old site** (`www.grhotels.co.uk`, every hotel page and sub-page, images, menu PDFs, copy, meta, nav) into `website/content/inventory.json`, then replace the placeholder seed content in `website/src/seed/` with the real copy and images. Download images from the old agency subdomain too. Keep every image's alt text meaningful.
+2. **Deploy to Vercel**: create the project from this repository with Root Directory `website` (a `VERCEL_TOKEN` secret lets you do this through the Vercel API), add the environment variables from `website/.env.example`, deploy, run the first admin login and seed.
+3. **Supabase Storage**: create a public bucket `media` in project `kamdmgouuidvvhsujzmy`, create S3 access keys, set the `S3_*` variables on Vercel.
+4. Work through `website/LAUNCH-CHECKLIST.md`.
+
 ### Still needed from you (unchanged from section 8)
 
 Vercel access, booking URLs per hotel, enquiry emails per hotel, logo SVG, TAN Pearl files, HubSpot IDs, a Turnstile key, an email sending domain, and answers to the Royal Oak and Caer Beris questions. The old-site crawl needs the cloud environment's network access widened (session menu → Edit cloud environment → Network access).
