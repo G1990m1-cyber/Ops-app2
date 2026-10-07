@@ -231,6 +231,13 @@ export const Hotels: CollectionConfig = {
               },
             },
             {
+              name: 'tableBookingUrl',
+              type: 'text',
+              label: 'Table booking link (optional)',
+              access: { update: adminOnlyField },
+              admin: { description: 'For restaurants that take online table bookings (e.g. ResDiary, Dojo). Adds a "Book a table" button to the hotel and dining pages.' },
+            },
+            {
               type: 'row',
               fields: [
                 { name: 'checkIn', type: 'text', label: 'Check-in from', defaultValue: '3:00pm', admin: { width: '33%' } },
@@ -259,6 +266,17 @@ export const Hotels: CollectionConfig = {
               editor: richLexical,
               label: 'Weddings & functions copy',
               admin: { condition: (_, siblingData) => Boolean(siblingData?.hasWeddings) },
+            },
+            {
+              name: 'weddingsGallery',
+              type: 'array',
+              label: 'Weddings & functions photos',
+              labels: { singular: 'Photo', plural: 'Photos' },
+              admin: { condition: (_, siblingData) => Boolean(siblingData?.hasWeddings), initCollapsed: true },
+              fields: [
+                { name: 'image', type: 'upload', relationTo: 'media', required: true },
+                { name: 'caption', type: 'text' },
+              ],
             },
           ],
         },

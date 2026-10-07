@@ -3,6 +3,7 @@ import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
 import React from 'react'
 
+import { BookNowButton } from '@/components/BookNow/BookNowButton'
 import { EventCard } from '@/components/Cards/EventCard'
 import { MenuCard } from '@/components/Cards/MenuCard'
 import { OfferCard } from '@/components/Cards/OfferCard'
@@ -13,6 +14,8 @@ import { SubpageHeader } from '@/components/HotelPage/SubpageHeader'
 import { BreadcrumbJsonLd } from '@/components/JsonLd'
 import RichText from '@/components/RichText'
 import { Section } from '@/components/Section'
+import { Button } from '@/components/ui/Button'
+import { GalleryBlock } from '@/blocks/Gallery/Component'
 import { MapBlockComponent } from '@/blocks/Map/Component'
 import { getCurrentMenus, getCurrentOffers, getHotelBySlug, getRooms, getUpcomingEvents } from '@/utilities/data'
 import { generateMeta } from '@/utilities/generateMeta'
@@ -57,7 +60,13 @@ export default async function HotelSubPage({ params }: Args) {
             {rooms.map((r, i) => <RoomCard key={r.id} room={r} hotel={hotel} index={i} />)}
           </div>
         ) : (
-          <p className="text-ink-soft">Room details are being added. Please call {hotel.phone || 'us'} to book.</p>
+          <div className="measure" data-reveal>
+            <p className="text-[1.15rem]">Our rooms, rates and availability are all on our booking page.</p>
+            <div className="mt-6 flex flex-wrap items-center gap-4">
+              <BookNowButton hotel={hotel} placement="block" size="lg" label="See rooms and book" />
+              {hotel.phone && <span className="text-ink-soft">or call {hotel.phone}</span>}
+            </div>
+          </div>
         )}
       </Section>
     )
@@ -66,6 +75,14 @@ export default async function HotelSubPage({ params }: Args) {
     body = (
       <Section>
         {hiddenHeading}
+        {hotel.tableBookingUrl && (
+          <div className="mb-10 flex flex-wrap items-center gap-4">
+            <Button href={hotel.tableBookingUrl} newTab size="lg">
+              Book a table
+            </Button>
+            {hotel.phone && <span className="text-ink-soft">or call {hotel.phone}</span>}
+          </div>
+        )}
         {menus.length ? (
           <div className="grid gap-6 lg:grid-cols-2">
             {menus.map((m, i) => <MenuCard key={m.id} menu={m} index={i} />)}
@@ -111,6 +128,9 @@ export default async function HotelSubPage({ params }: Args) {
             {hotel.weddingsIntro ? <RichText data={hotel.weddingsIntro} /> : <p>Tell us about your day and our events team will be in touch.</p>}
           </div>
         </Section>
+        {hotel.weddingsGallery && hotel.weddingsGallery.length > 0 && (
+          <GalleryBlock blockType="gallery" source="custom" images={hotel.weddingsGallery as never} layout="masonry" columns="3" heading={null} style={{ tone: 'cream', spacing: 'compact' }} />
+        )}
         <Section style={{ tone: 'sand' }} id="enquire">
           <div className="grid gap-10 lg:grid-cols-5 lg:gap-16">
             <div className="lg:col-span-2">

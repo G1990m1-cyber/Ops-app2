@@ -308,6 +308,10 @@ export interface Hotel {
    * The exact link guests use to book this hotel. Book Now buttons open it in a new tab. Leave blank to show the phone number and enquiry form instead.
    */
   bookingUrl?: string | null;
+  /**
+   * For restaurants that take online table bookings (e.g. ResDiary, Dojo). Adds a "Book a table" button to the hotel and dining pages.
+   */
+  tableBookingUrl?: string | null;
   checkIn?: string | null;
   checkOut?: string | null;
   /**
@@ -330,6 +334,13 @@ export interface Hotel {
     };
     [k: string]: unknown;
   } | null;
+  weddingsGallery?:
+    | {
+        image: number | Media;
+        caption?: string | null;
+        id?: string | null;
+      }[]
+    | null;
   rooms?: {
     docs?: (number | Room)[];
     hasNextPage?: boolean;
@@ -1615,11 +1626,19 @@ export interface HotelsSelect<T extends boolean = true> {
         x?: T;
       };
   bookingUrl?: T;
+  tableBookingUrl?: T;
   checkIn?: T;
   checkOut?: T;
   priceRange?: T;
   hasWeddings?: T;
   weddingsIntro?: T;
+  weddingsGallery?:
+    | T
+    | {
+        image?: T;
+        caption?: T;
+        id?: T;
+      };
   rooms?: T;
   menus?: T;
   events?: T;

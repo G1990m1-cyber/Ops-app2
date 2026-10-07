@@ -2,6 +2,7 @@ import React from 'react'
 
 import { BookNowButton } from '@/components/BookNow/BookNowButton'
 import { CMSLink, type CMSLinkType } from '@/components/Link'
+import { Button } from '@/components/ui/Button'
 import { Media, isMediaObject, isVideo } from '@/components/Media'
 import type { HeroBlock as HeroBlockType, Hotel } from '@/payload-types'
 import { cn } from '@/utilities/ui'
@@ -56,6 +57,11 @@ export const HeroBlock: React.FC<Props> = ({ media, poster, eyebrow, title, subt
           {sub && <p className="mt-5 max-w-xl text-[1.2rem] text-cream/90 md:text-[1.4rem]">{sub}</p>}
           <div className="mt-8 flex flex-wrap items-center gap-4">
             {showBookNow !== false && <BookNowButton hotel={hotel || null} placement="hero" size="lg" variant="onImage" />}
+            {hotel?.tableBookingUrl && (
+              <Button href={hotel.tableBookingUrl} newTab variant="link" size="lg" className="text-cream" onClick={undefined}>
+                Book a table
+              </Button>
+            )}
             {(links || []).map(({ link }, i) => (
               <CMSLink key={i} {...(link as unknown as CMSLinkType)} contextHotel={hotel || null} onImage appearance={link.appearance === 'secondary' ? 'link' : link.appearance} size="lg" className={link.appearance === 'secondary' ? 'text-cream' : undefined} />
             ))}

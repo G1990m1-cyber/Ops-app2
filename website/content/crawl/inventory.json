@@ -1,0 +1,4099 @@
+[
+ {
+  "url": "/",
+  "title": "Home - GR Hotels",
+  "description": "",
+  "og_image": "",
+  "canonical": "https://www.grhotels.co.uk/",
+  "mews_configuration_ids": [],
+  "phones": [],
+  "emails": [],
+  "blocks": [
+   {
+    "type": "h1",
+    "text": "Welcome to GR Hotels"
+   },
+   {
+    "type": "p",
+    "text": "UK's leading niche hotel groups with outstanding properties, situated in some of the UK's most idyllic settings."
+   },
+   {
+    "type": "h2",
+    "text": "Our Hotels"
+   },
+   {
+    "type": "h2",
+    "text": "Queens Head"
+   },
+   {
+    "type": "h4",
+    "text": "Berwick-upon-Tweed"
+   },
+   {
+    "type": "h2",
+    "text": "View Hotel"
+   },
+   {
+    "type": "h2",
+    "text": "The Castle"
+   },
+   {
+    "type": "h2",
+    "text": "Grassington Lodge"
+   },
+   {
+    "type": "h4",
+    "text": "Grassington, Skipton"
+   },
+   {
+    "type": "h2",
+    "text": "Vines Black Bourton"
+   },
+   {
+    "type": "h4",
+    "text": "Black Bourton, Bampton"
+   },
+   {
+    "type": "h2",
+    "text": "Caer Beris"
+   },
+   {
+    "type": "h4",
+    "text": "Builth Wells"
+   },
+   {
+    "type": "h2",
+    "text": "Royal Oak"
+   },
+   {
+    "type": "h4",
+    "text": "Cranbrook"
+   },
+   {
+    "type": "h2",
+    "text": "The George"
+   },
+   {
+    "type": "h4",
+    "text": "Piercebridge"
+   },
+   {
+    "type": "h2",
+    "text": "The Riverside House Hotel"
+   },
+   {
+    "type": "h4",
+    "text": "Mildenhall"
+   },
+   {
+    "type": "h3",
+    "text": "News & Offers"
+   },
+   {
+    "type": "p",
+    "text": "Subscribe to the GR Hotels newsletter to keep up to date with hotel news, seasonal offer / promotions and exclusive offers."
+   }
+  ],
+  "images": [],
+  "background_images": []
+ },
+ {
+  "url": "/caer-beris/",
+  "title": "Caer Beris Manor Hotel - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.co.uk/wp-content/uploads/2025/07/DSC00146-HDR-scaled.jpg",
+  "canonical": "https://www.grhotels.co.uk/caer-beris/",
+  "mews_configuration_ids": [],
+  "phones": [
+   "01473 597897"
+  ],
+  "emails": [
+   "enquiries@groupretreats.co.uk"
+  ],
+  "blocks": [
+   {
+    "type": "h1",
+    "text": "Caer Beris Manor Hotel"
+   },
+   {
+    "type": "p",
+    "text": "Caer Beris Manor Hotel features 21 individually styled bedrooms, each with its own en suite bathroom for your comfort and privacy. Whether you're visiting solo, as a couple, or with family and friends, there's a room to suit every guest. For a touch of luxury, our spacious Suite offers the ideal setting for a romantic getaway or special occasion."
+   },
+   {
+    "type": "li",
+    "text": "01473 597897"
+   },
+   {
+    "type": "li",
+    "text": "enquiries@groupretreats.co.uk"
+   },
+   {
+    "type": "link",
+    "href": "mailto:enquiries@groupretreats.co.uk",
+    "text": "enquiries@groupretreats.co.uk"
+   },
+   {
+    "type": "h3",
+    "text": "Caer Beris Manor Hotel"
+   },
+   {
+    "type": "p",
+    "text": "Welcome to Caer Beris Manor Hotel Tucked away in the heart of the Welsh countryside, Caer Beris Manor Hotel offers a tranquil escape where history, comfort, and nature come together. With self check-in available for your convenience, you can enjoy a flexible and seamless arrival at your own pace."
+   },
+   {
+    "type": "p",
+    "text": "During your stay, unwind in our elegant communal lounge – the perfect place to relax with a book by the fire, enjoy a quiet drink, or challenge your companions to a board game. The atmosphere is calm and inviting, making it ideal for peaceful moments or socialising with fellow guests."
+   },
+   {
+    "type": "p",
+    "text": "Step outside and explore the expansive gardens that surround the hotel. With stunning views of the rolling countryside, the grounds offer plenty of spots to sit back and enjoy the scenery. Birdwatchers and nature lovers will appreciate the variety of wildlife attracted by the nearby river and woodland habitats."
+   },
+   {
+    "type": "p",
+    "text": "Located at the foot of the drive is access to the Wye Valley Walk, a picturesque trail ideal for walking or cycling without the need to take the car. The hotel is also accessible for wheelchair users, with ground floor bedrooms available."
+   },
+   {
+    "type": "p",
+    "text": "Caer Beris Manor Hotel is a haven of calm and character – perfect for those looking to reconnect with nature, history, and a slower pace of life."
+   },
+   {
+    "type": "h3",
+    "text": "Rooms"
+   },
+   {
+    "type": "h3",
+    "text": "Attractions"
+   },
+   {
+    "type": "h3",
+    "text": "Testimonials"
+   },
+   {
+    "type": "h4",
+    "text": "Where to find us?"
+   }
+  ],
+  "images": [],
+  "background_images": [
+   "https://www.grhotels.co.uk/wp-content/uploads/2025/07/DSC00146-HDR-scaled.jpg"
+  ]
+ },
+ {
+  "url": "/caer-beris/local-attractions/",
+  "title": "Local Attractions - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.co.uk/wp-content/uploads/2025/07/images.png",
+  "canonical": "https://www.grhotels.co.uk/caer-beris/local-attractions/",
+  "mews_configuration_ids": [],
+  "phones": [
+   "07584578334",
+   "07747427486",
+   "07825 214733"
+  ],
+  "emails": [],
+  "blocks": [
+   {
+    "type": "li",
+    "text": "Map View"
+   },
+   {
+    "type": "link",
+    "href": "https://direct-book.com/properties/CaerBerisHotelDirect/about?locale=en&items%5b0%5d%5badults%5d=2&items%5b0%5d%5bchildren%5d=0&items%5b0%5d%5binfants%5d=0&currency=GBP&checkInDate=2025-09-05&checkOutDate=2025-09-06&trackPage=yes",
+    "text": "Book Online"
+   },
+   {
+    "type": "h1",
+    "text": "Local attractions & Suppliers"
+   },
+   {
+    "type": "h3",
+    "text": "Dine Indulge"
+   },
+   {
+    "type": "li",
+    "text": "dineindulge.co.uk"
+   },
+   {
+    "type": "li",
+    "text": "+44 (0)330 111 0361"
+   },
+   {
+    "type": "link",
+    "href": "tel:%20+44%20(0)330%20111%200361",
+    "text": "+44 (0)330 111 0361"
+   },
+   {
+    "type": "h3",
+    "text": "Fresh Food Events"
+   },
+   {
+    "type": "li",
+    "text": "https://www.freshfoodevents.co.uk"
+   },
+   {
+    "type": "li",
+    "text": "07825 214733"
+   },
+   {
+    "type": "link",
+    "href": "tel:%2007825%20214733",
+    "text": "07825 214733"
+   },
+   {
+    "type": "h3",
+    "text": "Bwyd Bethan Catering"
+   },
+   {
+    "type": "li",
+    "text": "https://www.bwydbethancatering.co.uk/Corporate-Hospitality.aspx"
+   },
+   {
+    "type": "li",
+    "text": "07747427486"
+   },
+   {
+    "type": "link",
+    "href": "tel:%2007747427486",
+    "text": "07747427486"
+   },
+   {
+    "type": "h3",
+    "text": "Lilly Kosek Massage Therapist"
+   },
+   {
+    "type": "li",
+    "text": "Facebook under Lilly Kosek Massage Therapy"
+   },
+   {
+    "type": "li",
+    "text": "07584578334"
+   },
+   {
+    "type": "link",
+    "href": "tel:%2007584578334",
+    "text": "07584578334"
+   },
+   {
+    "type": "h3",
+    "text": "Welsh Overland Safari"
+   },
+   {
+    "type": "li",
+    "text": "https://www.welshoverlandsafari.com/"
+   },
+   {
+    "type": "h3",
+    "text": "Builth Wells Golf Club"
+   },
+   {
+    "type": "li",
+    "text": "http://www.builthwellsgolf.co.uk/"
+   },
+   {
+    "type": "h3",
+    "text": "Pen y Fan"
+   },
+   {
+    "type": "li",
+    "text": "https://www.visitwales.com/things-do/adventure-and-activities/walking/crowning-glory-4-ways-walk-peny-fan"
+   },
+   {
+    "type": "h3",
+    "text": "Dragonfly Cruises and Dayboats"
+   },
+   {
+    "type": "li",
+    "text": "https://www.dragonfly-cruises.co.uk/"
+   },
+   {
+    "type": "h3",
+    "text": "The Royal Welsh Regimental Museum"
+   },
+   {
+    "type": "li",
+    "text": "https://royalwelshmuseum.wales/"
+   },
+   {
+    "type": "li",
+    "text": "Return to Caer Beris"
+   }
+  ],
+  "images": [
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2025/07/images-150x150.png",
+    "alt": "",
+    "width": "225",
+    "height": "225"
+   }
+  ],
+  "background_images": []
+ },
+ {
+  "url": "/castle-berwick/",
+  "title": "Castle Berwick - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.co.uk/wp-content/uploads/2022/08/b683c8208ad51ebf51cf8770119cb54c.jpeg",
+  "canonical": "https://www.grhotels.co.uk/castle-berwick/",
+  "mews_configuration_ids": [],
+  "phones": [
+   "01289 307900"
+  ],
+  "emails": [
+   "castlehotel@grhotels.co.uk"
+  ],
+  "blocks": [
+   {
+    "type": "h1",
+    "text": "Castle Berwick"
+   },
+   {
+    "type": "p",
+    "text": "spectacular Elizabethan walled town with its thrilling and turbulent military history guards the river estuary."
+   },
+   {
+    "type": "li",
+    "text": "01289 307900"
+   },
+   {
+    "type": "li",
+    "text": "castlehotel@grhotels.co.uk"
+   },
+   {
+    "type": "link",
+    "href": "mailto:castlehotel@grhotels.co.uk",
+    "text": "castlehotel@grhotels.co.uk"
+   },
+   {
+    "type": "h3",
+    "text": "Castle Berwick"
+   },
+   {
+    "type": "p",
+    "text": "Berwick Upon Tweed is England’s most northerly town, sitting midway between Edinburgh and Newcastle at the mouth of the River Tweed. This spectacular Elizabethan walled town with its thrilling and turbulent military history guards the river estuary and, with its stunning seascapes, golden beaches and close proximity to some of the most evocative historical sites in the United Kingdom, provides the perfect mix for a rewarding visit."
+   },
+   {
+    "type": "p",
+    "text": "The hotel is one hour by road and 40 minutes by rail from either Edinburgh or Newcastle-upon-Tyne, it’s very easy to get to for tourists and business people alike. Call The Castle Hotel on 01289 307900 today to reserve a room, or for more information about hosting your function."
+   },
+   {
+    "type": "h3",
+    "text": "Rooms"
+   },
+   {
+    "type": "h3",
+    "text": "Facilities"
+   },
+   {
+    "type": "h3",
+    "text": "Testimonials"
+   },
+   {
+    "type": "h4",
+    "text": "Where to find us?"
+   }
+  ],
+  "images": [],
+  "background_images": [
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/08/b683c8208ad51ebf51cf8770119cb54c.jpeg"
+  ]
+ },
+ {
+  "url": "/castle-berwick/facilities/",
+  "title": "Facilities - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.mortechmedia.co.uk/wp-content/uploads/2022/05/thumbnail_New-logo-.jpeg",
+  "canonical": "https://www.grhotels.co.uk/castle-berwick/facilities/",
+  "mews_configuration_ids": [],
+  "phones": [],
+  "emails": [],
+  "blocks": [
+   {
+    "type": "li",
+    "text": "Map View"
+   },
+   {
+    "type": "link",
+    "href": "https://direct-book.com/properties/castlehotel103%20direct",
+    "text": "Book Online"
+   },
+   {
+    "type": "h1",
+    "text": "Our Facilities"
+   },
+   {
+    "type": "h3",
+    "text": "The Castle Lounge"
+   },
+   {
+    "type": "p",
+    "text": "The Castle Lounge Bar at The Castle Hotel has long been a popular bar for both locals and visitors alike. Be it lunch with friends, casual dinner, private party or business function or whether you’re visiting for a quiet drink, or looking for a venue for the perfect large event, The Castle Hotel has something for everyone. There’s always a warm, comfortable welcome on offer to visitors to The Castle Lounge Bar."
+   },
+   {
+    "type": "h3",
+    "text": "Bar and restaurant"
+   },
+   {
+    "type": "p",
+    "text": "The Castle Hotel is also proud to offer a wide range of soft drinks, from fruit juices to tea and coffee. Whether you are a driver, a drinker or a diner The Castle Hotel is sure to have something to suit your palate. The Castle Hotel offers a welcoming and friendly environment which extends to all visitors, with children and dogs also welcome."
+   },
+   {
+    "type": "h3",
+    "text": "Entertainment"
+   },
+   {
+    "type": "li",
+    "text": "TO BE CONFIRMED"
+   },
+   {
+    "type": "li",
+    "text": "Return to The Castle Hotel"
+   }
+  ],
+  "images": [
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/thumbnail_New-logo--768x390.jpeg",
+    "alt": "",
+    "width": "832",
+    "height": "422"
+   }
+  ],
+  "background_images": []
+ },
+ {
+  "url": "/castle-berwick/function-and-conference-rooms/",
+  "title": "Function and Conference rooms - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.mortechmedia.co.uk/wp-content/uploads/2022/05/thumbnail_New-logo-.jpeg",
+  "canonical": "https://www.grhotels.co.uk/castle-berwick/function-and-conference-rooms/",
+  "mews_configuration_ids": [],
+  "phones": [],
+  "emails": [],
+  "blocks": [
+   {
+    "type": "li",
+    "text": "Map View"
+   },
+   {
+    "type": "link",
+    "href": "https://direct-book.com/properties/castlehotel103%20direct",
+    "text": "Book Online"
+   },
+   {
+    "type": "h1",
+    "text": "Function and Conference rooms"
+   },
+   {
+    "type": "h3",
+    "text": "Conference room"
+   },
+   {
+    "type": "p",
+    "text": "The Castle is proud to serve freshly made stone baked pizza – prepared in the traditional Italian way. Available in our bar, restaurant, for takeaway or for room service!"
+   },
+   {
+    "type": "h3",
+    "text": "Function room"
+   },
+   {
+    "type": "p",
+    "text": "Available for up to 50 people for dining or 100 people for discos and other events.\nPlease call to enquire about food and drink packages, or arrange for you caterer to use our fully equipped kitchen.\nIdeal for small weddings, Christenings, wakes, birthday parties and more."
+   },
+   {
+    "type": "li",
+    "text": "Return to The Castle Hotel"
+   }
+  ],
+  "images": [
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/thumbnail_New-logo--768x390.jpeg",
+    "alt": "",
+    "width": "832",
+    "height": "422"
+   }
+  ],
+  "background_images": []
+ },
+ {
+  "url": "/castle-berwick/rooms/",
+  "title": "Rooms - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.mortechmedia.co.uk/wp-content/uploads/2022/05/thumbnail_New-logo-.jpeg",
+  "canonical": "https://www.grhotels.co.uk/castle-berwick/rooms/",
+  "mews_configuration_ids": [],
+  "phones": [],
+  "emails": [],
+  "blocks": [
+   {
+    "type": "li",
+    "text": "Map View"
+   },
+   {
+    "type": "link",
+    "href": "https://direct-book.com/properties/castlehotel103%20direct",
+    "text": "Book Online"
+   },
+   {
+    "type": "h1",
+    "text": "Rooms"
+   },
+   {
+    "type": "p",
+    "text": "Refurbish throughout in 2021, our rooms are decorated and furnished to a very high standard. With an ensuite bathroom and high-powered shower, you will have a very comfortable and enjoyable stay in our modern rooms."
+   },
+   {
+    "type": "h3",
+    "text": "Deluxe Family Room"
+   },
+   {
+    "type": "h3",
+    "text": "Family Room"
+   },
+   {
+    "type": "h3",
+    "text": "Single Room"
+   },
+   {
+    "type": "h3",
+    "text": "Superior Family Room"
+   },
+   {
+    "type": "h3",
+    "text": "Studio Flat"
+   },
+   {
+    "type": "li",
+    "text": "Return to The Castle Hotel"
+   }
+  ],
+  "images": [
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/thumbnail_New-logo--768x390.jpeg",
+    "alt": "",
+    "width": "832",
+    "height": "422"
+   }
+  ],
+  "background_images": [
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/05/85561a5804b7540847f7590efe44a65d.jpeg",
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/05/d62a48931fb5f5006c083c74f7866df4-1.jpeg",
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/06/4b3ab6b34268892729c25d5763690031.jpg",
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/06/cd1f164eb1117edba26c9c74daa06c42.jpg",
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/06/e716b7a03816bcb99ad612457b6918a6.jpg"
+  ]
+ },
+ {
+  "url": "/castle-berwick/rooms/",
+  "title": "Rooms - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.mortechmedia.co.uk/wp-content/uploads/2022/05/thumbnail_New-logo-.jpeg",
+  "canonical": "https://www.grhotels.co.uk/castle-berwick/rooms/",
+  "mews_configuration_ids": [],
+  "phones": [],
+  "emails": [],
+  "blocks": [
+   {
+    "type": "li",
+    "text": "Map View"
+   },
+   {
+    "type": "link",
+    "href": "https://direct-book.com/properties/castlehotel103%20direct",
+    "text": "Book Online"
+   },
+   {
+    "type": "h1",
+    "text": "Rooms"
+   },
+   {
+    "type": "p",
+    "text": "Refurbish throughout in 2021, our rooms are decorated and furnished to a very high standard. With an ensuite bathroom and high-powered shower, you will have a very comfortable and enjoyable stay in our modern rooms."
+   },
+   {
+    "type": "h3",
+    "text": "Deluxe Family Room"
+   },
+   {
+    "type": "h3",
+    "text": "Family Room"
+   },
+   {
+    "type": "h3",
+    "text": "Single Room"
+   },
+   {
+    "type": "h3",
+    "text": "Superior Family Room"
+   },
+   {
+    "type": "h3",
+    "text": "Studio Flat"
+   },
+   {
+    "type": "li",
+    "text": "Return to The Castle Hotel"
+   }
+  ],
+  "images": [
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/thumbnail_New-logo--768x390.jpeg",
+    "alt": "",
+    "width": "832",
+    "height": "422"
+   }
+  ],
+  "background_images": [
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/05/85561a5804b7540847f7590efe44a65d.jpeg",
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/05/d62a48931fb5f5006c083c74f7866df4-1.jpeg",
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/06/4b3ab6b34268892729c25d5763690031.jpg",
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/06/cd1f164eb1117edba26c9c74daa06c42.jpg",
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/06/e716b7a03816bcb99ad612457b6918a6.jpg"
+  ]
+ },
+ {
+  "url": "/castle-berwick/rooms/cozy-double-room/",
+  "title": "Deluxe Family Room - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/d62a48931fb5f5006c083c74f7866df4-1.jpeg",
+  "canonical": "https://www.grhotels.co.uk/castle-berwick/rooms/cozy-double-room/",
+  "mews_configuration_ids": [],
+  "phones": [],
+  "emails": [],
+  "blocks": [
+   {
+    "type": "li",
+    "text": "Map View"
+   },
+   {
+    "type": "link",
+    "href": "https://direct-book.com/properties/castlehotel103%20direct",
+    "text": "Book Online"
+   },
+   {
+    "type": "h1",
+    "text": "Deluxe Family Room"
+   },
+   {
+    "type": "h2",
+    "text": "Further information"
+   },
+   {
+    "type": "p",
+    "text": "With an ensuite bathroom and high-powered shower, you will have a very comfortable and enjoyable stay in our modern rooms."
+   },
+   {
+    "type": "li",
+    "text": "En-suite bathroom"
+   },
+   {
+    "type": "li",
+    "text": "In room tea & coffee"
+   },
+   {
+    "type": "li",
+    "text": "Mineral water"
+   },
+   {
+    "type": "li",
+    "text": "Free Wi-fi"
+   },
+   {
+    "type": "li",
+    "text": "Complimentary Toiletries"
+   },
+   {
+    "type": "li",
+    "text": "Hair Dryer"
+   },
+   {
+    "type": "li",
+    "text": "Iron and Ironing Board"
+   },
+   {
+    "type": "li",
+    "text": "Return to The Castle Hotel"
+   }
+  ],
+  "images": [
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/thumbnail_New-logo--768x390.jpeg",
+    "alt": "",
+    "width": "832",
+    "height": "422"
+   }
+  ],
+  "background_images": [
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/05/d62a48931fb5f5006c083c74f7866df4-1.jpeg"
+  ]
+ },
+ {
+  "url": "/castle-berwick/rooms/family-room/",
+  "title": "Family Room - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/85561a5804b7540847f7590efe44a65d.jpeg",
+  "canonical": "https://www.grhotels.co.uk/castle-berwick/rooms/family-room/",
+  "mews_configuration_ids": [],
+  "phones": [],
+  "emails": [],
+  "blocks": [
+   {
+    "type": "li",
+    "text": "Map View"
+   },
+   {
+    "type": "link",
+    "href": "https://direct-book.com/properties/castlehotel103%20direct",
+    "text": "Book Online"
+   },
+   {
+    "type": "h1",
+    "text": "Family Room"
+   },
+   {
+    "type": "h2",
+    "text": "Further information"
+   },
+   {
+    "type": "p",
+    "text": "With an ensuite bathroom and high-powered shower, you will have a very comfortable and enjoyable stay in our modern rooms."
+   },
+   {
+    "type": "li",
+    "text": "En-suite bathroom"
+   },
+   {
+    "type": "li",
+    "text": "In room tea & coffee"
+   },
+   {
+    "type": "li",
+    "text": "Mineral water"
+   },
+   {
+    "type": "li",
+    "text": "Free Wi-fi"
+   },
+   {
+    "type": "li",
+    "text": "Complimentary Toiletries"
+   },
+   {
+    "type": "li",
+    "text": "Hair Dryer"
+   },
+   {
+    "type": "li",
+    "text": "Iron and Ironing Board"
+   },
+   {
+    "type": "li",
+    "text": "Return to The Castle Hotel"
+   }
+  ],
+  "images": [
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/thumbnail_New-logo--768x390.jpeg",
+    "alt": "",
+    "width": "832",
+    "height": "422"
+   }
+  ],
+  "background_images": [
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/05/85561a5804b7540847f7590efe44a65d.jpeg"
+  ]
+ },
+ {
+  "url": "/castle-berwick/rooms/single-room-2/",
+  "title": "Single Room - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.co.uk/wp-content/uploads/2022/06/4b3ab6b34268892729c25d5763690031.jpg",
+  "canonical": "https://www.grhotels.co.uk/castle-berwick/rooms/single-room-2/",
+  "mews_configuration_ids": [],
+  "phones": [],
+  "emails": [],
+  "blocks": [
+   {
+    "type": "li",
+    "text": "Map View"
+   },
+   {
+    "type": "link",
+    "href": "https://direct-book.com/properties/castlehotel103%20direct",
+    "text": "Book Online"
+   },
+   {
+    "type": "h1",
+    "text": "Single Room"
+   },
+   {
+    "type": "h2",
+    "text": "Further information"
+   },
+   {
+    "type": "p",
+    "text": "With an ensuite bathroom and high-powered shower, you will have a very comfortable and enjoyable stay in our modern rooms."
+   },
+   {
+    "type": "li",
+    "text": "En-suite bathroom"
+   },
+   {
+    "type": "li",
+    "text": "In room tea & coffee"
+   },
+   {
+    "type": "li",
+    "text": "Mineral water"
+   },
+   {
+    "type": "li",
+    "text": "Free Wi-fi"
+   },
+   {
+    "type": "li",
+    "text": "Complimentary Toiletries"
+   },
+   {
+    "type": "li",
+    "text": "Hair Dryer"
+   },
+   {
+    "type": "li",
+    "text": "Iron and Ironing Board"
+   },
+   {
+    "type": "li",
+    "text": "Return to The Castle Hotel"
+   }
+  ],
+  "images": [
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/thumbnail_New-logo--768x390.jpeg",
+    "alt": "",
+    "width": "832",
+    "height": "422"
+   }
+  ],
+  "background_images": [
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/06/4b3ab6b34268892729c25d5763690031.jpg"
+  ]
+ },
+ {
+  "url": "/castle-berwick/rooms/studio-flat/",
+  "title": "Studio Flat - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.co.uk/wp-content/uploads/2022/06/cd1f164eb1117edba26c9c74daa06c42.jpg",
+  "canonical": "https://www.grhotels.co.uk/castle-berwick/rooms/studio-flat/",
+  "mews_configuration_ids": [],
+  "phones": [],
+  "emails": [],
+  "blocks": [
+   {
+    "type": "li",
+    "text": "Map View"
+   },
+   {
+    "type": "link",
+    "href": "https://direct-book.com/properties/castlehotel103%20direct",
+    "text": "Book Online"
+   },
+   {
+    "type": "h1",
+    "text": "Studio Flat"
+   },
+   {
+    "type": "h2",
+    "text": "Further information"
+   },
+   {
+    "type": "p",
+    "text": "With an ensuite bathroom and high-powered shower, you will have a very comfortable and enjoyable stay in our modern rooms."
+   },
+   {
+    "type": "li",
+    "text": "En-suite bathroom"
+   },
+   {
+    "type": "li",
+    "text": "In room tea & coffee"
+   },
+   {
+    "type": "li",
+    "text": "Mineral water"
+   },
+   {
+    "type": "li",
+    "text": "Free Wi-fi"
+   },
+   {
+    "type": "li",
+    "text": "Complimentary Toiletries"
+   },
+   {
+    "type": "li",
+    "text": "Hair Dryer"
+   },
+   {
+    "type": "li",
+    "text": "Iron and Ironing Board"
+   },
+   {
+    "type": "li",
+    "text": "Return to The Castle Hotel"
+   }
+  ],
+  "images": [
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/thumbnail_New-logo--768x390.jpeg",
+    "alt": "",
+    "width": "832",
+    "height": "422"
+   },
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/06/eb70c91a516ca7fc3d57f3690f772176-1536x1230.jpg",
+    "alt": "",
+    "width": "1920",
+    "height": "1537"
+   },
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/06/cd1f164eb1117edba26c9c74daa06c42-1536x1023.jpg",
+    "alt": "",
+    "width": "1920",
+    "height": "1279"
+   },
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/06/9befb108c102c76eb7b18c7d3a1eacd3-1536x1023.jpg",
+    "alt": "",
+    "width": "1920",
+    "height": "1279"
+   },
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/06/82b67c3ea6b18baac6c7c069eb4432d7-1536x1023.jpg",
+    "alt": "",
+    "width": "1920",
+    "height": "1279"
+   },
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/06/32de639ddd541bd38c4b38e5b6be87e3-1536x1023.jpg",
+    "alt": "",
+    "width": "1920",
+    "height": "1279"
+   }
+  ],
+  "background_images": [
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/06/cd1f164eb1117edba26c9c74daa06c42.jpg"
+  ]
+ },
+ {
+  "url": "/castle-berwick/rooms/superior-family-room/",
+  "title": "Superior Family Room - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.co.uk/wp-content/uploads/2022/06/e716b7a03816bcb99ad612457b6918a6.jpg",
+  "canonical": "https://www.grhotels.co.uk/castle-berwick/rooms/superior-family-room/",
+  "mews_configuration_ids": [],
+  "phones": [],
+  "emails": [],
+  "blocks": [
+   {
+    "type": "li",
+    "text": "Map View"
+   },
+   {
+    "type": "link",
+    "href": "https://direct-book.com/properties/castlehotel103%20direct",
+    "text": "Book Online"
+   },
+   {
+    "type": "h1",
+    "text": "Superior Family Room"
+   },
+   {
+    "type": "h2",
+    "text": "Further information"
+   },
+   {
+    "type": "p",
+    "text": "With an ensuite bathroom and high-powered shower, you will have a very comfortable and enjoyable stay in our modern rooms."
+   },
+   {
+    "type": "li",
+    "text": "En-suite bathroom"
+   },
+   {
+    "type": "li",
+    "text": "In room tea & coffee"
+   },
+   {
+    "type": "li",
+    "text": "Mineral water"
+   },
+   {
+    "type": "li",
+    "text": "Free Wi-fi"
+   },
+   {
+    "type": "li",
+    "text": "Complimentary Toiletries"
+   },
+   {
+    "type": "li",
+    "text": "Hair Dryer"
+   },
+   {
+    "type": "li",
+    "text": "Iron and Ironing Board"
+   },
+   {
+    "type": "li",
+    "text": "Return to The Castle Hotel"
+   }
+  ],
+  "images": [
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/thumbnail_New-logo--768x390.jpeg",
+    "alt": "",
+    "width": "832",
+    "height": "422"
+   }
+  ],
+  "background_images": [
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/06/e716b7a03816bcb99ad612457b6918a6.jpg"
+  ]
+ },
+ {
+  "url": "/contact-us/",
+  "title": "Contact us - GR Hotels",
+  "description": "",
+  "og_image": "",
+  "canonical": "https://www.grhotels.co.uk/contact-us/",
+  "mews_configuration_ids": [],
+  "phones": [
+   "01289 307852",
+   "01289 307900",
+   "01993 843559"
+  ],
+  "emails": [
+   "20castlehotel@grhotels.co.uk",
+   "20grassingtonlodge@grhotels.co.uk",
+   "20queenshead@grhotels.co.uk",
+   "20vineshotel@grhotels.co.uk",
+   "castlehotel@grhotels.co.uk",
+   "grassingtonlodge@grhotels.co.uk",
+   "queenshead@grhotels.co.uk",
+   "vineshotel@grhotels.co.uk"
+  ],
+  "blocks": [
+   {
+    "type": "h1",
+    "text": "Contact us"
+   },
+   {
+    "type": "h3",
+    "text": "The Queens Head"
+   },
+   {
+    "type": "p",
+    "text": "6 Sandgate, Berwick-upon-Tweed"
+   },
+   {
+    "type": "p",
+    "text": "01289 307852"
+   },
+   {
+    "type": "link",
+    "href": "tel:%2001289%20307852",
+    "text": "01289 307852"
+   },
+   {
+    "type": "p",
+    "text": "queenshead@grhotels.co.uk"
+   },
+   {
+    "type": "link",
+    "href": "mailto:%20queenshead@grhotels.co.uk",
+    "text": "queenshead@grhotels.co.uk"
+   },
+   {
+    "type": "h3",
+    "text": "The Castle"
+   },
+   {
+    "type": "p",
+    "text": "103 Castlegate, Berwick-upon-Tweed TD15 1LF"
+   },
+   {
+    "type": "p",
+    "text": "01289 307900"
+   },
+   {
+    "type": "link",
+    "href": "tel:%2001289%20307900",
+    "text": "01289 307900"
+   },
+   {
+    "type": "p",
+    "text": "castlehotel@grhotels.co.uk"
+   },
+   {
+    "type": "link",
+    "href": "mailto:%20castlehotel@grhotels.co.uk",
+    "text": "castlehotel@grhotels.co.uk"
+   },
+   {
+    "type": "h3",
+    "text": "Grassington lodge"
+   },
+   {
+    "type": "p",
+    "text": "8 Wood Ln, Grassington, Skipton BD23 5LU"
+   },
+   {
+    "type": "p",
+    "text": "+44 (0)1473 597 897"
+   },
+   {
+    "type": "link",
+    "href": "tel:%20+44%20(0)1473%20597%20897",
+    "text": "+44 (0)1473 597 897"
+   },
+   {
+    "type": "p",
+    "text": "grassingtonlodge@grhotels.co.uk"
+   },
+   {
+    "type": "link",
+    "href": "mailto:%20grassingtonlodge@grhotels.co.uk",
+    "text": "grassingtonlodge@grhotels.co.uk"
+   },
+   {
+    "type": "h3",
+    "text": "The Vines"
+   },
+   {
+    "type": "p",
+    "text": "Burford Rd, Black Bourton, Bampton OX18 2PF"
+   },
+   {
+    "type": "p",
+    "text": "01993 843559"
+   },
+   {
+    "type": "link",
+    "href": "tel:%2001993%20843559",
+    "text": "01993 843559"
+   },
+   {
+    "type": "p",
+    "text": "vineshotel@grhotels.co.uk"
+   },
+   {
+    "type": "link",
+    "href": "mailto:%20vineshotel@grhotels.co.uk",
+    "text": "vineshotel@grhotels.co.uk"
+   }
+  ],
+  "images": [],
+  "background_images": []
+ },
+ {
+  "url": "/grassington-lodge/",
+  "title": "Grassington Lodge - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.co.uk/wp-content/uploads/2022/07/IMG-20220714-WA0023-1.jpeg",
+  "canonical": "https://www.grhotels.co.uk/grassington-lodge/",
+  "mews_configuration_ids": [],
+  "phones": [
+   "01756 752518"
+  ],
+  "emails": [
+   "grassingtonlodge@grhotels.co.uk"
+  ],
+  "blocks": [
+   {
+    "type": "h1",
+    "text": "Grassington Lodge"
+   },
+   {
+    "type": "h3",
+    "text": "Comfortable room-only accommodation"
+   },
+   {
+    "type": "li",
+    "text": "01756 752518"
+   },
+   {
+    "type": "li",
+    "text": "grassingtonlodge@grhotels.co.uk"
+   },
+   {
+    "type": "link",
+    "href": "mailto:grassingtonlodge@grhotels.co.uk",
+    "text": "grassingtonlodge@grhotels.co.uk"
+   },
+   {
+    "type": "p",
+    "text": "Grassington Lodge offer facilities and services to help make your stay more enjoyable and comfortable."
+   },
+   {
+    "type": "h3",
+    "text": "Rooms"
+   },
+   {
+    "type": "h3",
+    "text": "Activities"
+   },
+   {
+    "type": "h3",
+    "text": "Facilities"
+   },
+   {
+    "type": "h1",
+    "text": "Testimonials"
+   },
+   {
+    "type": "h1",
+    "text": "Where to find us?"
+   }
+  ],
+  "images": [],
+  "background_images": [
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/07/IMG-20220714-WA0023-1.jpeg"
+  ]
+ },
+ {
+  "url": "/grassington-lodge/activities/",
+  "title": "Activities - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.mortechmedia.co.uk/wp-content/uploads/2022/05/GL-Logo-wbg2.gif",
+  "canonical": "https://www.grhotels.co.uk/grassington-lodge/activities/",
+  "mews_configuration_ids": [],
+  "phones": [
+   "01756 752150",
+   "01756 795367"
+  ],
+  "emails": [],
+  "blocks": [
+   {
+    "type": "li",
+    "text": "Map View"
+   },
+   {
+    "type": "link",
+    "href": "https://direct-book.com/properties/grassingtonlodgedirect",
+    "text": "Book Online"
+   },
+   {
+    "type": "h3",
+    "text": "Grassington Lodge"
+   },
+   {
+    "type": "h1",
+    "text": "Local Attractions Available"
+   },
+   {
+    "type": "p",
+    "text": "In the countryside around Grassington there are many activities to get involved in ranging from cultural to sporting, with something for everyone to enjoy. Click on the following links for more information."
+   },
+   {
+    "type": "h4",
+    "text": "Sports & Leisure"
+   },
+   {
+    "type": "li",
+    "text": "Walking - www.countrywalking.co.uk"
+   },
+   {
+    "type": "li",
+    "text": "The Dales way - www.thedalesway.co.uk"
+   },
+   {
+    "type": "li",
+    "text": "Cycling - Mountain bike hire 01756 795367"
+   },
+   {
+    "type": "li",
+    "text": "Climbing - www.rockfax.co.uk"
+   },
+   {
+    "type": "li",
+    "text": "Horse riding - www.kilnseyriding.com"
+   },
+   {
+    "type": "li",
+    "text": "Golf - www.skiptongolfclub.co.uk"
+   },
+   {
+    "type": "li",
+    "text": "Leisure club - www.longashesleisure.co.uk"
+   },
+   {
+    "type": "li",
+    "text": "Fishing - Kilnsey Angling club 01756 752150"
+   },
+   {
+    "type": "li",
+    "text": "Ballooning - www.airborne.co.uk"
+   },
+   {
+    "type": "li",
+    "text": "Sunhill Centre - www.sunhillcentre.co.uk"
+   },
+   {
+    "type": "h4",
+    "text": "Places of Interest"
+   },
+   {
+    "type": "li",
+    "text": "Dales Lettings - Luxury holiday cottages"
+   },
+   {
+    "type": "li",
+    "text": "Yorkshire Dales National Park Authority - www.yorkshiredales.org.uk"
+   },
+   {
+    "type": "li",
+    "text": "Bolton Abbey - www.boltonabbey.com"
+   },
+   {
+    "type": "li",
+    "text": "Fountains Abbey - www.fountainsabbey.org.uk"
+   },
+   {
+    "type": "li",
+    "text": "Brimham Rocks - www.yorkshire-dales.com"
+   },
+   {
+    "type": "li",
+    "text": "Skipton Castle - www.skiptoncastle.com"
+   },
+   {
+    "type": "li",
+    "text": "Kilnsey trout farm - www.kilnseypark.co.uk"
+   },
+   {
+    "type": "li",
+    "text": "Travel within the Dales - www.traveldales.org.uk"
+   },
+   {
+    "type": "li",
+    "text": "Stump Cross Caverns - www.stumpcrosscaverns.co.uk"
+   },
+   {
+    "type": "li",
+    "text": "Malham - www.malhamdale.org.uk"
+   },
+   {
+    "type": "li",
+    "text": "Embsay steam railway - www.embsayboltonabbeyrailway.org.uk"
+   },
+   {
+    "type": "li",
+    "text": "Lightwater Valley Adventure Park - www.lightwatervalley.co.uk"
+   },
+   {
+    "type": "li",
+    "text": "Canal trips - www.canaltrips.co.uk"
+   },
+   {
+    "type": "li",
+    "text": "Accommodation in England - www.accommodation-england.com"
+   },
+   {
+    "type": "li",
+    "text": "Yorkshire Weather forecast - www.metoffice.com"
+   },
+   {
+    "type": "h4",
+    "text": "Shops & Cafes in Grassington"
+   },
+   {
+    "type": "li",
+    "text": "Vegetarian café - www.theretreatcafeingrassington.co.uk/"
+   },
+   {
+    "type": "li",
+    "text": "Menswear shop - www.robertbunney.co.uk"
+   },
+   {
+    "type": "li",
+    "text": "Ladieswear shop - www.helenmidgley.com"
+   },
+   {
+    "type": "li",
+    "text": "Ladieswear shop - www.countryclassicsdirect.com/"
+   },
+   {
+    "type": "li",
+    "text": "Gifts - www.harlequingrassington.co.uk/"
+   },
+   {
+    "type": "li",
+    "text": "Return to Grassington Lodge"
+   }
+  ],
+  "images": [
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL-Logo-wbg2.gif",
+    "alt": "",
+    "width": "327",
+    "height": "110"
+   }
+  ],
+  "background_images": []
+ },
+ {
+  "url": "/grassington-lodge/facilities/",
+  "title": "Facilities - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.mortechmedia.co.uk/wp-content/uploads/2022/05/GL-Logo-wbg2.gif",
+  "canonical": "https://www.grhotels.co.uk/grassington-lodge/facilities/",
+  "mews_configuration_ids": [],
+  "phones": [],
+  "emails": [],
+  "blocks": [
+   {
+    "type": "li",
+    "text": "Map View"
+   },
+   {
+    "type": "link",
+    "href": "https://direct-book.com/properties/grassingtonlodgedirect",
+    "text": "Book Online"
+   },
+   {
+    "type": "h3",
+    "text": "Grassington Lodge"
+   },
+   {
+    "type": "h1",
+    "text": "Our Facilities"
+   },
+   {
+    "type": "p",
+    "text": "We provide the following facilities to help make your stay more enjoyable and comfortable.\n\nOther facilities and services\nPrivate parking"
+   },
+   {
+    "type": "li",
+    "text": "Return to Grassington Lodge"
+   }
+  ],
+  "images": [
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL-Logo-wbg2.gif",
+    "alt": "",
+    "width": "327",
+    "height": "110"
+   }
+  ],
+  "background_images": []
+ },
+ {
+  "url": "/grassington-lodge/rooms/",
+  "title": "Rooms - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.mortechmedia.co.uk/wp-content/uploads/2022/05/GL-Logo-wbg2.gif",
+  "canonical": "https://www.grhotels.co.uk/grassington-lodge/rooms/",
+  "mews_configuration_ids": [],
+  "phones": [],
+  "emails": [],
+  "blocks": [
+   {
+    "type": "li",
+    "text": "Map View"
+   },
+   {
+    "type": "link",
+    "href": "https://direct-book.com/properties/grassingtonlodgedirect",
+    "text": "Book Online"
+   },
+   {
+    "type": "h1",
+    "text": "Rooms"
+   },
+   {
+    "type": "p",
+    "text": "All our rooms have TV’s, large fluffy towels and toiletries as standard, along with a well stocked hospitality tray. Wireless broadband connectivity is also available throughout the property.\n\nSome of our rooms are dog friendly, please enquire which ones will be suitable. We do have safe storage for cycles."
+   },
+   {
+    "type": "h3",
+    "text": "The Suite"
+   },
+   {
+    "type": "h3",
+    "text": "Vendale 1"
+   },
+   {
+    "type": "h3",
+    "text": "Vendale 2"
+   },
+   {
+    "type": "h3",
+    "text": "Room One – Premium Room"
+   },
+   {
+    "type": "h3",
+    "text": "Room Two"
+   },
+   {
+    "type": "h3",
+    "text": "Room Three"
+   },
+   {
+    "type": "h3",
+    "text": "Room Four"
+   },
+   {
+    "type": "h3",
+    "text": "Room Five"
+   },
+   {
+    "type": "h3",
+    "text": "Room Six*"
+   },
+   {
+    "type": "h3",
+    "text": "Room Seven – Premium Room"
+   },
+   {
+    "type": "h3",
+    "text": "Room Eight – Premium Room"
+   },
+   {
+    "type": "h3",
+    "text": "Room Nine – Premium Room"
+   },
+   {
+    "type": "h3",
+    "text": "Family Room"
+   },
+   {
+    "type": "li",
+    "text": "Return to Grassington Lodge"
+   }
+  ],
+  "images": [
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL-Logo-wbg2.gif",
+    "alt": "",
+    "width": "327",
+    "height": "110"
+   }
+  ],
+  "background_images": [
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL-Suite-6.jpeg",
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-1-2.jpeg",
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-2.jpeg",
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-3.jpeg",
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-5.jpeg",
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-6-2-1.jpeg",
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-7-1.jpeg",
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-8-1-1.jpeg",
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-9.jpeg",
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Vendale-1.jpeg",
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Vendale-2.jpeg",
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Room_4.jpeg",
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Image.jpeg"
+  ]
+ },
+ {
+  "url": "/grassington-lodge/rooms/family-room/",
+  "title": "Family Room - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Image-768x1024.jpeg",
+  "canonical": "https://www.grhotels.co.uk/grassington-lodge/rooms/family-room/",
+  "mews_configuration_ids": [],
+  "phones": [],
+  "emails": [],
+  "blocks": [
+   {
+    "type": "li",
+    "text": "Map View"
+   },
+   {
+    "type": "link",
+    "href": "https://direct-book.com/properties/grassingtonlodgedirect",
+    "text": "Book Online"
+   },
+   {
+    "type": "h1",
+    "text": "Family Room"
+   },
+   {
+    "type": "h2",
+    "text": "Further information"
+   },
+   {
+    "type": "li",
+    "text": "Return to Grassington Lodge"
+   }
+  ],
+  "images": [
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL-Logo-wbg2.gif",
+    "alt": "",
+    "width": "327",
+    "height": "110"
+   }
+  ],
+  "background_images": [
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Image.jpeg"
+  ]
+ },
+ {
+  "url": "/grassington-lodge/rooms/room-eight-premium-room/",
+  "title": "Room Eight - Premium Room - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-8-1-1.jpeg",
+  "canonical": "https://www.grhotels.co.uk/grassington-lodge/rooms/room-eight-premium-room/",
+  "mews_configuration_ids": [],
+  "phones": [],
+  "emails": [],
+  "blocks": [
+   {
+    "type": "li",
+    "text": "Map View"
+   },
+   {
+    "type": "link",
+    "href": "https://direct-book.com/properties/grassingtonlodgedirect",
+    "text": "Book Online"
+   },
+   {
+    "type": "h1",
+    "text": "Room Eight – Premium Room"
+   },
+   {
+    "type": "h2",
+    "text": "Further information"
+   },
+   {
+    "type": "p",
+    "text": "Located on the second floor at the front of the house, Room 8 is a spacious double room with 6’ super-king size bed, sofa, two comfortable chairs and ensuite shower/wc (no bath)"
+   },
+   {
+    "type": "p",
+    "text": "Views over the village rooftops and the dales to the west."
+   },
+   {
+    "type": "p",
+    "text": "As well as the standard facilities this room also includes a large flat screen digital TV and a fridge."
+   },
+   {
+    "type": "p",
+    "text": "Can be made as a twin upon request."
+   },
+   {
+    "type": "li",
+    "text": "Return to Grassington Lodge"
+   }
+  ],
+  "images": [
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL-Logo-wbg2.gif",
+    "alt": "",
+    "width": "327",
+    "height": "110"
+   }
+  ],
+  "background_images": [
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-8-1-1.jpeg"
+  ]
+ },
+ {
+  "url": "/grassington-lodge/rooms/room-five/",
+  "title": "Room Five - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-5.jpeg",
+  "canonical": "https://www.grhotels.co.uk/grassington-lodge/rooms/room-five/",
+  "mews_configuration_ids": [],
+  "phones": [],
+  "emails": [],
+  "blocks": [
+   {
+    "type": "li",
+    "text": "Map View"
+   },
+   {
+    "type": "link",
+    "href": "https://direct-book.com/properties/grassingtonlodgedirect",
+    "text": "Book Online"
+   },
+   {
+    "type": "h1",
+    "text": "Room Five"
+   },
+   {
+    "type": "h2",
+    "text": "Further information"
+   },
+   {
+    "type": "p",
+    "text": "Located on the first floor at the side of the house, overlooking a neighbour’s garden, Room 5 is one of our smaller double rooms (standard 4’6″ bed) with ensuite shower/wc."
+   },
+   {
+    "type": "li",
+    "text": "Return to Grassington Lodge"
+   }
+  ],
+  "images": [
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL-Logo-wbg2.gif",
+    "alt": "",
+    "width": "327",
+    "height": "110"
+   }
+  ],
+  "background_images": [
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-5.jpeg"
+  ]
+ },
+ {
+  "url": "/grassington-lodge/rooms/room-four/",
+  "title": "Room Four - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Room_4.jpeg",
+  "canonical": "https://www.grhotels.co.uk/grassington-lodge/rooms/room-four/",
+  "mews_configuration_ids": [],
+  "phones": [],
+  "emails": [],
+  "blocks": [
+   {
+    "type": "li",
+    "text": "Map View"
+   },
+   {
+    "type": "link",
+    "href": "https://direct-book.com/properties/grassingtonlodgedirect",
+    "text": "Book Online"
+   },
+   {
+    "type": "h1",
+    "text": "Room Four"
+   },
+   {
+    "type": "h2",
+    "text": "Further information"
+   },
+   {
+    "type": "p",
+    "text": "Located on the first floor with views across the hills as at front of house, Room 4 is a double room with 5′ king size bed and ensuite shower/wc."
+   },
+   {
+    "type": "li",
+    "text": "Return to Grassington Lodge"
+   }
+  ],
+  "images": [
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL-Logo-wbg2.gif",
+    "alt": "",
+    "width": "327",
+    "height": "110"
+   }
+  ],
+  "background_images": [
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Room_4.jpeg"
+  ]
+ },
+ {
+  "url": "/grassington-lodge/rooms/room-nine-premium-room/",
+  "title": "Room Nine - Premium Room - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-9.jpeg",
+  "canonical": "https://www.grhotels.co.uk/grassington-lodge/rooms/room-nine-premium-room/",
+  "mews_configuration_ids": [],
+  "phones": [],
+  "emails": [],
+  "blocks": [
+   {
+    "type": "li",
+    "text": "Map View"
+   },
+   {
+    "type": "link",
+    "href": "https://direct-book.com/properties/grassingtonlodgedirect",
+    "text": "Book Online"
+   },
+   {
+    "type": "h1",
+    "text": "Room Nine – Premium Room"
+   },
+   {
+    "type": "h2",
+    "text": "Further information"
+   },
+   {
+    "type": "p",
+    "text": "With contemporary styling, this double ground floor room, features a 5′ king size bed and oak flooring. Sleeps 2."
+   },
+   {
+    "type": "p",
+    "text": "Ensuite shower room (good size shower cubicle but shower room in itself is not large…..big enough for one though!!), flat screen digital TV and a fridge complete this stylish and popular room."
+   },
+   {
+    "type": "li",
+    "text": "Return to Grassington Lodge"
+   }
+  ],
+  "images": [
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL-Logo-wbg2.gif",
+    "alt": "",
+    "width": "327",
+    "height": "110"
+   }
+  ],
+  "background_images": [
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-9.jpeg"
+  ]
+ },
+ {
+  "url": "/grassington-lodge/rooms/room-one-premium-room/",
+  "title": "Room One - Premium Room - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-1-2.jpeg",
+  "canonical": "https://www.grhotels.co.uk/grassington-lodge/rooms/room-one-premium-room/",
+  "mews_configuration_ids": [],
+  "phones": [],
+  "emails": [],
+  "blocks": [
+   {
+    "type": "li",
+    "text": "Map View"
+   },
+   {
+    "type": "link",
+    "href": "https://direct-book.com/properties/grassingtonlodgedirect",
+    "text": "Book Online"
+   },
+   {
+    "type": "h1",
+    "text": "Room One – Premium Room"
+   },
+   {
+    "type": "h2",
+    "text": "Further information"
+   },
+   {
+    "type": "p",
+    "text": "Located on the first floor, Room 1 is a large double room with a 6’ king size bed and ensuite shower room (no bath)."
+   },
+   {
+    "type": "p",
+    "text": "Features a large flat screen digital TV and fridge."
+   },
+   {
+    "type": "p",
+    "text": "Can also be made up as a twin room upon request."
+   },
+   {
+    "type": "li",
+    "text": "Return to Grassington Lodge"
+   }
+  ],
+  "images": [
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL-Logo-wbg2.gif",
+    "alt": "",
+    "width": "327",
+    "height": "110"
+   }
+  ],
+  "background_images": [
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-1-2.jpeg"
+  ]
+ },
+ {
+  "url": "/grassington-lodge/rooms/room-seven-premium-room/",
+  "title": "Room Seven - Premium Room - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-7-1.jpeg",
+  "canonical": "https://www.grhotels.co.uk/grassington-lodge/rooms/room-seven-premium-room/",
+  "mews_configuration_ids": [],
+  "phones": [],
+  "emails": [],
+  "blocks": [
+   {
+    "type": "li",
+    "text": "Map View"
+   },
+   {
+    "type": "link",
+    "href": "https://direct-book.com/properties/grassingtonlodgedirect",
+    "text": "Book Online"
+   },
+   {
+    "type": "h1",
+    "text": "Room Seven – Premium Room"
+   },
+   {
+    "type": "h2",
+    "text": "Further information"
+   },
+   {
+    "type": "p",
+    "text": "Located on the second floor, overlooking the hills to the front and the rooftops of Grassington at the back, Room 7 is a double room with 6′ king size bed. The ensuite has a BATH ONLY. It does not have a ‘stand-up’ shower."
+   },
+   {
+    "type": "p",
+    "text": "Can also be made up as a twin-bedded room upon request."
+   },
+   {
+    "type": "p",
+    "text": "Bathrobes are provided."
+   },
+   {
+    "type": "li",
+    "text": "Return to Grassington Lodge"
+   }
+  ],
+  "images": [
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL-Logo-wbg2.gif",
+    "alt": "",
+    "width": "327",
+    "height": "110"
+   }
+  ],
+  "background_images": [
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-7-1.jpeg"
+  ]
+ },
+ {
+  "url": "/grassington-lodge/rooms/room-six/",
+  "title": "Room Six* - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-6-2-1.jpeg",
+  "canonical": "https://www.grhotels.co.uk/grassington-lodge/rooms/room-six/",
+  "mews_configuration_ids": [],
+  "phones": [],
+  "emails": [],
+  "blocks": [
+   {
+    "type": "li",
+    "text": "Map View"
+   },
+   {
+    "type": "link",
+    "href": "https://direct-book.com/properties/grassingtonlodgedirect",
+    "text": "Book Online"
+   },
+   {
+    "type": "h1",
+    "text": "Room Six*"
+   },
+   {
+    "type": "h2",
+    "text": "Further information"
+   },
+   {
+    "type": "p",
+    "text": "Located on the first floor overlooking a garden, Room 6* is a double room with 5′ king size bed – please note the private bathroom is outside of the bedroom (i.e., not en-suite)*. The bathroom is not shared with other rooms."
+   },
+   {
+    "type": "p",
+    "text": "The bathroom features a full size bath with shower over facility."
+   },
+   {
+    "type": "p",
+    "text": "Bathrobes are provided."
+   },
+   {
+    "type": "li",
+    "text": "Return to Grassington Lodge"
+   }
+  ],
+  "images": [
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL-Logo-wbg2.gif",
+    "alt": "",
+    "width": "327",
+    "height": "110"
+   }
+  ],
+  "background_images": [
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-6-2-1.jpeg"
+  ]
+ },
+ {
+  "url": "/grassington-lodge/rooms/room-three/",
+  "title": "Room Three - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-3.jpeg",
+  "canonical": "https://www.grhotels.co.uk/grassington-lodge/rooms/room-three/",
+  "mews_configuration_ids": [],
+  "phones": [],
+  "emails": [],
+  "blocks": [
+   {
+    "type": "li",
+    "text": "Map View"
+   },
+   {
+    "type": "link",
+    "href": "https://direct-book.com/properties/grassingtonlodgedirect",
+    "text": "Book Online"
+   },
+   {
+    "type": "h1",
+    "text": "Room Three"
+   },
+   {
+    "type": "h2",
+    "text": "Further information"
+   },
+   {
+    "type": "p",
+    "text": "Located on the first floor with views to the hills as at the front of the house, Room 3 is a double room with 5′ king size bed and en-suite shower/wc."
+   },
+   {
+    "type": "li",
+    "text": "Return to Grassington Lodge"
+   }
+  ],
+  "images": [
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL-Logo-wbg2.gif",
+    "alt": "",
+    "width": "327",
+    "height": "110"
+   }
+  ],
+  "background_images": [
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-3.jpeg"
+  ]
+ },
+ {
+  "url": "/grassington-lodge/rooms/room-two/",
+  "title": "Room Two - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-2.jpeg",
+  "canonical": "https://www.grhotels.co.uk/grassington-lodge/rooms/room-two/",
+  "mews_configuration_ids": [],
+  "phones": [],
+  "emails": [],
+  "blocks": [
+   {
+    "type": "li",
+    "text": "Map View"
+   },
+   {
+    "type": "link",
+    "href": "https://direct-book.com/properties/grassingtonlodgedirect",
+    "text": "Book Online"
+   },
+   {
+    "type": "h1",
+    "text": "Room Two"
+   },
+   {
+    "type": "h2",
+    "text": "Further information"
+   },
+   {
+    "type": "p",
+    "text": "Located on the first floor overlooking the car park Room 2 is one of our smaller double rooms (standard 4’6″ bed) with ensuite shower room."
+   },
+   {
+    "type": "li",
+    "text": "Return to Grassington Lodge"
+   }
+  ],
+  "images": [
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL-Logo-wbg2.gif",
+    "alt": "",
+    "width": "327",
+    "height": "110"
+   }
+  ],
+  "background_images": [
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-2.jpeg"
+  ]
+ },
+ {
+  "url": "/grassington-lodge/rooms/the-suite/",
+  "title": "The Suite - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL-Suite-6.jpeg",
+  "canonical": "https://www.grhotels.co.uk/grassington-lodge/rooms/the-suite/",
+  "mews_configuration_ids": [],
+  "phones": [],
+  "emails": [],
+  "blocks": [
+   {
+    "type": "li",
+    "text": "Map View"
+   },
+   {
+    "type": "link",
+    "href": "https://direct-book.com/properties/grassingtonlodgedirect",
+    "text": "Book Online"
+   },
+   {
+    "type": "h1",
+    "text": "The Suite"
+   },
+   {
+    "type": "h2",
+    "text": "Further information"
+   },
+   {
+    "type": "p",
+    "text": "A very luxurious and well appointed suite of rooms on two levels with oak flooring in the bedroom and luxurious carpet in the sitting room."
+   },
+   {
+    "type": "p",
+    "text": "BEDROOM – First floor elevation. King size sleigh bed with flat screen digital TV. Stylish and comfortable chairs."
+   },
+   {
+    "type": "p",
+    "text": "SITTING ROOM – A mezzanine room with Velux windows giving a light and airy feeling. Features a leather sofa, chair and dressing table. Another flat screen digital TV and drinks chiller."
+   },
+   {
+    "type": "p",
+    "text": "BATHROOM – A large luxurious room with a very large shower and separate bath. Please note that the bathroom shares the same level as the sitting room i.e., there is a requirement to climb the stairs to the bathroom from the bedroom."
+   },
+   {
+    "type": "li",
+    "text": "Return to Grassington Lodge"
+   }
+  ],
+  "images": [
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL-Logo-wbg2.gif",
+    "alt": "",
+    "width": "327",
+    "height": "110"
+   }
+  ],
+  "background_images": [
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL-Suite-6.jpeg"
+  ]
+ },
+ {
+  "url": "/grassington-lodge/rooms/vendale-1/",
+  "title": "Vendale 1 - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Vendale-1.jpeg",
+  "canonical": "https://www.grhotels.co.uk/grassington-lodge/rooms/vendale-1/",
+  "mews_configuration_ids": [],
+  "phones": [],
+  "emails": [],
+  "blocks": [
+   {
+    "type": "li",
+    "text": "Map View"
+   },
+   {
+    "type": "link",
+    "href": "https://direct-book.com/properties/grassingtonlodgedirect",
+    "text": "Book Online"
+   },
+   {
+    "type": "h1",
+    "text": "Vendale 1"
+   },
+   {
+    "type": "h2",
+    "text": "Further information"
+   },
+   {
+    "type": "p",
+    "text": "The Vendale rooms are located in a separate building about 20 yards from the main house and are spacious, light and airy."
+   },
+   {
+    "type": "p",
+    "text": "Spacious with a 6’ super-king size bed (which can be split into twin beds upon request), sitting area, large TV and DVD player. The bathroom has a bath and separate shower. The room has a fridge in which fresh milk and complimentary mineral water are provided each day."
+   },
+   {
+    "type": "p",
+    "text": "This is a lovely room in which Daniel Radcliffe stayed (it is far from a cupboard under the stairs!!) when he and the cast and crew stayed with us in November 2010 whilst filming The Woman in Black."
+   },
+   {
+    "type": "li",
+    "text": "Return to Grassington Lodge"
+   }
+  ],
+  "images": [
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL-Logo-wbg2.gif",
+    "alt": "",
+    "width": "327",
+    "height": "110"
+   }
+  ],
+  "background_images": [
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Vendale-1.jpeg"
+  ]
+ },
+ {
+  "url": "/grassington-lodge/rooms/vendale-2/",
+  "title": "Vendale 2 - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Vendale-2.jpeg",
+  "canonical": "https://www.grhotels.co.uk/grassington-lodge/rooms/vendale-2/",
+  "mews_configuration_ids": [],
+  "phones": [],
+  "emails": [],
+  "blocks": [
+   {
+    "type": "li",
+    "text": "Map View"
+   },
+   {
+    "type": "link",
+    "href": "https://direct-book.com/properties/grassingtonlodgedirect",
+    "text": "Book Online"
+   },
+   {
+    "type": "h1",
+    "text": "Vendale 2"
+   },
+   {
+    "type": "h2",
+    "text": "Further information"
+   },
+   {
+    "type": "p",
+    "text": "The Vendale rooms are located in a separate building about 20 yards from the main house and are spacious, light and airy."
+   },
+   {
+    "type": "p",
+    "text": "Spacious with a 6’ super-king size bed, flat screen TV and DVD player."
+   },
+   {
+    "type": "p",
+    "text": "Spacious shower room/wc (no bath) The room has a fridge in which fresh milk and complimentary mineral water are provided each day."
+   },
+   {
+    "type": "p",
+    "text": "Can be made up as a twin bedded room on request."
+   },
+   {
+    "type": "li",
+    "text": "Return to Grassington Lodge"
+   }
+  ],
+  "images": [
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL-Logo-wbg2.gif",
+    "alt": "",
+    "width": "327",
+    "height": "110"
+   }
+  ],
+  "background_images": [
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Vendale-2.jpeg"
+  ]
+ },
+ {
+  "url": "/queens-head-berwick/",
+  "title": "Queens Head Berwick - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Pictorial-Photography-commercial-rooms-property-hotel-interior-exterior-4.jpg",
+  "canonical": "https://www.grhotels.co.uk/queens-head-berwick/",
+  "mews_configuration_ids": [],
+  "phones": [
+   "01289 307900"
+  ],
+  "emails": [
+   "castlehotel@grhotels.co.uk"
+  ],
+  "blocks": [
+   {
+    "type": "h1",
+    "text": "Queens Head Berwick"
+   },
+   {
+    "type": "h3",
+    "text": "Comfort with a difference."
+   },
+   {
+    "type": "li",
+    "text": "01289 307900"
+   },
+   {
+    "type": "li",
+    "text": "castlehotel@grhotels.co.uk"
+   },
+   {
+    "type": "link",
+    "href": "mailto:castlehotel@grhotels.co.uk",
+    "text": "castlehotel@grhotels.co.uk"
+   },
+   {
+    "type": "p",
+    "text": "The Queens Head is a traditional 6 bed room self check in hotel. It overlooks Sandgate in the old part of Berwick upon Tweed only walking distance from the walls and quayside."
+   },
+   {
+    "type": "p",
+    "text": "The hotel is very welcoming! The hotel has six comfortable bedrooms with ensuite bathrooms, luxury breakfast hamper, comfy beds and internet throughout."
+   },
+   {
+    "type": "p",
+    "text": "Guests are very welcome to make use of the safe and secure outdoor bike storage area at the hotel."
+   },
+   {
+    "type": "p",
+    "text": "The Queen’s Head has everything you need for a restful stay in Berwick."
+   },
+   {
+    "type": "h3",
+    "text": "Rooms"
+   },
+   {
+    "type": "h3",
+    "text": "Facilities"
+   },
+   {
+    "type": "h1",
+    "text": "Testimonials"
+   },
+   {
+    "type": "h1",
+    "text": "Where to find us?"
+   }
+  ],
+  "images": [],
+  "background_images": [
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Pictorial-Photography-commercial-rooms-property-hotel-interior-exterior-4.jpg"
+  ]
+ },
+ {
+  "url": "/queens-head-berwick/facilities/",
+  "title": "Facilities - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-1.png",
+  "canonical": "https://www.grhotels.co.uk/queens-head-berwick/facilities/",
+  "mews_configuration_ids": [],
+  "phones": [],
+  "emails": [],
+  "blocks": [
+   {
+    "type": "li",
+    "text": "Map View"
+   },
+   {
+    "type": "link",
+    "href": "https://direct-book.com/properties/queensheadberwickhoteldirect",
+    "text": "Book Online"
+   },
+   {
+    "type": "h1",
+    "text": "Our Facilities"
+   },
+   {
+    "type": "h3",
+    "text": "Bedrooms & Bathrooms"
+   },
+   {
+    "type": "p",
+    "text": "Our r ooms have been recently refurbished to meet our guests high standards, while being sympathetic to the building’s Grade II listed building status; we have created a contemporary feel while maintaining the characteristics of a period building."
+   },
+   {
+    "type": "p",
+    "text": "Bathrooms are modern and include:"
+   },
+   {
+    "type": "li",
+    "text": "Powerful shower"
+   },
+   {
+    "type": "li",
+    "text": "Heated towel rails"
+   },
+   {
+    "type": "li",
+    "text": "Luxury large bath sheets"
+   },
+   {
+    "type": "li",
+    "text": "Complimentary toiletries"
+   },
+   {
+    "type": "h3",
+    "text": "Entertainment"
+   },
+   {
+    "type": "li",
+    "text": "Tea & Coffee Facilities"
+   },
+   {
+    "type": "li",
+    "text": "Freeview & 26″ LCD TV"
+   },
+   {
+    "type": "li",
+    "text": "DVD’s on request"
+   },
+   {
+    "type": "li",
+    "text": "Free WiFi"
+   },
+   {
+    "type": "li",
+    "text": "Return to Queens Head Berwick"
+   }
+  ],
+  "images": [
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-1.png",
+    "alt": "",
+    "width": "260",
+    "height": "60"
+   }
+  ],
+  "background_images": []
+ },
+ {
+  "url": "/queens-head-berwick/rooms/",
+  "title": "Rooms - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-1.png",
+  "canonical": "https://www.grhotels.co.uk/queens-head-berwick/rooms/",
+  "mews_configuration_ids": [],
+  "phones": [],
+  "emails": [],
+  "blocks": [
+   {
+    "type": "li",
+    "text": "Map View"
+   },
+   {
+    "type": "link",
+    "href": "https://direct-book.com/properties/queensheadberwickhoteldirect",
+    "text": "Book Online"
+   },
+   {
+    "type": "h1",
+    "text": "Rooms"
+   },
+   {
+    "type": "p",
+    "text": "The Queen’s Head Hotel has three twin rooms, two double rooms, and a family room: The family room is spacious and includes a double bed and a single bed with space available for a cot or an extra bed."
+   },
+   {
+    "type": "p",
+    "text": "Each room in the hotel has been carefully throughout to provide maximum comfort, relaxation and enjoyment throughout your stay."
+   },
+   {
+    "type": "p",
+    "text": "The beds have pocket-sprung mattresses and are dressed in quality matching bedding, and the pillows are hypo-allergenic."
+   },
+   {
+    "type": "p",
+    "text": "Your room will have a thermostat so you can feel as comfortable as if you were at home, and a housekeeper will maintain the high standards of your room with daily care and attention to detail."
+   },
+   {
+    "type": "p",
+    "text": "Please note the hotel is a self check-in hotel if you have any issues please contact the hotel on 01289/307952."
+   },
+   {
+    "type": "h3",
+    "text": "Double Room"
+   },
+   {
+    "type": "h3",
+    "text": "Family Room"
+   },
+   {
+    "type": "h3",
+    "text": "Superior Double Room"
+   },
+   {
+    "type": "h3",
+    "text": "Twin Room"
+   },
+   {
+    "type": "li",
+    "text": "Return to Queens Head Berwick"
+   }
+  ],
+  "images": [
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-1.png",
+    "alt": "",
+    "width": "260",
+    "height": "60"
+   }
+  ],
+  "background_images": [
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/07/IMG_20220716_134657.jpg",
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/08/5CBF53D6-5275-47C4-81C0-B8D7BDAEC387.jpeg",
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/08/FC536D73-A26F-4FD1-983E-C0A4564AD271.jpeg",
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/08/FFDE7D32-39B9-486F-A056-221876020B54.jpeg"
+  ]
+ },
+ {
+  "url": "/queens-head-berwick/rooms/double-room-def/",
+  "title": "Double Room - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.co.uk/wp-content/uploads/2022/08/FC536D73-A26F-4FD1-983E-C0A4564AD271.jpeg",
+  "canonical": "https://www.grhotels.co.uk/queens-head-berwick/rooms/double-room-def/",
+  "mews_configuration_ids": [],
+  "phones": [],
+  "emails": [],
+  "blocks": [
+   {
+    "type": "li",
+    "text": "Map View"
+   },
+   {
+    "type": "link",
+    "href": "https://direct-book.com/properties/queensheadberwickhoteldirect",
+    "text": "Book Online"
+   },
+   {
+    "type": "h1",
+    "text": "Double Room"
+   },
+   {
+    "type": "h2",
+    "text": "Further information"
+   },
+   {
+    "type": "p",
+    "text": "Our cosy double bedroom with bright en-suite shower-room, overlooking the stunning period buildings of Berwick. Perfect for a one night stay or a for single occupancy. Non smoking."
+   },
+   {
+    "type": "li",
+    "text": "En-suite bathroom"
+   },
+   {
+    "type": "li",
+    "text": "26 inch LCD TV & built in DVD Player"
+   },
+   {
+    "type": "li",
+    "text": "In room tea & coffee"
+   },
+   {
+    "type": "li",
+    "text": "Mineral water"
+   },
+   {
+    "type": "li",
+    "text": "Free Wi-fi"
+   },
+   {
+    "type": "li",
+    "text": "Complimentary Toiletries"
+   },
+   {
+    "type": "li",
+    "text": "Hair Dryer"
+   },
+   {
+    "type": "li",
+    "text": "Iron and Ironing Board"
+   },
+   {
+    "type": "li",
+    "text": "Hot Water Bottle"
+   },
+   {
+    "type": "li",
+    "text": "Return to Queens Head Berwick"
+   }
+  ],
+  "images": [
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-1.png",
+    "alt": "",
+    "width": "260",
+    "height": "60"
+   }
+  ],
+  "background_images": [
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/08/FC536D73-A26F-4FD1-983E-C0A4564AD271.jpeg"
+  ]
+ },
+ {
+  "url": "/queens-head-berwick/rooms/family-room/",
+  "title": "Family Room - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.co.uk/wp-content/uploads/2022/08/5CBF53D6-5275-47C4-81C0-B8D7BDAEC387.jpeg",
+  "canonical": "https://www.grhotels.co.uk/queens-head-berwick/rooms/family-room/",
+  "mews_configuration_ids": [],
+  "phones": [],
+  "emails": [],
+  "blocks": [
+   {
+    "type": "li",
+    "text": "Map View"
+   },
+   {
+    "type": "link",
+    "href": "https://direct-book.com/properties/queensheadberwickhoteldirect",
+    "text": "Book Online"
+   },
+   {
+    "type": "h1",
+    "text": "Family Room"
+   },
+   {
+    "type": "h2",
+    "text": "Further information"
+   },
+   {
+    "type": "p",
+    "text": "This generously spacious family bedroom has plenty of storage space and overlooks Berwick’s beautiful architecture. Non Smoking. Features a double and single bed. There would be also space for a cot or an extra single bed."
+   },
+   {
+    "type": "li",
+    "text": "En-suite bathroom"
+   },
+   {
+    "type": "li",
+    "text": "26 inch LCD TV & built in DVD Player"
+   },
+   {
+    "type": "li",
+    "text": "In room tea & coffee"
+   },
+   {
+    "type": "li",
+    "text": "Mineral water"
+   },
+   {
+    "type": "li",
+    "text": "Free Wi-fi"
+   },
+   {
+    "type": "li",
+    "text": "Complimentary Toiletries"
+   },
+   {
+    "type": "li",
+    "text": "Hair Dryer"
+   },
+   {
+    "type": "li",
+    "text": "Iron and Ironing Board"
+   },
+   {
+    "type": "li",
+    "text": "Hot Water Bottle"
+   },
+   {
+    "type": "li",
+    "text": "Return to Queens Head Berwick"
+   }
+  ],
+  "images": [
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-1.png",
+    "alt": "",
+    "width": "260",
+    "height": "60"
+   }
+  ],
+  "background_images": [
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/08/5CBF53D6-5275-47C4-81C0-B8D7BDAEC387.jpeg"
+  ]
+ },
+ {
+  "url": "/queens-head-berwick/rooms/superior-double-room/",
+  "title": "Superior Double Room - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.co.uk/wp-content/uploads/2022/07/IMG_20220716_134657.jpg",
+  "canonical": "https://www.grhotels.co.uk/queens-head-berwick/rooms/superior-double-room/",
+  "mews_configuration_ids": [],
+  "phones": [],
+  "emails": [],
+  "blocks": [
+   {
+    "type": "li",
+    "text": "Map View"
+   },
+   {
+    "type": "link",
+    "href": "https://direct-book.com/properties/queensheadberwickhoteldirect",
+    "text": "Book Online"
+   },
+   {
+    "type": "h1",
+    "text": "Superior Double Room"
+   },
+   {
+    "type": "h2",
+    "text": "Further information"
+   },
+   {
+    "type": "p",
+    "text": "Our superior double is spacious and comfortable. Perfect for a couple to base themselves during their stay. Non smoking."
+   },
+   {
+    "type": "li",
+    "text": "En-suite bathroom"
+   },
+   {
+    "type": "li",
+    "text": "26 inch LCD TV & built in DVD Player"
+   },
+   {
+    "type": "li",
+    "text": "In room tea & coffee"
+   },
+   {
+    "type": "li",
+    "text": "Mineral water"
+   },
+   {
+    "type": "li",
+    "text": "Free Wi-fi"
+   },
+   {
+    "type": "li",
+    "text": "Complimentary Toiletries"
+   },
+   {
+    "type": "li",
+    "text": "Hair Dryer"
+   },
+   {
+    "type": "li",
+    "text": "Iron and Ironing Board"
+   },
+   {
+    "type": "li",
+    "text": "Hot Water Bottle"
+   },
+   {
+    "type": "li",
+    "text": "Return to Queens Head Berwick"
+   }
+  ],
+  "images": [
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-1.png",
+    "alt": "",
+    "width": "260",
+    "height": "60"
+   }
+  ],
+  "background_images": [
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/07/IMG_20220716_134657.jpg"
+  ]
+ },
+ {
+  "url": "/queens-head-berwick/rooms/twin-room/",
+  "title": "Twin Room - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.co.uk/wp-content/uploads/2022/08/FFDE7D32-39B9-486F-A056-221876020B54.jpeg",
+  "canonical": "https://www.grhotels.co.uk/queens-head-berwick/rooms/twin-room/",
+  "mews_configuration_ids": [],
+  "phones": [],
+  "emails": [],
+  "blocks": [
+   {
+    "type": "li",
+    "text": "Map View"
+   },
+   {
+    "type": "link",
+    "href": "https://direct-book.com/properties/queensheadberwickhoteldirect",
+    "text": "Book Online"
+   },
+   {
+    "type": "h1",
+    "text": "Twin Room"
+   },
+   {
+    "type": "h2",
+    "text": "Further information"
+   },
+   {
+    "type": "p",
+    "text": "Our twin rooms are spacious and comfortable with ensuite bathrooms. Non Smoking."
+   },
+   {
+    "type": "li",
+    "text": "En-suite bathroom"
+   },
+   {
+    "type": "li",
+    "text": "26 inch LCD TV & built in DVD Player"
+   },
+   {
+    "type": "li",
+    "text": "In room tea & coffee"
+   },
+   {
+    "type": "li",
+    "text": "Mineral water"
+   },
+   {
+    "type": "li",
+    "text": "Free Wi-fi"
+   },
+   {
+    "type": "li",
+    "text": "Complimentary Toiletries"
+   },
+   {
+    "type": "li",
+    "text": "Hair Dryer"
+   },
+   {
+    "type": "li",
+    "text": "Iron and Ironing Board"
+   },
+   {
+    "type": "li",
+    "text": "Hot Water Bottle"
+   },
+   {
+    "type": "li",
+    "text": "Return to Queens Head Berwick"
+   }
+  ],
+  "images": [
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-1.png",
+    "alt": "",
+    "width": "260",
+    "height": "60"
+   }
+  ],
+  "background_images": [
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/08/FFDE7D32-39B9-486F-A056-221876020B54.jpeg"
+  ]
+ },
+ {
+  "url": "/royal-oak/",
+  "title": "Royal Oak - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.co.uk/wp-content/uploads/2025/09/the-royal-oak-hawkhurst.jpg",
+  "canonical": "https://www.grhotels.co.uk/royal-oak/",
+  "mews_configuration_ids": [],
+  "phones": [
+   "01580 755782"
+  ],
+  "emails": [
+   "royaloak@grhotels.co.uk"
+  ],
+  "blocks": [
+   {
+    "type": "h1",
+    "text": "Royal Oak"
+   },
+   {
+    "type": "p",
+    "text": "The Royal Oak in Hawkhurst is a cosy and inviting space with a natural and welcoming aesthetic."
+   },
+   {
+    "type": "li",
+    "text": "01580 755782"
+   },
+   {
+    "type": "li",
+    "text": "royaloak@grhotels.co.uk"
+   },
+   {
+    "type": "link",
+    "href": "mailto:royaloak@grhotels.co.uk",
+    "text": "royaloak@grhotels.co.uk"
+   },
+   {
+    "type": "li",
+    "text": "Book a Table"
+   },
+   {
+    "type": "link",
+    "href": "https://web.dojo.app/create_booking/vendor/EU7rQ_y5pnYeZkmzh80enykQcAGbsaTTDNKJrUq7mMc_restaurant",
+    "text": "Book a Table"
+   },
+   {
+    "type": "h3",
+    "text": "Royal Oak"
+   },
+   {
+    "type": "p",
+    "text": "We are located in a peaceful and scenic area, perfect for those who want to escape the hustle and bustle of city life."
+   },
+   {
+    "type": "p",
+    "text": "The decor is warm and rustic, with wooden tables and chairs, exposed brick walls, and soft lighting that creates a welcoming ambiance."
+   },
+   {
+    "type": "p",
+    "text": "Whether you’re visiting for business or pleasure, our hotel is the perfect choice for those who want to experience the beauty and charm of the countryside while enjoying all the comforts of home."
+   },
+   {
+    "type": "h3",
+    "text": "Rooms"
+   },
+   {
+    "type": "h3",
+    "text": "Attractions"
+   },
+   {
+    "type": "h3",
+    "text": "Testimonials"
+   },
+   {
+    "type": "h4",
+    "text": "Where to find us?"
+   }
+  ],
+  "images": [],
+  "background_images": [
+   "https://www.grhotels.co.uk/wp-content/uploads/2025/09/the-royal-oak-hawkhurst.jpg"
+  ]
+ },
+ {
+  "url": "/the-george-at-piercebridge/",
+  "title": "The George at Piercebridge - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.co.uk/wp-content/uploads/2026/06/External.jpg",
+  "canonical": "https://www.grhotels.co.uk/the-george-at-piercebridge/",
+  "mews_configuration_ids": [],
+  "phones": [
+   "01325 374576"
+  ],
+  "emails": [
+   "thegeorge@grhotels.co.uk"
+  ],
+  "blocks": [
+   {
+    "type": "h1",
+    "text": "The George at Piercebridge"
+   },
+   {
+    "type": "p",
+    "text": "Historic Riverside Stays in the Heart of County Durham"
+   },
+   {
+    "type": "p",
+    "text": "Set on the banks of the River Tees in the historic village of Piercebridge, The George is a characterful\ncoaching inn where heritage, hospitality and countryside charm come together. Dating back to the\n16th century, the hotel offers comfortable accommodation, riverside dining and a welcoming\natmosphere, making it the perfect base for exploring County Durham, North Yorkshire and the\nDurham Dales."
+   },
+   {
+    "type": "li",
+    "text": "01325 374576"
+   },
+   {
+    "type": "h3",
+    "text": "The George at Piercebridge"
+   },
+   {
+    "type": "p",
+    "text": "A Historic Coaching Inn on the River Tees"
+   },
+   {
+    "type": "p",
+    "text": "The George has welcomed travellers for centuries. Situated beside the historic bridge crossing the River Tees, the inn sits in one of the region’s most fascinating villages, with roots stretching back to Roman Britain."
+   },
+   {
+    "type": "p",
+    "text": "Piercebridge was once an important crossing point on Dere Street, one of the Roman Empire’s major roads through Britain. Today, visitors can explore the remains of the Roman fort and bridge just a short walk from the hotel, before returning to enjoy the comfort and character of this much loved countryside inn."
+   },
+   {
+    "type": "h3",
+    "text": "Stay at The George"
+   },
+   {
+    "type": "p",
+    "text": "Whether you’re visiting for a romantic escape, a family getaway, a business trip or a countryside weekend with the dog, The George offers a relaxing stay in one of the North East’s most historic settings."
+   },
+   {
+    "type": "p",
+    "text": "Each room has been designed to offer a comfortable and relaxing retreat after a day of exploring. Combining traditional character with modern comforts, guests can enjoy comfortable beds, en suite facilities, complimentary WiFi and everything needed for a restful stay. Whether you’re planning a romantic weekend, a family break or an overnight business trip, The George provides a warm and welcoming base in the heart of the countryside."
+   },
+   {
+    "type": "h3",
+    "text": "Food, Drink & Riverside Views"
+   },
+   {
+    "type": "p",
+    "text": "Housed within one of the most picturesque spaces in the hotel, our restaurant overlooks the historic bridge and River Tees, providing a memorable setting for breakfast, lunch and dinner. Guests and locals alike gather here to enjoy seasonal dishes, traditional favourites and a warm welcome throughout the year."
+   },
+   {
+    "type": "h3",
+    "text": "Weddings & Celebrations"
+   },
+   {
+    "type": "p",
+    "text": "Celebrate your special day in one of County Durham’s most picturesque riverside settings. From intimate ceremonies to larger celebrations, The George combines historic character, elegant reception spaces, beautiful gardens and comfortable accommodation."
+   },
+   {
+    "type": "p",
+    "text": "Our experienced events team will support you from your first enquiry through to the final dance."
+   },
+   {
+    "type": "p",
+    "text": "Licensed for civil ceremonies, with accommodation available for you and your guests."
+   },
+   {
+    "type": "link",
+    "href": "mailto:thegeorge@grhotels.co.uk",
+    "text": "Enquire About Weddings"
+   },
+   {
+    "type": "h3",
+    "text": "Discover County Durham & North Yorkshire"
+   },
+   {
+    "type": "p",
+    "text": "Perfectly positioned between Darlington, Barnard Castle and Richmond, The George provides easy access to some of the North East’s most loved attractions."
+   },
+   {
+    "type": "p",
+    "text": "Nearby highlights include:"
+   },
+   {
+    "type": "p",
+    "text": "Piercebridge Roman Fort, Raby Castle, Richmond Castle, The Bowes Museum, The Durham Dales, Riverside walks along the Tees, Historic market towns and villages"
+   },
+   {
+    "type": "p",
+    "text": "Whether you’re looking for history, walking, cycling, sightseeing or simply a peaceful countryside break, there is plenty to discover from our doorstep."
+   },
+   {
+    "type": "h3",
+    "text": "Testimonials"
+   },
+   {
+    "type": "h3",
+    "text": "Why Guests Love The George"
+   },
+   {
+    "type": "h4",
+    "text": "Where to find us?"
+   },
+   {
+    "type": "h4",
+    "text": "Your Riverside Escape Awaits"
+   },
+   {
+    "type": "p",
+    "text": "From riverside walks and historic landmarks to cosy evenings by the bar and relaxing overnight stays, The George offers an authentic countryside experience in one of County Durham’s most picturesque villages."
+   },
+   {
+    "type": "p",
+    "text": "Book direct for the best available rates, free parking and direct support from our team."
+   }
+  ],
+  "images": [
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2026/07/The-George-Weddings-Events.png",
+    "alt": "",
+    "width": "800",
+    "height": "600"
+   }
+  ],
+  "background_images": [
+   "https://www.grhotels.co.uk/wp-content/uploads/2026/06/External.jpg"
+  ]
+ },
+ {
+  "url": "/the-george-at-piercebridge/",
+  "title": "The George at Piercebridge - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.co.uk/wp-content/uploads/2026/06/External.jpg",
+  "canonical": "https://www.grhotels.co.uk/the-george-at-piercebridge/",
+  "mews_configuration_ids": [],
+  "phones": [
+   "01325 374576"
+  ],
+  "emails": [
+   "thegeorge@grhotels.co.uk"
+  ],
+  "blocks": [
+   {
+    "type": "h1",
+    "text": "The George at Piercebridge"
+   },
+   {
+    "type": "p",
+    "text": "Historic Riverside Stays in the Heart of County Durham"
+   },
+   {
+    "type": "p",
+    "text": "Set on the banks of the River Tees in the historic village of Piercebridge, The George is a characterful\ncoaching inn where heritage, hospitality and countryside charm come together. Dating back to the\n16th century, the hotel offers comfortable accommodation, riverside dining and a welcoming\natmosphere, making it the perfect base for exploring County Durham, North Yorkshire and the\nDurham Dales."
+   },
+   {
+    "type": "li",
+    "text": "01325 374576"
+   },
+   {
+    "type": "h3",
+    "text": "The George at Piercebridge"
+   },
+   {
+    "type": "p",
+    "text": "A Historic Coaching Inn on the River Tees"
+   },
+   {
+    "type": "p",
+    "text": "The George has welcomed travellers for centuries. Situated beside the historic bridge crossing the River Tees, the inn sits in one of the region’s most fascinating villages, with roots stretching back to Roman Britain."
+   },
+   {
+    "type": "p",
+    "text": "Piercebridge was once an important crossing point on Dere Street, one of the Roman Empire’s major roads through Britain. Today, visitors can explore the remains of the Roman fort and bridge just a short walk from the hotel, before returning to enjoy the comfort and character of this much loved countryside inn."
+   },
+   {
+    "type": "h3",
+    "text": "Stay at The George"
+   },
+   {
+    "type": "p",
+    "text": "Whether you’re visiting for a romantic escape, a family getaway, a business trip or a countryside weekend with the dog, The George offers a relaxing stay in one of the North East’s most historic settings."
+   },
+   {
+    "type": "p",
+    "text": "Each room has been designed to offer a comfortable and relaxing retreat after a day of exploring. Combining traditional character with modern comforts, guests can enjoy comfortable beds, en suite facilities, complimentary WiFi and everything needed for a restful stay. Whether you’re planning a romantic weekend, a family break or an overnight business trip, The George provides a warm and welcoming base in the heart of the countryside."
+   },
+   {
+    "type": "h3",
+    "text": "Food, Drink & Riverside Views"
+   },
+   {
+    "type": "p",
+    "text": "Housed within one of the most picturesque spaces in the hotel, our restaurant overlooks the historic bridge and River Tees, providing a memorable setting for breakfast, lunch and dinner. Guests and locals alike gather here to enjoy seasonal dishes, traditional favourites and a warm welcome throughout the year."
+   },
+   {
+    "type": "h3",
+    "text": "Weddings & Celebrations"
+   },
+   {
+    "type": "p",
+    "text": "Celebrate your special day in one of County Durham’s most picturesque riverside settings. From intimate ceremonies to larger celebrations, The George combines historic character, elegant reception spaces, beautiful gardens and comfortable accommodation."
+   },
+   {
+    "type": "p",
+    "text": "Our experienced events team will support you from your first enquiry through to the final dance."
+   },
+   {
+    "type": "p",
+    "text": "Licensed for civil ceremonies, with accommodation available for you and your guests."
+   },
+   {
+    "type": "link",
+    "href": "mailto:thegeorge@grhotels.co.uk",
+    "text": "Enquire About Weddings"
+   },
+   {
+    "type": "h3",
+    "text": "Discover County Durham & North Yorkshire"
+   },
+   {
+    "type": "p",
+    "text": "Perfectly positioned between Darlington, Barnard Castle and Richmond, The George provides easy access to some of the North East’s most loved attractions."
+   },
+   {
+    "type": "p",
+    "text": "Nearby highlights include:"
+   },
+   {
+    "type": "p",
+    "text": "Piercebridge Roman Fort, Raby Castle, Richmond Castle, The Bowes Museum, The Durham Dales, Riverside walks along the Tees, Historic market towns and villages"
+   },
+   {
+    "type": "p",
+    "text": "Whether you’re looking for history, walking, cycling, sightseeing or simply a peaceful countryside break, there is plenty to discover from our doorstep."
+   },
+   {
+    "type": "h3",
+    "text": "Testimonials"
+   },
+   {
+    "type": "h3",
+    "text": "Why Guests Love The George"
+   },
+   {
+    "type": "h4",
+    "text": "Where to find us?"
+   },
+   {
+    "type": "h4",
+    "text": "Your Riverside Escape Awaits"
+   },
+   {
+    "type": "p",
+    "text": "From riverside walks and historic landmarks to cosy evenings by the bar and relaxing overnight stays, The George offers an authentic countryside experience in one of County Durham’s most picturesque villages."
+   },
+   {
+    "type": "p",
+    "text": "Book direct for the best available rates, free parking and direct support from our team."
+   }
+  ],
+  "images": [
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2026/07/The-George-Weddings-Events.png",
+    "alt": "",
+    "width": "800",
+    "height": "600"
+   }
+  ],
+  "background_images": [
+   "https://www.grhotels.co.uk/wp-content/uploads/2026/06/External.jpg"
+  ]
+ },
+ {
+  "url": "/the-riverside-house-hotel/",
+  "title": "The Riverside House Hotel - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.co.uk/wp-content/uploads/2026/03/b4fc7b_6eada3dae73c4a62957b88b305627e27mv2-1024x819.png",
+  "canonical": "https://www.grhotels.co.uk/the-riverside-house-hotel/",
+  "mews_configuration_ids": [],
+  "phones": [
+   "01638 717274"
+  ],
+  "emails": [],
+  "blocks": [
+   {
+    "type": "h1",
+    "text": "The Riverside House Hotel"
+   },
+   {
+    "type": "p",
+    "text": "The Riverside House Hotel is nestled on the edge of the River Lark on the outskirts of the town of Mildenhall, not far from Newmarket and Bury St Edmunds."
+   },
+   {
+    "type": "link",
+    "href": "https://booking.eu.guestline.app/GRRHRSIDE/availability?hotel=GRRHRSIDE",
+    "text": "Book a Room"
+   },
+   {
+    "type": "link",
+    "href": "https://booking.resdiary.com/widget/Standard/TheRiversideHouseHotel/33772",
+    "text": "Book a Table"
+   },
+   {
+    "type": "li",
+    "text": "01638 717274"
+   },
+   {
+    "type": "h3",
+    "text": "The Riverside House Hotel"
+   },
+   {
+    "type": "h4",
+    "text": "Where to find us?"
+   }
+  ],
+  "images": [],
+  "background_images": [
+   "https://www.grhotels.co.uk/wp-content/uploads/2026/03/b4fc7b_6eada3dae73c4a62957b88b305627e27mv2.png"
+  ]
+ },
+ {
+  "url": "/thevines/",
+  "title": "The Vines Black Bourton - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Screenshot-2022-08-04-at-23.20.03-1024x683.png",
+  "canonical": "https://www.grhotels.co.uk/thevines/",
+  "mews_configuration_ids": [],
+  "phones": [
+   "01473 597897",
+   "01993 843559"
+  ],
+  "emails": [
+   "vineshotel@grhotels.co.uk"
+  ],
+  "blocks": [
+   {
+    "type": "h1",
+    "text": "The Vines Black Bourton"
+   },
+   {
+    "type": "h3",
+    "text": "Maintaining the highest of standards"
+   },
+   {
+    "type": "li",
+    "text": "01993 843559"
+   },
+   {
+    "type": "li",
+    "text": "vineshotel@grhotels.co.uk"
+   },
+   {
+    "type": "link",
+    "href": "mailto:vineshotel@grhotels.co.uk",
+    "text": "vineshotel@grhotels.co.uk"
+   },
+   {
+    "type": "h3",
+    "text": "Rooms"
+   },
+   {
+    "type": "h3",
+    "text": "Weddings"
+   },
+   {
+    "type": "h3",
+    "text": "Activities"
+   },
+   {
+    "type": "h3",
+    "text": "Facilities"
+   },
+   {
+    "type": "h1",
+    "text": "Testimonials"
+   },
+   {
+    "type": "h1",
+    "text": "Where to find us?"
+   }
+  ],
+  "images": [],
+  "background_images": [
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Screenshot-2022-08-04-at-23.20.03.png"
+  ]
+ },
+ {
+  "url": "/thevines/",
+  "title": "The Vines Black Bourton - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Screenshot-2022-08-04-at-23.20.03-1024x683.png",
+  "canonical": "https://www.grhotels.co.uk/thevines/",
+  "mews_configuration_ids": [],
+  "phones": [
+   "01473 597897",
+   "01993 843559"
+  ],
+  "emails": [
+   "vineshotel@grhotels.co.uk"
+  ],
+  "blocks": [
+   {
+    "type": "h1",
+    "text": "The Vines Black Bourton"
+   },
+   {
+    "type": "h3",
+    "text": "Maintaining the highest of standards"
+   },
+   {
+    "type": "li",
+    "text": "01993 843559"
+   },
+   {
+    "type": "li",
+    "text": "vineshotel@grhotels.co.uk"
+   },
+   {
+    "type": "link",
+    "href": "mailto:vineshotel@grhotels.co.uk",
+    "text": "vineshotel@grhotels.co.uk"
+   },
+   {
+    "type": "h3",
+    "text": "Rooms"
+   },
+   {
+    "type": "h3",
+    "text": "Weddings"
+   },
+   {
+    "type": "h3",
+    "text": "Activities"
+   },
+   {
+    "type": "h3",
+    "text": "Facilities"
+   },
+   {
+    "type": "h1",
+    "text": "Testimonials"
+   },
+   {
+    "type": "h1",
+    "text": "Where to find us?"
+   }
+  ],
+  "images": [],
+  "background_images": [
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Screenshot-2022-08-04-at-23.20.03.png"
+  ]
+ },
+ {
+  "url": "/thevines/activities/",
+  "title": "Activities - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/the-vines.png",
+  "canonical": "https://www.grhotels.co.uk/thevines/activities/",
+  "mews_configuration_ids": [],
+  "phones": [],
+  "emails": [],
+  "blocks": [
+   {
+    "type": "li",
+    "text": "Map View"
+   },
+   {
+    "type": "link",
+    "href": "https://direct-book.com/properties/thevinesdirect",
+    "text": "Book Online"
+   },
+   {
+    "type": "h1",
+    "text": "Activities"
+   },
+   {
+    "type": "p",
+    "text": "Explore the Oxfordshire Cotswolds, the countryside, Cotswold villages, Blenheim Palace and the Thames Path. Deemed an Area of Outstanding Natural Beauty, the Oxfordshire Cotswolds are picture book England, a quintessential cluster of time defying, honey stone villages and towns."
+   },
+   {
+    "type": "p",
+    "text": "Many yearly events take place in the vicinity such as the Charlbury Music Festival as well as arts weeks and antique sales in Burford. We are also close to the City of Oxford, the famous City of Spires. Elegant buildings and fantastic shopping and don’t miss the covered market and the open top bus tour of the City"
+   },
+   {
+    "type": "p",
+    "text": "The Thames Path"
+   },
+   {
+    "type": "p",
+    "text": "Follow the greatest river in England for 184 miles (294 km) from its source in the Cotswolds almost to the sea. Passing through peaceful water meadows, unspoilt rural villages, historic towns and cities. The Vines is an ideal location for those embarking on all or some of the many miles of wonderful waterway."
+   },
+   {
+    "type": "li",
+    "text": "Return to The Vines"
+   }
+  ],
+  "images": [
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/the-vines.png",
+    "alt": "",
+    "width": "228",
+    "height": "153"
+   }
+  ],
+  "background_images": []
+ },
+ {
+  "url": "/thevines/facilities/",
+  "title": "Facilities - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/the-vines.png",
+  "canonical": "https://www.grhotels.co.uk/thevines/facilities/",
+  "mews_configuration_ids": [],
+  "phones": [],
+  "emails": [],
+  "blocks": [
+   {
+    "type": "li",
+    "text": "Map View"
+   },
+   {
+    "type": "link",
+    "href": "https://direct-book.com/properties/thevinesdirect",
+    "text": "Book Online"
+   },
+   {
+    "type": "h1",
+    "text": "Whatever the Occasion"
+   },
+   {
+    "type": "p",
+    "text": "Let us look after you and your guests and help organise the day for you"
+   },
+   {
+    "type": "p",
+    "text": "General Party And Wedding Proposal"
+   },
+   {
+    "type": "p",
+    "text": "Contact the Vines and we can create a menu to suit your style and budget"
+   },
+   {
+    "type": "li",
+    "text": "Return to The Vines"
+   }
+  ],
+  "images": [
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/the-vines.png",
+    "alt": "",
+    "width": "228",
+    "height": "153"
+   }
+  ],
+  "background_images": []
+ },
+ {
+  "url": "/thevines/rooms/",
+  "title": "Rooms - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/the-vines.png",
+  "canonical": "https://www.grhotels.co.uk/thevines/rooms/",
+  "mews_configuration_ids": [],
+  "phones": [],
+  "emails": [],
+  "blocks": [
+   {
+    "type": "li",
+    "text": "Map View"
+   },
+   {
+    "type": "link",
+    "href": "https://direct-book.com/properties/thevinesdirect",
+    "text": "Book Online"
+   },
+   {
+    "type": "h1",
+    "text": "Rooms"
+   },
+   {
+    "type": "p",
+    "text": "Great care has been taken to design and furnish the spacious rooms to allow guests every modern convenience and comfort. Most rooms have king size beds and we also have twin and family rooms. All rooms have en suite shower rooms and the new wing features superb wet rooms with powerful shower, basin, w.c. and toiletries. Modern requirements such as flat screen televisions, refrigerators, shaver sockets desks, Internet access and direct dial telephones make a stay at “The Vines” a time of pleasure."
+   },
+   {
+    "type": "h3",
+    "text": "Double Room"
+   },
+   {
+    "type": "h3",
+    "text": "Family Room"
+   },
+   {
+    "type": "h3",
+    "text": "Twin Room"
+   },
+   {
+    "type": "h3",
+    "text": "Interconnecting Family Room"
+   },
+   {
+    "type": "li",
+    "text": "Return to The Vines"
+   }
+  ],
+  "images": [
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/the-vines.png",
+    "alt": "",
+    "width": "228",
+    "height": "153"
+   }
+  ],
+  "background_images": [
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/06/accomm-grp-1.jpeg",
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/06/vines_21845.jpeg",
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/06/vines_21867.jpeg",
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/06/vines_21896.jpeg"
+  ]
+ },
+ {
+  "url": "/thevines/rooms/double-room/",
+  "title": "Double Room - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.co.uk/wp-content/uploads/2022/06/vines_21845.jpeg",
+  "canonical": "https://www.grhotels.co.uk/thevines/rooms/double-room/",
+  "mews_configuration_ids": [],
+  "phones": [],
+  "emails": [],
+  "blocks": [
+   {
+    "type": "li",
+    "text": "Map View"
+   },
+   {
+    "type": "link",
+    "href": "https://direct-book.com/properties/thevinesdirect",
+    "text": "Book Online"
+   },
+   {
+    "type": "h1",
+    "text": "Double Room"
+   },
+   {
+    "type": "h2",
+    "text": "Further information"
+   },
+   {
+    "type": "p",
+    "text": "All rooms have ensuite shower rooms and the new wing features superb wet rooms with powerful shower, basin, w.c. and toiletries. Modern requirements such as flat screen televisions, refrigerators, shaver sockets desks, Internet access and direct dial telephones make a stay at “The Vines” a time of pleasure."
+   },
+   {
+    "type": "li",
+    "text": "Shower"
+   },
+   {
+    "type": "li",
+    "text": "Tea/Coffee Making"
+   },
+   {
+    "type": "li",
+    "text": "Television"
+   },
+   {
+    "type": "li",
+    "text": "En-Suite"
+   },
+   {
+    "type": "li",
+    "text": "Alarm Clock"
+   },
+   {
+    "type": "li",
+    "text": "Housekeeping"
+   },
+   {
+    "type": "li",
+    "text": "Clock Radio"
+   },
+   {
+    "type": "li",
+    "text": "Return to The Vines"
+   }
+  ],
+  "images": [
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/the-vines.png",
+    "alt": "",
+    "width": "228",
+    "height": "153"
+   }
+  ],
+  "background_images": [
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/06/vines_21845.jpeg"
+  ]
+ },
+ {
+  "url": "/thevines/rooms/family-room/",
+  "title": "Family Room - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.co.uk/wp-content/uploads/2022/06/vines_21867.jpeg",
+  "canonical": "https://www.grhotels.co.uk/thevines/rooms/family-room/",
+  "mews_configuration_ids": [],
+  "phones": [],
+  "emails": [],
+  "blocks": [
+   {
+    "type": "li",
+    "text": "Map View"
+   },
+   {
+    "type": "link",
+    "href": "https://direct-book.com/properties/thevinesdirect",
+    "text": "Book Online"
+   },
+   {
+    "type": "h1",
+    "text": "Family Room"
+   },
+   {
+    "type": "h2",
+    "text": "Further information"
+   },
+   {
+    "type": "p",
+    "text": "All rooms have ensuite shower rooms and the new wing features superb wet rooms with powerful shower, basin, w.c. and toiletries. Modern requirements such as flat screen televisions, refrigerators, shaver sockets desks, Internet access and direct dial telephones make a stay at “The Vines” a time of pleasure."
+   },
+   {
+    "type": "li",
+    "text": "Double Bed"
+   },
+   {
+    "type": "li",
+    "text": "Shower"
+   },
+   {
+    "type": "li",
+    "text": "Housekeeping"
+   },
+   {
+    "type": "li",
+    "text": "Linen Provided"
+   },
+   {
+    "type": "li",
+    "text": "En-suite Bathroom"
+   },
+   {
+    "type": "li",
+    "text": "Single Bed"
+   },
+   {
+    "type": "li",
+    "text": "Internet Access"
+   },
+   {
+    "type": "li",
+    "text": "Cots Available"
+   },
+   {
+    "type": "li",
+    "text": "WIFI"
+   },
+   {
+    "type": "li",
+    "text": "Hairdryer"
+   },
+   {
+    "type": "li",
+    "text": "Tea/Coffee Making"
+   },
+   {
+    "type": "li",
+    "text": "Linen and Towels Provided"
+   },
+   {
+    "type": "li",
+    "text": "Return to The Vines"
+   }
+  ],
+  "images": [
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/the-vines.png",
+    "alt": "",
+    "width": "228",
+    "height": "153"
+   }
+  ],
+  "background_images": [
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/06/vines_21867.jpeg"
+  ]
+ },
+ {
+  "url": "/thevines/rooms/interconnecting-family-room/",
+  "title": "Interconnecting Family Room - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.co.uk/wp-content/uploads/2022/06/accomm-grp-1.jpeg",
+  "canonical": "https://www.grhotels.co.uk/thevines/rooms/interconnecting-family-room/",
+  "mews_configuration_ids": [],
+  "phones": [],
+  "emails": [],
+  "blocks": [
+   {
+    "type": "li",
+    "text": "Map View"
+   },
+   {
+    "type": "link",
+    "href": "https://direct-book.com/properties/thevinesdirect",
+    "text": "Book Online"
+   },
+   {
+    "type": "h1",
+    "text": "Interconnecting Family Room"
+   },
+   {
+    "type": "h2",
+    "text": "Further information"
+   },
+   {
+    "type": "p",
+    "text": "All rooms have ensuite shower rooms and the new wing features superb wet rooms with powerful shower, basin, w.c. and toiletries. Modern requirements such as flat screen televisions, refrigerators, shaver sockets desks, Internet access and direct dial telephones make a stay at “The Vines” a time of pleasure."
+   },
+   {
+    "type": "li",
+    "text": "King Full Bed"
+   },
+   {
+    "type": "li",
+    "text": "Three Single Beds"
+   },
+   {
+    "type": "li",
+    "text": "Hairdryer"
+   },
+   {
+    "type": "li",
+    "text": "Television"
+   },
+   {
+    "type": "li",
+    "text": "En-suite Bathroom"
+   },
+   {
+    "type": "li",
+    "text": "Housekeeping"
+   },
+   {
+    "type": "li",
+    "text": "Interconnecting rooms"
+   },
+   {
+    "type": "li",
+    "text": "Fridge"
+   },
+   {
+    "type": "li",
+    "text": "Internet Access"
+   },
+   {
+    "type": "li",
+    "text": "Wheelchair Accessible Doors"
+   },
+   {
+    "type": "li",
+    "text": "Desk"
+   },
+   {
+    "type": "li",
+    "text": "Alarm Clock"
+   },
+   {
+    "type": "li",
+    "text": "Iron/Ironing board"
+   },
+   {
+    "type": "li",
+    "text": "Linen and Towels"
+   },
+   {
+    "type": "li",
+    "text": "Tea/Coffee Making"
+   },
+   {
+    "type": "li",
+    "text": "Garden View"
+   },
+   {
+    "type": "li",
+    "text": "Return to The Vines"
+   }
+  ],
+  "images": [
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/the-vines.png",
+    "alt": "",
+    "width": "228",
+    "height": "153"
+   }
+  ],
+  "background_images": [
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/06/accomm-grp-1.jpeg"
+  ]
+ },
+ {
+  "url": "/thevines/rooms/twin-room/",
+  "title": "Twin Room - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.co.uk/wp-content/uploads/2022/06/vines_21896.jpeg",
+  "canonical": "https://www.grhotels.co.uk/thevines/rooms/twin-room/",
+  "mews_configuration_ids": [],
+  "phones": [],
+  "emails": [],
+  "blocks": [
+   {
+    "type": "li",
+    "text": "Map View"
+   },
+   {
+    "type": "link",
+    "href": "https://direct-book.com/properties/thevinesdirect",
+    "text": "Book Online"
+   },
+   {
+    "type": "h1",
+    "text": "Twin Room"
+   },
+   {
+    "type": "h2",
+    "text": "Further information"
+   },
+   {
+    "type": "p",
+    "text": "All rooms have ensuite shower rooms and the new wing features superb wet rooms with powerful shower, basin, w.c. and toiletries. Modern requirements such as flat screen televisions, refrigerators, shaver sockets desks, Internet access and direct dial telephones make a stay at “The Vines” a time of pleasure."
+   },
+   {
+    "type": "li",
+    "text": "En-suite Bathroom"
+   },
+   {
+    "type": "li",
+    "text": "Housekeeping"
+   },
+   {
+    "type": "li",
+    "text": "Tea/Coffee Making"
+   },
+   {
+    "type": "li",
+    "text": "Linen and towels Provided"
+   },
+   {
+    "type": "li",
+    "text": "2 Single Beds"
+   },
+   {
+    "type": "li",
+    "text": "Internet Access"
+   },
+   {
+    "type": "li",
+    "text": "Desk"
+   },
+   {
+    "type": "li",
+    "text": "Flat Screen TV"
+   },
+   {
+    "type": "li",
+    "text": "Iron/Ironing board"
+   },
+   {
+    "type": "li",
+    "text": "Television"
+   },
+   {
+    "type": "li",
+    "text": "Hairdryer"
+   },
+   {
+    "type": "li",
+    "text": "Return to The Vines"
+   }
+  ],
+  "images": [
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/the-vines.png",
+    "alt": "",
+    "width": "228",
+    "height": "153"
+   }
+  ],
+  "background_images": [
+   "https://www.grhotels.co.uk/wp-content/uploads/2022/06/vines_21896.jpeg"
+  ]
+ },
+ {
+  "url": "/thevines/weddings/",
+  "title": "Weddings - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/the-vines.png",
+  "canonical": "https://www.grhotels.co.uk/thevines/weddings/",
+  "mews_configuration_ids": [],
+  "phones": [
+   "01473 597897"
+  ],
+  "emails": [],
+  "blocks": [
+   {
+    "type": "li",
+    "text": "Map View"
+   },
+   {
+    "type": "link",
+    "href": "https://direct-book.com/properties/thevinesdirect",
+    "text": "Book Online"
+   },
+   {
+    "type": "h1",
+    "text": "Stylish Weddings at The Vines"
+   },
+   {
+    "type": "h2",
+    "text": "Idyllic Cotswold Location"
+   },
+   {
+    "type": "p",
+    "text": "The Vines not only offers an idyllic Cotswold setting but the hotel is situated next to the charming St Mary’s Church of Black Bourton, a beautiful location for your wedding ceremony. The church can accommodate up to 150 guests and you have the opportunity to hire their professional organist and fantastic team of bell ringers."
+   },
+   {
+    "type": "p",
+    "text": "The Vines is also a 5-minute drive from St Mary’s Church of Bampton, which features in the popular TV series Downton Abbey and can accommodate a congregation of up to 250 guests."
+   },
+   {
+    "type": "h3",
+    "text": "Wedding Reception"
+   },
+   {
+    "type": "h3",
+    "text": "Wedding Breakfast"
+   },
+   {
+    "type": "link",
+    "href": "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Suppliers-list.pdf.png",
+    "text": "Wedding Directory"
+   },
+   {
+    "type": "h3",
+    "text": "The Meadow"
+   },
+   {
+    "type": "h3",
+    "text": "Accommodation"
+   },
+   {
+    "type": "h3",
+    "text": "Pricing"
+   },
+   {
+    "type": "h3",
+    "text": "Would you like to arrange a viewing?"
+   },
+   {
+    "type": "h3",
+    "text": "Wedding Fayre"
+   },
+   {
+    "type": "p",
+    "text": "Join us on Sunday 12 th May for a dazzling Wedding Fayre at the Vines from 11:00 am to 3:00 pm."
+   },
+   {
+    "type": "p",
+    "text": "Entry is free but booking is essential. Click here to register."
+   },
+   {
+    "type": "li",
+    "text": "Return to The Vines"
+   }
+  ],
+  "images": [
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/the-vines.png",
+    "alt": "",
+    "width": "228",
+    "height": "153"
+   },
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png",
+    "alt": "",
+    "width": "131",
+    "height": "112"
+   }
+  ],
+  "background_images": []
+ },
+ {
+  "url": "/thevines/weddings/price-list/",
+  "title": "Price List - GR Hotels",
+  "description": "",
+  "og_image": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/the-vines.png",
+  "canonical": "https://www.grhotels.co.uk/thevines/weddings/price-list/",
+  "mews_configuration_ids": [],
+  "phones": [],
+  "emails": [],
+  "blocks": [
+   {
+    "type": "li",
+    "text": "Map View"
+   },
+   {
+    "type": "link",
+    "href": "https://direct-book.com/properties/thevinesdirect",
+    "text": "Book Online"
+   },
+   {
+    "type": "h1",
+    "text": "The Vines Wedding Price List"
+   },
+   {
+    "type": "li",
+    "text": "Return to The Vines"
+   }
+  ],
+  "images": [
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/05/the-vines.png",
+    "alt": "",
+    "width": "228",
+    "height": "153"
+   },
+   {
+    "src": "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Vines-Wedding-Guide-Prices.png",
+    "alt": "",
+    "width": "724",
+    "height": "1024"
+   }
+  ],
+  "background_images": []
+ }
+]
