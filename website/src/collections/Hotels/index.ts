@@ -1,13 +1,7 @@
 import type { CollectionConfig } from 'payload'
 
-import {
-  adminOnlyField,
-  adminOrOwnHotel,
-  isAdmin,
-  publishedOrOwnHotel,
-} from '@/access'
+import { adminOnlyField, adminOrOwnHotel, isAdmin, publishedOrOwnHotel } from '@/access'
 import { pageBlocks } from '@/blocks'
-import { seoTab } from '@/fields/seo'
 import { simpleLexical, richLexical } from '@/fields/lexical'
 import { slugField } from '@/fields/slug'
 import { revalidateCollection, revalidateCollectionDelete } from '@/hooks/revalidate'
@@ -50,18 +44,19 @@ export const Hotels: CollectionConfig = {
     afterDelete: [revalidateCollectionDelete('hotels')],
   },
   fields: [
-    { name: 'name', type: 'text', required: true, access: { update: adminOnlyField } },
-    slugField({
-      fallbackField: 'name',
-      adminOnly: true,
-      description: 'Keep this the same as the old website so Google links keep working.',
-    }),
     {
       type: 'tabs',
       tabs: [
         {
           label: 'Essentials',
           fields: [
+            { name: 'name', type: 'text', required: true, access: { update: adminOnlyField } },
+            slugField({
+              fallbackField: 'name',
+              adminOnly: true,
+              description: 'Keep this the same as the old website so Google links keep working.',
+            }),
+
             {
               type: 'row',
               fields: [
@@ -75,7 +70,11 @@ export const Hotels: CollectionConfig = {
                 {
                   name: 'tagline',
                   type: 'text',
-                  admin: { width: '50%', description: 'One line under the name, e.g. "Riverside coaching inn since 1545"' },
+                  admin: {
+                    width: '50%',
+                    description:
+                      'One line under the name, e.g. "Riverside coaching inn since 1545"',
+                  },
                 },
               ],
             },
@@ -85,7 +84,9 @@ export const Hotels: CollectionConfig = {
               relationTo: 'media',
               required: true,
               label: 'Hero image or video',
-              admin: { description: 'Landscape photo (at least 2000px wide) or a short muted MP4.' },
+              admin: {
+                description: 'Landscape photo (at least 2000px wide) or a short muted MP4.',
+              },
             },
             {
               name: 'heroPoster',
@@ -93,7 +94,8 @@ export const Hotels: CollectionConfig = {
               relationTo: 'media',
               label: 'Still image for the video',
               admin: {
-                description: 'Only needed if the hero is a video. Shown while it loads and on devices that prefer less motion.',
+                description:
+                  'Only needed if the hero is a video. Shown while it loads and on devices that prefer less motion.',
               },
             },
             {
@@ -101,7 +103,10 @@ export const Hotels: CollectionConfig = {
               type: 'richText',
               editor: simpleLexical,
               label: 'Introduction',
-              admin: { description: 'Two or three sentences. Appears under the hero and in search results if no SEO description is set.' },
+              admin: {
+                description:
+                  'Two or three sentences. Appears under the hero and in search results if no SEO description is set.',
+              },
             },
             {
               name: 'facilities',
@@ -175,15 +180,28 @@ export const Hotels: CollectionConfig = {
                 {
                   type: 'row',
                   fields: [
-                    { name: 'lat', type: 'number', label: 'Latitude', admin: { width: '50%', step: 0.000001 } },
-                    { name: 'lng', type: 'number', label: 'Longitude', admin: { width: '50%', step: 0.000001 } },
+                    {
+                      name: 'lat',
+                      type: 'number',
+                      label: 'Latitude',
+                      admin: { width: '50%', step: 0.000001 },
+                    },
+                    {
+                      name: 'lng',
+                      type: 'number',
+                      label: 'Longitude',
+                      admin: { width: '50%', step: 0.000001 },
+                    },
                   ],
                 },
                 {
                   name: 'directionsUrl',
                   type: 'text',
                   label: 'Google Maps link',
-                  admin: { description: 'Used by the "Get directions" button. Paste the share link from Google Maps.' },
+                  admin: {
+                    description:
+                      'Used by the "Get directions" button. Paste the share link from Google Maps.',
+                  },
                 },
               ],
             },
@@ -235,13 +253,28 @@ export const Hotels: CollectionConfig = {
               type: 'text',
               label: 'Table booking link (optional)',
               access: { update: adminOnlyField },
-              admin: { description: 'For restaurants that take online table bookings (e.g. ResDiary, Dojo). Adds a "Book a table" button to the hotel and dining pages.' },
+              admin: {
+                description:
+                  'For restaurants that take online table bookings (e.g. ResDiary, Dojo). Adds a "Book a table" button to the hotel and dining pages.',
+              },
             },
             {
               type: 'row',
               fields: [
-                { name: 'checkIn', type: 'text', label: 'Check-in from', defaultValue: '3:00pm', admin: { width: '33%' } },
-                { name: 'checkOut', type: 'text', label: 'Check-out by', defaultValue: '11:00am', admin: { width: '33%' } },
+                {
+                  name: 'checkIn',
+                  type: 'text',
+                  label: 'Check-in from',
+                  defaultValue: '3:00pm',
+                  admin: { width: '33%' },
+                },
+                {
+                  name: 'checkOut',
+                  type: 'text',
+                  label: 'Check-out by',
+                  defaultValue: '11:00am',
+                  admin: { width: '33%' },
+                },
                 {
                   name: 'priceRange',
                   type: 'select',
@@ -272,7 +305,10 @@ export const Hotels: CollectionConfig = {
               type: 'array',
               label: 'Weddings & functions photos',
               labels: { singular: 'Photo', plural: 'Photos' },
-              admin: { condition: (_, siblingData) => Boolean(siblingData?.hasWeddings), initCollapsed: true },
+              admin: {
+                condition: (_, siblingData) => Boolean(siblingData?.hasWeddings),
+                initCollapsed: true,
+              },
               fields: [
                 { name: 'image', type: 'upload', relationTo: 'media', required: true },
                 { name: 'caption', type: 'text' },
@@ -285,11 +321,16 @@ export const Hotels: CollectionConfig = {
           fields: [
             { name: 'rooms', type: 'join', collection: 'rooms', on: 'hotel', defaultSort: 'order' },
             { name: 'menus', type: 'join', collection: 'menus', on: 'hotel' },
-            { name: 'events', type: 'join', collection: 'events', on: 'hotel', defaultSort: 'start' },
+            {
+              name: 'events',
+              type: 'join',
+              collection: 'events',
+              on: 'hotel',
+              defaultSort: 'start',
+            },
             { name: 'offers', type: 'join', collection: 'offers', on: 'hotel' },
           ],
         },
-        seoTab(),
       ],
     },
     {
@@ -297,7 +338,10 @@ export const Hotels: CollectionConfig = {
       type: 'number',
       label: 'Display order',
       defaultValue: 50,
-      admin: { position: 'sidebar', description: 'Lower numbers show first on the Our Hotels page.' },
+      admin: {
+        position: 'sidebar',
+        description: 'Lower numbers show first on the Our Hotels page.',
+      },
       access: { update: adminOnlyField },
     },
   ],

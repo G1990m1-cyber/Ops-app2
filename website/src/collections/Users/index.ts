@@ -30,8 +30,8 @@ export const Users: CollectionConfig = {
     admin: ({ req }) => Boolean(req.user),
     create: isAdmin,
     delete: isAdmin,
-    read: ({ req }) => (isAdminUser(req.user) ? true : { id: { equals: req.user?.id } }),
-    update: ({ req }) => (isAdminUser(req.user) ? true : { id: { equals: req.user?.id } }),
+    read: ({ req }) => (isAdminUser(req.user) ? true : req.user ? { id: { equals: req.user.id } } : false),
+    update: ({ req }) => (isAdminUser(req.user) ? true : req.user ? { id: { equals: req.user.id } } : false),
   },
   admin: {
     defaultColumns: ['name', 'email', 'role', 'hotels'],

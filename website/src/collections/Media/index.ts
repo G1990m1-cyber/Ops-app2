@@ -11,10 +11,10 @@ export const Media: CollectionConfig = {
   access: {
     read: () => true,
     create: isLoggedIn,
-    update: ({ req }) =>
-      isAdminUser(req.user) ? true : { createdBy: { equals: req.user?.id } },
-    delete: ({ req }) =>
-      isAdminUser(req.user) ? true : { createdBy: { equals: req.user?.id } },
+    // Managers may change or remove only what they uploaded. No user: refuse outright rather than
+    // building a query against an undefined id, which the database rejects.
+    update: ({ req }) => (isAdminUser(req.user) ? true : req.user ? { createdBy: { equals: req.user.id } } : false),
+    delete: ({ req }) => (isAdminUser(req.user) ? true : req.user ? { createdBy: { equals: req.user.id } } : false),
   },
   admin: {
     group: 'Content',

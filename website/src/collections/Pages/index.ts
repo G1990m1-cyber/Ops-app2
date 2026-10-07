@@ -2,7 +2,6 @@ import type { CollectionConfig } from 'payload'
 
 import { hiddenUnlessAdmin, isAdmin } from '@/access'
 import { pageBlocks } from '@/blocks'
-import { seoTab } from '@/fields/seo'
 import { slugField } from '@/fields/slug'
 import { revalidateCollection, revalidateCollectionDelete } from '@/hooks/revalidate'
 import { generatePreviewPath } from '@/utilities/generatePreviewPath'
@@ -26,7 +25,8 @@ export const Pages: CollectionConfig = {
     hidden: hiddenUnlessAdmin,
     livePreview: { url: ({ data }) => generatePreviewPath({ path: pathFor(data?.slug) }) },
     preview: (data) => generatePreviewPath({ path: pathFor(data?.slug as string) }),
-    description: 'Group pages such as Home, About, Contact, Careers and legal pages. Built from blocks.',
+    description:
+      'Group pages such as Home, About, Contact, Careers and legal pages. Built from blocks.',
   },
   versions: {
     drafts: { autosave: { interval: 300 }, schedulePublish: true },
@@ -37,14 +37,14 @@ export const Pages: CollectionConfig = {
     afterDelete: [revalidateCollectionDelete('pages')],
   },
   fields: [
-    { name: 'title', type: 'text', required: true },
-    slugField({ description: 'Use "home" for the home page.' }),
     {
       type: 'tabs',
       tabs: [
         {
           label: 'Content',
           fields: [
+            { name: 'title', type: 'text', required: true },
+            slugField({ description: 'Use "home" for the home page.' }),
             {
               name: 'layout',
               type: 'blocks',
@@ -55,7 +55,6 @@ export const Pages: CollectionConfig = {
             },
           ],
         },
-        seoTab(),
       ],
     },
     {

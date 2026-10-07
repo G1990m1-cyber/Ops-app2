@@ -1,11 +1,17 @@
 import { redirectsPlugin } from '@payloadcms/plugin-redirects'
 import { seoPlugin } from '@payloadcms/plugin-seo'
-import type { GenerateDescription, GenerateImage, GenerateTitle, GenerateURL } from '@payloadcms/plugin-seo/types'
+import type {
+  GenerateDescription,
+  GenerateImage,
+  GenerateTitle,
+  GenerateURL,
+} from '@payloadcms/plugin-seo/types'
 import { s3Storage } from '@payloadcms/storage-s3'
 import type { Plugin } from 'payload'
 import { revalidateTag } from 'next/cache'
 
 import { hiddenUnlessAdmin, isAdmin } from '@/access'
+import { seoExtraFields } from '@/fields/seo'
 import type { Hotel, Page } from '@/payload-types'
 import { getServerSideURL } from '@/utilities/getURL'
 import { lexicalToPlainText } from '@/utilities/lexicalToPlainText'
@@ -46,9 +52,9 @@ const generateImage: GenerateImage<SEODoc> = ({ doc }) => {
 
 const s3Enabled = Boolean(
   process.env.S3_BUCKET &&
-    process.env.S3_ENDPOINT &&
-    process.env.S3_ACCESS_KEY_ID &&
-    process.env.S3_SECRET_ACCESS_KEY,
+  process.env.S3_ENDPOINT &&
+  process.env.S3_ACCESS_KEY_ID &&
+  process.env.S3_SECRET_ACCESS_KEY,
 )
 
 /**
@@ -61,13 +67,16 @@ export const mediaPublicBase = (() => {
   if (explicit) return explicit
   const endpoint = process.env.S3_ENDPOINT || ''
   const bucket = process.env.S3_BUCKET || 'media'
-  if (/\/storage\/v1\/s3\/?$/.test(endpoint)) return endpoint.replace(/\/s3\/?$/, `/object/public/${bucket}`)
+  if (/\/storage\/v1\/s3\/?$/.test(endpoint))
+    return endpoint.replace(/\/s3\/?$/, `/object/public/${bucket}`)
   return null
 })()
 
 /** Public URL for a file in the media bucket, or null when files are served by Payload itself (local dev). */
 export const publicMediaURL = (filename?: string | null, prefix = 'media'): string | null =>
-  s3Enabled && mediaPublicBase && filename ? `${mediaPublicBase}/${prefix}/${encodeURIComponent(filename)}` : null
+  s3Enabled && mediaPublicBase && filename
+    ? `${mediaPublicBase}/${prefix}/${encodeURIComponent(filename)}`
+    : null
 
 export const plugins: Plugin[] = [
   redirectsPlugin({
@@ -105,6 +114,11 @@ export const plugins: Plugin[] = [
     },
   }),
   seoPlugin({
+    // The plugin adds the "SEO" tab itself; its generate endpoints only serve collections listed here.
+    collections: ['pages', 'hotels'],
+    uploadsCollection: 'media',
+    tabbedUI: true,
+    fields: ({ defaultFields }) => [...defaultFields, ...seoExtraFields],
     generateTitle,
     generateDescription,
     generateURL,
@@ -121,7 +135,10 @@ export const plugins: Plugin[] = [
           ? {
               disablePayloadAccessControl: true as const,
               generateFileURL: ({ filename, prefix }) =>
-                `${mediaPublicBase}/${[prefix, filename].filter(Boolean).map((seg) => encodeURIComponent(seg as string).replace(/%2F/g, '/')).join('/')}`,
+                `${mediaPublicBase}/${[prefix, filename]
+                  .filter(Boolean)
+                  .map((seg) => encodeURIComponent(seg as string).replace(/%2F/g, '/'))
+                  .join('/')}`,
             }
           : {}),
       },
