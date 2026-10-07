@@ -99,7 +99,9 @@ export async function POST(req: NextRequest) {
     const phone = hotel?.phone || settings.contact?.phone || ''
     const fill = (t: string) =>
       t.replace(/\{name\}/g, name.split(' ')[0] || name).replace(/\{hotel\}/g, brand).replace(/\{phone\}/g, phone || 'the number on our website')
-    const text = fill(enquirySettings.autoReplyMessage || 'Thank you for getting in touch with {hotel}. We have your message and will reply as soon as we can.')
+    const template = enquirySettings.autoReplyMessage || 'Thank you for getting in touch with {hotel}. We have your message and will reply as soon as we can.'
+    // Trim each line: wording typed or migrated with indentation must not leak into the email.
+    const text = fill(template.split('\n').map((l) => l.trim()).join('\n'))
     try {
       await payload.sendEmail({
         to: email,
