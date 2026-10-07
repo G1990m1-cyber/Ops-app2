@@ -9,29 +9,22 @@ import { groupCopy, hotels as seedHotels, siteLogo, type Img } from './content'
 import { placeholderImage } from './images'
 import { h2, p, paragraphs, rich, ul } from './lexical'
 
-const dirname = path.dirname(fileURLToPath(import.meta.url))
-/** content/images relative to the project root (process.cwd() on Vercel and locally); dirname as a fallback for odd runners. */
-const IMAGE_DIRS = [path.join(process.cwd(), 'content/images'), path.resolve(dirname, '../../content/images')]
+/** Migrated images live in content/images at the project root (process.cwd() locally and on Vercel). */
+const IMAGE_DIR = path.join(process.cwd(), 'content', 'images')
 const findImage = (file: string): string | null => {
-  for (const dir of IMAGE_DIRS) {
-    const p = path.join(dir, file)
-    if (fs.existsSync(p)) return p
-  }
-  return null
+  const p = path.join(process.cwd(), 'content', 'images', file)
+  return fs.existsSync(p) ? p : null
 }
 /** Last resort: fetch the original from the URL recorded at crawl time. */
 const fetchOriginal = async (file: string): Promise<Buffer | null> => {
-  for (const dir of IMAGE_DIRS) {
-    const idx = path.join(dir, 'index.json')
-    if (!fs.existsSync(idx)) continue
-    const info = JSON.parse(fs.readFileSync(idx, 'utf8')) as Record<string, { url?: string }>
-    const url = info[file]?.url
-    if (!url) return null
-    const res = await fetch(url)
-    if (!res.ok) return null
-    return Buffer.from(await res.arrayBuffer())
-  }
-  return null
+  const idx = path.join(IMAGE_DIR, 'index.json')
+  if (!fs.existsSync(idx)) return null
+  const info = JSON.parse(fs.readFileSync(idx, 'utf8')) as Record<string, { url?: string }>
+  const url = info[file]?.url
+  if (!url) return null
+  const res = await fetch(url)
+  if (!res.ok) return null
+  return Buffer.from(await res.arrayBuffer())
 }
 
 const log = (msg: string) => console.info(`  · ${msg}`)

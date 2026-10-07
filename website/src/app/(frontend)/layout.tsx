@@ -19,6 +19,12 @@ import { cn } from '@/utilities/ui'
 import { bodyFont, displayFont } from './fonts'
 import './globals.css'
 
+/**
+ * Pages are cached and refreshed in the background every 10 minutes, so date-based content
+ * (past events, expired offers and menus) drops off on its own. Admin edits refresh instantly.
+ */
+export const revalidate = 600
+
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const { isEnabled: draft } = await draftMode()
   const [settings, hotels] = await Promise.all([getCachedGlobal('site-settings', 1)(), getHotels()])

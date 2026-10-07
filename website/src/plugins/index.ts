@@ -51,6 +51,20 @@ const s3Enabled = Boolean(
     process.env.S3_SECRET_ACCESS_KEY,
 )
 
+/**
+ * Public base URL for files in the bucket. Serving straight from storage (rather than streaming
+ * every image through a serverless function) is much faster for heroes and galleries.
+ * Supabase: https://PROJECT.storage.supabase.co/storage/v1/s3 -> .../storage/v1/object/public/<bucket>
+ */
+const mediaPublicBase = (() => {
+  const explicit = process.env.MEDIA_PUBLIC_URL?.replace(/\/$/, '')
+  if (explicit) return explicit
+  const endpoint = process.env.S3_ENDPOINT || ''
+  const bucket = process.env.S3_BUCKET || 'media'
+  if (/\/storage\/v1\/s3\/?$/.test(endpoint)) return endpoint.replace(/\/s3\/?$/, `/object/public/${bucket}`)
+  return null
+})()
+
 export const plugins: Plugin[] = [
   redirectsPlugin({
     collections: ['pages', 'hotels'],
@@ -96,7 +110,18 @@ export const plugins: Plugin[] = [
     enabled: s3Enabled,
     // Keep the media table identical whether or not S3 is configured, so migrations match production.
     alwaysInsertFields: true,
-    collections: { media: { prefix: 'media' } },
+    collections: {
+      media: {
+        prefix: 'media',
+        ...(s3Enabled && mediaPublicBase
+          ? {
+              disablePayloadAccessControl: true as const,
+              generateFileURL: ({ filename, prefix }) =>
+                `${mediaPublicBase}/${[prefix, filename].filter(Boolean).map((seg) => encodeURIComponent(seg as string).replace(/%2F/g, '/')).join('/')}`,
+            }
+          : {}),
+      },
+    },
     bucket: process.env.S3_BUCKET || 'media',
     config: {
       endpoint: process.env.S3_ENDPOINT,

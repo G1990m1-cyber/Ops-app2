@@ -1,3 +1,4 @@
+import { revalidatePath } from 'next/cache'
 import { headers } from 'next/headers'
 import { NextResponse } from 'next/server'
 
@@ -13,6 +14,8 @@ export async function POST() {
   if (!user || user.role !== 'admin') return NextResponse.json({ ok: false, message: 'Admins only.' }, { status: 403 })
   try {
     await seed(payload)
+    // The seed writes with revalidation switched off; clear every cached page once at the end.
+    revalidatePath('/', 'layout')
     return NextResponse.json({ ok: true })
   } catch (err) {
     payload.logger.error({ err }, 'Seed failed')

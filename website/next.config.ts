@@ -16,6 +16,8 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: '*.storage.supabase.co' },
     ],
     deviceSizes: [390, 640, 768, 1024, 1280, 1536, 1920, 2400],
+    // Uploads get a unique filename, so optimised copies can be cached for a long time.
+    minimumCacheTTL: 60 * 60 * 24 * 30,
   },
   turbopack: { root: path.resolve(dirname) },
   // The seed route reads the migrated images from disk; make sure they ship with that function.
