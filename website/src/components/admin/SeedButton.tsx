@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 
-/** Shown to admins only while the site has no hotels. One click loads the placeholder content. */
+/** Shown to admins only while the site has no hotels. One click loads the content migrated from the old site. */
 export const SeedButton: React.FC = () => {
   const [state, setState] = useState<'idle' | 'running' | 'done' | 'error'>('idle')
   const [message, setMessage] = useState('')
@@ -21,9 +21,9 @@ export const SeedButton: React.FC = () => {
   }
   return (
     <div className="gr-seed">
-      <p>The site is empty. Load the placeholder content (8 hotels, rooms, menus, events, offers and pages) to start from.</p>
+      <p>The site is empty. Load the content migrated from the old site (8 hotels, rooms, photos, reviews and pages, plus an example menu, event and offer per hotel saved as drafts).</p>
       <button type="button" className="btn btn--style-primary btn--size-medium" onClick={run} disabled={state === 'running'}>
-        {state === 'running' ? 'Loading… this takes a minute or two' : 'Load placeholder content'}
+        {state === 'running' ? 'Loading… this takes two to three minutes' : 'Load the migrated content'}
       </button>
       {message && <p>{message}</p>}
     </div>

@@ -4,9 +4,9 @@ Work through this top to bottom. Each line is a yes/no.
 
 ## A. Content (owner and hotel managers)
 
-- [ ] Every hotel page reviewed on a phone. Placeholder photos replaced with real, well-lit, unfiltered photography (landscape, at least 2000px wide for heroes).
+- [ ] Every hotel page reviewed on a phone. Photos are the ones from the old site; replace any that are small or dated with fresh, well-lit, unfiltered photography (landscape, at least 2000px wide for heroes).
 - [ ] Every image has a short, honest alt description (the admin will not save without one).
-- [ ] Hotel intros, directions and "Welcome" text rewritten from placeholder copy.
+- [ ] Hotel intros, directions and "Welcome" text read through; they were carried over from the old site and lightly tidied, so correct anything out of date.
 - [ ] Rooms: names, sleeps, bed type, from-price and two or more photos each.
 - [ ] Menus: current menus uploaded (PDF or typed in), with a "show until" date on anything seasonal.
 - [ ] Events: at least the next month in. Past events hide themselves.

@@ -1,30 +1,31 @@
 # GR Hotels website replacement — PLAN
 
-**Status (6 Oct 2026): approved. Phase 1 to 6 built with placeholder content in `website/`. The crawl of the old site (Phase 0) is still blocked by the environment's network policy and will be run as a follow-up; until then every piece of hotel copy and photography is a clearly labelled placeholder.**
+**Status (7 Oct 2026): live for review at https://grhotels-website.vercel.app. The old site has been crawled (53 pages, 98 images) and its copy, photography, booking links, menus and contact details are loaded into the production database. The admin is at https://grhotels-website.vercel.app/admin.**
 
 ### What was built (summary)
 
 - `website/`: Next.js 16 + Payload 3.90 app, Tailwind 4 brand tokens, self-hosted Cormorant Garamond and a Bodoni Moda stand-in for TAN Pearl.
 - Content model, roles and access rules exactly as section 4, with one change: menu dietary flags are tick boxes instead of a multi-select (a multi-select that deep inside nested lists trips a Payload/Postgres bug in version history).
 - 17 blocks (section 5 plus an **Enquiry form** block so contact forms can sit on any page). Payload's form-builder plugin was dropped in favour of a purpose-built enquiry form with hotel routing, honeypot and Turnstile; simpler for managers and one fewer moving part.
-- Public site, Book Now with UTM tags and GTM events, hotel picker, mobile bar, cookie consent gating GTM-WVZV4DV8, newsletter to HubSpot, SEO fallbacks, sitemap, robots, JSON-LD, admin-managed redirects (applied in the request proxy).
-- Manager dashboard with the three big actions, branded admin, seed script and an admin "Load placeholder content" button for an empty production database.
-- Verified locally: production build green, 27/27 old URLs pass the redirect test, manager role cannot read or change other hotels (REST and admin), Lighthouse mobile on a hotel page 90+ across the board.
+- Public site, Book Now with UTM tags and GTM events, hotel picker, mobile bar, cookie consent gating GTM-WVZV4DV8, newsletter to HubSpot, SEO fallbacks, sitemap, robots, JSON-LD, admin-managed redirects (applied in the request proxy), page transitions, image fade-in and gentle hero motion that switch off under "reduce motion".
+- Manager dashboard with the three big actions, branded admin, seed script and an admin "Load the migrated content" button for an empty production database.
+- Real content: 8 hotels, 26 rooms, 93 images with written alt text, 13 guest reviews, 10 group pages, 17 redirects from old URLs, plus one example menu, event and offer per hotel saved as drafts for managers to replace.
+- Infrastructure: Supabase project **GR Hotels Website** (London, ref `kamdmgouuidvvhsujzmy`) for the database and the public `media` bucket; Vercel project `grhotels-website` in the Group Retreats team, London region, deploying from branch `ccr-0d76b103-2z12vu`. Migrations run on every deploy.
+- Verified on the live site: 27/27 old URLs land on a page, a manager account cannot read or change other hotels (REST and admin), Lighthouse mobile 90+ on home and hotel pages for accessibility, best practice and SEO.
 - Docs: `website/README.md`, `website/MANAGER-GUIDE.md`, `website/LAUNCH-CHECKLIST.md`, `website/.env.example`.
-- Supabase project **GR Hotels Website** created (London, ref `kamdmgouuidvvhsujzmy`). Tables are created by the migration on the first Vercel deploy; no data lives there yet.
 
 ### Follow-up session: start here
 
-If this is a new Claude session picking the work up: the build lives in `website/` on branch `ccr-0d76b103-2z12vu`. Read `website/README.md` first. Remaining work, in order:
+If this is a new Claude session picking the work up: the build lives in `website/` on branch `ccr-0d76b103-2z12vu`; pushes to that branch deploy to production automatically. Read `website/README.md` first. Remaining work is `website/LAUNCH-CHECKLIST.md`, chiefly:
 
-1. **Crawl the old site** (`www.grhotels.co.uk`, every hotel page and sub-page, images, menu PDFs, copy, meta, nav) into `website/content/inventory.json`, then replace the placeholder seed content in `website/src/seed/` with the real copy and images. Download images from the old agency subdomain too. Keep every image's alt text meaningful.
-2. **Deploy to Vercel**: create the project from this repository with Root Directory `website` (a `VERCEL_TOKEN` secret lets you do this through the Vercel API), add the environment variables from `website/.env.example`, deploy, run the first admin login and seed.
-3. **Supabase Storage**: create a public bucket `media` in project `kamdmgouuidvvhsujzmy`, create S3 access keys, set the `S3_*` variables on Vercel.
-4. Work through `website/LAUNCH-CHECKLIST.md`.
+1. Add the email sending domain (`RESEND_API_KEY` or `SMTP_*` on Vercel) so enquiry emails and password resets send.
+2. Add Turnstile and HubSpot keys when George supplies them; swap the Bodoni Moda stand-in for TAN Pearl and the PNG logo for the SVG.
+3. Create real manager accounts, delete the sample manager, and set the Riverside House enquiry email.
+4. Point `www.grhotels.co.uk` at Vercel and set `NEXT_PUBLIC_SERVER_URL` to the real domain.
 
-### Still needed from you (unchanged from section 8)
+### Still needed from you
 
-Vercel access, booking URLs per hotel, enquiry emails per hotel, logo SVG, TAN Pearl files, HubSpot IDs, a Turnstile key, an email sending domain, and answers to the Royal Oak and Caer Beris questions. The old-site crawl needs the cloud environment's network access widened (session menu → Edit cloud environment → Network access).
+Logo SVG, TAN Pearl files, HubSpot portal and form IDs, a Turnstile key, an email sending domain (Resend or SMTP), the Riverside House enquiry email, the names and emails for manager accounts, and access to DNS for the cutover.
 
 This plan covers everything in your brief. It is written for you as the owner, not for a developer. Where I have made a decision on your behalf I say so and why. Where I need something from you it is listed in section 8.
 

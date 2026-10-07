@@ -19,7 +19,7 @@ You need Node 22 or newer, pnpm 10, and a Postgres database (local, or the Supab
 cd website
 pnpm install
 cp .env.example .env        # then fill in DATABASE_URL and PAYLOAD_SECRET at minimum
-pnpm seed                   # creates tables, an admin user and placeholder content
+pnpm seed                   # creates tables, an admin user and the migrated content
 pnpm dev                    # http://localhost:3000  and  http://localhost:3000/admin
 ```
 
@@ -29,7 +29,7 @@ Useful commands:
 |---|---|
 | `pnpm dev` | Development server with hot reload. Database schema is pushed automatically. |
 | `pnpm build` then `pnpm start` | Production build and server, as Vercel runs it. |
-| `pnpm seed` | Adds or refreshes placeholder content. Safe to re-run. `pnpm seed -- --reset` wipes content first. |
+| `pnpm seed` | Adds or refreshes the migrated content. Safe to re-run. `pnpm seed -- --reset` wipes content first. |
 | `pnpm generate:types` | Regenerates `src/payload-types.ts` after changing collections. |
 | `pnpm migrate:create` | Writes a migration after a schema change (see Deploy). |
 | `pnpm migrate` | Applies pending migrations to `DATABASE_URL`. |
@@ -77,12 +77,18 @@ website/
 1. In Vercel, **Add New Project**, import this GitHub repository and set **Root Directory** to `website`.
 2. Framework preset: Next.js. Build settings are read from `vercel.json` (install, then `pnpm migrate && pnpm build`).
 3. Add the environment variables from `.env.example` under **Settings → Environment Variables** (Production and Preview). The important ones:
-   - `DATABASE_URL`: the Supabase **transaction pooler** string (port 6543) with `?sslmode=require`.
+   - `DATABASE_URL`: the Supabase **transaction pooler** string (port 6543, host `aws-0-eu-west-2.pooler.supabase.com`). No `sslmode` parameter is needed; the app turns TLS on for Supabase hosts itself.
    - `PAYLOAD_SECRET`, `PREVIEW_SECRET`: long random strings.
    - `NEXT_PUBLIC_SERVER_URL`: `https://www.grhotels.co.uk` in Production; leave blank in Preview so Vercel's URL is used.
-   - `S3_*`: Supabase Storage S3 keys (Project Settings → Storage → S3 access keys). Create a bucket called `media` and make it public.
+   - `S3_*`: Supabase Storage S3 keys (Project Settings → Storage → S3 access keys). Create a bucket called `media` and make it public. Images are served to visitors straight from that public bucket, so it must stay public. `MEDIA_PUBLIC_URL` is optional and only needed for a non-Supabase bucket.
    - Email, Turnstile, HubSpot and GTM values as they become available.
-4. Deploy. The first deploy runs the migrations and creates the tables. Then either run `pnpm seed` locally against the production `DATABASE_URL`, or log in to `/admin` and create the first user.
+4. Deploy. The first deploy runs the migrations and creates the tables. Open `/admin`, create the first admin user, and press **Load the migrated content** on the dashboard (or run `pnpm seed` locally against the production `DATABASE_URL`).
+
+The current production deployment is the Vercel project `grhotels-website` at https://grhotels-website.vercel.app, deploying from branch `ccr-0d76b103-2z12vu` with root directory `website`.
+
+### How caching works
+
+Public pages are cached and rebuilt in the background every 10 minutes, so past events, expired offers and out-of-date menus drop off on their own. Saving anything in the admin refreshes the affected pages straight away.
 
 ### Schema changes
 
@@ -132,4 +138,4 @@ Create managers under **Users**: set role to Hotel Manager and tick their hotels
 
 ## 6. Things still to do before launch
 
-See `LAUNCH-CHECKLIST.md`. In short: real photography and copy (the seed content is marked "placeholder"), booking URLs per hotel, enquiry email per hotel, the GR Hotels SVG logo, TAN Pearl font files, HubSpot and Turnstile keys, email sending domain, and the DNS cutover.
+See `LAUNCH-CHECKLIST.md`. The site is seeded with the copy, photography, booking links and contact details migrated from the old site. Still needed: the GR Hotels SVG logo, TAN Pearl font files, HubSpot and Turnstile keys, an email sending domain (Resend or SMTP) so enquiries and password resets send, an enquiry email for Riverside House, real manager accounts (and removal of the sample one), and the DNS cutover.

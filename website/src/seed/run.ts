@@ -5,7 +5,7 @@ import config from '../payload.config'
 import { seed } from './index'
 
 /**
- * Usage:  pnpm seed            (adds/updates placeholder content, keeps anything else)
+ * Usage:  pnpm seed            (adds/updates the migrated content, keeps anything else)
  *         pnpm seed -- --reset (clears content collections first)
  */
 const run = async () => {

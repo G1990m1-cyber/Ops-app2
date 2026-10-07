@@ -7,7 +7,7 @@ import { getPayloadClient } from '@/utilities/data'
 
 export const maxDuration = 300
 
-/** Admin-only: loads the placeholder content into an empty database. Safe to call again; it resumes. */
+/** Admin-only: loads the migrated content into an empty database. Safe to call again; it resumes. */
 export async function POST() {
   const payload = await getPayloadClient()
   const { user } = await payload.auth({ headers: await headers() })
