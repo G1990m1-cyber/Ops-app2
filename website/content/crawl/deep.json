@@ -1,0 +1,4870 @@
+{
+ "pages": {
+  "/thevines/": {
+   "testimonials": [
+    "Just a quick note to say how much we enjoyed our four days at The Vines , it was very relaxing and the food was excellent. We are looking forward to staying there again in the future. Kind Regards, Mr Cuddy Commercial Sales",
+    "Just a quick note to say how much we enjoyed our four days at The Vines , it was very relaxing and the food was excellent. We are looking forward to staying there again in the future. Kind Regards,",
+    "We all had such an enjoyable weekend with you for my parent's Diamond Wedding Anniversary and I wanted to pass on some of the complimentary comments we have received about the food (delicious!), the atmosphere (warm, relaxed yet efficient), the location (interesting and unusual) and you and your staff (amazing!!). Mrs Walton",
+    "We all had such an enjoyable weekend with you for my parent's Diamond Wedding Anniversary and I wanted to pass on some of the complimentary comments we have received about the food (delicious!), the atmosphere (warm, relaxed yet efficient), the location (interesting and unusual) and you and your staff (amazing!!).",
+    "We just wanted to take a moment to stop and thank you for your over-the-top hospitality while Stephen and I were with you at The Vines. You really went beyond the norm by making us feel so at home by offering constant help, in every way, to make our days in the Cotswolds just perfect! Your warmth is obviously a beautiful natural quality that is so much appreciated by us. Customer",
+    "We just wanted to take a moment to stop and thank you for your over-the-top hospitality while Stephen and I were with you at The Vines. You really went beyond the norm by making us feel so at home by offering constant help, in every way, to make our days in the Cotswolds just perfect! Your warmth is obviously a beautiful natural quality that is so much appreciated by us."
+   ],
+   "testimonial_names": [
+    "Mr Cuddy Commercial Sales",
+    "Mrs Walton",
+    "Customer"
+   ],
+   "maps": [
+    "https://maps.google.com/maps?q=The%20Vines%2C%20Black%20Bourton%20OX18%202PF&t=m&z=15&output=embed&iwloc=near"
+   ],
+   "map_q": [
+    "The%20Vines%2C%20Black%20Bourton%20OX18%202PF"
+   ],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/thevinesdirect"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/the-vines.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Screenshot-2022-08-04-at-22.59.30.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Screenshot-2022-08-04-at-23.03.07.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Screenshot-2022-08-04-at-23.08.27.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Screenshot-2022-08-04-at-23.10.11.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Screenshot-2022-08-04-at-23.13.25.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Screenshot-2022-08-04-at-23.15.23.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Screenshot-2022-08-04-at-23.17.37.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Screenshot-2022-08-04-at-23.20.03-1024x683.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Screenshot-2022-08-04-at-23.20.03.png"
+   ],
+   "header_links": [
+    [
+     "#viewMap",
+     "Map View"
+    ],
+    [
+     "https://direct-book.com/properties/thevinesdirect",
+     "Book a Room"
+    ],
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/the-vines.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/the-george-at-piercebridge/": {
+   "testimonials": [
+    "\"The hotel is in a stunning location by the River Tees and is full of charm and character.\"",
+    "\"A beautiful riverside setting with plenty of character.\"",
+    "\"Friendly staff, comfortable rooms and excellent breakfast.\"",
+    "\"A lovely old coaching inn in a wonderful countryside location.\""
+   ],
+   "testimonial_names": [],
+   "maps": [
+    "https://maps.google.com/maps?q=Piercebridge%2C%20Darlington%2C%20DL2%203SW&t=m&z=15&output=embed&iwloc=near"
+   ],
+   "map_q": [
+    "Piercebridge%2C%20Darlington%2C%20DL2%203SW"
+   ],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2025/10/TheGeorgeOfPiercebridge-Logo.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2026/06/DSC01915-HDR-scaled.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2026/06/DSC01955-HDR-scaled.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2026/06/DSC02020-HDR-scaled.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2026/06/DSC02030-HDR-scaled.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2026/06/DSC02045-HDR-scaled.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2026/06/DSC02205-HDR-scaled.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2026/06/DSC02380-HDR-scaled.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2026/06/DSC02385-HDR-scaled.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2026/06/External.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2026/07/The-George-Weddings-Events-1024x768.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2026/07/The-George-Weddings-Events-300x225.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2026/07/The-George-Weddings-Events-768x576.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2026/07/The-George-Weddings-Events.png"
+   ],
+   "header_links": [
+    [
+     "#viewMap",
+     "Map View"
+    ],
+    [
+     "https://bookingengine.mylighthouse.com/v2/george-of-piercebridge-piercebridge?language=en-GB",
+     "Book a Room"
+    ],
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2025/10/TheGeorgeOfPiercebridge-Logo.jpg"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/": {
+   "testimonials": [],
+   "testimonial_names": [],
+   "maps": [],
+   "map_q": [],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Screenshot-2022-05-10-at-10.06.10.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/md1sum.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Pictorial-Photography-commercial-rooms-property-hotel-interior-exterior-4.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Screenshot-2022-08-04-at-23.20.03.png",
+    "https://www.grhotels.mortechmedia.co.uk/wp-content/uploads/2022/05/Untitled-1.svg"
+   ],
+   "header_links": [
+    [
+     "#",
+     "Book Now"
+    ],
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/caer-beris/",
+     "Caer Beris Manor Hotel"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge/",
+     "The George at Piercebridge"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.mortechmedia.co.uk/wp-content/uploads/2022/05/Untitled-1.svg"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/thevines/rooms/": {
+   "testimonials": [],
+   "testimonial_names": [],
+   "maps": [],
+   "map_q": [],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/thevinesdirect"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/the-vines.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/06/accomm-grp-1.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/06/vines_21845.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/06/vines_21867.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/06/vines_21896.jpeg"
+   ],
+   "header_links": [
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/thevines/facilities/": {
+   "testimonials": [],
+   "testimonial_names": [],
+   "maps": [],
+   "map_q": [],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/thevinesdirect"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/the-vines.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Screenshot-2022-08-04-at-22.59.30.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Screenshot-2022-08-04-at-23.08.27.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Screenshot-2022-08-04-at-23.13.25.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Screenshot-2022-08-04-at-23.17.37.png"
+   ],
+   "header_links": [
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/thevines/weddings/": {
+   "testimonials": [],
+   "testimonial_names": [],
+   "maps": [],
+   "map_q": [],
+   "mews": [
+    "78b13d2a-68f5-cd79-0416-e279da8108b3"
+   ],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/thevinesdirect"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/the-vines.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Suppliers-list.pdf.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Vines-Wedding-Drinks-Packages.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Vines-Wedding-Packages.png"
+   ],
+   "header_links": [
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/thevines/rooms/twin-room/": {
+   "testimonials": [],
+   "testimonial_names": [],
+   "maps": [],
+   "map_q": [],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/thevinesdirect"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/the-vines.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/06/vines_21896.jpeg"
+   ],
+   "header_links": [
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/rooms/",
+     "Rooms"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/thevines/rooms/family-room/": {
+   "testimonials": [],
+   "testimonial_names": [],
+   "maps": [],
+   "map_q": [],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/thevinesdirect"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/the-vines.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/06/vines_21867.jpeg"
+   ],
+   "header_links": [
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/rooms/",
+     "Rooms"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/thevines/rooms/double-room/": {
+   "testimonials": [],
+   "testimonial_names": [],
+   "maps": [],
+   "map_q": [],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/thevinesdirect"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/the-vines.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/06/vines_21845.jpeg"
+   ],
+   "header_links": [
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/rooms/",
+     "Rooms"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/thevines/rooms/interconnecting-family-room/": {
+   "testimonials": [],
+   "testimonial_names": [],
+   "maps": [],
+   "map_q": [],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/thevinesdirect"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/the-vines.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/06/accomm-grp-1.jpeg"
+   ],
+   "header_links": [
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/rooms/",
+     "Rooms"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/thevines/activities/": {
+   "testimonials": [],
+   "testimonial_names": [],
+   "maps": [],
+   "map_q": [],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/thevinesdirect"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/the-vines.png"
+   ],
+   "header_links": [
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/thevines/weddings/price-list/": {
+   "testimonials": [],
+   "testimonial_names": [],
+   "maps": [],
+   "map_q": [],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/thevinesdirect"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/the-vines.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Vines-Wedding-Guide-Prices-1086x1536.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Vines-Wedding-Guide-Prices-212x300.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Vines-Wedding-Guide-Prices-724x1024.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Vines-Wedding-Guide-Prices-768x1086.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Vines-Wedding-Guide-Prices.png"
+   ],
+   "header_links": [
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/weddings/",
+     "Weddings"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/castle-berwick/rooms/": {
+   "testimonials": [],
+   "testimonial_names": [],
+   "maps": [],
+   "map_q": [],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/castlehotel103%20direct"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/85561a5804b7540847f7590efe44a65d.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/d62a48931fb5f5006c083c74f7866df4-1.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/thumbnail_New-logo--300x152.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/thumbnail_New-logo--768x390.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/thumbnail_New-logo-.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/06/4b3ab6b34268892729c25d5763690031.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/06/cd1f164eb1117edba26c9c74daa06c42.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/06/e716b7a03816bcb99ad612457b6918a6.jpg",
+    "https://www.grhotels.mortechmedia.co.uk/wp-content/uploads/2022/05/thumbnail_New-logo-.jpeg"
+   ],
+   "header_links": [
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/castle-berwick/facilities/": {
+   "testimonials": [],
+   "testimonial_names": [],
+   "maps": [],
+   "map_q": [],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/castlehotel103%20direct"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/06386f2c7bd07fd7ac9a533ebe5086b9.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/227cf56da6fbd74869caa216d31476f6.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/7684cf76293c69cb4ac269075e5b8c2f.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Screenshot-2022-05-13-at-11.27.22.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/b1e0911f36ba300757605626fbb221b6.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/thumbnail_New-logo--300x152.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/thumbnail_New-logo--768x390.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/thumbnail_New-logo-.jpeg",
+    "https://www.grhotels.mortechmedia.co.uk/wp-content/uploads/2022/05/thumbnail_New-logo-.jpeg"
+   ],
+   "header_links": [
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/castle-berwick/": {
+   "testimonials": [
+    "On arrival Lesley and Catherine were so nice when went in to room was absolutely beautiful stunning food was first class did not want to leave was so relaxing just what I needed felt so relaxed every day thank you Lesley and Catherine for making my holiday great John (source Google) JOHN M",
+    "On arrival Lesley and Catherine were so nice when went in to room was absolutely beautiful stunning food was first class did not want to leave was so relaxing just what I needed felt so relaxed every day thank you Lesley and Catherine for making my holiday great John (source Google)",
+    "Absolutely fabulous place to stay. Handy for everything. Dining room is beautifully decorated and is used as breakfast room and evening restaurant. Staff can't do enough for you. The whole hotel is at the end of a major refurbishment. ..It's definitely a hotel in would recommend to my friends (source Google) SHIRLEY M",
+    "Absolutely fabulous place to stay. Handy for everything. Dining room is beautifully decorated and is used as breakfast room and evening restaurant. Staff can't do enough for you. The whole hotel is at the end of a major refurbishment. ..It's definitely a hotel in would recommend to my friends (source Google)",
+    "Excellent place to stay. Good rooms. Enjoyed a very good full English breakfast. Stayed two nights and ate in the restaurant both nights. Steak pie, lasagne, scampi all good. Sweets good as well. Reasonable prices. Pleasant decor in the downstairs restaurant and bar. Nice comfortable seats and settees. Bar prices good as well. Pleasant, clean ensuite rooms. Older building with stairs and a few steps down on the main landing. Friendly staff. Strongly recommended. (source Google) GEOFF N",
+    "Excellent place to stay. Good rooms. Enjoyed a very good full English breakfast. Stayed two nights and ate in the restaurant both nights. Steak pie, lasagne, scampi all good. Sweets good as well. Reasonable prices. Pleasant decor in the downstairs restaurant and bar. Nice comfortable seats and settees. Bar prices good as well. Pleasant, clean ensuite rooms. Older building with stairs and a few steps down on the main landing. Friendly staff. Strongly recommended. (source Google)"
+   ],
+   "testimonial_names": [
+    "JOHN M",
+    "SHIRLEY M",
+    "GEOFF N"
+   ],
+   "maps": [
+    "https://maps.google.com/maps?q=The%20Castle%20Hotel%20103%20Castlegate%20Berwick-upon-Tweed%20Northumberland%20TD15%201LF&t=m&z=15&output=embed&iwloc=near"
+   ],
+   "map_q": [
+    "The%20Castle%20Hotel%20103%20Castlegate%20Berwick-upon-Tweed%20Northumberland%20TD15%201LF"
+   ],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/castlehotel103%20direct"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/06386f2c7bd07fd7ac9a533ebe5086b9.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/227cf56da6fbd74869caa216d31476f6.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/4062ba4d9a5bb103c6d1a6b850df1e76.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/7684cf76293c69cb4ac269075e5b8c2f.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/85561a5804b7540847f7590efe44a65d.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/b1e0911f36ba300757605626fbb221b6.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/d62a48931fb5f5006c083c74f7866df4-1.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/thumbnail_New-logo-.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/08/b683c8208ad51ebf51cf8770119cb54c-1024x682.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/08/b683c8208ad51ebf51cf8770119cb54c.jpeg"
+   ],
+   "header_links": [
+    [
+     "#viewMap",
+     "Map View"
+    ],
+    [
+     "https://direct-book.com/properties/castlehotel103%20direct",
+     "Book a Room"
+    ],
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/thumbnail_New-logo-.jpeg"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/castle-berwick/function-and-conference-rooms/": {
+   "testimonials": [],
+   "testimonial_names": [],
+   "maps": [],
+   "map_q": [],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/castlehotel103%20direct"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/thumbnail_New-logo--300x152.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/thumbnail_New-logo--768x390.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/thumbnail_New-logo-.jpeg",
+    "https://www.grhotels.mortechmedia.co.uk/wp-content/uploads/2022/05/thumbnail_New-logo-.jpeg"
+   ],
+   "header_links": [
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/castle-berwick/rooms/single-room-2/": {
+   "testimonials": [],
+   "testimonial_names": [],
+   "maps": [],
+   "map_q": [],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/castlehotel103%20direct"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/thumbnail_New-logo--300x152.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/thumbnail_New-logo--768x390.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/thumbnail_New-logo-.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/06/4b3ab6b34268892729c25d5763690031-1024x682.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/06/4b3ab6b34268892729c25d5763690031.jpg"
+   ],
+   "header_links": [
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/rooms/",
+     "Rooms"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/castle-berwick/rooms/superior-family-room/": {
+   "testimonials": [],
+   "testimonial_names": [],
+   "maps": [],
+   "map_q": [],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/castlehotel103%20direct"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/thumbnail_New-logo--300x152.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/thumbnail_New-logo--768x390.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/thumbnail_New-logo-.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/06/e716b7a03816bcb99ad612457b6918a6-1024x682.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/06/e716b7a03816bcb99ad612457b6918a6.jpg"
+   ],
+   "header_links": [
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/rooms/",
+     "Rooms"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/castle-berwick/rooms/family-room/": {
+   "testimonials": [],
+   "testimonial_names": [],
+   "maps": [],
+   "map_q": [],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/castlehotel103%20direct"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/85561a5804b7540847f7590efe44a65d-1024x682.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/85561a5804b7540847f7590efe44a65d.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/thumbnail_New-logo--300x152.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/thumbnail_New-logo--768x390.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/thumbnail_New-logo-.jpeg"
+   ],
+   "header_links": [
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/rooms/",
+     "Rooms"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/castle-berwick/rooms/cozy-double-room/": {
+   "testimonials": [],
+   "testimonial_names": [],
+   "maps": [],
+   "map_q": [],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/castlehotel103%20direct"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/d62a48931fb5f5006c083c74f7866df4-1-1024x682.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/d62a48931fb5f5006c083c74f7866df4-1.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/thumbnail_New-logo--300x152.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/thumbnail_New-logo--768x390.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/thumbnail_New-logo-.jpeg"
+   ],
+   "header_links": [
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/rooms/",
+     "Rooms"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/castle-berwick/rooms/studio-flat/": {
+   "testimonials": [],
+   "testimonial_names": [],
+   "maps": [],
+   "map_q": [],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/castlehotel103%20direct"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/thumbnail_New-logo--300x152.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/thumbnail_New-logo--768x390.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/thumbnail_New-logo-.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/06/32de639ddd541bd38c4b38e5b6be87e3-1024x682.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/06/32de639ddd541bd38c4b38e5b6be87e3-1536x1023.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/06/32de639ddd541bd38c4b38e5b6be87e3-300x200.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/06/32de639ddd541bd38c4b38e5b6be87e3-768x512.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/06/32de639ddd541bd38c4b38e5b6be87e3.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/06/82b67c3ea6b18baac6c7c069eb4432d7-1024x682.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/06/82b67c3ea6b18baac6c7c069eb4432d7-1536x1023.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/06/82b67c3ea6b18baac6c7c069eb4432d7-300x200.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/06/82b67c3ea6b18baac6c7c069eb4432d7-768x512.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/06/82b67c3ea6b18baac6c7c069eb4432d7.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/06/9befb108c102c76eb7b18c7d3a1eacd3-1024x682.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/06/9befb108c102c76eb7b18c7d3a1eacd3-1536x1023.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/06/9befb108c102c76eb7b18c7d3a1eacd3-300x200.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/06/9befb108c102c76eb7b18c7d3a1eacd3-768x512.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/06/9befb108c102c76eb7b18c7d3a1eacd3.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/06/cd1f164eb1117edba26c9c74daa06c42-1024x682.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/06/cd1f164eb1117edba26c9c74daa06c42-1536x1023.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/06/cd1f164eb1117edba26c9c74daa06c42-300x200.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/06/cd1f164eb1117edba26c9c74daa06c42-768x512.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/06/cd1f164eb1117edba26c9c74daa06c42.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/06/eb70c91a516ca7fc3d57f3690f772176-1024x820.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/06/eb70c91a516ca7fc3d57f3690f772176-1536x1230.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/06/eb70c91a516ca7fc3d57f3690f772176-300x240.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/06/eb70c91a516ca7fc3d57f3690f772176-768x615.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/06/eb70c91a516ca7fc3d57f3690f772176.jpg",
+    "https://www.grhotels.mortechmedia.co.uk/wp-content/uploads/2022/06/32de639ddd541bd38c4b38e5b6be87e3.jpg",
+    "https://www.grhotels.mortechmedia.co.uk/wp-content/uploads/2022/06/82b67c3ea6b18baac6c7c069eb4432d7.jpg",
+    "https://www.grhotels.mortechmedia.co.uk/wp-content/uploads/2022/06/9befb108c102c76eb7b18c7d3a1eacd3.jpg",
+    "https://www.grhotels.mortechmedia.co.uk/wp-content/uploads/2022/06/cd1f164eb1117edba26c9c74daa06c42.jpg",
+    "https://www.grhotels.mortechmedia.co.uk/wp-content/uploads/2022/06/eb70c91a516ca7fc3d57f3690f772176.jpg"
+   ],
+   "header_links": [
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/rooms/",
+     "Rooms"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/contact-us/": {
+   "testimonials": [],
+   "testimonial_names": [],
+   "maps": [],
+   "map_q": [],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "header_links": [
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/caer-beris/": {
+   "testimonials": [
+    "Exceptional manor and beautiful landscape in heart of Wales. Plenty of rooms with all facilities - clean, tidy and well arranged. Fully furnished kitchen, small jacuzzi, beautiful and extended garden with a lovely stream - all the best of nature has to offer.\n\nWe had a lovely time with friends and family. In winter, post sunset ensure to drive carefully for the last lag of drive (approx 60 miles). Best to reach before sunset and enjoy the lovely drive through Wales."
+   ],
+   "testimonial_names": [],
+   "maps": [
+    "https://maps.google.com/maps?q=Caer%20Beris%20Manor%20Hotel%20%26amp%3B%20Restaurant%2C%20Builth%20Wells%20LD2%203NP&t=m&z=15&output=embed&iwloc=near"
+   ],
+   "map_q": [
+    "Caer%20Beris%20Manor%20Hotel%20%26amp%3B%20Restaurant%2C%20Builth%20Wells%20LD2%203NP"
+   ],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/CaerBerisHotelDirect/about?locale=en&items%5b0%5d%5badults%5d=2&items%5b0%5d%5bchildren%5d=0&items%5b0%5d%5binfants%5d=0&currency=GBP&checkInDate=2025-09-05&checkOutDate=2025-09-06&trackPage=yes"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2025/07/DSC00146-HDR-1024x684.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2025/07/DSC00146-HDR-scaled.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2025/07/images.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2025/08/191742758-scaled.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2025/08/191742906-scaled.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2025/08/191742948-scaled.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2025/08/191743215-scaled.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2025/08/191743216-scaled.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2025/08/191743227-scaled.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2025/08/192638223.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2025/08/192638227.jpg"
+   ],
+   "header_links": [
+    [
+     "#viewMap",
+     "Map View"
+    ],
+    [
+     "https://direct-book.com/properties/CaerBerisHotelDirect/about?locale=en&items%5b0%5d%5badults%5d=2&items%5b0%5d%5bchildren%5d=0&items%5b0%5d%5binfants%5d=0&currency=GBP&checkInDate=2025-09-05&checkOutDate=2025-09-06&trackPage=yes",
+     "Book a Room"
+    ],
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2025/07/images.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/caer-beris/local-attractions/": {
+   "testimonials": [],
+   "testimonial_names": [],
+   "maps": [],
+   "map_q": [],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/CaerBerisHotelDirect/about?locale=en&items%5b0%5d%5badults%5d=2&items%5b0%5d%5bchildren%5d=0&items%5b0%5d%5binfants%5d=0&currency=GBP&checkInDate=2025-09-05&checkOutDate=2025-09-06&trackPage=yes"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2025/07/images-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2025/07/images.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2025/08/191742758-scaled.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2025/08/191742906-scaled.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2025/08/191742948-scaled.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2025/08/191743215-scaled.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2025/08/192638227.jpg"
+   ],
+   "header_links": [
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ],
+    [
+     "https://www.grhotels.co.uk/caer-beris/",
+     "Caer Beris Manor Hotel"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/royal-oak/": {
+   "testimonials": [
+    "Exceptional manor and beautiful landscape in heart of Wales. Plenty of rooms with all facilities - clean, tidy and well arranged. Fully furnished kitchen, small jacuzzi, beautiful and extended garden with a lovely stream - all the best of nature has to offer.\n\nWe had a lovely time with friends and family. In winter, post sunset ensure to drive carefully for the last lag of drive (approx 60 miles). Best to reach before sunset and enjoy the lovely drive through Wales.",
+    "Wow what a wonderful place. Huge in gorgeous grounds. Fantastic rooms, very large kitchen, hot tub, lots of outdoor seating. Electric car charger.\nIt has everything for a great stay. PJ",
+    "Wow what a wonderful place. Huge in gorgeous grounds. Fantastic rooms, very large kitchen, hot tub, lots of outdoor seating. Electric car charger.\nIt has everything for a great stay."
+   ],
+   "testimonial_names": [
+    "PJ"
+   ],
+   "maps": [
+    "https://maps.google.com/maps?q=Rye%20Rd%2C%20High%20Street%2C%20Hawkhurst%2C%20Cranbrook%20TN18%204EP&t=m&z=15&output=embed&iwloc=near"
+   ],
+   "map_q": [
+    "Rye%20Rd%2C%20High%20Street%2C%20Hawkhurst%2C%20Cranbrook%20TN18%204EP"
+   ],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/TheRoyalOakdirect1",
+    "https://web.dojo.app/create_booking/vendor/EU7rQ_y5pnYeZkmzh80enykQcAGbsaTTDNKJrUq7mMc_restaurant"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2025/09/RoyalOak_Feb24_64-scaled.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2025/09/RoyalOak_Feb24_67-scaled.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2025/09/RoyalOak_Feb24_70-scaled.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2025/09/RoyalOak_Feb24_73-scaled.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2025/09/RoyalOak_Feb24_76-scaled.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2025/09/RoyalOak_Feb24_81-scaled.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2025/09/the-royal-oak-hawkhurst.jpg"
+   ],
+   "header_links": [
+    [
+     "#viewMap",
+     "Map View"
+    ],
+    [
+     "https://direct-book.com/properties/TheRoyalOakdirect1",
+     "Book a Room"
+    ],
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/the-riverside-house-hotel/": {
+   "testimonials": [],
+   "testimonial_names": [],
+   "maps": [
+    "https://maps.google.com/maps?q=The%20Riverside%20House%20Hotel%2017%20Mill%20Street%20Mildenhall%20Bury%20St%20Edmunds%20IP28%207DP&t=m&z=15&output=embed&iwloc=near"
+   ],
+   "map_q": [
+    "The%20Riverside%20House%20Hotel%2017%20Mill%20Street%20Mildenhall%20Bury%20St%20Edmunds%20IP28%207DP"
+   ],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://booking.eu.guestline.app/GRRHRSIDE/availability?hotel=GRRHRSIDE",
+    "https://booking.resdiary.com/widget/Standard/TheRiversideHouseHotel/33772"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2026/03/036fc9_24f8fb7b2efb4ee9b1ec7ab790688509mv2.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2026/03/036fc9_4eef53e1533d45b8acba2d5831d62cc3mv2.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2026/03/036fc9_61d0582e5dc14e8a92d2457ff4c8e292mv2.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2026/03/036fc9_70fcfbe8a2254bf8afee09c0156bada3mv2.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2026/03/036fc9_8623a8217aec4eaaaff63e23d0581296mv2.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2026/03/036fc9_950e8f49c485492cb0400aa65c07ba11mv2.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2026/03/admin-ajax-removebg-preview.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2026/03/b4fc7b_6eada3dae73c4a62957b88b305627e27mv2-1024x819.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2026/03/b4fc7b_6eada3dae73c4a62957b88b305627e27mv2.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2026/03/b4fc7b_f7d30141f480498dbadb132ad96e0d28mv2.png"
+   ],
+   "header_links": [
+    [
+     "#viewMap",
+     "Map View"
+    ],
+    [
+     "https://booking.eu.guestline.app/GRRHRSIDE/availability?hotel=GRRHRSIDE",
+     "Book a Room"
+    ],
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2026/03/admin-ajax-removebg-preview.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/grassington-lodge/": {
+   "testimonials": [
+    "Phil and I really enjoyed our stay…thank you! Phil Spencer & Kirstie Allsopp, Channel 4’s Location, Location, Location.,",
+    "Phil and I really enjoyed our stay…thank you!",
+    "Love the attention to detail.\nProbably the best B & B we’ve ever stayed in. Love the attention to detail. W & L Mayer,",
+    "Love the attention to detail.\nProbably the best B & B we’ve ever stayed in. Love the attention to detail."
+   ],
+   "testimonial_names": [
+    "Phil Spencer & Kirstie Allsopp, Channel 4’s Location, Location, Location.,",
+    "W & L Mayer,"
+   ],
+   "maps": [
+    "https://maps.google.com/maps?q=8%20Wood%20Lane%2C%20Grassington%2C%20North%20Yorkshire%2C%20BD23%205LU&t=m&z=15&output=embed&iwloc=near"
+   ],
+   "map_q": [
+    "8%20Wood%20Lane%2C%20Grassington%2C%20North%20Yorkshire%2C%20BD23%205LU"
+   ],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/grassingtonlodgedirect"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL-Logo-wbg2.gif",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-3.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-6-2.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-8-1.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Screenshot-2022-05-10-at-10.06.10.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/07/IMG-20220714-WA0023-1-768x1024.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/07/IMG-20220714-WA0023-1.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Image-1.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Image-2.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Image-3.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Image-4.jpeg"
+   ],
+   "header_links": [
+    [
+     "#viewMap",
+     "Map View"
+    ],
+    [
+     "https://direct-book.com/properties/grassingtonlodgedirect",
+     "Book a Room"
+    ],
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL-Logo-wbg2.gif",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/grassington-lodge/rooms/": {
+   "testimonials": [],
+   "testimonial_names": [],
+   "maps": [],
+   "map_q": [],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/grassingtonlodgedirect"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL-Logo-wbg2.gif",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL-Suite-6.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-1-2.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-2.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-3.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-5.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-6-2-1.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-7-1.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-8-1-1.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-9.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Vendale-1.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Vendale-2.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Room_4.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Image.jpeg",
+    "https://www.grhotels.mortechmedia.co.uk/wp-content/uploads/2022/05/GL-Logo-wbg2.gif"
+   ],
+   "header_links": [
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/grassington-lodge/rooms/family-room/": {
+   "testimonials": [],
+   "testimonial_names": [],
+   "maps": [],
+   "map_q": [],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/grassingtonlodgedirect"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL-Logo-wbg2.gif",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Image-768x1024.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Image.jpeg"
+   ],
+   "header_links": [
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/rooms/",
+     "Rooms"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/grassington-lodge/rooms/room-one-premium-room/": {
+   "testimonials": [],
+   "testimonial_names": [],
+   "maps": [],
+   "map_q": [],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/grassingtonlodgedirect"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL-Logo-wbg2.gif",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-1-2.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "header_links": [
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/rooms/",
+     "Rooms"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/grassington-lodge/rooms/room-four/": {
+   "testimonials": [],
+   "testimonial_names": [],
+   "maps": [],
+   "map_q": [],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/grassingtonlodgedirect"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL-Logo-wbg2.gif",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Room_4.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "header_links": [
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/rooms/",
+     "Rooms"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/grassington-lodge/rooms/room-five/": {
+   "testimonials": [],
+   "testimonial_names": [],
+   "maps": [],
+   "map_q": [],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/grassingtonlodgedirect"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL-Logo-wbg2.gif",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-5.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "header_links": [
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/rooms/",
+     "Rooms"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/grassington-lodge/rooms/the-suite/": {
+   "testimonials": [],
+   "testimonial_names": [],
+   "maps": [],
+   "map_q": [],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/grassingtonlodgedirect"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL-Logo-wbg2.gif",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL-Suite-6.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "header_links": [
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/rooms/",
+     "Rooms"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/grassington-lodge/rooms/room-three/": {
+   "testimonials": [],
+   "testimonial_names": [],
+   "maps": [],
+   "map_q": [],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/grassingtonlodgedirect"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL-Logo-wbg2.gif",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-3.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "header_links": [
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/rooms/",
+     "Rooms"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/grassington-lodge/rooms/room-nine-premium-room/": {
+   "testimonials": [],
+   "testimonial_names": [],
+   "maps": [],
+   "map_q": [],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/grassingtonlodgedirect"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL-Logo-wbg2.gif",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-9.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "header_links": [
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/rooms/",
+     "Rooms"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/grassington-lodge/rooms/vendale-2/": {
+   "testimonials": [],
+   "testimonial_names": [],
+   "maps": [],
+   "map_q": [],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/grassingtonlodgedirect"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL-Logo-wbg2.gif",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Vendale-2.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "header_links": [
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/rooms/",
+     "Rooms"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/grassington-lodge/rooms/room-seven-premium-room/": {
+   "testimonials": [],
+   "testimonial_names": [],
+   "maps": [],
+   "map_q": [],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/grassingtonlodgedirect"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL-Logo-wbg2.gif",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-7-1.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "header_links": [
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/rooms/",
+     "Rooms"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/grassington-lodge/rooms/room-two/": {
+   "testimonials": [],
+   "testimonial_names": [],
+   "maps": [],
+   "map_q": [],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/grassingtonlodgedirect"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL-Logo-wbg2.gif",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-2.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "header_links": [
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/rooms/",
+     "Rooms"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/grassington-lodge/rooms/vendale-1/": {
+   "testimonials": [],
+   "testimonial_names": [],
+   "maps": [],
+   "map_q": [],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/grassingtonlodgedirect"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL-Logo-wbg2.gif",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Vendale-1.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "header_links": [
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/rooms/",
+     "Rooms"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/grassington-lodge/rooms/room-eight-premium-room/": {
+   "testimonials": [],
+   "testimonial_names": [],
+   "maps": [],
+   "map_q": [],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/grassingtonlodgedirect"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL-Logo-wbg2.gif",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-8-1-1.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "header_links": [
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/rooms/",
+     "Rooms"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/grassington-lodge/rooms/room-six/": {
+   "testimonials": [],
+   "testimonial_names": [],
+   "maps": [],
+   "map_q": [],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/grassingtonlodgedirect"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL-Logo-wbg2.gif",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-6-2-1.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "header_links": [
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/rooms/",
+     "Rooms"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/grassington-lodge/activities/": {
+   "testimonials": [],
+   "testimonial_names": [],
+   "maps": [],
+   "map_q": [],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/grassingtonlodgedirect"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL-Logo-wbg2.gif",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png",
+    "https://www.grhotels.mortechmedia.co.uk/wp-content/uploads/2022/05/GL-Logo-wbg2.gif"
+   ],
+   "header_links": [
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/grassington-lodge/facilities/": {
+   "testimonials": [],
+   "testimonial_names": [],
+   "maps": [],
+   "map_q": [],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/grassingtonlodgedirect"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Fire.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL-Logo-wbg2.gif",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/hayden-scott-lyTgIeUBOUE-unsplash-scaled.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/social.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/yevhenii-dubrovskyi-4hfPfuYB14k-unsplash-scaled.jpg",
+    "https://www.grhotels.mortechmedia.co.uk/wp-content/uploads/2022/05/GL-Logo-wbg2.gif"
+   ],
+   "header_links": [
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/queens-head-berwick/": {
+   "testimonials": [
+    "Staying here at the moment. Hotel is spotless. Staff very welcoming and nothing is any trouble to them. Breakfast freshly cooked to order. Early dinner menu excellent value for money. Would definitely cone back. Margaret Kerr",
+    "Staying here at the moment. Hotel is spotless. Staff very welcoming and nothing is any trouble to them. Breakfast freshly cooked to order. Early dinner menu excellent value for money. Would definitely cone back.",
+    "We popped in for an after-dinner coffee and peppermint tea. The waitress was very cheerful, friendly and efficient. The bar area looked as though it had recently been refurbished and was very attractive with a lovely atmosphere. Dani Drought",
+    "We popped in for an after-dinner coffee and peppermint tea. The waitress was very cheerful, friendly and efficient. The bar area looked as though it had recently been refurbished and was very attractive with a lovely atmosphere.",
+    "Excellent food, lovely friendly staff. The two ladies waiting on we're amazing, so hard working and good humoured. Will definitely be back. Betty Bredford",
+    "Excellent food, lovely friendly staff. The two ladies waiting on we're amazing, so hard working and good humoured. Will definitely be back."
+   ],
+   "testimonial_names": [
+    "Margaret Kerr",
+    "Dani Drought",
+    "Betty Bredford"
+   ],
+   "maps": [
+    "https://maps.google.com/maps?q=6%20Sandgate%2C%20Berwick-upon-Tweed%2C%20Northumberland%2C%20TD15%201EP&t=m&z=15&output=embed&iwloc=near"
+   ],
+   "map_q": [
+    "6%20Sandgate%2C%20Berwick-upon-Tweed%2C%20Northumberland%2C%20TD15%201EP"
+   ],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/queensheadberwickhoteldirect"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-1.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/08/4F4ED6B4-A6B2-4CE1-A043-A391C658E847.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/08/AD048D34-4851-4741-8682-8D73F27541FC.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/08/B27562AD-D03A-4E2F-A621-0F4BF8D2104D.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/08/DADFF227-B789-4015-9E0A-3DAA382BA9D8.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Pictorial-Photography-commercial-rooms-property-hotel-interior-exterior-4-1024x659.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Pictorial-Photography-commercial-rooms-property-hotel-interior-exterior-4.jpg"
+   ],
+   "header_links": [
+    [
+     "#viewMap",
+     "Map View"
+    ],
+    [
+     "https://direct-book.com/properties/queensheadberwickhoteldirect",
+     "Book a Room"
+    ],
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-1.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/queens-head-berwick/rooms/": {
+   "testimonials": [],
+   "testimonial_names": [],
+   "maps": [],
+   "map_q": [],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/queensheadberwickhoteldirect"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-1.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/07/IMG_20220716_134657.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/08/5CBF53D6-5275-47C4-81C0-B8D7BDAEC387.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/08/FC536D73-A26F-4FD1-983E-C0A4564AD271.jpeg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/08/FFDE7D32-39B9-486F-A056-221876020B54.jpeg"
+   ],
+   "header_links": [
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/queens-head-berwick/rooms/twin-room/": {
+   "testimonials": [],
+   "testimonial_names": [],
+   "maps": [],
+   "map_q": [],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/queensheadberwickhoteldirect"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-1.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/08/FFDE7D32-39B9-486F-A056-221876020B54.jpeg"
+   ],
+   "header_links": [
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/rooms/",
+     "Rooms"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/queens-head-berwick/rooms/family-room/": {
+   "testimonials": [],
+   "testimonial_names": [],
+   "maps": [],
+   "map_q": [],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/queensheadberwickhoteldirect"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-1.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/08/5CBF53D6-5275-47C4-81C0-B8D7BDAEC387.jpeg"
+   ],
+   "header_links": [
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/rooms/",
+     "Rooms"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/queens-head-berwick/rooms/superior-double-room/": {
+   "testimonials": [],
+   "testimonial_names": [],
+   "maps": [],
+   "map_q": [],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/queensheadberwickhoteldirect"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-1.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/07/IMG_20220716_134657-1024x768.jpg",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/07/IMG_20220716_134657.jpg"
+   ],
+   "header_links": [
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/rooms/",
+     "Rooms"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/queens-head-berwick/rooms/double-room-def/": {
+   "testimonials": [],
+   "testimonial_names": [],
+   "maps": [],
+   "map_q": [],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/queensheadberwickhoteldirect"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-1.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/08/FC536D73-A26F-4FD1-983E-C0A4564AD271.jpeg"
+   ],
+   "header_links": [
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/rooms/",
+     "Rooms"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  },
+  "/queens-head-berwick/facilities/": {
+   "testimonials": [],
+   "testimonial_names": [],
+   "maps": [],
+   "map_q": [],
+   "mews": [],
+   "booking_links": [
+    "https://api.mews.com/distributor/distributor.min.js",
+    "https://direct-book.com/properties/queensheadberwickhoteldirect"
+   ],
+   "uploads": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-300x270.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x-768x691.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-1.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-150x150.png",
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "header_links": [
+    [
+     "https://www.grhotels.co.uk",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk/",
+     "Home"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ]
+   ],
+   "header_imgs": [
+    "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png"
+   ],
+   "footer_text": "Our Hotels Royal Oak Hawkhurst The George Piercebridge Queens Head Berwick Berwick-upon-Tweed Castle Berwick Berwick-upon-Tweed Grassington Lodge Grassington, Skipton The Vines Black Bourton Black Bourton, Bampton Contact us © 2022 GR Hotels. All rights reserved.",
+   "footer_links": [
+    [
+     "https://www.grhotels.co.uk///",
+     ""
+    ],
+    [
+     "https://www.grhotels.co.uk///contact-us/",
+     "Contact us"
+    ],
+    [
+     "https://www.grhotels.co.uk/castle-berwick/",
+     "Castle Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/grassington-lodge/",
+     "Grassington Lodge"
+    ],
+    [
+     "https://www.grhotels.co.uk/queens-head-berwick/",
+     "Queens Head Berwick"
+    ],
+    [
+     "https://www.grhotels.co.uk/royal-oak/",
+     "Royal Oak"
+    ],
+    [
+     "https://www.grhotels.co.uk/the-george-at-piercebridge",
+     "The George"
+    ],
+    [
+     "https://www.grhotels.co.uk/thevines/",
+     "The Vines Black Bourton"
+    ]
+   ],
+   "social": [
+    "https://www.facebook.com/tr?id=1892910458338128&ev=PageView&noscript=1"
+   ]
+  }
+ },
+ "images": {
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GRHOTELS-logo@4x.png": [
+   "/",
+   "/caer-beris/",
+   "/caer-beris/local-attractions/",
+   "/castle-berwick/",
+   "/castle-berwick/facilities/",
+   "/castle-berwick/function-and-conference-rooms/",
+   "/castle-berwick/rooms/",
+   "/castle-berwick/rooms/cozy-double-room/",
+   "/castle-berwick/rooms/family-room/",
+   "/castle-berwick/rooms/single-room-2/",
+   "/castle-berwick/rooms/studio-flat/",
+   "/castle-berwick/rooms/superior-family-room/",
+   "/contact-us/",
+   "/grassington-lodge/",
+   "/grassington-lodge/activities/",
+   "/grassington-lodge/facilities/",
+   "/grassington-lodge/rooms/",
+   "/grassington-lodge/rooms/family-room/",
+   "/grassington-lodge/rooms/room-eight-premium-room/",
+   "/grassington-lodge/rooms/room-five/",
+   "/grassington-lodge/rooms/room-four/",
+   "/grassington-lodge/rooms/room-nine-premium-room/",
+   "/grassington-lodge/rooms/room-one-premium-room/",
+   "/grassington-lodge/rooms/room-seven-premium-room/",
+   "/grassington-lodge/rooms/room-six/",
+   "/grassington-lodge/rooms/room-three/",
+   "/grassington-lodge/rooms/room-two/",
+   "/grassington-lodge/rooms/the-suite/",
+   "/grassington-lodge/rooms/vendale-1/",
+   "/grassington-lodge/rooms/vendale-2/",
+   "/queens-head-berwick/",
+   "/queens-head-berwick/facilities/",
+   "/queens-head-berwick/rooms/",
+   "/queens-head-berwick/rooms/double-room-def/",
+   "/queens-head-berwick/rooms/family-room/",
+   "/queens-head-berwick/rooms/superior-double-room/",
+   "/queens-head-berwick/rooms/twin-room/",
+   "/royal-oak/",
+   "/the-george-at-piercebridge/",
+   "/the-riverside-house-hotel/",
+   "/thevines/",
+   "/thevines/activities/",
+   "/thevines/facilities/",
+   "/thevines/rooms/",
+   "/thevines/rooms/double-room/",
+   "/thevines/rooms/family-room/",
+   "/thevines/rooms/interconnecting-family-room/",
+   "/thevines/rooms/twin-room/",
+   "/thevines/weddings/",
+   "/thevines/weddings/price-list/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Temp-Logo-GR-Hotels-png@2x.png": [
+   "/",
+   "/caer-beris/",
+   "/caer-beris/local-attractions/",
+   "/castle-berwick/",
+   "/castle-berwick/facilities/",
+   "/castle-berwick/function-and-conference-rooms/",
+   "/castle-berwick/rooms/",
+   "/castle-berwick/rooms/cozy-double-room/",
+   "/castle-berwick/rooms/family-room/",
+   "/castle-berwick/rooms/single-room-2/",
+   "/castle-berwick/rooms/studio-flat/",
+   "/castle-berwick/rooms/superior-family-room/",
+   "/contact-us/",
+   "/grassington-lodge/",
+   "/grassington-lodge/activities/",
+   "/grassington-lodge/facilities/",
+   "/grassington-lodge/rooms/",
+   "/grassington-lodge/rooms/family-room/",
+   "/grassington-lodge/rooms/room-eight-premium-room/",
+   "/grassington-lodge/rooms/room-five/",
+   "/grassington-lodge/rooms/room-four/",
+   "/grassington-lodge/rooms/room-nine-premium-room/",
+   "/grassington-lodge/rooms/room-one-premium-room/",
+   "/grassington-lodge/rooms/room-seven-premium-room/",
+   "/grassington-lodge/rooms/room-six/",
+   "/grassington-lodge/rooms/room-three/",
+   "/grassington-lodge/rooms/room-two/",
+   "/grassington-lodge/rooms/the-suite/",
+   "/grassington-lodge/rooms/vendale-1/",
+   "/grassington-lodge/rooms/vendale-2/",
+   "/queens-head-berwick/",
+   "/queens-head-berwick/facilities/",
+   "/queens-head-berwick/rooms/",
+   "/queens-head-berwick/rooms/double-room-def/",
+   "/queens-head-berwick/rooms/family-room/",
+   "/queens-head-berwick/rooms/superior-double-room/",
+   "/queens-head-berwick/rooms/twin-room/",
+   "/royal-oak/",
+   "/the-george-at-piercebridge/",
+   "/the-riverside-house-hotel/",
+   "/thevines/",
+   "/thevines/activities/",
+   "/thevines/facilities/",
+   "/thevines/rooms/",
+   "/thevines/rooms/double-room/",
+   "/thevines/rooms/family-room/",
+   "/thevines/rooms/interconnecting-family-room/",
+   "/thevines/rooms/twin-room/",
+   "/thevines/weddings/",
+   "/thevines/weddings/price-list/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2.png": [
+   "/",
+   "/caer-beris/",
+   "/caer-beris/local-attractions/",
+   "/castle-berwick/",
+   "/castle-berwick/facilities/",
+   "/castle-berwick/function-and-conference-rooms/",
+   "/castle-berwick/rooms/",
+   "/castle-berwick/rooms/cozy-double-room/",
+   "/castle-berwick/rooms/family-room/",
+   "/castle-berwick/rooms/single-room-2/",
+   "/castle-berwick/rooms/studio-flat/",
+   "/castle-berwick/rooms/superior-family-room/",
+   "/contact-us/",
+   "/grassington-lodge/",
+   "/grassington-lodge/activities/",
+   "/grassington-lodge/facilities/",
+   "/grassington-lodge/rooms/",
+   "/grassington-lodge/rooms/family-room/",
+   "/grassington-lodge/rooms/room-eight-premium-room/",
+   "/grassington-lodge/rooms/room-five/",
+   "/grassington-lodge/rooms/room-four/",
+   "/grassington-lodge/rooms/room-nine-premium-room/",
+   "/grassington-lodge/rooms/room-one-premium-room/",
+   "/grassington-lodge/rooms/room-seven-premium-room/",
+   "/grassington-lodge/rooms/room-six/",
+   "/grassington-lodge/rooms/room-three/",
+   "/grassington-lodge/rooms/room-two/",
+   "/grassington-lodge/rooms/the-suite/",
+   "/grassington-lodge/rooms/vendale-1/",
+   "/grassington-lodge/rooms/vendale-2/",
+   "/queens-head-berwick/",
+   "/queens-head-berwick/facilities/",
+   "/queens-head-berwick/rooms/",
+   "/queens-head-berwick/rooms/double-room-def/",
+   "/queens-head-berwick/rooms/family-room/",
+   "/queens-head-berwick/rooms/superior-double-room/",
+   "/queens-head-berwick/rooms/twin-room/",
+   "/royal-oak/",
+   "/the-george-at-piercebridge/",
+   "/the-riverside-house-hotel/",
+   "/thevines/",
+   "/thevines/activities/",
+   "/thevines/facilities/",
+   "/thevines/rooms/",
+   "/thevines/rooms/double-room/",
+   "/thevines/rooms/family-room/",
+   "/thevines/rooms/interconnecting-family-room/",
+   "/thevines/rooms/twin-room/",
+   "/thevines/weddings/",
+   "/thevines/weddings/price-list/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-e1652127857169.png": [
+   "/",
+   "/caer-beris/",
+   "/caer-beris/local-attractions/",
+   "/castle-berwick/",
+   "/castle-berwick/facilities/",
+   "/castle-berwick/function-and-conference-rooms/",
+   "/castle-berwick/rooms/",
+   "/castle-berwick/rooms/cozy-double-room/",
+   "/castle-berwick/rooms/family-room/",
+   "/castle-berwick/rooms/single-room-2/",
+   "/castle-berwick/rooms/studio-flat/",
+   "/castle-berwick/rooms/superior-family-room/",
+   "/contact-us/",
+   "/grassington-lodge/",
+   "/grassington-lodge/activities/",
+   "/grassington-lodge/facilities/",
+   "/grassington-lodge/rooms/",
+   "/grassington-lodge/rooms/family-room/",
+   "/grassington-lodge/rooms/room-eight-premium-room/",
+   "/grassington-lodge/rooms/room-five/",
+   "/grassington-lodge/rooms/room-four/",
+   "/grassington-lodge/rooms/room-nine-premium-room/",
+   "/grassington-lodge/rooms/room-one-premium-room/",
+   "/grassington-lodge/rooms/room-seven-premium-room/",
+   "/grassington-lodge/rooms/room-six/",
+   "/grassington-lodge/rooms/room-three/",
+   "/grassington-lodge/rooms/room-two/",
+   "/grassington-lodge/rooms/the-suite/",
+   "/grassington-lodge/rooms/vendale-1/",
+   "/grassington-lodge/rooms/vendale-2/",
+   "/queens-head-berwick/",
+   "/queens-head-berwick/facilities/",
+   "/queens-head-berwick/rooms/",
+   "/queens-head-berwick/rooms/double-room-def/",
+   "/queens-head-berwick/rooms/family-room/",
+   "/queens-head-berwick/rooms/superior-double-room/",
+   "/queens-head-berwick/rooms/twin-room/",
+   "/royal-oak/",
+   "/the-george-at-piercebridge/",
+   "/the-riverside-house-hotel/",
+   "/thevines/",
+   "/thevines/activities/",
+   "/thevines/facilities/",
+   "/thevines/rooms/",
+   "/thevines/rooms/double-room/",
+   "/thevines/rooms/family-room/",
+   "/thevines/rooms/interconnecting-family-room/",
+   "/thevines/rooms/twin-room/",
+   "/thevines/weddings/",
+   "/thevines/weddings/price-list/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/05/the-vines.png": [
+   "/thevines/",
+   "/thevines/activities/",
+   "/thevines/facilities/",
+   "/thevines/rooms/",
+   "/thevines/rooms/double-room/",
+   "/thevines/rooms/family-room/",
+   "/thevines/rooms/interconnecting-family-room/",
+   "/thevines/rooms/twin-room/",
+   "/thevines/weddings/",
+   "/thevines/weddings/price-list/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Screenshot-2022-08-04-at-22.59.30.png": [
+   "/thevines/",
+   "/thevines/facilities/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Screenshot-2022-08-04-at-23.03.07.png": [
+   "/thevines/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Screenshot-2022-08-04-at-23.08.27.png": [
+   "/thevines/",
+   "/thevines/facilities/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Screenshot-2022-08-04-at-23.10.11.png": [
+   "/thevines/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Screenshot-2022-08-04-at-23.13.25.png": [
+   "/thevines/",
+   "/thevines/facilities/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Screenshot-2022-08-04-at-23.15.23.png": [
+   "/thevines/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Screenshot-2022-08-04-at-23.17.37.png": [
+   "/thevines/",
+   "/thevines/facilities/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Screenshot-2022-08-04-at-23.20.03.png": [
+   "/",
+   "/thevines/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2025/10/TheGeorgeOfPiercebridge-Logo.jpg": [
+   "/the-george-at-piercebridge/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2026/06/DSC01915-HDR-scaled.jpg": [
+   "/the-george-at-piercebridge/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2026/06/DSC01955-HDR-scaled.jpg": [
+   "/the-george-at-piercebridge/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2026/06/DSC02020-HDR-scaled.jpg": [
+   "/the-george-at-piercebridge/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2026/06/DSC02030-HDR-scaled.jpg": [
+   "/the-george-at-piercebridge/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2026/06/DSC02045-HDR-scaled.jpg": [
+   "/the-george-at-piercebridge/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2026/06/DSC02205-HDR-scaled.jpg": [
+   "/the-george-at-piercebridge/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2026/06/DSC02380-HDR-scaled.jpg": [
+   "/the-george-at-piercebridge/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2026/06/DSC02385-HDR-scaled.jpg": [
+   "/the-george-at-piercebridge/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2026/06/External.jpg": [
+   "/the-george-at-piercebridge/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2026/07/The-George-Weddings-Events.png": [
+   "/the-george-at-piercebridge/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Screenshot-2022-05-10-at-10.06.10.png": [
+   "/",
+   "/grassington-lodge/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/05/md1sum.jpeg": [
+   "/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Pictorial-Photography-commercial-rooms-property-hotel-interior-exterior-4.jpg": [
+   "/",
+   "/queens-head-berwick/"
+  ],
+  "https://www.grhotels.mortechmedia.co.uk/wp-content/uploads/2022/05/Untitled-1.svg": [
+   "/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/06/accomm-grp-1.jpeg": [
+   "/thevines/rooms/",
+   "/thevines/rooms/interconnecting-family-room/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/06/vines_21845.jpeg": [
+   "/thevines/rooms/",
+   "/thevines/rooms/double-room/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/06/vines_21867.jpeg": [
+   "/thevines/rooms/",
+   "/thevines/rooms/family-room/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/06/vines_21896.jpeg": [
+   "/thevines/rooms/",
+   "/thevines/rooms/twin-room/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Suppliers-list.pdf.png": [
+   "/thevines/weddings/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Vines-Wedding-Drinks-Packages.png": [
+   "/thevines/weddings/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Vines-Wedding-Packages.png": [
+   "/thevines/weddings/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Vines-Wedding-Guide-Prices.png": [
+   "/thevines/weddings/price-list/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/05/85561a5804b7540847f7590efe44a65d.jpeg": [
+   "/castle-berwick/",
+   "/castle-berwick/rooms/",
+   "/castle-berwick/rooms/family-room/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/05/d62a48931fb5f5006c083c74f7866df4-1.jpeg": [
+   "/castle-berwick/",
+   "/castle-berwick/rooms/",
+   "/castle-berwick/rooms/cozy-double-room/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/05/thumbnail_New-logo-.jpeg": [
+   "/castle-berwick/",
+   "/castle-berwick/facilities/",
+   "/castle-berwick/function-and-conference-rooms/",
+   "/castle-berwick/rooms/",
+   "/castle-berwick/rooms/cozy-double-room/",
+   "/castle-berwick/rooms/family-room/",
+   "/castle-berwick/rooms/single-room-2/",
+   "/castle-berwick/rooms/studio-flat/",
+   "/castle-berwick/rooms/superior-family-room/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/06/4b3ab6b34268892729c25d5763690031.jpg": [
+   "/castle-berwick/rooms/",
+   "/castle-berwick/rooms/single-room-2/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/06/cd1f164eb1117edba26c9c74daa06c42.jpg": [
+   "/castle-berwick/rooms/",
+   "/castle-berwick/rooms/studio-flat/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/06/e716b7a03816bcb99ad612457b6918a6.jpg": [
+   "/castle-berwick/rooms/",
+   "/castle-berwick/rooms/superior-family-room/"
+  ],
+  "https://www.grhotels.mortechmedia.co.uk/wp-content/uploads/2022/05/thumbnail_New-logo-.jpeg": [
+   "/castle-berwick/facilities/",
+   "/castle-berwick/function-and-conference-rooms/",
+   "/castle-berwick/rooms/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/05/06386f2c7bd07fd7ac9a533ebe5086b9.jpeg": [
+   "/castle-berwick/",
+   "/castle-berwick/facilities/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/05/227cf56da6fbd74869caa216d31476f6.jpeg": [
+   "/castle-berwick/",
+   "/castle-berwick/facilities/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/05/7684cf76293c69cb4ac269075e5b8c2f.jpeg": [
+   "/castle-berwick/",
+   "/castle-berwick/facilities/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Screenshot-2022-05-13-at-11.27.22.png": [
+   "/castle-berwick/facilities/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/05/b1e0911f36ba300757605626fbb221b6.jpeg": [
+   "/castle-berwick/",
+   "/castle-berwick/facilities/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/05/4062ba4d9a5bb103c6d1a6b850df1e76.jpeg": [
+   "/castle-berwick/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/08/b683c8208ad51ebf51cf8770119cb54c.jpeg": [
+   "/castle-berwick/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/06/32de639ddd541bd38c4b38e5b6be87e3.jpg": [
+   "/castle-berwick/rooms/studio-flat/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/06/82b67c3ea6b18baac6c7c069eb4432d7.jpg": [
+   "/castle-berwick/rooms/studio-flat/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/06/9befb108c102c76eb7b18c7d3a1eacd3.jpg": [
+   "/castle-berwick/rooms/studio-flat/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/06/eb70c91a516ca7fc3d57f3690f772176.jpg": [
+   "/castle-berwick/rooms/studio-flat/"
+  ],
+  "https://www.grhotels.mortechmedia.co.uk/wp-content/uploads/2022/06/32de639ddd541bd38c4b38e5b6be87e3.jpg": [
+   "/castle-berwick/rooms/studio-flat/"
+  ],
+  "https://www.grhotels.mortechmedia.co.uk/wp-content/uploads/2022/06/82b67c3ea6b18baac6c7c069eb4432d7.jpg": [
+   "/castle-berwick/rooms/studio-flat/"
+  ],
+  "https://www.grhotels.mortechmedia.co.uk/wp-content/uploads/2022/06/9befb108c102c76eb7b18c7d3a1eacd3.jpg": [
+   "/castle-berwick/rooms/studio-flat/"
+  ],
+  "https://www.grhotels.mortechmedia.co.uk/wp-content/uploads/2022/06/cd1f164eb1117edba26c9c74daa06c42.jpg": [
+   "/castle-berwick/rooms/studio-flat/"
+  ],
+  "https://www.grhotels.mortechmedia.co.uk/wp-content/uploads/2022/06/eb70c91a516ca7fc3d57f3690f772176.jpg": [
+   "/castle-berwick/rooms/studio-flat/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2025/07/DSC00146-HDR.jpg": [
+   "/caer-beris/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2025/07/DSC00146-HDR-scaled.jpg": [
+   "/caer-beris/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2025/07/images.png": [
+   "/caer-beris/",
+   "/caer-beris/local-attractions/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2025/08/191742758-scaled.jpg": [
+   "/caer-beris/",
+   "/caer-beris/local-attractions/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2025/08/191742906-scaled.jpg": [
+   "/caer-beris/",
+   "/caer-beris/local-attractions/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2025/08/191742948-scaled.jpg": [
+   "/caer-beris/",
+   "/caer-beris/local-attractions/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2025/08/191743215-scaled.jpg": [
+   "/caer-beris/",
+   "/caer-beris/local-attractions/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2025/08/191743216-scaled.jpg": [
+   "/caer-beris/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2025/08/191743227-scaled.jpg": [
+   "/caer-beris/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2025/08/192638223.jpg": [
+   "/caer-beris/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2025/08/192638227.jpg": [
+   "/caer-beris/",
+   "/caer-beris/local-attractions/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2025/09/RoyalOak_Feb24_64-scaled.jpg": [
+   "/royal-oak/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2025/09/RoyalOak_Feb24_67-scaled.jpg": [
+   "/royal-oak/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2025/09/RoyalOak_Feb24_70-scaled.jpg": [
+   "/royal-oak/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2025/09/RoyalOak_Feb24_73-scaled.jpg": [
+   "/royal-oak/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2025/09/RoyalOak_Feb24_76-scaled.jpg": [
+   "/royal-oak/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2025/09/RoyalOak_Feb24_81-scaled.jpg": [
+   "/royal-oak/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2025/09/the-royal-oak-hawkhurst.jpg": [
+   "/royal-oak/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2026/03/036fc9_24f8fb7b2efb4ee9b1ec7ab790688509mv2.png": [
+   "/the-riverside-house-hotel/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2026/03/036fc9_4eef53e1533d45b8acba2d5831d62cc3mv2.png": [
+   "/the-riverside-house-hotel/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2026/03/036fc9_61d0582e5dc14e8a92d2457ff4c8e292mv2.png": [
+   "/the-riverside-house-hotel/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2026/03/036fc9_70fcfbe8a2254bf8afee09c0156bada3mv2.png": [
+   "/the-riverside-house-hotel/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2026/03/036fc9_8623a8217aec4eaaaff63e23d0581296mv2.png": [
+   "/the-riverside-house-hotel/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2026/03/036fc9_950e8f49c485492cb0400aa65c07ba11mv2.png": [
+   "/the-riverside-house-hotel/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2026/03/admin-ajax-removebg-preview.png": [
+   "/the-riverside-house-hotel/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2026/03/b4fc7b_6eada3dae73c4a62957b88b305627e27mv2.png": [
+   "/the-riverside-house-hotel/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2026/03/b4fc7b_f7d30141f480498dbadb132ad96e0d28mv2.png": [
+   "/the-riverside-house-hotel/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL-Logo-wbg2.gif": [
+   "/grassington-lodge/",
+   "/grassington-lodge/activities/",
+   "/grassington-lodge/facilities/",
+   "/grassington-lodge/rooms/",
+   "/grassington-lodge/rooms/family-room/",
+   "/grassington-lodge/rooms/room-eight-premium-room/",
+   "/grassington-lodge/rooms/room-five/",
+   "/grassington-lodge/rooms/room-four/",
+   "/grassington-lodge/rooms/room-nine-premium-room/",
+   "/grassington-lodge/rooms/room-one-premium-room/",
+   "/grassington-lodge/rooms/room-seven-premium-room/",
+   "/grassington-lodge/rooms/room-six/",
+   "/grassington-lodge/rooms/room-three/",
+   "/grassington-lodge/rooms/room-two/",
+   "/grassington-lodge/rooms/the-suite/",
+   "/grassington-lodge/rooms/vendale-1/",
+   "/grassington-lodge/rooms/vendale-2/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-3.jpeg": [
+   "/grassington-lodge/",
+   "/grassington-lodge/rooms/",
+   "/grassington-lodge/rooms/room-three/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-6-2.jpeg": [
+   "/grassington-lodge/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-8-1.jpeg": [
+   "/grassington-lodge/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/07/IMG-20220714-WA0023-1.jpeg": [
+   "/grassington-lodge/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Image-1.jpeg": [
+   "/grassington-lodge/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Image-2.jpeg": [
+   "/grassington-lodge/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Image-3.jpeg": [
+   "/grassington-lodge/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Image-4.jpeg": [
+   "/grassington-lodge/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL-Suite-6.jpeg": [
+   "/grassington-lodge/rooms/",
+   "/grassington-lodge/rooms/the-suite/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-1-2.jpeg": [
+   "/grassington-lodge/rooms/",
+   "/grassington-lodge/rooms/room-one-premium-room/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-2.jpeg": [
+   "/grassington-lodge/rooms/",
+   "/grassington-lodge/rooms/room-two/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-5.jpeg": [
+   "/grassington-lodge/rooms/",
+   "/grassington-lodge/rooms/room-five/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-6-2-1.jpeg": [
+   "/grassington-lodge/rooms/",
+   "/grassington-lodge/rooms/room-six/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-7-1.jpeg": [
+   "/grassington-lodge/rooms/",
+   "/grassington-lodge/rooms/room-seven-premium-room/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-8-1-1.jpeg": [
+   "/grassington-lodge/rooms/",
+   "/grassington-lodge/rooms/room-eight-premium-room/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Room-9.jpeg": [
+   "/grassington-lodge/rooms/",
+   "/grassington-lodge/rooms/room-nine-premium-room/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Vendale-1.jpeg": [
+   "/grassington-lodge/rooms/",
+   "/grassington-lodge/rooms/vendale-1/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/05/GL_Vendale-2.jpeg": [
+   "/grassington-lodge/rooms/",
+   "/grassington-lodge/rooms/vendale-2/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Room_4.jpeg": [
+   "/grassington-lodge/rooms/",
+   "/grassington-lodge/rooms/room-four/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/08/Image.jpeg": [
+   "/grassington-lodge/rooms/",
+   "/grassington-lodge/rooms/family-room/"
+  ],
+  "https://www.grhotels.mortechmedia.co.uk/wp-content/uploads/2022/05/GL-Logo-wbg2.gif": [
+   "/grassington-lodge/activities/",
+   "/grassington-lodge/facilities/",
+   "/grassington-lodge/rooms/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/05/Fire.jpeg": [
+   "/grassington-lodge/facilities/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/05/hayden-scott-lyTgIeUBOUE-unsplash-scaled.jpg": [
+   "/grassington-lodge/facilities/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/05/social.jpeg": [
+   "/grassington-lodge/facilities/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/05/yevhenii-dubrovskyi-4hfPfuYB14k-unsplash-scaled.jpg": [
+   "/grassington-lodge/facilities/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/05/image-2-1.png": [
+   "/queens-head-berwick/",
+   "/queens-head-berwick/facilities/",
+   "/queens-head-berwick/rooms/",
+   "/queens-head-berwick/rooms/double-room-def/",
+   "/queens-head-berwick/rooms/family-room/",
+   "/queens-head-berwick/rooms/superior-double-room/",
+   "/queens-head-berwick/rooms/twin-room/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/08/4F4ED6B4-A6B2-4CE1-A043-A391C658E847.jpeg": [
+   "/queens-head-berwick/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/08/AD048D34-4851-4741-8682-8D73F27541FC.jpeg": [
+   "/queens-head-berwick/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/08/B27562AD-D03A-4E2F-A621-0F4BF8D2104D.jpeg": [
+   "/queens-head-berwick/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/08/DADFF227-B789-4015-9E0A-3DAA382BA9D8.jpeg": [
+   "/queens-head-berwick/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/07/IMG_20220716_134657.jpg": [
+   "/queens-head-berwick/rooms/",
+   "/queens-head-berwick/rooms/superior-double-room/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/08/5CBF53D6-5275-47C4-81C0-B8D7BDAEC387.jpeg": [
+   "/queens-head-berwick/rooms/",
+   "/queens-head-berwick/rooms/family-room/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/08/FC536D73-A26F-4FD1-983E-C0A4564AD271.jpeg": [
+   "/queens-head-berwick/rooms/",
+   "/queens-head-berwick/rooms/double-room-def/"
+  ],
+  "https://www.grhotels.co.uk/wp-content/uploads/2022/08/FFDE7D32-39B9-486F-A056-221876020B54.jpeg": [
+   "/queens-head-berwick/rooms/",
+   "/queens-head-berwick/rooms/twin-room/"
+  ]
+ }
+}

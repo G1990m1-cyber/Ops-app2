@@ -1,0 +1,14 @@
+node_modules
+.next
+.vercel
+.env
+.env.local
+.env.*.local
+next-env.d.ts
+*.tsbuildinfo
+# Local media uploads (production uses Supabase Storage)
+public/media/
+# Playwright / lighthouse output
+/test-results/
+/lighthouse/
+.DS_Store
