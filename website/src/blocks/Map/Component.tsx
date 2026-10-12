@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/Button'
 import type { Hotel, MapBlock as M } from '@/payload-types'
 import { telHref } from '@/utilities/booking'
 
-import { MapEmbed } from './MapEmbed'
+import { GoogleHotelMap } from './GoogleHotelMap'
 
 export const MapBlockComponent: React.FC<M & { contextHotel?: Hotel | null }> = ({ heading, hotel: picked, showDirections, style, contextHotel }) => {
   const hotel = (picked && typeof picked === 'object' ? picked : contextHotel) as Hotel | null
@@ -75,7 +75,13 @@ export const MapBlockComponent: React.FC<M & { contextHotel?: Hotel | null }> = 
           )}
         </div>
         <div className="lg:col-span-3" data-reveal style={{ '--reveal-delay': '120ms' } as React.CSSProperties}>
-          <MapEmbed lat={lat ?? null} lng={lng ?? null} query={q} name={hotel.name} />
+          {typeof lat === 'number' && typeof lng === 'number' ? (
+            <GoogleHotelMap lat={lat} lng={lng} name={hotel.name} />
+          ) : (
+            <div className="flex aspect-[4/3] w-full items-center justify-center rounded-2xl bg-linen text-ink-soft md:aspect-[16/10]">
+              Use “Get directions” for the map.
+            </div>
+          )}
         </div>
       </div>
     </Section>
