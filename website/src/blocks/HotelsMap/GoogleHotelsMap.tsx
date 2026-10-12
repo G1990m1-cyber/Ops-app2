@@ -1,11 +1,9 @@
 'use client'
 
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import { MarkerClusterer, SuperClusterAlgorithm } from '@googlemaps/markerclusterer'
 import Link from 'next/link'
 import React, { useEffect, useRef, useState } from 'react'
 
-import { KEY, MAP_ID, clusterRenderer, loadGoogleMaps, markerIcon } from './googleMaps'
+import { KEY, MAP_ID, loadGoogleMaps, markerIcon } from './googleMaps'
 
 export type HotelPin = {
   name: string
@@ -56,7 +54,6 @@ export const GoogleHotelsMap: React.FC<{ pins: HotelPin[] }> = ({ pins }) => {
   useEffect(() => {
     if (!inView || !ref.current) return
     let cancelled = false
-    let clusterer: any = null
     loadGoogleMaps()
       .then((google) => {
         if (cancelled || !ref.current) return
@@ -70,25 +67,16 @@ export const GoogleHotelsMap: React.FC<{ pins: HotelPin[] }> = ({ pins }) => {
         })
         const bounds = new google.maps.LatLngBounds()
         const info = new google.maps.InfoWindow()
-        const markers = pins.map((p) => {
+        pins.forEach((p) => {
           const position = { lat: p.lat, lng: p.lng }
           bounds.extend(position)
-          const marker = new google.maps.Marker({ position, icon: markerIcon(google), title: p.name })
+          const marker = new google.maps.Marker({ position, map, icon: markerIcon(google), title: p.name })
           const open = () => {
             info.setContent(infoHtml(p))
             info.open({ map, anchor: marker })
           }
           marker.addListener('mouseover', open)
           marker.addListener('click', open)
-          return marker
-        })
-        // Only group hotels that genuinely overlap (e.g. the two in Berwick); a small radius keeps
-        // every other hotel as its own pin at the default view instead of collapsing into a few.
-        clusterer = new MarkerClusterer({
-          map,
-          markers,
-          renderer: clusterRenderer(google),
-          algorithm: new SuperClusterAlgorithm({ radius: 24, maxZoom: 11 }),
         })
         map.fitBounds(bounds, 56)
         const once = google.maps.event.addListener(map, 'idle', () => {
@@ -101,7 +89,6 @@ export const GoogleHotelsMap: React.FC<{ pins: HotelPin[] }> = ({ pins }) => {
       })
     return () => {
       cancelled = true
-      if (clusterer) clusterer.clearMarkers()
     }
   }, [inView, pins])
 

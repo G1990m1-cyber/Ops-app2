@@ -25,43 +25,20 @@ export const loadGoogleMaps = (): Promise<any> => {
   return loaderPromise
 }
 
-// Individual pin: cream teardrop, bronze outline and a simplified GR Hotels Georgian house, with a
-// soft drop shadow. Recreated as vector from the logo artwork so it stays crisp at pin size.
+// A clean, classic location pin: a bronze teardrop with a cream centre, a thin cream outline that
+// lifts it off the map, and a soft drop shadow. Minimal and legible rather than a busy illustration.
 const PIN = encodeURIComponent(
-  `<svg xmlns="http://www.w3.org/2000/svg" width="44" height="58" viewBox="0 0 44 58">
-    <defs><filter id="s" x="-50%" y="-20%" width="200%" height="160%"><feDropShadow dx="0" dy="1.6" stdDeviation="1.7" flood-color="#000" flood-opacity="0.35"/></filter></defs>
-    <g filter="url(#s)"><path d="M22 2C12.6 2 5 9.6 5 19c0 11.2 17 30 17 30s17-18.8 17-30C39 9.6 31.4 2 22 2z" fill="#faf6f1" stroke="#88764c" stroke-width="2"/></g>
-    <g fill="#88764c"><rect x="11.5" y="9" width="1.8" height="2.6"/><rect x="30.7" y="9" width="1.8" height="2.6"/><rect x="20.8" y="8.4" width="2.4" height="2.2"/><rect x="11" y="11.2" width="22" height="1.6"/><rect x="12.5" y="12.6" width="19" height="16.2"/></g>
-    <g fill="#faf6f1"><rect x="14.2" y="14.4" width="2.4" height="3"/><rect x="20.8" y="14.4" width="2.4" height="3"/><rect x="27.4" y="14.4" width="2.4" height="3"/><rect x="14.2" y="18.8" width="2.4" height="3"/><rect x="20.8" y="18.8" width="2.4" height="3"/><rect x="27.4" y="18.8" width="2.4" height="3"/><rect x="14.2" y="23.2" width="2.4" height="3"/><rect x="27.4" y="23.2" width="2.4" height="3"/><rect x="20.2" y="22.6" width="3.6" height="6.2"/></g>
-  </svg>`.replace(/\s+/g, ' '),
-)
-
-// Cluster pin: solid bronze teardrop with a soft shadow; the grouped count is a white label.
-const CLUSTER = encodeURIComponent(
-  `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="62" viewBox="0 0 48 62">
-    <defs><filter id="c" x="-50%" y="-20%" width="200%" height="160%"><feDropShadow dx="0" dy="1.6" stdDeviation="1.8" flood-color="#000" flood-opacity="0.35"/></filter></defs>
-    <g filter="url(#c)"><path d="M24 2C13 2 4 11 4 22c0 12.5 20 36 20 36s20-23.5 20-36C44 11 35 2 24 2z" fill="#88764c" stroke="#faf6f1" stroke-width="2"/></g>
+  `<svg xmlns="http://www.w3.org/2000/svg" width="34" height="46" viewBox="0 0 34 46">
+    <defs><filter id="s" x="-60%" y="-30%" width="220%" height="170%"><feDropShadow dx="0" dy="1.6" stdDeviation="1.7" flood-color="#000" flood-opacity="0.38"/></filter></defs>
+    <g filter="url(#s)">
+      <path d="M17 2C9.8 2 4 7.8 4 15c0 9 13 27 13 27s13-18 13-27C30 7.8 24.2 2 17 2z" fill="#88764c" stroke="#faf6f1" stroke-width="1.5"/>
+      <circle cx="17" cy="15" r="4.6" fill="#faf6f1"/>
+    </g>
   </svg>`.replace(/\s+/g, ' '),
 )
 
 export const markerIcon = (google: any) => ({
   url: `data:image/svg+xml;charset=UTF-8,${PIN}`,
-  scaledSize: new google.maps.Size(44, 58),
-  anchor: new google.maps.Point(22, 49),
-})
-
-/** Renderer for @googlemaps/markerclusterer: a bronze pin with the grouped count in white. */
-export const clusterRenderer = (google: any) => ({
-  render: ({ count, position }: { count: number; position: any }) =>
-    new google.maps.Marker({
-      position,
-      icon: {
-        url: `data:image/svg+xml;charset=UTF-8,${CLUSTER}`,
-        scaledSize: new google.maps.Size(48, 62),
-        anchor: new google.maps.Point(24, 52),
-        labelOrigin: new google.maps.Point(24, 22),
-      },
-      label: { text: String(count), color: '#faf6f1', fontSize: '14px', fontWeight: '700' },
-      zIndex: 1000 + count,
-    }),
+  scaledSize: new google.maps.Size(34, 46),
+  anchor: new google.maps.Point(17, 43),
 })
