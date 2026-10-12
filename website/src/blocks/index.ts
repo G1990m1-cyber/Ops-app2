@@ -8,6 +8,7 @@ import { Facilities } from './Facilities/config'
 import { FAQ } from './FAQ/config'
 import { Gallery } from './Gallery/config'
 import { Hero } from './Hero/config'
+import { HotelsMap } from './HotelsMap/config'
 import { HotelGrid } from './HotelGrid/config'
 import { MapBlock } from './Map/config'
 import { MenusList } from './MenusList/config'
@@ -37,4 +38,5 @@ export const pageBlocks: Block[] = [
   EnquiryForm,
   Embed,
   HotelGrid,
+  HotelsMap,
 ]

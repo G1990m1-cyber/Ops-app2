@@ -10,6 +10,7 @@ import { FacilitiesBlock } from './Facilities/Component'
 import { FAQBlockComponent } from './FAQ/Component'
 import { GalleryBlock } from './Gallery/Component'
 import { HeroBlock } from './Hero/Component'
+import { HotelsMapBlock } from './HotelsMap/Component'
 import { HotelGridBlock } from './HotelGrid/Component'
 import { MapBlockComponent } from './Map/Component'
 import { MenusListBlock } from './MenusList/Component'
@@ -39,6 +40,7 @@ const components: Record<string, React.ComponentType<any>> = {
   enquiryForm: EnquiryFormBlockComponent,
   embed: EmbedBlockComponent,
   hotelGrid: HotelGridBlock,
+  hotelsMap: HotelsMapBlock,
 }
 
 type Blocks = NonNullable<Page['layout']> | NonNullable<Hotel['layout']>

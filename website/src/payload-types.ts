@@ -258,6 +258,7 @@ export interface Hotel {
         | EnquiryFormBlock
         | EmbedBlock
         | HotelGridBlock
+        | HotelsMapBlock
       )[]
     | null;
   address?: {
@@ -612,6 +613,7 @@ export interface Page {
     | EnquiryFormBlock
     | EmbedBlock
     | HotelGridBlock
+    | HotelsMapBlock
   )[];
   meta?: {
     title?: string | null;
@@ -1191,6 +1193,24 @@ export interface HotelGridBlock {
   blockType: 'hotelGrid';
 }
 /**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "HotelsMapBlock".
+ */
+export interface HotelsMapBlock {
+  heading?: string | null;
+  /**
+   * Optional line under the heading, e.g. "Eight hotels and inns across Britain."
+   */
+  intro?: string | null;
+  style?: {
+    tone?: ('cream' | 'sand' | 'linen' | 'charcoal') | null;
+    spacing?: ('compact' | 'normal' | 'generous') | null;
+  };
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'hotelsMap';
+}
+/**
  * Upload a PDF or type the menu in. Set a "valid to" date and the menu disappears from the website on its own.
  *
  * This interface was referenced by `Config`'s JSON-Schema
@@ -1626,6 +1646,7 @@ export interface HotelsSelect<T extends boolean = true> {
         enquiryForm?: T | EnquiryFormBlockSelect<T>;
         embed?: T | EmbedBlockSelect<T>;
         hotelGrid?: T | HotelGridBlockSelect<T>;
+        hotelsMap?: T | HotelsMapBlockSelect<T>;
       };
   address?:
     | T
@@ -2079,6 +2100,22 @@ export interface HotelGridBlockSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "HotelsMapBlock_select".
+ */
+export interface HotelsMapBlockSelect<T extends boolean = true> {
+  heading?: T;
+  intro?: T;
+  style?:
+    | T
+    | {
+        tone?: T;
+        spacing?: T;
+      };
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "rooms_select".
  */
 export interface RoomsSelect<T extends boolean = true> {
@@ -2207,6 +2244,7 @@ export interface PagesSelect<T extends boolean = true> {
         enquiryForm?: T | EnquiryFormBlockSelect<T>;
         embed?: T | EmbedBlockSelect<T>;
         hotelGrid?: T | HotelGridBlockSelect<T>;
+        hotelsMap?: T | HotelsMapBlockSelect<T>;
       };
   meta?:
     | T
