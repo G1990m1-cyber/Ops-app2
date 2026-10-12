@@ -281,6 +281,16 @@ export interface Hotel {
     directionsUrl?: string | null;
   };
   /**
+   * Optional. One row per line, e.g. Days "Mon to Fri", Hours "12pm to 11pm, kitchen to 9pm". Shown on the Find us page.
+   */
+  openingHours?:
+    | {
+        days: string;
+        hours: string;
+        id?: string | null;
+      }[]
+    | null;
+  /**
    * By car, by rail, parking notes.
    */
   directions?: {
@@ -299,9 +309,21 @@ export interface Hotel {
     [k: string]: unknown;
   } | null;
   social?: {
+    /**
+     * Full link, e.g. https://...
+     */
     facebook?: string | null;
+    /**
+     * Full link, e.g. https://...
+     */
     instagram?: string | null;
+    /**
+     * Full link, e.g. https://...
+     */
     tripadvisor?: string | null;
+    /**
+     * Full link, e.g. https://x.com/...
+     */
     x?: string | null;
   };
   /**
@@ -312,6 +334,10 @@ export interface Hotel {
    * For restaurants that take online table bookings (e.g. ResDiary, Dojo). Adds a "Book a table" button to the hotel and dining pages.
    */
   tableBookingUrl?: string | null;
+  /**
+   * Optional. One line shown on room pages, e.g. "Free cancellation up to 48 hours before arrival."
+   */
+  cancellationPolicy?: string | null;
   checkIn?: string | null;
   checkOut?: string | null;
   /**
@@ -1619,6 +1645,13 @@ export interface HotelsSelect<T extends boolean = true> {
         lng?: T;
         directionsUrl?: T;
       };
+  openingHours?:
+    | T
+    | {
+        days?: T;
+        hours?: T;
+        id?: T;
+      };
   directions?: T;
   social?:
     | T
@@ -1630,6 +1663,7 @@ export interface HotelsSelect<T extends boolean = true> {
       };
   bookingUrl?: T;
   tableBookingUrl?: T;
+  cancellationPolicy?: T;
   checkIn?: T;
   checkOut?: T;
   priceRange?: T;

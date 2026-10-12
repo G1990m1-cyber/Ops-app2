@@ -8,9 +8,10 @@ import {
 } from '@/access'
 import { richLexical } from '@/fields/lexical'
 import { slugField } from '@/fields/slug'
+import { validateOptionalUrl } from '@/fields/validators'
 import { enforceHotelScope } from '@/hooks/enforceHotelScope'
 import { revalidateCollection, revalidateCollectionDelete } from '@/hooks/revalidate'
-import { generatePreviewPath, hotelPath } from '@/utilities/generatePreviewPath'
+import { generatePreviewPath, resolveHotelPath } from '@/utilities/generatePreviewPath'
 
 export const ROOM_FEATURES = [
   { value: 'en-suite', label: 'En suite' },
@@ -44,13 +45,13 @@ export const Rooms: CollectionConfig = {
     defaultColumns: ['name', 'hotel', 'sleeps', 'fromPrice', '_status'],
     group: 'Content',
     livePreview: {
-      url: ({ data }) => {
-        const base = hotelPath(data?.hotel)
-        return generatePreviewPath({ path: base && data?.slug ? `${base}/rooms/${data.slug}` : null })
+      url: async ({ data, req }) => {
+        const base = await resolveHotelPath(data?.hotel, req)
+        return generatePreviewPath({ path: base && data?.slug ? `${base}/rooms/${data.slug}` : null }) || ''
       },
     },
-    preview: (data) => {
-      const base = hotelPath(data?.hotel)
+    preview: async (data, { req }) => {
+      const base = await resolveHotelPath(data?.hotel, req)
       return generatePreviewPath({ path: base && data?.slug ? `${base}/rooms/${data.slug}` : null })
     },
   },
@@ -105,6 +106,7 @@ export const Rooms: CollectionConfig = {
       name: 'bookingUrl',
       type: 'text',
       label: 'Booking link for this room (optional)',
+      validate: validateOptionalUrl,
       admin: { description: 'Overrides the hotel booking link for this room only.' },
     },
     {

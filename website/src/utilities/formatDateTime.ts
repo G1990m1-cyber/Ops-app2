@@ -23,11 +23,3 @@ export const formatTime = (value?: string | null): string =>
   value ? timeFormatter.format(new Date(value)).replace(' ', '').toLowerCase() : ''
 export const formatShortDate = (value?: string | null): string =>
   value ? shortDate.format(new Date(value)) : ''
-export const formatDateRange = (start?: string | null, end?: string | null): string => {
-  if (!start) return ''
-  if (!end) return formatDate(start)
-  const s = new Date(start)
-  const e = new Date(end)
-  if (s.toDateString() === e.toDateString()) return `${formatDate(start)}, ${formatTime(start)} to ${formatTime(end)}`
-  return `${formatDate(start)} to ${formatDate(end)}`
-}

@@ -5,7 +5,6 @@ import type { Payload } from 'payload'
 import type { Hotel, Media } from '@/payload-types'
 
 import { groupCopy, hotels as seedHotels, siteLogo, type Img } from './content'
-import { placeholderImage } from './images'
 import { h1, h2, p, paragraphs, rich, ul } from './lexical'
 
 /** Migrated images live in content/images at the project root (process.cwd() locally and on Vercel). */
@@ -70,26 +69,6 @@ const uploadImg = async (ctx: Ctx, img: Img): Promise<Media> => {
   return doc
 }
 
-/** Brand-toned generated image, only for things the old site never had (e.g. sample offers). */
-const uploadPlaceholder = async (ctx: Ctx, key: string, alt: string, w = 2000, h = 1333): Promise<Media> => {
-  const cached = ctx.images.get(key)
-  if (cached) return cached
-  const existing = await ctx.payload.find({ collection: 'media', where: { filename: { in: [`${key}.jpg`, `${key}.webp`] } }, limit: 1, overrideAccess: true, depth: 0 })
-  if (existing.docs[0]) {
-    ctx.images.set(key, existing.docs[0])
-    return existing.docs[0]
-  }
-  ctx.seedNo.n += 1
-  const buffer = await placeholderImage(alt, ctx.seedNo.n, w, h)
-  const doc = await ctx.payload.create({
-    collection: 'media',
-    data: { alt },
-    file: { data: buffer, mimetype: 'image/jpeg', name: `${key}.jpg`, size: buffer.length },
-    overrideAccess: true,
-  })
-  ctx.images.set(key, doc)
-  return doc
-}
 
 const resetCollections = async (payload: Payload) => {
   const order = ['enquiries', 'testimonials', 'offers', 'events', 'menus', 'rooms', 'redirects', 'pages', 'hotels', 'media'] as const
@@ -563,5 +542,3 @@ export const seed = async (payload: Payload, opts: { reset?: boolean } = {}) => 
   }
 }
 
-// kept for the rare case an admin wants a brand-toned image for something that has no photo yet
-export { uploadPlaceholder as _uploadPlaceholder, ul as _ul }

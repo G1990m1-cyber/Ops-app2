@@ -14,6 +14,7 @@ import { BreadcrumbJsonLd } from '@/components/JsonLd'
 import RichText from '@/components/RichText'
 import { Section } from '@/components/Section'
 import { ROOM_FEATURES } from '@/collections/Rooms'
+import { telHref } from '@/utilities/booking'
 import { getHotelBySlug, getRoomBySlug, getRooms } from '@/utilities/data'
 import { generateMeta } from '@/utilities/generateMeta'
 import { redirectOrNotFound } from '@/utilities/redirects'
@@ -65,11 +66,14 @@ export default async function RoomPage({ params }: Args) {
               {room.sleeps ? <li className="flex items-center gap-2"><Icon name="guests" className="h-5 w-5 text-bronze" /> Sleeps {room.sleeps}</li> : null}
               {room.bedType ? <li className="flex items-center gap-2"><Icon name="bed" className="h-5 w-5 text-bronze" /> {room.bedType}</li> : null}
               <li className="flex items-center gap-2"><Icon name="clock" className="h-5 w-5 text-bronze" /> Check-in from {hotel.checkIn || '3pm'}</li>
+              {hotel.cancellationPolicy ? (
+                <li className="flex items-start gap-2"><Icon name="check" className="mt-0.5 h-5 w-5 shrink-0 text-bronze" /> {hotel.cancellationPolicy}</li>
+              ) : null}
             </ul>
             <div className="mt-6 grid gap-3">
               <BookNowButton hotel={hotel} roomUrl={room.bookingUrl} placement="room" size="lg" className="w-full" />
               {hotel.phone && (
-                <a href={`tel:${hotel.phone.replace(/[^\d+]/g, '')}`} className="text-center text-cocoa link-underline">
+                <a href={telHref(hotel.phone)} className="text-center text-cocoa link-underline">
                   or call {hotel.phone}
                 </a>
               )}

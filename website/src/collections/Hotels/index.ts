@@ -6,6 +6,7 @@ import { simpleLexical, richLexical } from '@/fields/lexical'
 import { slugField } from '@/fields/slug'
 import { revalidateCollection, revalidateCollectionDelete } from '@/hooks/revalidate'
 import { generatePreviewPath } from '@/utilities/generatePreviewPath'
+import { validateOptionalUrl } from '@/fields/validators'
 import { FACILITIES } from '../facilities'
 
 export const Hotels: CollectionConfig = {
@@ -198,10 +199,31 @@ export const Hotels: CollectionConfig = {
                   name: 'directionsUrl',
                   type: 'text',
                   label: 'Google Maps link',
+                  validate: validateOptionalUrl,
                   admin: {
                     description:
                       'Used by the "Get directions" button. Paste the share link from Google Maps.',
                   },
+                },
+              ],
+            },
+            {
+              name: 'openingHours',
+              type: 'array',
+              label: 'Opening hours',
+              labels: { singular: 'Row', plural: 'Rows' },
+              admin: {
+                initCollapsed: true,
+                description:
+                  'Optional. One row per line, e.g. Days "Mon to Fri", Hours "12pm to 11pm, kitchen to 9pm". Shown on the Find us page.',
+              },
+              fields: [
+                {
+                  type: 'row',
+                  fields: [
+                    { name: 'days', type: 'text', required: true, admin: { width: '40%', placeholder: 'Mon to Fri' } },
+                    { name: 'hours', type: 'text', required: true, admin: { width: '60%', placeholder: '12pm to 11pm' } },
+                  ],
                 },
               ],
             },
@@ -220,15 +242,15 @@ export const Hotels: CollectionConfig = {
                 {
                   type: 'row',
                   fields: [
-                    { name: 'facebook', type: 'text', admin: { width: '50%' } },
-                    { name: 'instagram', type: 'text', admin: { width: '50%' } },
+                    { name: 'facebook', type: 'text', validate: validateOptionalUrl, admin: { width: '50%', description: 'Full link, e.g. https://...' } },
+                    { name: 'instagram', type: 'text', validate: validateOptionalUrl, admin: { width: '50%', description: 'Full link, e.g. https://...' } },
                   ],
                 },
                 {
                   type: 'row',
                   fields: [
-                    { name: 'tripadvisor', type: 'text', admin: { width: '50%' } },
-                    { name: 'x', type: 'text', label: 'X (Twitter)', admin: { width: '50%' } },
+                    { name: 'tripadvisor', type: 'text', validate: validateOptionalUrl, admin: { width: '50%', description: 'Full link, e.g. https://...' } },
+                    { name: 'x', type: 'text', label: 'X (Twitter)', validate: validateOptionalUrl, admin: { width: '50%', description: 'Full link, e.g. https://x.com/...' } },
                   ],
                 },
               ],
@@ -243,6 +265,7 @@ export const Hotels: CollectionConfig = {
               type: 'text',
               label: 'Booking engine link',
               access: { update: adminOnlyField },
+              validate: validateOptionalUrl,
               admin: {
                 description:
                   'The exact link guests use to book this hotel. Book Now buttons open it in a new tab. Leave blank to show the phone number and enquiry form instead.',
@@ -253,9 +276,19 @@ export const Hotels: CollectionConfig = {
               type: 'text',
               label: 'Table booking link (optional)',
               access: { update: adminOnlyField },
+              validate: validateOptionalUrl,
               admin: {
                 description:
                   'For restaurants that take online table bookings (e.g. ResDiary, Dojo). Adds a "Book a table" button to the hotel and dining pages.',
+              },
+            },
+            {
+              name: 'cancellationPolicy',
+              type: 'text',
+              label: 'Cancellation policy (short)',
+              admin: {
+                description:
+                  'Optional. One line shown on room pages, e.g. "Free cancellation up to 48 hours before arrival."',
               },
             },
             {

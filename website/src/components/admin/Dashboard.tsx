@@ -37,6 +37,20 @@ export const Dashboard: React.FC<ServerProps> = async ({ user, payload }) => {
   const firstName = (u.name || '').split(' ')[0] || 'there'
   const hotelParam = !isAdmin && hotels.length === 1 ? `?hotel=${hotels[0].id}` : ''
 
+  // Count unanswered enquiries so the inbox is the first thing a manager sees each day.
+  let newEnquiries = 0
+  try {
+    const ids = hotels.map((h) => h.id)
+    const res = await payload.count({
+      collection: 'enquiries',
+      overrideAccess: true,
+      where: isAdmin ? { status: { equals: 'new' } } : { and: [{ status: { equals: 'new' } }, { hotel: { in: ids } }] },
+    })
+    newEnquiries = res.totalDocs
+  } catch {
+    newEnquiries = 0
+  }
+
   const actions = [
     {
       href: `/admin/collections/menus/create${hotelParam}`,
@@ -85,6 +99,22 @@ export const Dashboard: React.FC<ServerProps> = async ({ user, payload }) => {
       </header>
 
       <div className="gr-dashboard__actions">
+        {/* Links into the Payload admin SPA, not Next pages, so a plain anchor is correct here. */}
+        {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+        <a className="gr-action" href="/admin/collections/enquiries?where[status][equals]=new">
+          <span className="gr-action__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="3" y="5" width="18" height="14" rx="2" />
+              <path d="M3 7l9 6 9-6" />
+            </svg>
+          </span>
+          <span className="gr-action__title">
+            Enquiries{newEnquiries > 0 ? ` (${newEnquiries} new)` : ''}
+          </span>
+          <span className="gr-action__text">
+            {newEnquiries > 0 ? 'Guests waiting to hear back. Reply, then mark as replied.' : 'Messages from guests land here as well as by email.'}
+          </span>
+        </a>
         {actions.map((a) => (
           <a className="gr-action" href={a.href} key={a.href}>
             <span className="gr-action__icon">{a.icon}</span>

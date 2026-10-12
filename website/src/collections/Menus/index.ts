@@ -8,8 +8,9 @@ import {
 } from '@/access'
 import { blockPlaceholderPublish } from '@/hooks/blockPlaceholderPublish'
 import { enforceHotelScope } from '@/hooks/enforceHotelScope'
+import { endOnOrAfter } from '@/fields/validators'
 import { revalidateCollection, revalidateCollectionDelete } from '@/hooks/revalidate'
-import { generatePreviewPath, hotelPath } from '@/utilities/generatePreviewPath'
+import { generatePreviewPath, resolveHotelPath } from '@/utilities/generatePreviewPath'
 
 export const MENU_TYPES = [
   { label: 'Food', value: 'food' },
@@ -65,7 +66,16 @@ export const Menus: CollectionConfig = {
     group: 'Content',
     description:
       'Upload a PDF or type the menu in. Set a "valid to" date and the menu disappears from the website on its own.',
-    preview: (data) => generatePreviewPath({ path: hotelPath(data?.hotel) ? `${hotelPath(data?.hotel)}/dining` : null }),
+    livePreview: {
+      url: async ({ data, req }) => {
+        const base = await resolveHotelPath(data?.hotel, req)
+        return generatePreviewPath({ path: base ? `${base}/dining` : null }) || ''
+      },
+    },
+    preview: async (data, { req }) => {
+      const base = await resolveHotelPath(data?.hotel, req)
+      return generatePreviewPath({ path: base ? `${base}/dining` : null })
+    },
   },
   versions: { drafts: true, maxPerDoc: 20 },
   hooks: {
@@ -101,6 +111,7 @@ export const Menus: CollectionConfig = {
           name: 'validTo',
           type: 'date',
           label: 'Show until',
+          validate: endOnOrAfter('validFrom', 'show-until date'),
           admin: {
             width: '50%',
             date: { pickerAppearance: 'dayOnly', displayFormat: 'd MMM yyyy' },

@@ -22,7 +22,34 @@ const nextConfig: NextConfig = {
   turbopack: { root: path.resolve(dirname) },
   // The seed route reads the migrated images from disk; make sure they ship with that function.
   outputFileTracingIncludes: { '/next/seed': ['./content/images/**/*'] },
+  async redirects() {
+    return [
+      // The homepage lives at '/', not at the 'home' page slug; collapse the duplicates.
+      { source: '/home', destination: '/', permanent: true },
+      { source: '/index', destination: '/', permanent: true },
+      // Browsers still request /favicon.ico; point it at the SVG we ship.
+      { source: '/favicon.ico', destination: '/favicon.svg', permanent: false },
+    ]
+  },
   async headers() {
+    // Permissive but real: allows the admin, Google Tag Manager (after consent), map embeds,
+    // Supabase storage and the booking engines over https, while blocking plugins/object embeds,
+    // locking the page base URL and only allowing same-origin framing.
+    const csp = [
+      "default-src 'self'",
+      "base-uri 'self'",
+      "object-src 'none'",
+      "frame-ancestors 'self'",
+      "img-src 'self' data: blob: https:",
+      "media-src 'self' https:",
+      "font-src 'self' data:",
+      "style-src 'self' 'unsafe-inline' https:",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: https:",
+      "worker-src 'self' blob:",
+      "connect-src 'self' https:",
+      "frame-src 'self' https:",
+      "form-action 'self' https:",
+    ].join('; ')
     return [
       {
         source: '/(.*)',
@@ -31,6 +58,7 @@ const nextConfig: NextConfig = {
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
           { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
           { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
+          { key: 'Content-Security-Policy', value: csp },
         ],
       },
       {

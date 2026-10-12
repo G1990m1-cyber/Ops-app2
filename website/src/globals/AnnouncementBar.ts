@@ -3,6 +3,7 @@ import type { GlobalConfig } from 'payload'
 import { hiddenUnlessAdmin, isAdmin } from '@/access'
 import { link } from '@/fields/link'
 import { revalidateGlobal } from '@/hooks/revalidate'
+import { endOnOrAfter } from '@/fields/validators'
 
 export const AnnouncementBar: GlobalConfig = {
   slug: 'announcement-bar',
@@ -28,7 +29,7 @@ export const AnnouncementBar: GlobalConfig = {
       admin: { condition: (data) => Boolean(data?.enabled) },
       fields: [
         { name: 'startDate', type: 'date', label: 'Show from', admin: { width: '50%', date: { pickerAppearance: 'dayAndTime' } } },
-        { name: 'endDate', type: 'date', label: 'Show until', admin: { width: '50%', date: { pickerAppearance: 'dayAndTime' } } },
+        { name: 'endDate', type: 'date', label: 'Show until', validate: endOnOrAfter('startDate', 'show-until date'), admin: { width: '50%', date: { pickerAppearance: 'dayAndTime' } } },
       ],
     },
   ],

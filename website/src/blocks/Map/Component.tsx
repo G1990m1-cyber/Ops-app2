@@ -49,6 +49,19 @@ export const MapBlockComponent: React.FC<M & { contextHotel?: Hotel | null }> = 
                 <span>Check-in from {hotel.checkIn || '3pm'}, check-out by {hotel.checkOut || '11am'}</span>
               </li>
             )}
+            {hotel.openingHours && hotel.openingHours.length > 0 && (
+              <li className="flex items-start gap-3">
+                <Icon name="clock" className="mt-0.5 h-5 w-5 shrink-0 text-bronze [.tone-charcoal_&]:text-gold" />
+                <span>
+                  <span className="block font-medium">Opening hours</span>
+                  {hotel.openingHours.map((r) => (
+                    <span key={r.id} className="block text-ink-soft [.tone-charcoal_&]:text-cream/70">
+                      {r.days}: {r.hours}
+                    </span>
+                  ))}
+                </span>
+              </li>
+            )}
           </ul>
           <div className="mt-7">
             <Button href={directions} newTab variant="secondary">

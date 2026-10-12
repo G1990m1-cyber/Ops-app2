@@ -7,10 +7,6 @@ import { NextRequest } from 'next/server'
 
 import configPromise from '@payload-config'
 
-export type PreviewSearchParams = {
-  path: string
-  previewSecret: string
-}
 
 export async function GET(req: NextRequest): Promise<Response> {
   const payload = await getPayload({ config: configPromise })

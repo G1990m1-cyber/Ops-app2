@@ -10,6 +10,7 @@ import {
 import { richLexical } from '@/fields/lexical'
 import { blockPlaceholderPublish } from '@/hooks/blockPlaceholderPublish'
 import { enforceHotelScope } from '@/hooks/enforceHotelScope'
+import { endOnOrAfter, validateOptionalUrl } from '@/fields/validators'
 import { revalidateCollection, revalidateCollectionDelete } from '@/hooks/revalidate'
 import type { User } from '@/payload-types'
 
@@ -84,6 +85,7 @@ export const Offers: CollectionConfig = {
           label: 'Show until',
           required: true,
           index: true,
+          validate: endOnOrAfter('startDate', 'end date'),
           admin: { width: '50%', date: { pickerAppearance: 'dayOnly', displayFormat: 'd MMM yyyy' } },
         },
       ],
@@ -96,6 +98,7 @@ export const Offers: CollectionConfig = {
           name: 'linkUrl',
           type: 'text',
           label: 'Button link (optional)',
+          validate: validateOptionalUrl,
           admin: { width: '50%', description: 'Leave blank to use the hotel booking link.' },
         },
       ],

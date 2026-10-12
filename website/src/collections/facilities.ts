@@ -22,4 +22,3 @@ export const FACILITIES = [
   { value: 'tv', label: 'Smart TV' },
 ] as const
 
-export type FacilityValue = (typeof FACILITIES)[number]['value']

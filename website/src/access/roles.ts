@@ -11,7 +11,6 @@ export const getUserHotelIds = (user: User | null | undefined): number[] => {
 }
 
 export const isAdminUser = (user: User | null | undefined): boolean => user?.role === 'admin'
-export const isManagerUser = (user: User | null | undefined): boolean => user?.role === 'manager'
 
 /** Collection-level: admins only. */
 export const isAdmin: Access = ({ req }) => isAdminUser(req.user)

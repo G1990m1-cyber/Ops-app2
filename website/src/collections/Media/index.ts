@@ -1,6 +1,6 @@
 import type { CollectionConfig } from 'payload'
 
-import { hiddenUnlessAdmin, isAdminUser, isLoggedIn } from '@/access'
+import { isAdminUser, isLoggedIn } from '@/access'
 import { populateCreatedBy } from '@/hooks/populateCreatedBy'
 import { validateUpload } from '@/hooks/validateUpload'
 import { publicMediaURL } from '@/plugins'
@@ -88,4 +88,3 @@ export const Media: CollectionConfig = {
   },
 }
 
-export const mediaHiddenForManagers = hiddenUnlessAdmin

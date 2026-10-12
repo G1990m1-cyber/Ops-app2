@@ -9,8 +9,9 @@ import {
 import { richLexical } from '@/fields/lexical'
 import { blockPlaceholderPublish } from '@/hooks/blockPlaceholderPublish'
 import { enforceHotelScope } from '@/hooks/enforceHotelScope'
+import { endOnOrAfter, validateOptionalUrl } from '@/fields/validators'
 import { revalidateCollection, revalidateCollectionDelete } from '@/hooks/revalidate'
-import { generatePreviewPath, hotelPath } from '@/utilities/generatePreviewPath'
+import { generatePreviewPath, resolveHotelPath } from '@/utilities/generatePreviewPath'
 
 export const Events: CollectionConfig = {
   slug: 'events',
@@ -26,7 +27,16 @@ export const Events: CollectionConfig = {
     defaultColumns: ['title', 'hotel', 'start', '_status'],
     group: 'Content',
     description: 'Past events drop off the website automatically the day after they end.',
-    preview: (data) => generatePreviewPath({ path: hotelPath(data?.hotel) ? `${hotelPath(data?.hotel)}/events` : null }),
+    livePreview: {
+      url: async ({ data, req }) => {
+        const base = await resolveHotelPath(data?.hotel, req)
+        return generatePreviewPath({ path: base ? `${base}/events` : null }) || ''
+      },
+    },
+    preview: async (data, { req }) => {
+      const base = await resolveHotelPath(data?.hotel, req)
+      return generatePreviewPath({ path: base ? `${base}/events` : null })
+    },
   },
   versions: { drafts: true, maxPerDoc: 20 },
   hooks: {
@@ -61,6 +71,7 @@ export const Events: CollectionConfig = {
           name: 'end',
           type: 'date',
           label: 'Ends (optional)',
+          validate: endOnOrAfter('start', 'end'),
           admin: { width: '50%', date: { pickerAppearance: 'dayAndTime', displayFormat: 'd MMM yyyy h:mm a', timeIntervals: 15 } },
         },
       ],
@@ -78,7 +89,7 @@ export const Events: CollectionConfig = {
       type: 'row',
       fields: [
         { name: 'price', type: 'text', admin: { width: '50%', description: 'e.g. "£45 per person" or "Free"' } },
-        { name: 'ticketUrl', type: 'text', label: 'Ticket or booking link', admin: { width: '50%' } },
+        { name: 'ticketUrl', type: 'text', label: 'Ticket or booking link', validate: validateOptionalUrl, admin: { width: '50%' } },
       ],
     },
   ],
