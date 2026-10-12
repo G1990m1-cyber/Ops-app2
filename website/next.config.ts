@@ -42,7 +42,7 @@ const nextConfig: NextConfig = {
       "frame-ancestors 'self'",
       "img-src 'self' data: blob: https:",
       "media-src 'self' https:",
-      "font-src 'self' data:",
+      "font-src 'self' data: https://fonts.gstatic.com",
       "style-src 'self' 'unsafe-inline' https:",
       "script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: https:",
       "worker-src 'self' blob:",
