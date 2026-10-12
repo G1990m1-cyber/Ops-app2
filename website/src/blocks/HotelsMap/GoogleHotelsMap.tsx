@@ -27,7 +27,10 @@ const loadGoogleMaps = (): Promise<any> => {
   if (loaderPromise) return loaderPromise
   loaderPromise = new Promise((resolve, reject) => {
     const s = document.createElement('script')
-    s.src = `https://maps.googleapis.com/maps/api/js?key=${encodeURIComponent(KEY)}&v=quarterly&loading=async`
+    // Note: no `loading=async` — with it, google.maps.Map is not defined yet at onload, so the
+    // map constructor throws and the block falls back to the link list. Classic loading makes the
+    // Map constructor available as soon as the script's onload fires.
+    s.src = `https://maps.googleapis.com/maps/api/js?key=${encodeURIComponent(KEY)}&v=quarterly`
     s.async = true
     s.defer = true
     s.onload = () => resolve((window as any).google)
