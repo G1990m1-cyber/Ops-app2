@@ -15,6 +15,9 @@ export type HotelPin = {
 }
 
 const KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || ''
+// A cloud-styled Map ID (Maps Studio). When set, the cloud style controls the look and the inline
+// brand style below is ignored. Not secret; the GR Hotels Map ID is the default, overridable by env.
+const MAP_ID = process.env.NEXT_PUBLIC_GOOGLE_MAPS_MAP_ID || 'e8cff4cdf600b8aec8c25a72'
 
 /** Loads the Google Maps JS API once for the whole page. */
 let loaderPromise: Promise<any> | null = null
@@ -97,10 +100,10 @@ export const GoogleHotelsMap: React.FC<{ pins: HotelPin[] }> = ({ pins }) => {
       .then((google) => {
         if (cancelled || !ref.current) return
         const map = new google.maps.Map(ref.current, {
+          ...(MAP_ID ? { mapId: MAP_ID } : { styles: MAP_STYLE }),
           mapTypeControl: false,
           streetViewControl: false,
           fullscreenControl: false,
-          styles: MAP_STYLE,
           gestureHandling: 'cooperative',
           backgroundColor: '#efe7db',
         })
