@@ -25,31 +25,29 @@ export const loadGoogleMaps = (): Promise<any> => {
   return loaderPromise
 }
 
-// Individual pin: cream teardrop, bronze outline, a little bronze building crest — the GR Hotels mark.
+// Individual pin: cream teardrop, bronze outline and a simplified GR Hotels Georgian house, with a
+// soft drop shadow. Recreated as vector from the logo artwork so it stays crisp at pin size.
 const PIN = encodeURIComponent(
-  `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="54" viewBox="0 0 40 54">
-    <ellipse cx="20" cy="50" rx="6" ry="2" fill="#000" opacity="0.18"/>
-    <path d="M20 2C11.2 2 4 9.2 4 18c0 10.5 16 30 16 30s16-19.5 16-30C36 9.2 28.8 2 20 2z" fill="#faf6f1" stroke="#88764c" stroke-width="2.2"/>
-    <polygon points="20,8 29,15 11,15" fill="#88764c"/>
-    <rect x="12" y="15" width="16" height="11" fill="#88764c"/>
-    <rect x="14.3" y="18" width="3" height="3.4" fill="#faf6f1"/>
-    <rect x="22.7" y="18" width="3" height="3.4" fill="#faf6f1"/>
-    <rect x="18.5" y="21.6" width="3" height="4.4" fill="#faf6f1"/>
+  `<svg xmlns="http://www.w3.org/2000/svg" width="44" height="58" viewBox="0 0 44 58">
+    <defs><filter id="s" x="-50%" y="-20%" width="200%" height="160%"><feDropShadow dx="0" dy="1.6" stdDeviation="1.7" flood-color="#000" flood-opacity="0.35"/></filter></defs>
+    <g filter="url(#s)"><path d="M22 2C12.6 2 5 9.6 5 19c0 11.2 17 30 17 30s17-18.8 17-30C39 9.6 31.4 2 22 2z" fill="#faf6f1" stroke="#88764c" stroke-width="2"/></g>
+    <g fill="#88764c"><rect x="11.5" y="9" width="1.8" height="2.6"/><rect x="30.7" y="9" width="1.8" height="2.6"/><rect x="20.8" y="8.4" width="2.4" height="2.2"/><rect x="11" y="11.2" width="22" height="1.6"/><rect x="12.5" y="12.6" width="19" height="16.2"/></g>
+    <g fill="#faf6f1"><rect x="14.2" y="14.4" width="2.4" height="3"/><rect x="20.8" y="14.4" width="2.4" height="3"/><rect x="27.4" y="14.4" width="2.4" height="3"/><rect x="14.2" y="18.8" width="2.4" height="3"/><rect x="20.8" y="18.8" width="2.4" height="3"/><rect x="27.4" y="18.8" width="2.4" height="3"/><rect x="14.2" y="23.2" width="2.4" height="3"/><rect x="27.4" y="23.2" width="2.4" height="3"/><rect x="20.2" y="22.6" width="3.6" height="6.2"/></g>
   </svg>`.replace(/\s+/g, ' '),
 )
 
-// Cluster pin: solid bronze teardrop with a white count in the bulb.
+// Cluster pin: solid bronze teardrop with a soft shadow; the grouped count is a white label.
 const CLUSTER = encodeURIComponent(
-  `<svg xmlns="http://www.w3.org/2000/svg" width="46" height="60" viewBox="0 0 46 60">
-    <ellipse cx="23" cy="56" rx="7" ry="2.5" fill="#000" opacity="0.18"/>
-    <path d="M23 2C12.5 2 4 10.5 4 21c0 12 19 34 19 34s19-22 19-34C42 10.5 33.5 2 23 2z" fill="#88764c" stroke="#faf6f1" stroke-width="2"/>
+  `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="62" viewBox="0 0 48 62">
+    <defs><filter id="c" x="-50%" y="-20%" width="200%" height="160%"><feDropShadow dx="0" dy="1.6" stdDeviation="1.8" flood-color="#000" flood-opacity="0.35"/></filter></defs>
+    <g filter="url(#c)"><path d="M24 2C13 2 4 11 4 22c0 12.5 20 36 20 36s20-23.5 20-36C44 11 35 2 24 2z" fill="#88764c" stroke="#faf6f1" stroke-width="2"/></g>
   </svg>`.replace(/\s+/g, ' '),
 )
 
 export const markerIcon = (google: any) => ({
   url: `data:image/svg+xml;charset=UTF-8,${PIN}`,
-  scaledSize: new google.maps.Size(40, 54),
-  anchor: new google.maps.Point(20, 48),
+  scaledSize: new google.maps.Size(44, 58),
+  anchor: new google.maps.Point(22, 49),
 })
 
 /** Renderer for @googlemaps/markerclusterer: a bronze pin with the grouped count in white. */
@@ -59,9 +57,9 @@ export const clusterRenderer = (google: any) => ({
       position,
       icon: {
         url: `data:image/svg+xml;charset=UTF-8,${CLUSTER}`,
-        scaledSize: new google.maps.Size(46, 60),
-        anchor: new google.maps.Point(23, 55),
-        labelOrigin: new google.maps.Point(23, 21),
+        scaledSize: new google.maps.Size(48, 62),
+        anchor: new google.maps.Point(24, 52),
+        labelOrigin: new google.maps.Point(24, 22),
       },
       label: { text: String(count), color: '#faf6f1', fontSize: '14px', fontWeight: '700' },
       zIndex: 1000 + count,

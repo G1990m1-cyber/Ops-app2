@@ -1,7 +1,7 @@
 'use client'
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { MarkerClusterer } from '@googlemaps/markerclusterer'
+import { MarkerClusterer, SuperClusterAlgorithm } from '@googlemaps/markerclusterer'
 import Link from 'next/link'
 import React, { useEffect, useRef, useState } from 'react'
 
@@ -82,8 +82,14 @@ export const GoogleHotelsMap: React.FC<{ pins: HotelPin[] }> = ({ pins }) => {
           marker.addListener('click', open)
           return marker
         })
-        // Group nearby hotels (e.g. the two in Berwick) into a numbered cluster when zoomed out.
-        clusterer = new MarkerClusterer({ map, markers, renderer: clusterRenderer(google) })
+        // Only group hotels that genuinely overlap (e.g. the two in Berwick); a small radius keeps
+        // every other hotel as its own pin at the default view instead of collapsing into a few.
+        clusterer = new MarkerClusterer({
+          map,
+          markers,
+          renderer: clusterRenderer(google),
+          algorithm: new SuperClusterAlgorithm({ radius: 24, maxZoom: 11 }),
+        })
         map.fitBounds(bounds, 56)
         const once = google.maps.event.addListener(map, 'idle', () => {
           if ((map.getZoom() || 0) > 12) map.setZoom(12)
