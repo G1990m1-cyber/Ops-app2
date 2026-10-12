@@ -6,6 +6,7 @@ import {
   hotelFilterOptions,
   publishedOrScoped,
 } from '@/access'
+import { blockPlaceholderPublish } from '@/hooks/blockPlaceholderPublish'
 import { enforceHotelScope } from '@/hooks/enforceHotelScope'
 import { revalidateCollection, revalidateCollectionDelete } from '@/hooks/revalidate'
 import { generatePreviewPath, hotelPath } from '@/utilities/generatePreviewPath'
@@ -68,7 +69,7 @@ export const Menus: CollectionConfig = {
   },
   versions: { drafts: true, maxPerDoc: 20 },
   hooks: {
-    beforeValidate: [enforceHotelScope()],
+    beforeValidate: [blockPlaceholderPublish(), enforceHotelScope()],
     afterChange: [revalidateCollection('menus')],
     afterDelete: [revalidateCollectionDelete('menus')],
   },

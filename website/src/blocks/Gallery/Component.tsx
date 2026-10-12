@@ -7,8 +7,8 @@ import { cn } from '@/utilities/ui'
 
 import { Lightbox } from './Lightbox'
 
-export const GalleryBlock: React.FC<G & { hotel?: Hotel | null }> = ({ heading, source, images, layout, columns, style, hotel }) => {
-  const items = (source === 'hotel' ? hotel?.gallery : images) || []
+export const GalleryBlock: React.FC<G & { contextHotel?: Hotel | null }> = ({ heading, source, images, layout, columns, style, contextHotel }) => {
+  const items = (source === 'hotel' ? contextHotel?.gallery : images) || []
   const resolved = items
     .map((i) => (i.image && typeof i.image === 'object' ? { image: i.image as MediaType, caption: i.caption || i.image.caption || '' } : null))
     .filter((x): x is { image: MediaType; caption: string } => Boolean(x))

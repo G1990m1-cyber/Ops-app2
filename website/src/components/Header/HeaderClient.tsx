@@ -110,6 +110,12 @@ export const HeaderClient: React.FC<Props> = ({ nav, siteName, logo, hotels, boo
   const onHero = !scrolled && !open
   const light = onHero
 
+  // On a hotel page the first path segment is the hotel slug, so Book now goes straight to that
+  // hotel's engine instead of opening the group picker. On other pages this finds nothing and the
+  // picker opens as before.
+  const currentSlug = pathname?.split('/')[1] || ''
+  const currentHotel = hotel || bookTargets.find((t) => t.slug === currentSlug) || null
+
   return (
     <>
       <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[200] focus:bg-cream focus:px-4 focus:py-2">
@@ -191,7 +197,7 @@ export const HeaderClient: React.FC<Props> = ({ nav, siteName, logo, hotels, boo
           <div className="flex items-center gap-3">
             <div className="hidden md:block">
               <BookNowButton
-                hotel={hotel}
+                hotel={currentHotel}
                 hotels={bookTargets}
                 placement="header"
                 size="md"

@@ -6,7 +6,7 @@ import type { Hotel, Media } from '@/payload-types'
 
 import { groupCopy, hotels as seedHotels, siteLogo, type Img } from './content'
 import { placeholderImage } from './images'
-import { h2, p, paragraphs, rich, ul } from './lexical'
+import { h1, h2, p, paragraphs, rich, ul } from './lexical'
 
 /** Migrated images live in content/images at the project root (process.cwd() locally and on Vercel). */
 const IMAGE_DIR = path.join(process.cwd(), 'content', 'images')
@@ -111,7 +111,12 @@ export const seed = async (payload: Payload, opts: { reset?: boolean } = {}) => 
   }
 
   /* ── Users ────────────────────────────────────────────────────────────── */
+  const isProd = process.env.NODE_ENV === 'production'
   const adminEmail = process.env.SEED_ADMIN_EMAIL || 'admin@grhotels.co.uk'
+  // Never create an admin with a guessable default password in production: require an explicit one.
+  if (isProd && !process.env.SEED_ADMIN_PASSWORD) {
+    throw new Error('Set SEED_ADMIN_PASSWORD to a strong value before seeding in production.')
+  }
   const adminPassword = process.env.SEED_ADMIN_PASSWORD || 'change-me-now'
   const existingAdmin = await payload.find({ collection: 'users', where: { email: { equals: adminEmail } }, limit: 1, overrideAccess: true })
   if (!existingAdmin.docs.length) {
@@ -282,12 +287,17 @@ export const seed = async (payload: Payload, opts: { reset?: boolean } = {}) => 
   }
 
   /* ── Sample manager user ──────────────────────────────────────────────── */
+  // Only for local/demo use. Never create a known-credential account in production;
+  // opt in elsewhere with SEED_SAMPLE_MANAGER=true.
   const managerEmail = 'manager@example.grhotels.co.uk'
-  const mgr = await payload.find({ collection: 'users', where: { email: { equals: managerEmail } }, limit: 1, overrideAccess: true })
-  if (!mgr.docs.length) {
-    const berwick = hotelDocs.filter((h) => h.slug === 'queens-head-berwick' || h.slug === 'castle-berwick').map((h) => h.id)
-    await payload.create({ collection: 'users', overrideAccess: true, data: { name: 'Sample Manager (Berwick)', email: managerEmail, password: 'Manager-Demo-2026!', role: 'manager', hotels: berwick } })
-    log(`Sample manager ${managerEmail} (both Berwick hotels)`)
+  const wantSampleManager = !isProd || process.env.SEED_SAMPLE_MANAGER === 'true'
+  if (wantSampleManager) {
+    const mgr = await payload.find({ collection: 'users', where: { email: { equals: managerEmail } }, limit: 1, overrideAccess: true })
+    if (!mgr.docs.length) {
+      const berwick = hotelDocs.filter((h) => h.slug === 'queens-head-berwick' || h.slug === 'castle-berwick').map((h) => h.id)
+      await payload.create({ collection: 'users', overrideAccess: true, data: { name: 'Sample Manager (Berwick)', email: managerEmail, password: 'Manager-Demo-2026!', role: 'manager', hotels: berwick } })
+      log(`Sample manager ${managerEmail} (both Berwick hotels)`)
+    }
   }
 
   /* ── Globals ──────────────────────────────────────────────────────────── */
@@ -385,9 +395,91 @@ export const seed = async (payload: Payload, opts: { reset?: boolean } = {}) => 
         { blockType: 'enquiryForm', heading: 'Get in touch', showStayFields: false, style: { tone: 'sand', spacing: 'normal', align: 'left' } },
       ],
     },
-    { title: 'Privacy policy', slug: 'privacy-policy', layout: [{ blockType: 'text', eyebrow: 'Legal', richText: rich(h2('Privacy policy'), p('This page is ready for your privacy policy. Paste it in from the admin under Pages.')), narrow: true, style: { tone: 'cream', spacing: 'generous', align: 'left' } }] },
-    { title: 'Cookie policy', slug: 'cookie-policy', layout: [{ blockType: 'text', eyebrow: 'Legal', richText: rich(h2('Cookie policy'), p('We use essential cookies to run the site and, only with your permission, Google Tag Manager for analytics and advertising measurement. You can change your choice at any time using “Cookie settings” in the footer.')), narrow: true, style: { tone: 'cream', spacing: 'generous', align: 'left' } }] },
-    { title: 'Terms and conditions', slug: 'terms', layout: [{ blockType: 'text', eyebrow: 'Legal', richText: rich(h2('Terms and conditions'), p('This page is ready for your booking terms. Paste them in from the admin under Pages.')), narrow: true, style: { tone: 'cream', spacing: 'generous', align: 'left' } }] },
+    {
+      title: 'Privacy policy',
+      slug: 'privacy-policy',
+      layout: [
+        {
+          blockType: 'text',
+          eyebrow: 'Legal',
+          richText: rich(
+            h1('Privacy policy'),
+            p('This is a plain-English starting draft. Please have it reviewed before launch and replace it with the wording your data-protection adviser approves. Last updated: replace with the go-live date.'),
+            h2('Who we are'),
+            p('GR Hotels ("we", "us") operates this website and the hotels listed on it. We are the data controller for the personal information collected here. For any question about your information, contact us using the details on our Contact page.'),
+            h2('The information we collect'),
+            ul([
+              'Details you give us: your name, email address, phone number and the content of any enquiry or booking request you send through our forms.',
+              'Newsletter sign-ups: your email address and first name, if you choose to subscribe.',
+              'Usage information: with your consent, anonymous analytics about how the site is used, collected through Google Tag Manager. See our Cookie policy.',
+            ]),
+            h2('How we use it'),
+            ul([
+              'To answer your enquiry and manage your booking or event.',
+              'To send you our newsletter, where you have asked us to, until you unsubscribe.',
+              'To understand how the website is used and improve it, where you have accepted analytics cookies.',
+            ]),
+            p('We rely on your consent for marketing and analytics, and on our legitimate interest in responding to enquiries and running our hotels. We do not sell your information.'),
+            h2('Who we share it with'),
+            p('We share information only with the service providers who help us run the site and our hotels (for example our email, hosting and booking providers), and where the law requires it. Enquiries are sent to the relevant hotel so its team can reply.'),
+            h2('How long we keep it'),
+            p('We keep enquiry and booking records for as long as needed to serve you and to meet our legal and accounting duties, then delete them. Newsletter details are kept until you unsubscribe.'),
+            h2('Your rights'),
+            p('You can ask to see, correct or delete the information we hold about you, or object to how we use it. To do so, or to complain, contact us using the details on our Contact page. You also have the right to complain to the Information Commissioner’s Office (ico.org.uk).'),
+          ),
+          narrow: true,
+          style: { tone: 'cream', spacing: 'generous', align: 'left' },
+        },
+      ],
+    },
+    {
+      title: 'Cookie policy',
+      slug: 'cookie-policy',
+      layout: [
+        {
+          blockType: 'text',
+          eyebrow: 'Legal',
+          richText: rich(
+            h1('Cookie policy'),
+            p('Cookies are small files a website saves on your device. We keep ours to a minimum.'),
+            h2('Essential cookies'),
+            p('A small number of cookies are needed to run the site and remember your cookie choice. These are always on and carry no personal information for marketing.'),
+            h2('Analytics and advertising'),
+            p('Only if you press “Accept” do we load Google Tag Manager, which we use to measure how the site is used and the effect of our advertising. Nothing in this group loads until you accept.'),
+            h2('Changing your mind'),
+            p('You can change your choice at any time using “Cookie settings” in the footer, or by clearing this site’s cookies in your browser.'),
+          ),
+          narrow: true,
+          style: { tone: 'cream', spacing: 'generous', align: 'left' },
+        },
+      ],
+    },
+    {
+      title: 'Terms and conditions',
+      slug: 'terms',
+      layout: [
+        {
+          blockType: 'text',
+          eyebrow: 'Legal',
+          richText: rich(
+            h1('Terms and conditions'),
+            p('This is a plain-English starting draft. Please replace it with your own booking terms, checked by your adviser, before launch. Last updated: replace with the go-live date.'),
+            h2('Bookings'),
+            p('Room and table bookings are made through each hotel’s own booking system and are subject to that hotel’s rates, availability and confirmation. A booking is confirmed only once you receive confirmation from the hotel.'),
+            h2('Payment and cancellation'),
+            p('Payment terms, deposits and cancellation or no-show charges vary by hotel and rate. The terms that apply to your stay are the ones shown at the time you book and in your confirmation. Please read them before you book.'),
+            h2('Changes and cancellations by us'),
+            p('We will always try to honour every booking. In the rare event we must change or cancel, we will contact you as soon as we can and offer an alternative or a refund of any sum paid to us for that booking.'),
+            h2('Using this website'),
+            p('The content on this site is for general information. We keep it as accurate and up to date as we can, but details such as prices, menus and events can change. The images and text on this site remain our property and may not be reused without permission.'),
+            h2('Contact'),
+            p('For any question about a booking or these terms, contact the hotel directly or use the details on our Contact page.'),
+          ),
+          narrow: true,
+          style: { tone: 'cream', spacing: 'generous', align: 'left' },
+        },
+      ],
+    },
   ]
 
   for (const pg of pages) {
@@ -466,7 +558,9 @@ export const seed = async (payload: Payload, opts: { reset?: boolean } = {}) => 
 
   console.info('\nSeed complete.')
   console.info(`Admin login: ${adminEmail}`)
-  console.info(`Sample manager: ${managerEmail} / Manager-Demo-2026!  (sees only the two Berwick hotels)`)
+  if (wantSampleManager) {
+    console.info(`Sample manager: ${managerEmail} / Manager-Demo-2026!  (sees only the two Berwick hotels)`)
+  }
 }
 
 // kept for the rare case an admin wants a brand-toned image for something that has no photo yet

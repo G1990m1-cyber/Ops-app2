@@ -2,6 +2,7 @@ import type { CollectionConfig } from 'payload'
 
 import { adminOnlyField, hiddenUnlessAdmin, isAdmin, isAdminUser } from '@/access'
 import type { User } from '@/payload-types'
+import { getServerSideURL } from '@/utilities/getURL'
 
 export const Users: CollectionConfig = {
   slug: 'users',
@@ -13,7 +14,7 @@ export const Users: CollectionConfig = {
     forgotPassword: {
       generateEmailSubject: () => 'Reset your GR Hotels website password',
       generateEmailHTML: (args) => {
-        const url = `${process.env.NEXT_PUBLIC_SERVER_URL || ''}/admin/reset/${args?.token}`
+        const url = `${getServerSideURL()}/admin/reset/${args?.token}`
         const name = (args?.user as User | undefined)?.name || 'there'
         return `
           <div style="font-family:Georgia,serif;font-size:18px;color:#262626;line-height:1.5">

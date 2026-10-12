@@ -14,6 +14,7 @@ const block = (type: string, children: unknown[], extra: Record<string, unknown>
 })
 
 export const p = (t: string) => block('paragraph', [text(t)], { textFormat: 0, textStyle: '' })
+export const h1 = (t: string) => block('heading', [text(t)], { tag: 'h1' })
 export const h2 = (t: string) => block('heading', [text(t)], { tag: 'h2' })
 export const h3 = (t: string) => block('heading', [text(t)], { tag: 'h3' })
 export const ul = (items: string[]) =>

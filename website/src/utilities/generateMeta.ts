@@ -40,10 +40,14 @@ export const generateMeta = async (args: {
   const page = !isHotel ? (doc as Partial<Page> | null) : null
 
   const baseTitle = titleOverride || (hotel ? `${hotel.name} | ${hotel.location}` : page?.title === 'Home' ? null : page?.title)
-  const metaTitle = doc?.meta?.title || (baseTitle ? `${baseTitle} | ${suffix}` : settings.tagline ? `${suffix} | ${settings.tagline}` : suffix)
+  // A per-page override (e.g. a hotel sub-page like "Rooms | The Castle") wins over the document's own
+  // saved SEO title/description; without an override the document's meta wins, then the sensible fallbacks.
+  const metaTitle = titleOverride
+    ? `${baseTitle} | ${suffix}`
+    : doc?.meta?.title || (baseTitle ? `${baseTitle} | ${suffix}` : settings.tagline ? `${suffix} | ${settings.tagline}` : suffix)
   const description =
-    doc?.meta?.description ||
     descriptionOverride ||
+    doc?.meta?.description ||
     (hotel ? lexicalToPlainText(hotel.intro).slice(0, 158) : '') ||
     settings.seo?.defaultDescription ||
     'Characterful hotels and pubs with rooms across Britain. Book direct with GR Hotels.'

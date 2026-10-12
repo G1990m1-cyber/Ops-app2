@@ -8,6 +8,7 @@ import {
   isAdminUser,
 } from '@/access'
 import { richLexical } from '@/fields/lexical'
+import { blockPlaceholderPublish } from '@/hooks/blockPlaceholderPublish'
 import { enforceHotelScope } from '@/hooks/enforceHotelScope'
 import { revalidateCollection, revalidateCollectionDelete } from '@/hooks/revalidate'
 import type { User } from '@/payload-types'
@@ -38,6 +39,7 @@ export const Offers: CollectionConfig = {
   versions: { drafts: true, maxPerDoc: 20 },
   hooks: {
     beforeValidate: [
+      blockPlaceholderPublish(),
       ({ data, req, ...rest }) => {
         // Admins may leave hotel blank for a group-wide offer; managers must pick a hotel.
         if (isAdminUser(req.user as User | null) && !data?.hotel) return data

@@ -7,6 +7,7 @@ import {
   publishedOrScoped,
 } from '@/access'
 import { richLexical } from '@/fields/lexical'
+import { blockPlaceholderPublish } from '@/hooks/blockPlaceholderPublish'
 import { enforceHotelScope } from '@/hooks/enforceHotelScope'
 import { revalidateCollection, revalidateCollectionDelete } from '@/hooks/revalidate'
 import { generatePreviewPath, hotelPath } from '@/utilities/generatePreviewPath'
@@ -29,7 +30,7 @@ export const Events: CollectionConfig = {
   },
   versions: { drafts: true, maxPerDoc: 20 },
   hooks: {
-    beforeValidate: [enforceHotelScope()],
+    beforeValidate: [blockPlaceholderPublish(), enforceHotelScope()],
     afterChange: [revalidateCollection('events')],
     afterDelete: [revalidateCollectionDelete('events')],
   },

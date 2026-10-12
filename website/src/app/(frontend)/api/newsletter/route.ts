@@ -1,5 +1,7 @@
 import { NextResponse, type NextRequest } from 'next/server'
 
+import { getServerSideURL } from '@/utilities/getURL'
+
 /** Posts a sign-up to HubSpot Forms. Without HubSpot IDs configured it logs and succeeds (dev). */
 export async function POST(req: NextRequest) {
   let body: { email?: string; firstName?: string; website?: string; page?: string }
@@ -33,7 +35,7 @@ export async function POST(req: NextRequest) {
       body: JSON.stringify({
         fields,
         context: {
-          pageUri: `${process.env.NEXT_PUBLIC_SERVER_URL || ''}${body.page || '/'}`,
+          pageUri: `${getServerSideURL()}${body.page || '/'}`,
           pageName: 'GR Hotels newsletter',
           ipAddress: req.headers.get('x-forwarded-for')?.split(',')[0]?.trim(),
         },
