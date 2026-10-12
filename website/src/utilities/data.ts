@@ -175,6 +175,26 @@ export const getCurrentOffers = async (
   return res.docs
 }
 
+/**
+ * Which hotel sections have something worth visiting right now, so the sub-nav can hide dead-end
+ * tabs. Rooms and "Find us" always show (Rooms routes to the booking engine even with no room data).
+ */
+export type HotelSectionFlags = { dining: boolean; events: boolean; offers: boolean }
+
+export const getHotelSectionFlags = async (hotel: Hotel): Promise<HotelSectionFlags> => {
+  const [menus, events, offers] = await Promise.all([
+    getCurrentMenus(hotel),
+    getUpcomingEvents(hotel, 1),
+    getCurrentOffers(hotel, 1),
+  ])
+  return {
+    // A hotel that takes table bookings still has a useful dining page even with no menus loaded.
+    dining: menus.length > 0 || Boolean(hotel.tableBookingUrl),
+    events: events.length > 0,
+    offers: offers.length > 0,
+  }
+}
+
 export const getTestimonials = async (
   hotel?: Hotel | number | string | null,
   limit = 4,

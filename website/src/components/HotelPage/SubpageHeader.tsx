@@ -8,7 +8,7 @@ import type { Hotel, Media as MediaType } from '@/payload-types'
 export const SubpageHeader: React.FC<{ hotel: Hotel; title: string; intro?: string | null; image?: MediaType | number | string | null }> = ({ hotel, title, intro, image }) => {
   const media = isMediaObject(image) ? image : hotel.heroMedia && typeof hotel.heroMedia === 'object' && hotel.heroMedia.mimeType?.startsWith('video/') ? hotel.heroPoster : hotel.heroMedia
   return (
-    <section className="relative flex min-h-[46svh] items-end overflow-hidden bg-charcoal text-cream md:min-h-[52vh]">
+    <section className="relative flex min-h-[46svh] items-end overflow-hidden bg-charcoal text-cream md:min-h-[52vh]" data-page-hero>
       <Media resource={media} fill size="hero" sizes="100vw" priority className="absolute inset-0" decorative />
       <div className="absolute inset-0 overlay-gradient" aria-hidden="true" />
       <div className="container-site relative z-10 w-full pb-10 pt-36 md:pb-14">

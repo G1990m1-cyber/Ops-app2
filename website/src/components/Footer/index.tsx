@@ -7,6 +7,7 @@ import { hrefFromReference } from '@/components/Link'
 import { NewsletterForm } from '@/components/Forms/NewsletterForm'
 import { getHotels } from '@/utilities/data'
 import { getCachedGlobal } from '@/utilities/getGlobals'
+import { telHref } from '@/utilities/booking'
 
 const linkHref = (l: { type?: string | null; reference?: unknown; url?: string | null }) =>
   l.type === 'reference' ? hrefFromReference(l.reference as never) : l.url || null
@@ -18,12 +19,13 @@ export const Footer: React.FC = async () => {
     getHotels(),
   ])
   const year = new Date().getFullYear()
+  const contact = settings.contact || {}
   const social = settings.social || {}
   const socials = [
-    { name: 'instagram', url: social.instagram },
-    { name: 'facebook', url: social.facebook },
-    { name: 'linkedin', url: social.linkedin },
-    { name: 'x', url: social.x },
+    { name: 'instagram', label: 'Instagram', url: social.instagram },
+    { name: 'facebook', label: 'Facebook', url: social.facebook },
+    { name: 'linkedin', label: 'LinkedIn', url: social.linkedin },
+    { name: 'x', label: 'X', url: social.x },
   ].filter((s) => s.url)
 
   return (
@@ -37,11 +39,22 @@ export const Footer: React.FC = async () => {
             <p className="font-display text-[2rem] leading-none text-cream">{settings.siteName}</p>
             {settings.tagline && <p className="mt-4 max-w-sm text-cream/80">{settings.tagline}</p>}
             {nav.footerNote && <p className="mt-4 max-w-sm text-[1rem] text-cream/70">{nav.footerNote}</p>}
+            {(contact.phone || contact.email || contact.address) && (
+              <address className="mt-5 not-italic text-[1rem] leading-relaxed text-cream/80">
+                {contact.phone && (
+                  <a href={telHref(contact.phone)} className="link-underline block">{contact.phone}</a>
+                )}
+                {contact.email && (
+                  <a href={`mailto:${contact.email}`} className="link-underline block break-all">{contact.email}</a>
+                )}
+                {contact.address && <span className="mt-2 block whitespace-pre-line text-cream/70">{contact.address}</span>}
+              </address>
+            )}
             {socials.length > 0 && (
               <ul className="mt-6 flex gap-4">
                 {socials.map((s) => (
                   <li key={s.name}>
-                    <a href={s.url!} target="_blank" rel="noopener noreferrer" aria-label={s.name} className="text-gold transition-colors hover:text-cream">
+                    <a href={s.url!} target="_blank" rel="noopener noreferrer" aria-label={`${settings.siteName} on ${s.label}`} className="text-gold transition-colors hover:text-cream">
                       <Icon name={s.name} className="h-5 w-5" />
                     </a>
                   </li>

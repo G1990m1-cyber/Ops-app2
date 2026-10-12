@@ -4,6 +4,7 @@ import { MenuCard } from '@/components/Cards/MenuCard'
 import { Section, SectionHeading } from '@/components/Section'
 import type { Hotel, MenusListBlock as M } from '@/payload-types'
 import { getCurrentMenus } from '@/utilities/data'
+import { telHref } from '@/utilities/booking'
 
 export const MenusListBlock: React.FC<M & { contextHotel?: Hotel | null }> = async ({ heading, intro, hotel: picked, types, style, contextHotel }) => {
   const hotel = (picked && typeof picked === 'object' ? picked : contextHotel) as Hotel | null
@@ -19,7 +20,15 @@ export const MenusListBlock: React.FC<M & { contextHotel?: Hotel | null }> = asy
           ))}
         </div>
       ) : (
-        <p className="text-ink-soft [.tone-charcoal_&]:text-cream/70">Our new menus are on their way. Please call {hotel.phone || 'the hotel'} for today&apos;s dishes.</p>
+        <p className="text-ink-soft [.tone-charcoal_&]:text-cream/70">
+          Our new menus are on their way. Please call{' '}
+          {hotel.phone ? (
+            <a href={telHref(hotel.phone)} className="link-underline">{hotel.phone}</a>
+          ) : (
+            'the hotel'
+          )}{' '}
+          for today&apos;s dishes.
+        </p>
       )}
     </Section>
   )

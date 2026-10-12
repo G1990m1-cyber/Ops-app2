@@ -17,7 +17,8 @@ import { Section } from '@/components/Section'
 import { Button } from '@/components/ui/Button'
 import { GalleryBlock } from '@/blocks/Gallery/Component'
 import { MapBlockComponent } from '@/blocks/Map/Component'
-import { getCurrentMenus, getCurrentOffers, getHotelBySlug, getRooms, getUpcomingEvents } from '@/utilities/data'
+import { getCurrentMenus, getCurrentOffers, getHotelBySlug, getHotelSectionFlags, getRooms, getUpcomingEvents } from '@/utilities/data'
+import { telHref } from '@/utilities/booking'
 import { generateMeta } from '@/utilities/generateMeta'
 import { redirectOrNotFound } from '@/utilities/redirects'
 
@@ -64,7 +65,11 @@ export default async function HotelSubPage({ params }: Args) {
             <p className="text-[1.15rem]">Our rooms, rates and availability are all on our booking page.</p>
             <div className="mt-6 flex flex-wrap items-center gap-4">
               <BookNowButton hotel={hotel} placement="block" size="lg" label="See rooms and book" />
-              {hotel.phone && <span className="text-ink-soft">or call {hotel.phone}</span>}
+              {hotel.phone && (
+                <span className="text-ink-soft">
+                  or call <a href={telHref(hotel.phone)} className="link-underline">{hotel.phone}</a>
+                </span>
+              )}
             </div>
           </div>
         )}
@@ -80,7 +85,11 @@ export default async function HotelSubPage({ params }: Args) {
             <Button href={hotel.tableBookingUrl} newTab size="lg">
               Book a table
             </Button>
-            {hotel.phone && <span className="text-ink-soft">or call {hotel.phone}</span>}
+            {hotel.phone && (
+              <span className="text-ink-soft">
+                or call <a href={telHref(hotel.phone)} className="link-underline">{hotel.phone}</a>
+              </span>
+            )}
           </div>
         )}
         {menus.length ? (
@@ -88,7 +97,11 @@ export default async function HotelSubPage({ params }: Args) {
             {menus.map((m, i) => <MenuCard key={m.id} menu={m} index={i} />)}
           </div>
         ) : (
-          <p className="text-ink-soft">Our new menus are on their way. Please call {hotel.phone || 'the hotel'} for today&apos;s dishes.</p>
+          <p className="text-ink-soft">
+            Our new menus are on their way. Please call{' '}
+            {hotel.phone ? <a href={telHref(hotel.phone)} className="link-underline">{hotel.phone}</a> : 'the hotel'}{' '}
+            for today&apos;s dishes.
+          </p>
         )}
       </Section>
     )
@@ -163,10 +176,18 @@ export default async function HotelSubPage({ params }: Args) {
     )
   }
 
+  // Hide dead-end tabs, but always keep the tab for the section being viewed.
+  const flags = await getHotelSectionFlags(hotel)
+  const shownFlags = {
+    dining: flags.dining || sub === 'dining',
+    events: flags.events || sub === 'events',
+    offers: flags.offers || sub === 'offers',
+  }
+
   return (
     <>
       <SubpageHeader hotel={hotel} title={section.title} intro={section.intro(hotel.name)} />
-      <HotelSubnav hotel={hotel} current={sub as HotelSection} />
+      <HotelSubnav hotel={hotel} current={sub as HotelSection} flags={shownFlags} />
       {body}
       <BreadcrumbJsonLd items={crumbs} />
     </>

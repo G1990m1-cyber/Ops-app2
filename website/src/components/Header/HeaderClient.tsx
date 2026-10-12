@@ -60,13 +60,26 @@ export const HeaderClient: React.FC<Props> = ({ nav, siteName, logo, hotels, boo
   const [hotelsOpen, setHotelsOpen] = useState(false)
   const hotelsRef = useRef<HTMLLIElement>(null)
 
-  // Transparent over a hero at the top of a page, solid cream once scrolled.
+  // Tracks scroll past the top, used to collapse the announcement strip.
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
+
+  // The header is only transparent (white logo) while a dark hero actually sits behind it.
+  // On pages with no hero (404, legal, plain text pages) it stays solid so the logo is never
+  // invisible on the cream background.
+  const [heroBehind, setHeroBehind] = useState(true)
+  useEffect(() => {
+    const hero = document.querySelector('[data-page-hero]') as HTMLElement | null
+    const compute = () => (hero ? window.scrollY < hero.offsetHeight - headerHeight : false)
+    const onScroll = () => setHeroBehind(compute())
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [pathname, headerHeight])
 
   useEffect(() => {
     setOpen(false)
@@ -107,7 +120,7 @@ export const HeaderClient: React.FC<Props> = ({ nav, siteName, logo, hotels, boo
     })
     .filter((x): x is { href: string; label: string; newTab: boolean } => Boolean(x))
 
-  const onHero = !scrolled && !open
+  const onHero = heroBehind && !open
   const light = onHero
 
   // On a hotel page the first path segment is the hotel slug, so Book now goes straight to that

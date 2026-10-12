@@ -20,7 +20,9 @@ export const TestimonialsBlockComponent: React.FC<T & { contextHotel?: Hotel | n
           name: t.name,
           source: t.source || undefined,
           hotel: typeof t.hotel === 'object' && t.hotel ? t.hotel.name : undefined,
-          rating: t.rating || undefined,
+          // Only show a star rating for sources that actually give one; an email or guest-book note
+          // should not display stars the guest never awarded.
+          rating: ['google', 'tripadvisor', 'booking'].includes(t.source || '') ? t.rating || undefined : undefined,
         }))}
       />
     </Section>

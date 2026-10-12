@@ -30,7 +30,7 @@ export const HeroBlock: React.FC<Props> = ({ media, poster, eyebrow, title, subt
   const Title = titleAs
 
   return (
-    <section className={cn('relative flex items-end overflow-hidden bg-charcoal text-cream', heights[height || 'tall'])} data-hero>
+    <section className={cn('relative flex items-end overflow-hidden bg-charcoal text-cream', heights[height || 'tall'])} data-hero data-page-hero>
       <div className="absolute inset-[-12%_0_0_0]" data-hero-media>
         {isMediaObject(resource) && (
           <Media

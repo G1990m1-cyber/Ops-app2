@@ -4,6 +4,7 @@ import { EnquiryForm } from '@/components/Forms/EnquiryForm'
 import { Section, SectionHeading } from '@/components/Section'
 import type { EnquiryFormBlock as E, Hotel } from '@/payload-types'
 import { getHotels } from '@/utilities/data'
+import { telHref } from '@/utilities/booking'
 
 export const EnquiryFormBlockComponent: React.FC<E & { contextHotel?: Hotel | null }> = async ({ heading, intro, hotel: picked, showStayFields, style, contextHotel }) => {
   const hotel = (picked && typeof picked === 'object' ? picked : contextHotel) as Hotel | null
@@ -16,7 +17,11 @@ export const EnquiryFormBlockComponent: React.FC<E & { contextHotel?: Hotel | nu
           {hotel && (
             <p className="mt-4 text-ink-soft [.tone-charcoal_&]:text-cream/70">
               Your message goes straight to the team at {hotel.name}.
-              {hotel.phone ? ` Prefer to talk? Call ${hotel.phone}.` : ''}
+              {hotel.phone ? (
+                <>
+                  {' '}Prefer to talk? Call <a href={telHref(hotel.phone)} className="link-underline">{hotel.phone}</a>.
+                </>
+              ) : null}
             </p>
           )}
         </div>
